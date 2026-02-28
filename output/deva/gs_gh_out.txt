@@ -1,0 +1,398 @@
+329914	Hmm... Very mysterious development. Not be easier to implement AURA_243 or take a ready implementation? 	1 	2  	NEUTRAL (HA)
+2728032	:+1: 	1 	1  	NEUTRAL
+3098507	So what I'm hearing is that if I: * tag consistently as `^/\d.\d\d/$` being stable, and * there's an `ack-single-file` in the repo at the time of the tagging and automatic tarballing then you can use that. Correct? The bummer for me is that I hav 	1 	-3  	NEUTRAL (LA)
+3103230	How did you tested by normal player? Have you tried destroying some walls and waiting for next battle? Edit: I confused the game object id with guid :) You've changed phaseMask, spawntimesecs, animeprogress and state. How did it help? 	-3 	-4  	DEPRESSED
+95688	Nice indeed. An earlier version of this patch was checked in and then backed out recently, so I hope it stays in this time. 	4 	-3  	RELAXED
+1054622	i like InnoDB more :D 	4 	-2  	EXCITED
+3151138	Build result for 60695012ab66170083c10607393b70a507b71390: [Failure](http://ci.motd.kr/job/netty-3/1282/) 	-2 	-3  	DEPRESSED
+23685	Well you could do `proc { |attributes| attributes.reject {|k,v| k == '_delete'}.all? {|k,v| v.blank?} }` 	1 	-3  	NEUTRAL (LA)
+3275458	Build result for 50ac0cdfcb35907fa38df61ff23708acd592d510: [Failure](http://ci.motd.kr/job/netty-master/1839/) 	-2 	-3  	DEPRESSED
+237374	You are right. I retested this patch and it does not solve the problem. Additional fix in jQuery.fx.prototype.custom also does not solve the problem. I must have been mistaken about the causes of this behavior.  	1 	-2  	NEUTRAL (LA)
+671199	As I commented elsewhere, it's probably not necessary, but not harmful to have that in there. In fact, it would help people like dmorley and rekado that merged early, before the fixes of the last few days. 	1 	-3  	NEUTRAL (LA)
+276584	this commit then must help. In fact this git info lookup in affected lines not used for projects generation. And after this commit generation will not fail for pointed ppl. (in case when they have git also installed but not have git repo in mangos dir) 	1 	-3  	NEUTRAL (LA)
+311457	Attention to detail 	1 	-2  	NEUTRAL (LA)
+2595724	"Job pr-rangepos-per-commit failed for 558c0592 [(results)](https://scala-webapps.epfl.ch/jenkins/job/pr-rangepos-per-commit/493/): <br>Took 9 s.<br> ![sad kitty](http://cdn.memegenerator.net/instances/100x/31464013.jpg)<br> to rebuild, comment """"PLS REBUIL" 	-2 	5  	STRESSED
+3383490	Thanks! :) 	4 	5  	EXCITED
+1320076	If you don't want to deal with timeouts just define your own implicit Inf which is 1 year and then all is good? 	4 	-3  	RELAXED
+1128657	This patch https://gist.github.com/2153372 looks stable, but is not solving the pushbacks. And I feel it added a few other issues. 	-2 	-3  	DEPRESSED
+1392186	so, since when and how does the DSM or better the Diskstation Media Server understdand how to handle those files? i simply cant get it to work and cant find any examples anywhere... thx 	1 	-3  	NEUTRAL (LA)
+514023	How this fixes that crash? !plr and !plr two times?  	2 	5  	EXCITED
+1719894	Yep I've already fix the bug, but not pushed yet. Huuum okay I see what you mean, but I don't really know yet how to fix that.  	2 	2  	EXCITED
+1007170	@Nielsomat makes sense. I'm just obsessively allergic to feature bloat :). 	2 	-2  	RELAXED
+77029	Grrrrrr, I meant ID! :) 	2 	2  	EXCITED
+13274	sweet commit. Thanks for pushing it, Josh. 	3 	-2  	RELAXED
+2448603	"@FernetMenta has done a lot of stuff into this direction. From verifying the """"swapBuffers"""" to video buffers for the player - to be able to get images on screen in sync and being able to have enough in the queue to get the images out quite fine. Been lo" 	3 	-4  	RELAXED
+1462849	No, no, that's fine. That's collaborate work, isn't it? :-) 	-3 	2  	STRESSED
+1508780	Once again, a decoupled test would have more staying power than this one. 	1 	-3  	NEUTRAL (LA)
+40522	Not. This assignment instead of matching. 	1 	-3  	NEUTRAL (LA)
+375161	`oio_async_send()` calls are not in one-to-one correspondence with the callbacks. Even when you space out the calls it wasn't passing due to the race condition when it takes more than 50ms to service the async callback after a send. 	1 	-3  	NEUTRAL (LA)
+819410	"I knew there was going to be some kind of joke from Machiavelli instead of something along the lines of """"merry Christmas"""". :D Merry christmas everyone :)" 	4 	-3  	EXCITED
+118913	"We should have this off in development mode by default"""" +1" 	1 	-3  	NEUTRAL (LA)
+1014645	Fixed. To capture XML error I added a try-catch in the read() method of XMLReader in the processNextElement() method. 	1 	-3  	NEUTRAL (LA)
+4028460	this took some work 	1 	-2  	NEUTRAL (LA)
+711042	"Expection"""" doesn't seem right. Perhaps """"Exception"""" or maybe """"Expectation""""?" 	1 	-2  	NEUTRAL (LA)
+1053893	shauren you're my hero 	4 	2  	EXCITED
+1993422	I have only changed the Video player as I believe that is sufficient, to be absolutely correct one could update the audio player as well anf display the most recent time. If people think that is the right way I can make the changes. 	1 	-4  	NEUTRAL (LA)
+2501	timothynjones, this code is actually going to chance once more with: http://rails.lighthouseapp.com/projects/8994/tickets/420-interpret-limit-as-number-of-bytes And the :limit is no longer going to specify the number of decimal places, instead if will s 	-2 	-3  	DEPRESSED
+2363173	Our server's running 1.4.6 now and we had over a dozen plugins break and only 'one' has yet to be 'completely' updated to work with the Beta build 1.4.6 but the developer is working on it. From my point of view that's a pretty good ratio. It's time to mo 	4 	-3  	RELAXED
+2237021	Same problem as above -- `timezone.now` called at definition time, not execution time. 	1 	-4  	NEUTRAL (LA)
+235826	"Couldn't have asked for more. This Contribution is Huge. Some Bugs i Noticed are. The Capture Points inside the bases can be """"Captured"""" over and over by the same team.(I know its minor). Also I Received a Crash Unit::CalcSpellDuration+1E c:\documents an" 	-2 	-4  	DEPRESSED
+387293	"Yes, but I think as a result making _all_ parameters extension points will lead to quite a BC nightmare. At the very least I guess it should be highlighted in the UPDATE.md and I guess the """"note"""" in the above linked article needs to be removed. Maybe a " 	-3 	4  	STRESSED
+923785	@fxn I have no idea what this is about, but you're probably right. 	1 	-2  	NEUTRAL (LA)
+40654	http://www.wowhead.com/?spell=5215 now applies at player as debuff - this is wrong 	-2 	2  	STRESSED
+304504	Hmm.. Just tried to fix the link that broke... Shall I go ahead and change the already written module to suit your current requirement? 	1 	-4  	NEUTRAL (LA)
+707123	Fixes #10704. 	1 	1  	NEUTRAL
+3269045	Its added in a later commit when I added the error checking to friend note. 	1 	-3  	NEUTRAL (LA)
+479410	without locking the mutex, signals are missed. I observe this on ubuntu 10.10 	1 	-2  	NEUTRAL (LA)
+380228	- 	1 	1  	NEUTRAL
+1144441	Aint no way not to love it! <3 <3 <3! 	-5 	5  	STRESSED
+2274623	This name makes much more sense! :thumbsup:  	2 	5  	EXCITED
+1268086	This is great. API's for the win. I hope we start seeing this trend more and more, rails providing the interfaces, and devs dropping in the implementations based on whatever requirements they have. Can't install Redis in your stack? use delayed job. nee 	4 	-3  	RELAXED
+4070942	On a second thought, lub does lose important information, because `if (x) Array[C]() else Array[D]()` (given that `C <: D`) and `if (x) Array[C]() else Array[Nothing]()` should be erased differently, therefore we indeed cannot abstract away from implement 	3 	-4  	RELAXED
+6726407	Not sure what you mean (i suspect i'm being dumb) it's a tar.gz of the tip of the default branch, `application/x-gzip`... 	-3 	-2  	DEPRESSED
+1723995	These 2 variables are currently unused 	1 	1  	NEUTRAL
+279838	Now *that* is perfect! 	5 	5  	EXCITED
+6102083	# Head * Added ignore user icon [#4417](https://github.com/diaspora/diaspora/pull/4417) ## Refactor After that should I use git push -f origin 4304-add-ignore-user-icon ? 	-2 	-4  	DEPRESSED
+1025829	I'm usually the first to argue for not changing the list of inflections but we should probably remove cow => kine in master - it's an archaic word and no-one uses it. 	1 	3  	NEUTRAL (HA)
+4735137	I've played around with this and think I'm gonna merge without making a change here. We can revisit later. 	1 	-3  	NEUTRAL (LA)
+4491538	Noted 	1 	1  	NEUTRAL
+570497	As I've said, I have no clue how Python works. I just read the [documentation](http://docs.python.org/library/stdtypes.html#str.split). Hm. On reading it again, it seems like `CC.strip().split()` is the closest implementation. 	1 	2  	NEUTRAL (HA)
+520928	Remove these comments. 	1 	2  	NEUTRAL (HA)
+94486	Here is the relevant commit: 08983fefd547142ef8b913af1859b96597753d9f 	1 	-3  	NEUTRAL (LA)
+5696698	You need to add `depends_on 'gettext'` though. 	1 	-2  	NEUTRAL (LA)
+1066868	Split again please (recommended 80 character limit). 	1 	2  	NEUTRAL (HA)
+737525	only throws InterruptedException or Fatal now 	1 	5  	NEUTRAL (HA)
+1807651	Combine these into a single conditional using '&&'. 	1 	-2  	NEUTRAL (LA)
+3411608	While that is true, Any solution is going to be a heuristic. There is literally no way to know what repo they are building against (if they are building against a Bukkit fork). I guess the right answer would be to try the following in order: * [owner o 	-2 	-3  	DEPRESSED
+514973	Can't do this! There is no php formula in Homebrew. 	2 	5  	EXCITED
+1162577	same here 	1 	1  	NEUTRAL
+4087393	Moved the proxy dumper part, the instantiator is still needed to have proxies in dev 	1 	-3  	NEUTRAL (LA)
+6191405	@Montellese Can't find any overload for std::string. :( EDIT: found it. Strange overload: CStdString in input, std::string on output. 	-2 	-3  	DEPRESSED
+737069	I think this is harder to read than the original. What is the advantage? 	3 	2  	EXCITED
+6724969	I just removed the normal case lines because I'm guessing it is covered somewhere else and I just didn't see it. If it isn't covered, it would be outside the scope of this pull request/ticket 21194 	1 	-4  	NEUTRAL (LA)
+717533	The same thing here. 	1 	-3  	NEUTRAL (LA)
+392895	INTERNAL USE ONLY? 	1 	5  	NEUTRAL (HA)
+1425738	suggest and require-dev aren't really mutually exclusive 	1 	-2  	NEUTRAL (LA)
+1568914	I agree. In general it seems like using ```import XYZ``` style rather than ```from XYZ import foo``` might make more sense in the long run. For this first run I figured I'd see how it looks and get feedback. In a later change I can do a full sweep o 	1 	-3  	NEUTRAL (LA)
+4492321	What does Spark do if you've not defined any resource configurations and this line is called? 	3 	-3  	RELAXED
+4918530	And what does this solve? core tests have loads of these short docblocks with testMethodname method only in it 2013/6/27 Mark <notifications@github.com> > In lib/Cake/Test/Case/Model/Datasource/DboSourceTest.php: > > > @@ -569,7 +569,9 @@ publi 	1 	-3  	NEUTRAL (LA)
+2441943	`// Support: Firefox >16` 	1 	-3  	NEUTRAL (LA)
+6211296	Well, the require just was there before my pull request. Could it be that the tests passed because require 'pathname' is present in the test file? I guess that this require should be moved to the initialize method where Pathname is used for the first time 	1 	-3  	NEUTRAL (LA)
+779321	Can you call StorageInterface without the alias? 	1 	-3  	NEUTRAL (LA)
+531615	"The reason for creating a """"query"""" route was so I could pass arbitrary get value pairs without needing to define a route for every combination. I would argue against this level of checking in the router by saying it query params should be tested and val" 	1 	-4  	NEUTRAL (LA)
+1543092	done 	1 	-2  	NEUTRAL (LA)
+5561330	Done. 	1 	-2  	NEUTRAL (LA)
+1151940	this is wrong :) 	2 	2  	EXCITED
+4601172	Thanks, Ruby n00b appreciates :) 	3 	2  	EXCITED
+2174808	"longitude, latitude pairs """"in"""" units of degrees?" 	1 	-3  	NEUTRAL (LA)
+1971395	These 2 lines seems unneeded. 	1 	2  	NEUTRAL (HA)
+2029320	include the code from SupervisorAskSpec here (once moved out) 	1 	-3  	NEUTRAL (LA)
+1274213	@jmikola ZendMonitor will display the DateTime within the monitor instance, IIRC -- i.e., it can be passed as is. For DB writers, behavior differs, unfortunately, and even within a particular RDBMS, it will differ based on the column type. I typically put 	-3 	-4  	DEPRESSED
+295442	Fixed 	1 	-3  	NEUTRAL (LA)
+4779589	beeing => being and singup => signup ? 	1 	1  	NEUTRAL
+3440654	No browser has already unprefixed `matches` so there's no need for that. 	1 	1  	NEUTRAL
+2870251	"Guessing you probably want something closer to `%r(^4\.)`‚Ä¶ ```console >> [""""3.4.0"""", """"3.410"""", """"4.0"""", """"4.1""""].map {|s| !!%r(4.0).match(s) } => [true, true, true, false] >> [""""3.4.0"""", """"3.410"""", """"4.0"""", """"4.1""""].map {|s| !!%r(^4\.).match(s) } => [false, fal" 	2 	5  	EXCITED
+6443561	$this->assertTrue($result) would probably suffice. 	1 	-3  	NEUTRAL (LA)
+4138559	Thanks, fixed. 	3 	-2  	RELAXED
+4004515	No need to shell out for this - there's a Pathname method to do this, e.g.: ```ruby (bin/'decaude').make_symlink bin/'caudec' ``` 	1 	-3  	NEUTRAL (LA)
+1196554	Have you tested this change? I'm pretty sure it won't work. 	1 	-3  	NEUTRAL (LA)
+6294337	unsure about everything from here down, not really Django specific. 	1 	-3  	NEUTRAL (LA)
+3633337	"If it didn't overwrite LookAndFeel before this PR, it doesn't know either. I'm not sure what your point/concern is. If it's about the wording of """"GetCurrentResolution(Info)""""/""""SetCurrentResolution()"""" I'm happy to consider any ideas/suggestions. Like I said" 	5 	-3  	RELAXED
+277596	Before I pushed the new view stuff I told Grumpydev that I had a feeling I was forgetting something.. this was it... I had ran into the locked view issue myself while testing out the new view code. Thanks! =) 	4 	5  	EXCITED
+378955	Apparently, every browser we support do allow an opening html comment at the start of inline script tags, exemplified by the fact it worked in 1.5.2 when we were still using script tag injection. Sadly, this feature is popular enough to have a library like 	-2 	-3  	DEPRESSED
+2680924	Why does everyone who hacks on Jekyll have to use the same Ruby version? Jekyll is [supposed to be compatible](https://github.com/mojombo/jekyll/blob/cc0f84197afc4b73781e2a800ea4d1990605981b/.travis.yml#L2-5) with all sorts of Rubies. I think this file  	-2 	-3  	DEPRESSED
+392116	@FabianBeiner: but as @nimbupani said, there's only two hacks to retain, at least just one to match IE6 and 7 	1 	-3  	NEUTRAL (LA)
+2082055	The session_id() call is probably a better solution than setting $_COOKIE directly. I'll change that. 	1 	-3  	NEUTRAL (LA)
+625489	If there are merge conflicts in chkrootkit.rb, you will need to resolve them or, as Max said, `git reset --hard FETCH_HEAD` to get back in sync with the upstream repository. 	-2 	-3  	DEPRESSED
+380248	So no more rogue stealth being broken by warriors' damage shield after a sap? this bug still exists, you can find hack-fix for it in my fork 	-2 	-3  	DEPRESSED
+1297459	might want to hide the logger spam if your using the `add_shows_wo_dir = 1` option as you will get this line for each episode for each season.. which can be a lot of wasted lines... 	1 	-4  	NEUTRAL (LA)
+442458	@blackfalcon There‚Äôs nothing wrong with [safe CSS hacks ](http://mathiasbynens.be/notes/safe-css-hacks) like the ones that are used here. 	-2 	-2  	DEPRESSED
+566563	Why? Isn't that a bit buried in the source code? Before, the gem was guaranteed to be installed. Now it is not. But the code still needs it. has_secure_password is a macro like any other. I think it would be good to print it in the generated Gemfi 	4 	-3  	RELAXED
+118097	Would IE user agent sniffing be a bad idea? 	-3 	-4  	DEPRESSED
+186863	rofl latest core from RSA and about 300 testers about 20 hour uptime, that is good, no crashed with your infos and why u used bad words, that is a true story 	-3 	-3  	DEPRESSED
+3196959	It is required to return HashWithIndifferentAccess instead of just plain regular Hash??? I mean what value does it bring in to the code??? 	1 	-3  	NEUTRAL (LA)
+153931	Oh good catch!! We usually do this, and I forgot this time: $config = Config::getInstance() 	5 	5  	EXCITED
+541385	i think this is hack electrical charge (61900) should be fixed 	1 	-4  	NEUTRAL (LA)
+2299238	I was confused if @kennethreitz somehow got his account compromised and was injecting bad JS into the site, but no need to worry about it - this is just heatmap tracking from [CrazyEgg](http://www.crazyegg.com/), in case anyone else is wondering. 	-3 	2  	STRESSED
+485834	Was already fixed by filtering out MOVEMENTFLAG_ROOT sent from the client, but this should fix all other corner cases where even wannabe hackers/exploiters have no control over. 	1 	-4  	NEUTRAL (LA)
+3505827	I see... Maybe we should explain this in the javadocs Am 26.06.2013 um 03:06 schrieb Trustin Lee <notifications@github.com>: > That's why I didn't close after sending the close frame. > > On 06/26/2013 01:49 AM, Norman Maurer wrote: > > > > The  	1 	-2  	NEUTRAL (LA)
+78048	we should remove authorize() and just have login() with an optional set of permissions. in most cases apps will want to tos the user and request permissions in one shot. 	1 	-4  	NEUTRAL (LA)
+1795259	Doesn't this need indifferent access? Wasn't that the reason for #7478? self.session = HashWithIndifferentAccess.new 	1 	-3  	NEUTRAL (LA)
+1146083	I got it working, but just by hack, still don't understand what's wrong :S https://github.com/alteredq/three.js/commit/ff5d13d03c4ad2e7a4845189b21d1869a7ac4c45 	-2 	2  	STRESSED
+2822516	sudo -u gitlab -H ssh git@localhost - asks for a password for git@localhost. I tried to enter everything but failed. Nothing seems to work, I use ubuntu server 12.04, and followed all the steps one by one. What to do? Thanks.  	3 	-4  	RELAXED
+4177	I'd take zed's comments with a few grains of salt, some good stuff there and the traditional hyperbole. The DB connection issue is real and remains outstanding. That's why we need the connection pool branch from nick sieger before we're 'done' here.  	4 	-2  	RELAXED
+2220662	I wonder something in last comits db. I have see thing like data=2 changed but are this a hack? 	4 	-3  	RELAXED
+3153	wouldn't inject be more succinct? e.g. <pre><code> filter_chain.inject(Array.new) do |filters, filter_item| filters << filter_item if filter_item.before? filters end </code></pre> 	1 	-2  	NEUTRAL (LA)
+2781288	Because I always forget. :'( I'll put it in next time. 	-2 	-3  	DEPRESSED
+73731	Some example of damage recount: http://img688.imageshack.us/i/bugalisdk.jpg/ http://img69.imageshack.us/img69/836/wowscrnshot043010150253.jpg And Video: http://www.youtube.com/watch?v=WetQT9nnwc0 Best Regards 	-2 	-2  	DEPRESSED
+67095	+1 for delegations instead of deprecations. 	1 	1  	NEUTRAL
+3291175	http://imageshack.us/a/img14/9319/jjwwoqq.gif 	-2 	-2  	DEPRESSED
+3886403	I'm getting this error as well, src/server/shared/Cryptography/BigNumber.cpp: In member function 'ACE_Auto_Array_Ptr<unsigned char> BigNumber::AsByteArray(int32, bool)': src/server/shared/Cryptography/BigNumber.cpp:189:43: error: no matching function f 	1 	-3  	NEUTRAL (LA)
+2370388	"I trust you guys to made the right decision on this, but I also empathize with the sentiment expressed above. Perhaps some failing tests would make clear exactly what needs work and define """"fully baked""""?" 	-2 	-3  	DEPRESSED
+345852	No worries. About what, in particular? The fact that RoR is lost or about a pissed of dev jumping ship to a language inspired by the devil? On 16 Apr 2011, at 23:20, thehack wrote: > @dfischer Thanks for inspiring me to post. > > -- > Reply to t 	-2 	-3  	DEPRESSED
+1703886	@grumpit and @drogus thanks for the replies. I still think the fluid form reveals the intention better than a where clause with a hash, even though I'm usually all for shorter code :-) 	3 	-3  	RELAXED
+3242305	I honestly wasn't saying you were only interested in Yatse - I was just pointing out that the way you use to stream a file is a hack, you browse a path we shouldn't be serving in order to generate the hashed path. We can definitely do better, and I'm glad  	4 	3  	EXCITED
+52803	Session secret is now unneeded since it'll just use cookie signing. I could see having a global key, but that means changing your key invalidates all your signed messages, rather than just your cookies. 	1 	-3  	NEUTRAL (LA)
+166576	Maybe it's time to break out a very specific browser version sniff + weak inference. Do you know the range of Opera versions affected? 	-3 	-3  	DEPRESSED
+3988903	/Suicide... I just hate RBAC ._. 	-3 	3  	STRESSED
+330911	rsa, passing NaN values as input parameters will definitely cause issues with any geometry functions. Just because they expect them to be valid. RandomMovementGenerator<Creature>::_setRandomLocation() is the last function in call stack which triggered call 	1 	-4  	NEUTRAL (LA)
+1697842	ok, but just do some test. Create some npc and set them wp. After it just do relogin near them. With my fix and without. I kill about a week for find reason of client crash (i recheck all bits in reversed client). But may be problem was in orientation. I c 	1 	-4  	NEUTRAL (LA)
+800234	I suppose you may have a valid point in that the only situations where the preemption is something we want to re-decode data for is if it's a known refreshrate change. However, could please try to set xbmc in windowed mode, then change refreshrate manua 	1 	-3  	NEUTRAL (LA)
+1154164	hmm yes.. well, main intention was to (hot - maybe even hack)fix a problem that was introduced in a recent commit. I am not sure how it must work on retail (that is how the environmental dmg spells are cast). Depending on this we must use this or a si 	-2 	2  	STRESSED
+94770	Ah, that's very nice! : ) Should the StringDecoder now be documented? 	5 	5  	EXCITED
+19553	@paulrosania: If your users are able to execute JavaScript through a XSS, this authenticity token won't be able to prevent CSRFs at all. It would be a snap to fetch the authenticity token from a page which has a form on it... @everyone else who wants to 	1 	-3  	NEUTRAL (LA)
+781096	@drogus, bro, please don't forget to update railties and active record changelog. Also, the build is failing on 1.9.2 and 1.9.3. 	1 	-3  	NEUTRAL (LA)
+988064	you are getting rusty in your old age... forgetting to close braces etc. 	1 	-2  	NEUTRAL (LA)
+751365	"Since this patch, my authentication is broken. I use a form authentication, with an email and a password. With the previous version of this file """"$user->getUsername()"""" returns my user's email. Currently """"$this->metadata->getIdentifierValues($user)"""" return" 	1 	-3  	NEUTRAL (LA)
+384612	Upon testing I realize that the current browser only does folders - I'll see what it takes to hack in files. 	1 	-3  	NEUTRAL (LA)
+420617	This doesn't make sense 	1 	-2  	NEUTRAL (LA)
+2071525	We can add an ```else``` here to destroy the session safely if we get a request after the window has close. Note that calling ```sess_destroy``` rather than ```session_destroy()``` will cause any cookie with a valid session id to go away, which means dropp 	-2 	-4  	DEPRESSED
+98382	Another point is usability. Imagine having two different Bundle.php files open at the same time in your editor (don't forget that applications will potentially have dozens of custom Bundles!). It's very easy to edit the wrong Bundle.php if you are not extr 	5 	-4  	RELAXED
+5428851	It's what they call a run-on sentence. Think of it as a violation of the SRP in writing :wink: 	1 	-3  	NEUTRAL (LA)
+47824	Should be, but as i said already, i'm trying to stick to the already defined phar support lines in DIC: https://github.com/symfony/DependencyInjection/blob/master/Loader/XmlFileLoader.php#L329 	-2 	-3  	DEPRESSED
+2288807	In principle LGTM but a regression test would be good, I'm not able to trigger a memory leak with getPeerCertificate(). 	1 	-3  	NEUTRAL (LA)
+5902517	This feels wrong, `JSONSerializer = BaseJSONSerializer` should work too (I know we could just import JSONSerializer from signing and use as is, but that feels wrong) 	1 	-2  	NEUTRAL (LA)
+1083825	This is called upon creation of the AES*CounterInetRNG classes only 	1 	1  	NEUTRAL
+916462	What if we figure out if a default is provided? We can control the default typeclass, so let's give it a real class name and throw an isInstanceOf before mangling? Either that or we can wrap the typeclass on the way *in* to the hash map if it's an ins 	1 	-3  	NEUTRAL (LA)
+1425995	Interesting - looks like the ldap component doesn't follow the way zf2 handles exceptions 	3 	-3  	RELAXED
+6077178	FYI, there's [hash_pbkdf2](http://php.net/manual/en/function.hash-pbkdf2.php) on php >= 5.5. 	1 	1  	NEUTRAL
+415676	all interfaces must be resolved recursively as well, so that doesn't work. My first approach was to try to get collectFirst working but I didn't find a good way, and it is really only some extra HashMap lookups that are performed (initially). I would be 	4 	-4  	RELAXED
+3785722	Relying on reflection to get the definition looks like a hack 	1 	-3  	NEUTRAL (LA)
+1895508	It passes. But instead, I included a test that is divorved from the standard library (ie, it doesn't depend on the signature of `Option#getOrElse`). It was more convenient to test for an error due to failure to eliminate a tail call than to check for s 	1 	-4  	NEUTRAL (LA)
+43884	That's the bridge I was talking about. The bridge is injected in the Session instead of the service specified in storage_id. The storage_id service is injected into the bridge. The bridge just acts as a shell as it will delegate all calls to the injected  	1 	-3  	NEUTRAL (LA)
+2425710	And in all fairness, I'd also leave `origin_remote` and `local_path` in the function signature. They are not optional, and they are not going to change. So why not leave them there? 	1 	-3  	NEUTRAL (LA)
+2537229	No, it's even lower layer. This is the payload of UDP packets, or length encoded TCP frames. No upper layer protocol message can be contained in a 0 byte frame, so this is safe. 	1 	-4  	NEUTRAL (LA)
+4121887	wait, forget this one... 	1 	-3  	NEUTRAL (LA)
+1796153	"it would look nicer if we add a cancel button. That would require not requiring email, password and username. we could """"flash"""" the notifications. Now the user just sees an """"X"""" and not why it's wrong. That could be changed while at it. Adding a confirmatio" 	1 	-3  	NEUTRAL (LA)
+5902408	"I'd move the `separators=(',', ':')` into `__init__` of `MessageEncoder`, so we always get """"efficient"""" (having '__json_message' as key doesn't look to efficient" 	1 	-2  	NEUTRAL (LA)
+2149297	in any case I would not trust precedence and add parenthesis... Hope it's coding standard too 	4 	-3  	RELAXED
+1412959	yes, that contains strictly more information. I'd like to use FiniteDuration more in method signatures which expect finite durations ‚Ä¶ 	-2 	-4  	DEPRESSED
+5613485	HMAC 	1 	1  	NEUTRAL
+4971176	For some reason, ``grunt build`` fails if this file is not present. We should include a version (without credentials) in master. 	1 	-3  	NEUTRAL (LA)
+1259053	Not being bound by the collections, I'd rather this had the signature final def contains[A1 >: A](elem: A): Boolean The difference is invisible at the user level but significant internally. With an Any parameter it won't infer anything 	-2 	-5  	DEPRESSED
+4232780	Yeah, it's totally legal to end up in the null case. The question though is if we should change the signature to be a Function and then check if it's partial and then applyOrElse and just straight apply if it isn't. (this would also be a non-issue with t 	1 	-3  	EXCITED
+1663939	Yes! I'll do that. On Fri, Sep 21, 2012 at 12:57 PM, Kevin Sawicki <notifications@github.com>wrote: > In app/src/main/java/com/github/mobile/AuthorizationClient.java: > > > @@ -0,0 +1,68 @@ > > +/* > > This class can be removed now right? > > 	-3 	5  	STRESSED
+6481670	you should not change the signature of the protected method as this is a BC break. Do the call to ``$request->getRequestFormat()`` in the calling method 	1 	-3  	NEUTRAL (LA)
+4183330	Surely byte should be typdef'd rather than hash-define'd? (even better replace it with uint8_t). 	1 	-3  	NEUTRAL (LA)
+6485952	It is only a security risk when used with TLS/SSL, so maybe this could be: Note that GZipMiddleware is considered a security risk on sites that use HTTPS 	1 	-4  	NEUTRAL (LA)
+2509873	why not new hash syntax? 	1 	1  	NEUTRAL
+478552	is it needed here ? This is an object so it should always be assigned by reference, no ? 	1 	-3  	NEUTRAL (LA)
+169039	Don't forget: V8 is smarter than us all :P 	2 	2  	RELAXED
+2471529	When using the `useUploadName` option, should we be doing any sanitizing of the $_FILES['name'] value which will be used as the target filename? The `basename()` should help, and I hesitate to change the filename too much if the user is expecting all  	1 	-4  	NEUTRAL (LA)
+6530132	Why 80 bytes? That's significantly larger than a hash, yet still too small for a announce-commit sacrifice. 	1 	-2  	NEUTRAL (LA)
+1230345	I've implemented your suggestions. Removing the noise caused by wrapping the sets in Option[...] and not passing around the decoder in the Defragging class cleaned up the code a lot. The changes actually reduced the amount of cases by 1, but I think it d 	1 	3  	NEUTRAL (HA)
+1678712	I prefer ``` options.is_a? Hash ``` over ``` Hash === options ``` would also maybe change `options[:method] => options[:method].blank?` to protect against anyone using an empty string 	1 	-4  	NEUTRAL (LA)
+3146242	"How about the following method? The 2nd parameter is driven from storm_conf. We add it here to make plugin development easier, and ensure all plugins use """"java.security.auth.login.config"""" in storm configuration. /** * Invoked once immediate" 	1 	5  	NEUTRAL (HA)
+2955317	The my question is. why do we queue stuff in decoder? It shouldn't if at all possible. If we must, it would make much more sense that the Decode() function return the VC_DROPPED flag even if it currently return a valid picture. (return values of decod 	1 	-3  	NEUTRAL (LA)
+2814187	"It looks like your code will convert this JSON: {""""person"""":[null]} to this Ruby hash: {""""person"""": nil} Is that right?" 	-2 	-4  	DEPRESSED
+5567990	We don't need a setter method for a public property, that's the point of it being public, so you can just do this: $this->security->sanitize_filename_str = array('whatever', 'you', 'wish') 	1 	-3  	NEUTRAL (LA)
+3881986	This seems like a lot of obfuscation to avoid declaring a val or calling asType twice, neither of which will hurt that badly. In fact, is there something taking place in lines 365-375 which is not captured by this line: ``` TypeConKind(tpe.typeParams ma 	-2 	-3  	DEPRESSED
+3706059	@stof I updated the code (haven't pushed yet), but wanna some feedback from you. Here it is the method: ```php protected function createSubRequest($uri, Request $request) { $cookies = $request->cookies->all() 	1 	-3  	NEUTRAL (LA)
+3612307	@steveklabnik Interesting enough that the convention of an indent after private has been violated so many times in the Rails code base itself. Thanks a ton for pointing it. Will fix all the places ASAP. 	3 	-4  	RELAXED
+629374	got it~ thanks! On Sat, Mar 31, 2012 at 2:07 AM, Jack Nagel <reply@reply.github.com> wrote: >> +class Mpfi < Formula >> + ¬†homepage 'http://perso.ens-lyon.fr/nathalie.revol/software.html' >> + ¬†url 'https://gforge.inria.fr/frs/download.php/30130/m 	-2 	5  	STRESSED
+1108640	Why not a one-liner? ```javascript this._decoder = encoding ? new StringDecoder(encoding) : null 	1 	-3  	NEUTRAL (LA)
+1493543	There should be a space before and after `else`. Please follow Cake's [coding standards](https://github.com/cakephp/cakephp-codesniffer). 	1 	-3  	NEUTRAL (LA)
+4662430	The 80 character limit is sacrosanct. Horrible things will be inflicted on those who violate it. 	-2 	4  	STRESSED
+5308786	It looks to me like any cookies set on the original response won't make it to the session. Am I wrong? 	4 	-3  	RELAXED
+4183083	problem is that /xbmc/linux/PlatformDefs.h defines 'byte unsigned cha' at 158, RPI's /usr/include/linux/i2c.h uses 'byte' as param name at line 26. reordering includes fixes compilation, as long as param is included (somehow ) before define. 	1 	-3  	NEUTRAL (LA)
+5696694	I just meant the gettext hackery 	1 	1  	NEUTRAL
+3418607	"Hide comment button in the mobile view when not signed in""""? :)" 	2 	-3  	RELAXED
+841162	Eek. Good call - they shouldn't be able to. What's the best way to authenticate such a request? Feel free to point me at a FAQ if there is one that's applicable. 	4 	-3  	STRESSED
+335730	can confirm last comment, plz fix 	1 	-4  	NEUTRAL (LA)
+1828270	ahh ok. So the solution would be that GetTotalTime() should return 0 when playing a recording? 	1 	-3  	RELAXED
+3156940	Why not python-requests.org? It's the same thing just with a registered domain. 	1 	-3  	NEUTRAL (LA)
+1131513	![fuck yeah](http://troll.me/images/success-baby/fuck-yeah.jpg) 	-2 	-2  	DEPRESSED
+31292	Great job! 	5 	5  	EXCITED
+166749	Sign me on this. Maybe the bigger issue is to sensibilize jQuery devs about not shaking the internals of the lib every chance they get 	1 	-3  	NEUTRAL (LA)
+3835720	because it is immediately clear from the folder name what it is - repo + what type or regular folder. now realized i'm feeling this need, because i configured folders_path to be ~/Documents/, so the SS repos are mixed with other stuff. 	1 	5  	NEUTRAL (HA)
+91706	@wycats ok, that's good to know. If you're not going to support 1.9.1, then +1 to making that as obvious as possible. Knowing that, I would override a few less methods in Multibyte::Chars - I overrode `center` and a few others for compatiblity with 1.9.1. 	4 	-3  	RELAXED
+460827	Now that we're messing with this, I was thinking that maybe this makes more sense: Instead of having `/src/extras/cameras/FirstPersonCamera.js` we could have `/src/extras/controls/FirstPersonControls.js` ````javascript var camera = new THREE.Camera( 	1 	-3  	NEUTRAL (LA)
+3503953	The e6f10b07d44f0ddde26246b4a41527a84eede81c claims to fix this. Is this work-around still needed? 	1 	-2  	NEUTRAL (LA)
+1196011	wouldn't it be better to change `@by = $1` to `@by = markup`? Since now there isn't a default else case. 	1 	-2  	NEUTRAL (LA)
+290751	"..then 'selected=""""selected""""' for xhtml validation and missing the option close tag" 	1 	-3  	NEUTRAL (LA)
+2326320	wow you are always fixing other ppl's mess 	-3 	3  	EXCITED
+207034	I'm using nginx + php-cgi 	1 	1  	NEUTRAL
+338679	creature and npc_vendor still gives duplicate entries.. game_event_creature still isn't fixed.. eventEntry, guid. not guid, event. <= unless i missed an update that changed it. (Using 335.11.39 with all updates in SQL from git source) 	1 	-2  	NEUTRAL (LA)
+3567186	Sounds find, we don't really want `v` prefixes. 	1 	-2  	NEUTRAL (LA)
+957456	Here, `$options` has no options of the leaf type. So we cannot override option's values in the custom types. 	1 	-4  	NEUTRAL (LA)
+1703107	"You need to change the name of current """"the_barrens.cpp"""" into """"northern_barrens.cpp"""" implement additional file for """"southern_barrens.cpp"""" as the placeholder." 	1 	-3  	NEUTRAL (LA)
+967653	issue with coreutils? check passes, then dies on install with complaint from `/usr/local/bin/ginstall` ``` Starting iteration 9 Starting iteration 10 The test appears to have succeeded. PASS: test_cpp =================== All 10 tests passed == 	-3 	-3  	DEPRESSED
+163854	Albeit the rest of dependencies are clear, this one is not in my view. I think it would be good to add a comment # Needed because Active Resource does such and such stuff. or whatever.  	1 	-4  	NEUTRAL (LA)
+2281533	@bergerkiller I wouldn't use an utility program but I know people who would do that without a doubt. I would re-compile my plugins. this is nothing but a more work and time spent instead of enjoying the game and / or my life. using a cuscom classloader is 	1 	-3  	NEUTRAL (LA)
+9618	common-2.mpq exists only in 3.0.x clients. 	1 	1  	NEUTRAL
+1613379	This link point to a 404, not the docs : https://docs.djangoproject.com/en/dev/topics/python3/six/ 	-2 	-3  	DEPRESSED
+472308	> Ok, I don't know much about the new clustering, and that's why I was > asking. > I thought a ActorRef could be used transparently, even when the actor was > moving around in the cluster. > Alright, that does not exist to my knowledge :-) 	2 	-3  	RELAXED
+1032374	Actually thanks to Shauren and Subv. 	3 	-2  	RELAXED
+784770	1. in 32-bit compiles coordinat's value must be double for true check == 0.0f (on float we have random error in 6-7 digit after zero, condition impossible). more correct check fabs(->x) < 0.0001 for example. only on 64bit with SSE commit works good. 2. af 	4 	-4  	RELAXED
+2905462	No, it doesn't maintain the reference and that's the whole point - we'll be modifying `$value` later and we don't want the input array to be modified. 	1 	-3  	NEUTRAL (LA)
+1922070	Fixed @ 9e34127dad0b84b271c5cf8ccef03c86fb962740 	1 	-3  	NEUTRAL (LA)
+933170	There is a mistake, see on https://github.com/TrinityCore/TrinityCore/commit/9d185c5d6657c74b24041356916d095ddb6f0d73#commitcomment-933161 	-2 	-2  	DEPRESSED
+1538383	Got it. Works like a charm.  	4 	-2  	RELAXED
+10564	This is an awesome blossom. 	4 	3  	EXCITED
+953253	Recently there were quite some changes which have not made their way to the wiki yet. Someone should update it...  	1 	-3  	NEUTRAL (LA)
+3425484	He/she must have accidentally re-indented the whole document. 	1 	-4  	NEUTRAL (LA)
+1381983	Note: boss_deathbringer_saurfang changes don't do anything, just simplified it. 	1 	-3  	NEUTRAL (LA)
+3677908	why? 	1 	1  	NEUTRAL
+2354786	#ERROR! 	1 	1  	NEUTRAL
+1168892	Yup, it is a mistake. 	-2 	1  	NEG VALENCE
+1041092	I don't think asking for money was a good idea, but I definitely don't see an issue with what he's done. If nobody listens, make them listen. Heck he might have stopped something very bad from happening down the road. 	-4 	3  	STRESSED
+3042879	~~Via the docs here it looks like IE 10's behavior is by the spec:~~ http://dom.spec.whatwg.org/#node Wouldn't it be possible to simply do `elem[elem.nodeType === 1? 'parentElement': 'parentNode']` ? 	-2 	-2  	DEPRESSED
+300807	thanks so much!! :D 	4 	5  	EXCITED
+1450807	I know you invited me to shrink this pull, but the `setTimeout` just didn't feel right. My changes (f6c7ed555fd58d3a381689f2b9b2b4b25bb05981) actually add 3 bytes gzipped, and I have declined to push them directly so you can review the relevant work on thi 	1 	-3  	NEUTRAL (LA)
+800173	Thanks. I've googled it but it is nice to see the actual command. Git is quite a monster :) 	3 	3  	EXCITED
+226201	Was just messing a bit with the parameters... try this 	1 	-2  	NEUTRAL (LA)
+1169089	The alternative ofcourse is to fixup the buildsystem to split swscale and libav*, which wouldn't be a terrible idea as there are several places currently where the removal of ffmpeg would mean the removal of unrelated features (screenshots, as an example). 	-2 	3  	STRESSED
+154594	Add this method to InstallerDAO interface? 	1 	-3  	NEUTRAL (LA)
+2531903	Looks like this is causing fails for cases where the container has height==0 but does have width: http://jsfiddle.net/dmethvin/FZvav/  	-2 	-2  	DEPRESSED
+516648	not working Flags on Arathi Basin....  	1 	-3  	NEUTRAL (LA)
+32494	Just for add: code itself not expected any functionality changes: this mostly just move code from onw class to another 	1 	-3  	NEUTRAL (LA)
+452262	alloc deleted freelist allocation chaining 	1 	1  	NEUTRAL
+3860440	Move the resize code to an updateScreen function 	1 	-3  	NEUTRAL (LA)
+5584455	This actually happened. I used my own project's test suite to thoroughly exercise my patch and uncovered a few bugs with my initial implementation. Now that I think of it, I should have written a test case for the compiler every time I encountered buggy b 	1 	-3  	NEUTRAL (LA)
+861743	Provide a comment showing what the output is? 	1 	-2  	NEUTRAL (LA)
+157850	"Ok added a new commit, changing it. (""""move into a separate test""""), didn't know for sure if editing a commit after a pull request is such a good idea." 	4 	-3  	RELAXED
+4049668	Revert formatting 	1 	-2  	NEUTRAL (LA)
+316220	Perhaps using the logging instead of stdout? 	1 	-2  	NEUTRAL (LA)
+6155904	"I'd move this under the previous heading """"QuerySets" 	1 	-2  	NEUTRAL (LA)
+777474	Ah nevermind, setting :min zeroes :sec. 	1 	-3  	NEUTRAL (LA)
+5793448	Same as above, also please use brackets 	1 	-2  	NEUTRAL (LA)
+176460	Coolio, does it work with the latest master? 	1 	-2  	NEUTRAL (LA)
+2502144	you should add ``= array()`` so that it is an array, not ``null`` 	1 	-2  	NEUTRAL (LA)
+1560538	private[this]? 	1 	1  	NEUTRAL
+737444	This is a fair point Patrik, I had originally written the match in systemInvoke to use the new isFatal method, but abandoned that when Roland suggested the cleaner extractor match. I'll revert my change. (Although it's faster 	1 	-3  	NEUTRAL (LA)
+1626836	I will do that change to LeaderChanged. It will be harder to keep track of, but more useful. https://www.assembla.com/spaces/akka/tickets/2518 	-2 	-4  	DEPRESSED
+67102	I see. Thanks. 	3 	-2  	RELAXED
+5783214	Why is this blocking? 	1 	1  	NEUTRAL
+1614039	Great! I noticed that ticket shortly after I commented :) 	5 	5  	EXCITED
+5627188	This method should not throw any exceptions but notify the future about failures 	1 	-3  	NEUTRAL (LA)
+3832483	why not send the `Ack` directly to the grand-parent? 	3 	-2  	RELAXED
+1560856	Why isn't this just timeLeft < Duration.Zero, which is the specification? Writing it this way introduces some potential for bugs, now or in the future. The only difference I see is a few object allocations less. Are there platforms where `nanoTime` is fa 	1 	-3  	NEUTRAL (LA)
+1781911	What is the purpose of this object? 	1 	-2  	NEUTRAL (LA)
+1427461	I can remove these 	1 	-3  	NEUTRAL (LA)
+394842	Fixed. 	1 	-3  	NEUTRAL (LA)
+5499917	if you `depends_on :python`, you should remove the quotes around `python`, so `system python, 'scripts/mk_make.py`. Make sure this installs the python bindings (if any) into the Cellar, too. There is a wiki Entry about https://github.com/mxcl/homebrew 	-2 	-3  	DEPRESSED
+3404811	Spelling error: `quiet` should be `quite`. 	1 	-4  	NEUTRAL (LA)
+6033451	once space between sentences, please. 	1 	-2  	NEUTRAL (LA)
+6647053	This is useless, there is already: `InvalidOptionsException`. 	-2 	1  	NEG VALENCE
+6365717	Please repush as `depends_on :libpng`. The symbol form does additional checks and does not instal libpng if a system version is available to link against. Thanks. 	3 	-4  	RELAXED
+6307484	What IDE do you guys use? Mine has spelling correction so I never run into these mistakes! 	2 	5  	EXCITED
+4605359	formatting .) 	1 	1  	NEUTRAL
+332642	There are both: - Exception is an alias of \Zend\Cache\Exception - BaseException is an alias of \Exception And I'm catching Zend\Cache\Exception there. Only on working with GlobIterator I'm catching \Exception 	1 	-2  	NEUTRAL (LA)
+1142998	All other strings are using __d, why not this one? 	1 	-4  	NEUTRAL (LA)
+1330566	this shouldn‚Äôt be necessary 	1 	-4  	NEUTRAL (LA)
+3466031	Remove all usages of the `m_` suffix and add `this.` to all member accesses in the type 	1 	-3  	NEUTRAL (LA)
+802833	These lines should be removed. 	1 	-3  	NEUTRAL (LA)
+108407	sure, new commit added to this pull request. 	1 	-3  	NEUTRAL (LA)
+2711879	Rename to AbstractUdtTest ? 	1 	1  	NEUTRAL
+1806069	INOUT - TYPO? 	1 	1  	NEUTRAL
+1836177	no need to use ``else`` here as the ``if`` returns 	1 	-2  	NEUTRAL (LA)
+6085438	This was `.dealiasWiden`. I need to poke things a bit to see if that change makes sense. In my poking, I've found a regression. It's not related to this line though (I tried reverting and it still failes) ``` object Test { val a: Option[Int] = 	1 	-3  	NEUTRAL (LA)
+959526	Proto? 	1 	1  	NEUTRAL
+218643	What about vendor-specific JSON content types? e.g. `application/vnd.acme+json` 	1 	-4  	NEUTRAL (LA)
+991416	Hm, i have that in many place. If you really care, i can change them all - it's all testing code, though. 	1 	-3  	NEUTRAL (LA)
+2101404	Extra blank line. 	1 	-4  	NEUTRAL (LA)
+362724	Thanks for pointing it out. Again, lets address all the comments in separate ticket. Btw. what's the Typesafe's policy on Copyright section and @author tags? Personally I'd save myself adding this stuff to every file. 	3 	-3  	RELAXED
+839466	That's true, i changed with typehinting. 	1 	1  	NEUTRAL
+5842250	`$this->transport` is not the same as `$transport`. `$transport` is the transport used by the mailer and `$this->transport` is the transport of the handler. 	1 	-2  	NEUTRAL (LA)
+470523	Why protected? 	1 	-2  	NEUTRAL (LA)
+4791539	"In the spirit of uniformity this should return a """"profile"""" object containing the profile's name as """"label"""" and optionally """"lockmode"""" and """"thumbnail"""" if requested by the user." 	3 	-3  	RELAXED
+3686393	I don't get it. The version is bumped on `Put` and `Remove`. It would only be a problem if the sustained modification rate is > 1000/s. I don't understand why the gossipInterval would affect this. The idea is that removed entries are first set to `None 	1 	-3  	NEUTRAL (LA)
+3967227	@fabpot Please suggest how can I enable listener that located in this file excluding loading all the file? Add `debug_prod.xml`? 	1 	-3  	NEUTRAL (LA)
+1110583	Can you please change the method signature to ReadVdrMarks? Are these .vdr files related to the VDR PVR plugin?  	1 	-3  	NEUTRAL (LA)
+3192571	"OK, so Jenkins is not having the latest pgp-plugin. So what is the """"official"""" version to use?" 	1 	-3  	NEUTRAL (LA)
+1074669	It kills exploits. 	1 	1  	NEUTRAL
+99700	"@jamespadolsey oh, duh! I'll just go over to the corner and hang my head for awhile for forgetting about that. I suppose it may be still worth adding a method to do the comparison, as a convenience and """"nudge in the hey use this direction"""" for plugin a" 	2 	5  	DEPRESSED
+263714	it is, but i had no source to write my script on (sniffs) 	1 	-2  	NEUTRAL (LA)
+1676229	This commit seems to break compatibility with API 11-. onActionMode* appeared on API 11 only. When running on Donut, I have an exception : ``` W/dalvikvm(242): VFY: unable to find class referenced in signature (Landroid/view/ActionMode 	1 	-3  	NEUTRAL (LA)
+1197396	Why does the remember-me cookie default to `httponly` but not the session cookie? 	1 	2  	NEUTRAL (HA)
+1041166	@klondike Of course Github has the *right* to ban @homakov, claiming otherwise would be absurd. Banning white-hat hackers sends the message that you're more concerned with saving face than actually fixing things and a company whose entire userbase is made 	1 	-4  	NEUTRAL (LA)
+15492	"Hi, I stumped on the """"html_fallback"""" paramter introduced in find_template(). Boolean parameter are not very readable and API change not always possible (e.g. using hash as parameter). Solution: Kinda named boolean parameter using :name.true or :name.f" 	1 	-3  	NEUTRAL (LA)
+625415	i don't know ruby, what does this syntax error mean ? Library/Formula/chkrootkit.rb:32: syntax error, unexpected $end, expecting kEND  	1 	-2  	NEUTRAL (LA)
+1272508	restructuredText supports has a native way of incorporating a caption. http://docutils.sourceforge.net/docs/ref/rst/directives.html#figure. Using alt is not robust to different output formats.  	1 	-4  	NEUTRAL (LA)
+1551175	Isn't Rails supporting Ruby 1.8 Hash syntax anymore? 	1 	-2  	NEUTRAL (LA)
+8973	"So it wasn't first changed in this commit, but: on line 32 of the new version, observers are assigned as """"config.active_record.observers = :cacher, :garbage_collector, :forum_observer"""". Is that missing square brackets?" 	1 	-3  	NEUTRAL (LA)
+1367620	![cookie](http://creativestudios.com/csdevblogpictures/uploaded_images/cookie_cat-786090.jpg) 	-2 	-2  	DEPRESSED
+418513	Because of spellmods system, this needs some major changes or immediate hack 	1 	5  	NEUTRAL (HA)
+241974	Any way to report as spam on comments like these? 	4 	-3  	RELAXED
+3931375	i am noob but what i am supposed to do so it works? git revert \<hash> does no difference 	1 	-3  	NEUTRAL (LA)
+2635160	Reason for this hack is the same as the one for ICC teleport spells, which is documented here https://github.com/TrinityCore/TrinityCore/blob/master/src/server/game/Spells/SpellMgr.cpp#L3399 	-2 	-3  	DEPRESSED
+78175	After meddling with this for a while, it doesn't seem like it will work: the URI builder URI-encodes the parameters, which includes the access_token. Since the access_token contains special characters (e.g. '|', '%') this breaks the requests. It doesn't  	1 	-3  	NEUTRAL (LA)
+1606042	@asm89 I'm having some troubles understanding how this should behave for a firewall with multiple authentication listeners. If more than one listener extends AbstractFactory, you'll have multiple calls to createAuthenticationFailureHandler and createAut 	1 	3  	NEUTRAL (HA)
+734968	No 	1 	1  	NEUTRAL
+1470898	this triggers a failure for me: ERROR: test_changelist_unquote (cms.tests.admin.AdminTestCase) This test checks for proper jstree cookie unquoting. ---------------------------------------------------------------------- Traceback (most rece 	1 	-3  	NEUTRAL (LA)
+1750061	Obviously, I'm sitting on both sides of the fence, here. I'm pretty much resigned to seeing this stay in core (though I'd prefer it remain a gem), but as such, I'd sure like to see something (#7422) that would allow for slightly improved separation of conc 	4 	-3  	RELAXED
+2387331	At least you're good at obfuscating commit changes. 	4 	-2  	RELAXED
+145388	After seating warlock with demon on multiseat mount, on mount appeared aura from 32233. Source - sniff. May be this off bug, but it is real... 	1 	-4  	NEUTRAL (LA)
+3651032	"I did Naxxramas few weeks ago, it was an orb. I also tried it the """"old"""" way by cleaning all wings, and the areatrigger wasn't teleporting me. PS: Those sniffs are from 4.3.4" 	1 	-3  	NEUTRAL (LA)
+2442089	Awesome :) n8i Sent from my iPhone On 16.01.2013, at 01:49, Trustin Lee <notifications@github.com> wrote: > Yes. Let me take care of it today. > > ‚Äî > Reply to this email directly or view it on GitHub. >  	-2 	4  	STRESSED
+880127	Will this throw the non-ssl pods offline? 	1 	-3  	NEUTRAL (LA)
+1812313	You commented out the checksum rather than updating it. 	1 	1  	NEUTRAL
+2387900	as i already commented on that PR, only necessary and minor changes until frodo. this one was necessary because channel IDs weren't assigned to epg tables properly, leading to errors when scheduling recordings. 	1 	-3  	NEUTRAL (LA)
+110072	It's a hack I think... 	1 	2  	NEUTRAL (HA)
+420914	"This can be done as: man1.install file => file.sub(/\.man/, """".1"""") Passing a hash to install does a rename. Also I think you need to escape the """"."""" for correctness, since it means """"match any character"""" in a regex." 	1 	-4  	NEUTRAL (LA)
+2365477	The execution time still depends on the length of the password, doesn't it? 	1 	-3  	NEUTRAL (LA)
+257393	The only rogue trainer that teaches dual spec as far as I know for alliance is Ironforge at the moment 	1 	-2  	NEUTRAL (LA)
+71166	approximately from here there are periodic crush in (data various): #0 ObjectMgr::DeleteRespawnTimeForInstance (this=0x865e8e8, instance=42) at /usr/include/c++/4.3/tr1_impl/hashtable_policy.h:240 #1 0x0824e0b8 in InstanceMap::UnloadAll (this=0x1e 	-2 	-3  	EXCITED
+4209055	This masks the original exception backtrace and outputs the true error on stderr instead of in the exception message. Instead, this should rescue the gem activation error and raise a `BcryptMissing` error with this message. Better yeah, get rid of the r 	3 	-2  	EXCITED
+1826880	You mean the tools were written for a future version of the API? That's weird. Also, why do you expect that SHA1 if everytime I download the zip its checksum is fcb6f651275b88f6225ed94f51568936ccba9e6d? I couldn't ever install these tools without manually 	4 	-3  	RELAXED
+1046072	depends lines go after md5, before patches 	1 	1  	NEUTRAL
+907620	As it stands, you're assigning `bytes = str = unicode`. What you want is `bytes = str 	1 	1  	NEUTRAL
+10063	@wycats yes, under the hood the metal is middleware. we inject it into the middleware stack and thats how it intercepts the request. The focus is on the endpoint implementation. Metal bits should be application endpoints, not filters. 	-2 	-3  	DEPRESSED
+379134	I've some STI models that override new to return a subclass based upon a key in the attributes hash - any chance we can pass the attributes to build_association or is that going to run into problems with attribute protection? 	1 	-3  	NEUTRAL (LA)
+131567	"didn't the conditions hash go away with AR 3.0? should that be """":where => {:name => 'defaulty' }" 	1 	-4  	NEUTRAL (LA)
+1343484	"we had exception for dmg spell an now for triggered spell in these functions, thats clean code? for dbc """"hack"""" we have one function to override dbc values, it is separate, open the function an you see instantly what spells are modified, try find exceptions" 	1 	-3  	NEUTRAL (LA)
+2962998	`System.currentTimeMillis()` seems to be there from long time though https://github.com/netty/netty/blob/85e16840841bf036c0ce1b094e5d33aa47731f90/common/src/main/java/io/netty/util/HashedWheelTimer.java#L407 	-2 	-3  	DEPRESSED
+1757520	@rsa Do not worry at all :) Though I didn't enjoy all of your comments you did usually comment about content which I respected and often considered important feedback. Me not continuouing here has nothing to do with you nor your actions at all.  	4 	-3  	RELAXED
+3867987	Why is the Sanitize class deprecated? Is there anything else that replaces it? 	1 	-2  	NEUTRAL (LA)
+12294	"@josh http://rack.rubyforge.org/doc/files/SPEC.html """"A Rack application is an Ruby object (not a class) that responds to call" 	-2 	-3  	DEPRESSED
+1474993	wouldn't a HashSet make more sense here (and be faster, especially for a small number of trees)? 	1 	-3  	NEUTRAL (LA)
+576751	pblock->nTime may have been unchanged (GetAdjustedTime() didn't increase yet at the time of the call), while IncrementExtraNonce does reset the extra nonce if it sees an increased time. Nonetheless, somehow this code is not in the resulting pull request 	1 	-3  	NEUTRAL (LA)
+218511	"Well, their specific hack doesn't work because of `extern`, but in the same spirit you can try another hack: ``` #define NODE_MODULE(modname, regfunc) \ extern """"C"""" { " 	3 	-3  	RELAXED
+1316032	I have no problem with making this protected. I just used the same access as updated0 and removed0. What's the reason for HashSetCollision1 being private[immutable] and HashSet1 and HashTrieSet being public anyway? On Mon, Aug 6, 2012 at 11:23 PM 	1 	-3  	NEUTRAL (LA)
+3664819	"Why does injecting a script _require_ the ajax module? As for """"_"""": it's a bogus inference that means nothing. jQuery UI uses it, jQuery uses it... but all it means is that we can close tickets as """"Won't Fix"""", because it's not for user code to mess w" 	-3 	-3  	DEPRESSED
+1639320	Could be encoded with Option[Either[LeaderChanged, LeaderChanged]] and remove a var (since I assume they can't be both Some at the same time?) 	1 	-3  	NEUTRAL (LA)
+1423872	If they set the Xcode SDK to 10.6 compile they get the legacy player, it was designed as a transparent way to switch to the new version going forward but 'm happy to do it with OF_ENABLE_LEGACY_QUICKTIME - except that if you are compiling against 10.7 or 	-2 	-4  	DEPRESSED
+456211	FreeBSD can't distribute strong encryption code internationally (out of the US). I wonder if this is tied to that issue: http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/crypt.html Or another more likely issue is that OpenSSL makes it clear in th 	-2 	-3  	DEPRESSED
+657164	"case valid @ (""""whitelist"""" | """"blacklist"""") => valid case invalid => throw new IllegalArgumentException(""""akka.remote.nat-firewall is set to """"+invalid+"""" and not to 'whitelist' or 'blacklist'"""")" 	1 	-3  	NEUTRAL (LA)
+783868	false actually has a special meaning internally, and should not be removed from the signature. 	1 	-3  	NEUTRAL (LA)
+656858	Ouch, undocumented behavior that an empty whitelist makes ALL unknown addresses whitelisted, surprising behavior. 	1 	5  	DEPRESSED
+2092647	Yeah I saw the commit, no worries, thanks! On Sun, Nov 11, 2012 at 12:14 PM, Nikita Afanasenko < notifications@github.com> wrote: > In activesupport/lib/active_support/core_ext/hash/conversions.rb: > > > if value['type'] == 'array' 	-4 	5  	EXCITED
+2720335	"Except that the callable type hint is only available starting in 5.4, and we support 5.3... On Jan 21, 2013 12:35 PM, """"Kathryn Reeve"""" <notifications@github.com> wrote: > In library/Zend/Authentication/Adapter/DbTable.php: > > > @@ -192,6 +205,18 @@" 	1 	-3  	NEUTRAL (LA)
+4681393	For that matter, non-anonymous objects can then also be serialized as well - since the URLs are signed we don't need to worry too much about tampering 	-3 	-3  	DEPRESSED
+44274	you mean like this?: $this->dispatcher->dispatch(SecurityEvents::FAILED_LOGIN, new FailedLoginEvent($request)) 	4 	-2  	RELAXED
+1217573	consistent naming (what is the decoder *doing*?): `DefraggingPackets` 	1 	-3  	NEUTRAL (LA)
+2015304	arent here still lots of coding standard violations? 	1 	-3  	NEUTRAL (LA)
+749133	This should be encoded in the Open state and not in the breaker itself. 	1 	-3  	NEUTRAL (LA)
+5723921	Caveat emptor: assigning a negative timeout to an uint64_t will make it wrap around to a large value, e.g. -1 becomes 0xFFFFFFFFFFFFFFFF. 	1 	-3  	NEUTRAL (LA)
+5675386	The `as_json` requirement is a little looser than you are thinking :) It's meant to produce a JSON representation of the object, which includes Ruby objects that have a clear meaning to the JSON encoder, like symbols and times. That's a natural way for a 	4 	-3  	RELAXED
+5737693	ah forget what I wrote. Now I see it in `global.rb` and utils, too. 	1 	-2  	NEUTRAL (LA)
+6428879	You should specify the capacity parameter of the Hashtable constructor to avoid resize operations while adding keys, i.e. ```new Hashtable (value.Count, StringComparer.OrdinalIgnoreCase) 	1 	-4  	NEUTRAL (LA)
+419666	Who do you handle capacity violations? (In case of bounded Deque) 	1 	-3  	NEUTRAL (LA)
+36873	I think that this should stay at DEBUG level. IMO, the only needed INFO level in the security stuff would be the message saying that the authentication succeeded or failed. Other one are debugging messages. 	1 	5  	NEUTRAL (HA)
+1282829	IMO placing the request into the router was a hack for a problem hard to solve, this can also be considered a hack, one that I would rather not have. 	-2 	-3  	DEPRESSED
+4919518	Thta's certainly true but I just came accross it and wanted to make this test methods annotation more clear before i forget it... But personally I doubt that somebody has the motivation to improve them at large... 	-3 	3  	STRESSED
+981303	I like this idea, but unfortunately you have not quite achieved functional signature parity between the two versions. If there is no `readdir_r`, maybe we should do something like: ```c GIT_INLINE(int) p_readdir_r(DIR *dirp, struct dirent *entry, struct  	-3 	-3  	DEPRESSED
+3996711	I think you can check against `settings_change` instead of the full hash of changes, wdyt? 	-2 	-4  	DEPRESSED
+878036	missing `@group Zend_Crypt` here 	1 	1  	NEUTRAL
+5566438	I wouldn't make this a use class methods. It seems most of the methods here revolve around the session object, and thus it would make sense to make AuthenticityToken be initialized with a readable attribute session as follows: ```ruby token = Authenti 	1 	-3  	NEUTRAL (LA)
+3314145	I think you'll need to treat `Double.NaN` here. Reuse `Constant#equalHashValue`. 	1 	-2  	NEUTRAL (LA)
+1290187	We remove `/download` from sourceforge URLs (`brew audit` will warn about this). 	1 	-3  	NEUTRAL (LA)
+976359	main.h has hashBestBlock. 	1 	-2  	NEUTRAL (LA)
+1856867	$secure = (bool) $config['cookie_secure'] 	1 	1  	NEUTRAL
+5540437	Please `brew audit carton` 	1 	-3  	NEUTRAL (LA)
+362566	Why not use DeathWatch to remove refs? WeakHashMaps have performance implications. 	1 	2  	NEUTRAL (HA)
+4854861	doesn't this need to be set somewhere? i.e. back to the to the geohash. Also, I think that the GeoPoint itself needs to be used as a varialbe and not the geohash, since generating the geohash will be based on the precision specified? For example, som 	1 	-4  	NEUTRAL (LA)
+6122179	Yeah maybe Am 03.09.2013 um 12:20 schrieb Trustin Lee <notifications@github.com>: > In transport/src/main/java/io/netty/channel/ChannelOutboundBuffer.java: > > > @@ -224,10 +238,44 @@ private static long total(Object msg) { > > } > > >  	1 	-3  	EXCITED
+1918949	On second thought, couldn't this just return an `int`-encoded boolean/error? There's precedence with `git_branch_is_head`. 	1 	-3  	NEUTRAL (LA)
+104635	Yeah, I prefer options hashes to be specified that way. If there is a mandatory options argument, it should be checked in the method body. By default, it should be possible to pass no options at all. 	1 	-3  	EXCITED
+2219453	Should the result of this deferred chaining map go into a new array instead of reassigning `requests`? 	1 	-2  	NEUTRAL (LA)
+463079	"Don't override `brew`. The best way to sniff for installed formula is to do `Formula.factory(""""mysql"""").installed?`, and it should be done in `install`." 	1 	-3  	NEUTRAL (LA)
+6483883	I backtracked the constructors of `HashedWheelTimer` through Netty into our code, and this was the only place (except for the TestConductor, but that one is just for testing and uses the `Executors.defaultThreadFactory` for everything anyway.) 	1 	-3  	NEUTRAL (LA)
+657173	"val NATFirewallAddresses = getStringList(""""akka.remote.nat-firewall-addresses"""").asScala.toSet" 	1 	1  	NEUTRAL
+4421204	As far as I can tell it impossible to test as previously written. `handleFatal` gets its `$error` from `get_last_error` and there is no way that I know of to inject this dependency from the outside. I added `handleFatalError` to split the code and allo 	1 	3  	NEUTRAL (HA)
+3991180	I haven't looked at this code before, but I would say that the original implementation was rife with duplication. It also used unnecessary calls on the explicit receiver (self). Maybe I'm strange, but the little method that generates the Hash in the  	-2 	-3  	DEPRESSED
+739112	Can clarify this with `Hash#fetch`: ``` seconds_to_advance = options.fetch(:seconds, 0) + 60*options.fetch(:minutes, 0) + 3600*options.fetch(:hours, 0) ``` 	1 	-4  	NEUTRAL (LA)
+1217254	It does: Endianess is Netty (and in Java generally) is handled by the underlying `ChannelBuffer`. So to do this ‚Äúproperly‚Äù you could either demand a little endian `ChannelBuffer` factory, or override the `LengthFieldBasedFrameDecoder` and wrap the incomin 	1 	-3  	NEUTRAL (LA)
+1581644	In the spirit of testing all the guarantees in the documentation, there should probably be tests for these cases: * `repository` is NULL (thought I'm not sure how this would be tested) * Asking to hash as `GIT_OBJ_ANY` should give an error. Or should it? 	3 	5  	EXCITED
+3991765	More proper would be: ```php if (self::$trustedProxies) { if (self::$trustedHeaders[self::HEADER_CLIENT_PORT] && $port = $this->headers->get(self::$trustedHeaders[self::HEADER_CLIENT_PORT])) { return $port 	1 	-3  	NEUTRAL (LA)
+1217020	style: ```scala class AuthenticationProxy( underlying: ServiceFactory[Request, Result], username: String, password: String, database: Option[String]) extends ServiceFactoryProxy(underlying) { ``` 	1 	-3  	NEUTRAL (LA)
