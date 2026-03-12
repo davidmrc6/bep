@@ -1,3 +1,4 @@
+import json
 import logging
 
 from pathlib import Path
@@ -28,6 +29,11 @@ def _dedup_candidates(
     return dedup
 
 
+def _save_json(df: pd.DataFrame, path: Path) -> None:
+    records = df.to_dict(orient="records")
+    path.write_text(json.dumps(records, indent=2, ensure_ascii=False))
+
+
 def aggregate_and_save(
     repo_records: list[dict],
     code_records: list[dict],
@@ -39,24 +45,15 @@ def aggregate_and_save(
     df_repo = _dedup_candidates(repo_records, log, "Repo")
     df_code = _dedup_candidates(code_records, log, "Code")
 
-    df_repo.to_json(
-        output_dir / "repo_search_candidates.json",
-        orient="records", indent=2, force_ascii=False,
-    )
-    df_code.to_json(
-        output_dir / "code_search_candidates.json",
-        orient="records", indent=2, force_ascii=False,
-    )
+    _save_json(df_repo, output_dir / "repo_search_candidates.json")
+    _save_json(df_code, output_dir / "code_search_candidates.json")
 
     # Combined file
     df_all = pd.concat([df_repo, df_code], ignore_index=True)
     unique_repos = df_all["repo_full_name"].nunique() if not df_all.empty else 0
     log.info("Total unique candidate repos (all sources): %d", unique_repos)
 
-    df_all.to_json(
-        output_dir / "all_candidates.json",
-        orient="records", indent=2, force_ascii=False,
-    )
+    _save_json(df_all, output_dir / "all_candidates.json")
 
     log.info("Outputs written to %s", output_dir.resolve())
     print(f"\n{'='*60}")

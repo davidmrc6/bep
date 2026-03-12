@@ -23,12 +23,12 @@ def load_meta(cache_dir: Path, key: str) -> dict | None:
 def save_meta(cache_dir: Path, key: str, meta: dict) -> None:
     d = cache_dir / key
     d.mkdir(parents=True, exist_ok=True)
-    _meta_path(cache_dir, key).write_text(json.dumps(meta, indent=2))
+    _meta_path(cache_dir, key).write_text(json.dumps(meta, indent=2, ensure_ascii=False))
 
 def save_page(cache_dir: Path, key: str, page: int, data: dict) -> None:
     d = cache_dir / key
     d.mkdir(parents=True, exist_ok=True)
-    (d / f"page_{page}.json").write_text(json.dumps(data, indent=2))
+    (d / f"page_{page}.json").write_text(json.dumps(data, indent=2, ensure_ascii=False))
 
 def load_page(cache_dir: Path, key: str, page: int) -> dict | None:
     p = cache_dir / key / f"page_{page}.json"
