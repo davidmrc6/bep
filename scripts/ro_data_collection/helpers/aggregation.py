@@ -30,7 +30,7 @@ def _dedup_candidates(
 
 
 def _save_json(df: pd.DataFrame, path: Path) -> None:
-    records = df.to_dict(orient="records")
+    records = df.where(df.notna(), None).to_dict(orient="records")
     path.write_text(json.dumps(records, indent=2, ensure_ascii=False))
 
 
