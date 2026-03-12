@@ -1,0 +1,393 @@
+funcționează
+functioneaza
+modificări
+aplicație
+aplicația
+aplicații
+rezultatele
+cerințe
+cerinte
+implementare
+funcționalitate
+functionalitate
+funcționalități
+functionalitati
+interfață
+interfata
+autentificare
+înregistrare
+inregistrare
+încărcare
+incarcare
+descărcare
+descarcare
+configurare
+configurare
+conexiune
+dependențe
+dependente
+actualizare
+îmbunătățire
+imbunatatire
+îmbunătățiri
+imbunatatiri
+remediere
+eroare
+erori
+avertizare
+documentație
+documentatie
+descriere
+setări
+setari
+căutare
+cautare
+afișare
+afisare
+ștergere
+stergere
+adăugare
+adaugare
+înlocuire
+inlocuire
+prelucrare
+trimitere
+primire
+răspuns
+raspuns
+cerere
+utilizator
+utilizatori
+parolă
+parola
+permisiuni
+rețea
+performanță
+performanta
+securitate
+compatibilitate
+depășire
+încercare
+incercare
+încercat
+incercat
+excepție
+exceptie
+închidere
+inchidere
+pornire
+oprire
+validare
+încărcător
+incarcator
+salvare
+eșuat
+esuat
+reușit
+reusit
+generare
+procesare
+conectare
+deconectare
+inițializare
+initializare
+instrucțiuni
+instructiuni
+explicație
+explicatie
+observații
+observatii
+mențiuni
+mentiuni
+recomandări
+recomandari
+exemplu
+exemple
+pași
+următorii pași
+introducere
+concluzii
+cerința
+cerințele
+soluție
+solutie
+soluții
+solutii
+problemă
+problema
+probleme
+rezolvare
+testare
+rulare
+compilare
+execuție
+instalare
+mediu
+versiune
+fișier
+fișiere
+fisier
+dependență
+bibliotecă
+biblioteci
+pachet
+pachete
+licență
+licenta
+disertație
+disertatie
+laborator
+laboratorul
+tema
+temă
+proiect
+proiectul
+facultate
+universitate
+curs
+seminar
+exercițiu
+exerciții
+exercitiu
+exercitii
+cerința
+cerinta
+punctaj
+notă
+evaluare
+demonstrație
+demonstratie
+prezentare
+capitol
+cuprins
+concluzie
+întrucât
+astfel încât
+însă
+insa
+totuși
+totusi
+așadar
+asadar
+fiindcă
+fiindca
+deoarece
+până când
+pana cand
+înainte de
+inainte de
+după ce
+dupa ce
+fără să
+fara sa
+încât
+incat
+într-un
+într-o
+intr
+pentru că
+proiect licenta
+lucrare licenta
+tema laborator
+tema de laborator
+proiect final
+proiect semestrial
+baza de date
+structuri de date
+programare orientata pe obiecte
+algoritmi si structuri de date
+retele de calculatoare
+ingineria programarii
+analiza algoritmilor
+inteligenta artificiala
+sisteme de operare
+limbaje formale
+compilatoare
+grafica pe calculator
+arhitectura sistemelor de calcul
+programare web
+dezvoltare web
+aplicatii web
+aplicatii mobile
+aplicatie desktop
+tema acasa
+cerinte proiect
+specificatii proiect
+documentatie proiect
+descriere proiect
+prezentare proiect
+raport final
+raport de laborator
+exemplu de rulare
+mod de utilizare
+instructiuni de instalare
+pasi de rulare
+rezultate obtinute
+concluzii finale
+baza de date
+interfata grafica
+interfata utilizator
+sistem de autentificare
+pagina principala
+pagina de login
+control acces
+gestionare utilizatori
+adaugare utilizator
+stergere utilizator
+modificare date
+salvare date
+incarcare fisiere
+trimitere email
+prelucrare date
+validare date
+procesare imagine
+recunoastere faciala
+aplicatie client server
+comunicare intre procese
+conexiune la server
+cod sursa
+fisiere sursa
+tratare erori
+testare automata
+configurare proiect
+build release
+mod debug
+dependinte proiect
+mediu de dezvoltare
+versiune finala
+varianta initiala
+imbunatatiri aduse
+probleme cunoscute
+limitari proiect
+scenarii de test
+cazuri de test
+cum se foloseste
+pentru a porni
+pentru a compila
+pentru a instala
+este necesar
+se foloseste
+se poate
+se afiseaza
+se salveaza
+trebuie instalat
+trebuie configurat
+acest proiect
+aceasta aplicatie
+acest program
+aceasta lucrare
+scopul proiectului
+scopul aplicatiei
+descriere generala
+functionalitati principale
+tehnologii folosite
+limbaje folosite
+exemple de utilizare
+structura proiectului
+cerinte minime
+cerinte software
+cerinte hardware
+te rog modifica
+te rog schimba
+te rog verifica
+te rog adauga
+te rog sterge
+te rog refa
+te rog corecteaza
+ai uitat sa
+ai uitat de
+nu functioneaza
+nu merge
+de ce ai
+trebuie sa
+trebuia sa
+ar trebui sa
+nu ai verificat
+nu ai tratat
+nu ai implementat
+vezi ca
+grija aici
+ai grija
+aici e o problema
+aici e gresit
+aici lipseste
+aici se strica
+se poate sparge
+mai verifica o data
+mai uita-te o data
+nu este corect
+nu e corect
+nu e bine
+nu e ok
+nu este ok
+merge prost
+se blocheaza
+se opreste
+da eroare
+crapa aici
+nu compileaza
+nu porneste
+nu se salveaza
+nu se incarca
+nu se afiseaza
+nu se actualizeaza
+poti sa
+poti verifica
+poti explica
+poti refactoriza
+poti simplifica
+cred ca trebuie
+cred ca ar trebui
+ar fi bine sa
+mai bine faci
+poate ar fi bine
+incearca sa
+incearca varianta
+nu ar fi mai bine
+vezi daca merge
+vezi daca poti
+poate lipseste
+probabil lipseste
+aici trebuie
+aici ar trebui
+aici poti
+aici nu trebuie
+aici n-are sens
+nu are sens
+nu vad rostul
+pare redundant
+e redundant
+cod duplicat
+prea complicat
+se poate simplifica
+greu de inteles
+greu de urmarit
+denumire neclara
+nume nepotrivit
+comentariu inutil
+logica gresita
+ordine gresita
+conditie gresita
+cazul acesta
+cazul asta
+lipseste cazul
+nu tratezi cazul
+apare eroare
+am gasit o problema
+am gasit un bug
+aici pica
+aici da fail
+aici intra gresit
+nu prinde exceptia
+nu trateaza eroarea
+lipseste validarea
+lipseste verificarea
+valoare gresita
+tip gresit
+parametru gresit
+returneaza gresit
+se comporta ciudat
+rezultat incorect
+afisare gresita
+comparatie gresita
+conditia nu e buna

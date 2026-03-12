@@ -27,3 +27,8 @@ ipython_config.py
 .DS_Store
 Thumbs.db
 desktop.ini
+.idea/
+
+__cache__/
+__logs__/
+__output__/
