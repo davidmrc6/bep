@@ -1,0 +1,77 @@
+funcționează
+functioneaza
+te rog modifica
+te rog schimba
+te rog verifica
+te rog adauga
+te rog sterge
+te rog refa
+modificari
+modificări
+te rog corecteaza
+ai uitat sa
+ai uitat de
+nu functioneaza
+nu merge
+nu ai verificat
+nu ai tratat
+nu ai implementat
+vezi ca
+ai grija
+aici e o problema
+aici e gresit
+aici lipseste
+aici se strica
+mai verifica o data
+nu este corect
+nu e corect
+nu e bine
+merge prost
+se blocheaza
+da eroare
+crapa aici
+nu compileaza
+nu porneste
+nu se salveaza
+nu se incarca
+nu se afiseaza
+poti verifica
+poti explica
+poti refactoriza
+poti simplifica
+cred ca trebuie
+ar fi bine sa
+incearca sa
+nu ar fi mai bine
+vezi daca merge
+poate lipseste
+aici trebuie
+aici ar trebui
+nu are sens
+pare redundant
+cod duplicat
+prea complicat
+se poate simplifica
+greu de inteles
+greu de urmarit
+denumire neclara
+nume nepotrivit
+logica gresita
+ordine gresita
+conditie gresita
+lipseste cazul
+nu tratezi cazul
+am gasit o problema
+am gasit un bug
+aici pica
+nu prinde exceptia
+nu trateaza eroarea
+lipseste validarea
+lipseste verificarea
+valoare gresita
+parametru gresit
+returneaza gresit
+se comporta ciudat
+rezultat incorect
+afisare gresita
+conditia nu e buna

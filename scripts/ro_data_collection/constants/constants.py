@@ -1,6 +1,7 @@
 from pathlib import Path
 
-WORDS_PATH = Path("./__dictionaries__/keywords.txt")
+REPO_WORDS_PATH = Path("./__dictionaries__/keywords_repo.txt")
+CODE_WORDS_PATH = Path("./__dictionaries__/keywords_code.txt")
 TEST_WORDS_PATH = Path("./__dictionaries__/keywords_test.txt")
 
 CACHE_DIR = Path("./__cache__")

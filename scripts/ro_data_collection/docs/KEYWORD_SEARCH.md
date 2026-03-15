@@ -17,25 +17,25 @@ Because `helpers.session` calls `load_dotenv()`, keeping that token in a local `
 Run the full keyword list:
 
 ```bash
-python keyword_search.py
+python repo_search.py
 ```
 
 Run the small test list:
 
 ```bash
-python keyword_search.py --test
+python repo_search.py --test
 ```
 
 Use a custom keyword file or output folder:
 
 ```bash
-python keyword_search.py --words path/to/keywords.txt --output-dir path/to/output
+python repo_search.py --words path/to/keywords.txt --output-dir path/to/output
 ```
 
 If you want to slow the run down a bit more between queries:
 
 ```bash
-python keyword_search.py --delay 4
+python repo_search.py --delay 4
 ```
 
 ## Keyword file format

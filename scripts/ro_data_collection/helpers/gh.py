@@ -1,4 +1,5 @@
 import math
+import re
 import time
 
 from pathlib import Path
@@ -12,26 +13,45 @@ PER_PAGE = 100
 MAX_RESULTS = 1000
 MAX_PAGES = MAX_RESULTS // PER_PAGE
 
+
+def _wait_and_retry(resp: Response, url: str, params: dict, session: Session, log: Logger) -> Response:
+    """Handle rate limits (403/429) and server errors (5xx) with a single retry."""
+    if resp.status_code in (403, 429):
+        # Retry-After header (seconds), or fall back to x-ratelimit-reset (unix ts)
+        retry_after = resp.headers.get("Retry-After")
+        if retry_after is not None:
+            wait = int(retry_after)
+        else:
+            reset_ts = resp.headers.get("x-ratelimit-reset")
+            if reset_ts is not None:
+                wait = max(int(reset_ts) - int(time.time()), 0) + 1
+            else:
+                wait = 60
+        log.warning("%d rate limit on %s. Sleeping %ds...", resp.status_code, url, wait)
+        time.sleep(wait)
+        resp = session.get(url, params=params)
+
+    if resp.status_code in (500, 502, 503):
+        log.warning("Server error %d on %s. Retrying in 10s...", resp.status_code, url)
+        time.sleep(10)
+        resp = session.get(url, params=params)
+
+    return resp
+
+
 def _do_search_request(url: str, params: dict, session: Session, log: Logger) -> Response:
-    """Execute single search request"""
+    """Execute single search request (uses search rate limit)."""
     wait_for_rate_limit(session, log, buffer=2)
     resp = session.get(url, params=params)
-
-    # Handle secondary rate limits (HTTP 403 with Retry-After res header)
-    # If Retry-After header not present, default to 60s
-    if resp.status_code == 403:
-        retry_after = int(resp.headers.get("Retry-After", 60))
-        log.warning(f"403 Rate Limit. Sleeping {retry_after}s...")
-        time.sleep(retry_after)
-        resp = session.get(url, params = params)            # TODO: what if this also throws a 403?
-
-    # Handle server errors with single retry
-    if resp.status_code in (500, 502, 503):
-        log.warning(f"Server error {resp.status_code}. Retrying in 10 seconds...")
-        time.sleep(10)
-        resp = session.get(url, params = params)
-
+    resp = _wait_and_retry(resp, url, params, session, log)
     resp.raise_for_status()
+    return resp
+
+
+def _do_core_request(url: str, params: dict, session: Session, log: Logger) -> Response:
+    """Execute a core API request with rate limit and error handling."""
+    resp = session.get(url, params=params)
+    resp = _wait_and_retry(resp, url, params, session, log)
     return resp
 
 def search_paginated(
@@ -137,3 +157,117 @@ def search_paginated(
 
     log.info("DONE       [%s] q='%s' → %d items fetched", cache_dir.name, query, len(all_items))
     return all_items
+
+
+def fetch_repo_info(full_name: str, session: Session, log: Logger) -> dict | None:
+    """
+    Fetch full repository metadata via GET /repos/{owner}/{repo}.
+    Uses core rate limit. Returns the raw JSON dict, or None on failure.
+    """
+    url = f"https://api.github.com/repos/{full_name}"
+    resp = _do_core_request(url, {}, session, log)
+
+    if resp.status_code == 404:
+        log.warning("Repo info: %s not found (404)", full_name)
+        return None
+    if not resp.ok:
+        log.warning("Repo info: %s returned %d", full_name, resp.status_code)
+        return None
+
+    return resp.json()
+
+
+def fetch_total_pr_count(full_name: str, session: Session, log: Logger) -> int | None:
+    """
+    Fetch the total number of PRs (open + closed) for a repo.
+    Uses GET /repos/{owner}/{repo}/pulls?state=all&per_page=1 and parses the
+    Link header to extract the last page number, which equals the total count.
+    Uses core rate limit (5000/hr), not search rate limit.
+    Returns None on failure.
+    """
+    url = f"https://api.github.com/repos/{full_name}/pulls"
+    params = {"state": "all", "per_page": 1}
+    resp = _do_core_request(url, params, session, log)
+
+    if resp.status_code == 404:
+        log.warning("PR count: repo %s not found (404)", full_name)
+        return None
+    if not resp.ok:
+        log.warning("PR count: %s returned %d", full_name, resp.status_code)
+        return None
+
+    link = resp.headers.get("Link", "")
+    # Link header: <...?page=42>; rel="last"
+    match = re.search(r'[&?]page=(\d+)>;\s*rel="last"', link)
+    if match:
+        return int(match.group(1))
+
+    # No Link header means 0 or 1 PRs — check body
+    body = resp.json()
+    return len(body)
+
+
+def fetch_contributor_info(
+    full_name: str, session: Session, log: Logger,
+) -> dict:
+    """
+    Fetch contributor count and human contributor count for a repo.
+    Uses GET /repos/{owner}/{repo}/contributors?per_page=100&anon=false.
+    One API call (core rate limit). Returns:
+        {"total_contributors": int|None, "human_contributors": int|None}
+    For repos with <=100 contributors, human_contributors is exact.
+    For repos with >100, it's a lower bound (first 100 only).
+    """
+    url = f"https://api.github.com/repos/{full_name}/contributors"
+    params = {"per_page": 100, "anon": "false"}
+    resp = _do_core_request(url, params, session, log)
+
+    if resp.status_code == 404:
+        log.warning("Contributors: %s not found (404)", full_name)
+        return {"total_contributors": None, "human_contributors": None}
+    if not resp.ok:
+        log.warning("Contributors: %s returned %d", full_name, resp.status_code)
+        return {"total_contributors": None, "human_contributors": None}
+
+    # 204 No Content = empty repo, or non-JSON response
+    if resp.status_code == 204 or not resp.text.strip():
+        return {"total_contributors": 0, "human_contributors": 0}
+
+    body = resp.json()
+    if not isinstance(body, list):
+        return {"total_contributors": 0, "human_contributors": 0}
+
+    # Total count from Link header
+    link = resp.headers.get("Link", "")
+    match = re.search(r'[&?]page=(\d+)>;\s*rel="last"', link)
+    if match:
+        total = int(match.group(1)) * 100  # upper bound estimate
+        # Fetch exact count from last page would cost another call, so estimate
+        # For our filtering purposes this is fine
+    else:
+        total = len(body)
+
+    human_count = sum(1 for c in body if _is_human(c))
+
+    return {"total_contributors": total, "human_contributors": human_count}
+
+
+# Common bot account name patterns (lowercase)
+_BOT_NAME_PATTERNS = re.compile(
+    r"(^|\W)(bot|ci|automation)(\W|$)"
+    r"|dependabot|renovate|greenkeeper|snyk-bot|imgbot|codecov"
+    r"|github-actions|mergify|semantic-release|release-please"
+    r"|copilot|claude|openai|devin|cursor|coderabbit|sourcery"
+    r"|\[bot]$",
+    re.IGNORECASE,
+)
+
+
+def _is_human(contributor: dict) -> bool:
+    """Check if a contributor is likely a human (not a bot or app)."""
+    if contributor.get("type") == "Bot":
+        return False
+    login = (contributor.get("login") or "").lower()
+    if _BOT_NAME_PATTERNS.search(login):
+        return False
+    return True

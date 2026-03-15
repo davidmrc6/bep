@@ -1,10 +1,131 @@
 """
-TODO: Filtering approach
-1. for each candidate repo, filter out repos with:
-    - low number of pull requests (e.g., under 3-5) + self-merged prs, prs with no comments
-2, pull all review-related text (PR review comments, PR general comments (maybe issues if the dataset is too scarce)
-3. run every extracted comment through a language detection model (e.g. lid.176.bin) with a confidence
-   threshold of 0.7, and manually review borderline cases (between 0.5 and 0.7)
-4. take a random sample of the filtered comments and manually verify that they're actually romanian
-   and express some sort of sentiment relevant to code review
+Post-processing step: takes the raw repo_search_candidates.json from repo_search.py
+and filters/cleans it before further analysis.
+
+Steps:
+1. Merge duplicate repos (combine their matched_query fields)
+2. Remove repos with too few total PRs
+3. Remove repos that are too large (by stars or PR count) — likely big projects
+   where Romanian is incidental
+4. Remove repos with fewer than 2 human contributors
 """
+import argparse
+import json
+
+from pathlib import Path
+from constants.constants import OUTPUT_DIR
+
+DEFAULT_MIN_PRS = 5
+DEFAULT_MAX_PRS = 5000
+DEFAULT_MAX_STARS = 10000
+DEFAULT_MIN_HUMAN_CONTRIBUTORS = 2
+
+
+def load_candidates(path: Path) -> list[dict]:
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def merge_duplicates(records: list[dict]) -> list[dict]:
+    """Merge records for the same repo, combining matched_query values."""
+    by_repo: dict[str, dict] = {}
+    for r in records:
+        name = r["repo_full_name"]
+        if name not in by_repo:
+            by_repo[name] = {**r, "matched_queries": [r["matched_query"]]}
+            del by_repo[name]["matched_query"]
+        else:
+            by_repo[name]["matched_queries"].append(r["matched_query"])
+
+    # Deduplicate query lists
+    for entry in by_repo.values():
+        entry["matched_queries"] = sorted(set(entry["matched_queries"]))
+
+    return list(by_repo.values())
+
+
+def filter_candidates(
+    records: list[dict],
+    min_prs: int,
+    max_prs: int,
+    max_stars: int,
+    min_human_contributors: int,
+) -> list[dict]:
+    filtered = []
+    for r in records:
+        pr_count = r.get("total_pr_count")
+        stars = r.get("stargazers_count", 0)
+        human_contribs = r.get("human_contributors")
+
+        # Skip repos where we couldn't fetch PR count
+        if pr_count is None:
+            continue
+
+        if pr_count < min_prs:
+            continue
+
+        if pr_count > max_prs:
+            continue
+
+        if stars > max_stars:
+            continue
+
+        # Require at least N human contributors
+        if human_contribs is not None and human_contribs < min_human_contributors:
+            continue
+
+        filtered.append(r)
+
+    return filtered
+
+
+def main():
+    p = argparse.ArgumentParser(description="Filter and deduplicate repo candidates")
+    p.add_argument(
+        "--input", type=Path, nargs="+",
+        default=[
+            OUTPUT_DIR / "repo_search_candidates.json",
+            OUTPUT_DIR / "code_search_candidates.json",
+        ],
+        help="Path(s) to raw candidates JSON files",
+    )
+    p.add_argument(
+        "--output", type=Path,
+        default=OUTPUT_DIR / "filtered_candidates.json",
+        help="Path to write filtered output",
+    )
+    p.add_argument("--min-prs", type=int, default=DEFAULT_MIN_PRS)
+    p.add_argument("--max-prs", type=int, default=DEFAULT_MAX_PRS)
+    p.add_argument("--max-stars", type=int, default=DEFAULT_MAX_STARS)
+    p.add_argument("--min-human-contributors", type=int, default=DEFAULT_MIN_HUMAN_CONTRIBUTORS)
+    args = p.parse_args()
+
+    raw = []
+    for input_path in args.input:
+        if input_path.exists():
+            records = load_candidates(input_path)
+            print(f"Loaded {len(records)} records from {input_path.name}")
+            raw.extend(records)
+        else:
+            print(f"Skipping {input_path.name} (not found)")
+    print(f"Total: {len(raw)} raw records")
+
+    merged = merge_duplicates(raw)
+    print(f"After dedup: {len(merged)} unique repos")
+
+    filtered = filter_candidates(
+        merged, args.min_prs, args.max_prs, args.max_stars, args.min_human_contributors,
+    )
+    print(
+        f"After filtering (prs: {args.min_prs}-{args.max_prs}, "
+        f"stars: <={args.max_stars}, "
+        f"human contributors: >={args.min_human_contributors}): "
+        f"{len(filtered)} repos"
+    )
+
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    args.output.write_text(json.dumps(filtered, indent=2, ensure_ascii=False))
+    print(f"Written to {args.output.resolve()}")
+
+
+if __name__ == "__main__":
+    main()
