@@ -19,6 +19,7 @@ nu ai implementat
 vezi ca
 ai grija
 aici e o problema
+
 aici e gresit
 aici lipseste
 aici se strica

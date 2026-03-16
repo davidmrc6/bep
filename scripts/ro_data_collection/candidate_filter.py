@@ -8,17 +8,35 @@ Steps:
 3. Remove repos that are too large (by stars or PR count) — likely big projects
    where Romanian is incidental
 4. Remove repos with fewer than 2 human contributors
+5. Remove translation/i18n/l10n repos where Romanian is just one of many languages
 """
 import argparse
 import json
+import re
 
 from pathlib import Path
 from constants.constants import OUTPUT_DIR
 
 DEFAULT_MIN_PRS = 5
-DEFAULT_MAX_PRS = 5000
-DEFAULT_MAX_STARS = 10000
+DEFAULT_MAX_PRS = 1000
+DEFAULT_MAX_STARS = 2000
 DEFAULT_MIN_HUMAN_CONTRIBUTORS = 2
+
+# Patterns that indicate a repo is a translation/i18n/docs-translation project
+_I18N_PATTERNS = re.compile(
+    r"i18n|l10n|\blocales?\b|\blocali[zs]ation\b"
+    r"|\btranslat(e|ion|ions|ing|or)\b"
+    r"|crowdin|transifex|weblate|pontoon"
+    r"|\blang(uage)?[\-_]?pack"
+    r"|-ro\b|[\-_]ro\b|romanian[\-_]translation",
+    re.IGNORECASE,
+)
+
+# Topic keywords that signal translation repos
+_I18N_TOPICS = {
+    "i18n", "l10n", "localization", "localisation", "translation",
+    "translations", "crowdin", "transifex", "weblate", "internationalization",
+}
 
 
 def load_candidates(path: Path) -> list[dict]:
@@ -41,6 +59,27 @@ def merge_duplicates(records: list[dict]) -> list[dict]:
         entry["matched_queries"] = sorted(set(entry["matched_queries"]))
 
     return list(by_repo.values())
+
+
+def _looks_like_i18n(repo: dict) -> bool:
+    """Heuristic: does this repo look like a translation/i18n/l10n project?"""
+    # Check repo name
+    full_name = repo.get("repo_full_name", "")
+    if _I18N_PATTERNS.search(full_name):
+        return True
+
+    # Check description
+    desc = repo.get("description") or ""
+    if _I18N_PATTERNS.search(desc):
+        return True
+
+    # Check topics
+    topics_str = repo.get("topics") or ""
+    topics = {t.strip().lower() for t in topics_str.split(",") if t.strip()}
+    if topics & _I18N_TOPICS:
+        return True
+
+    return False
 
 
 def filter_candidates(
@@ -71,6 +110,10 @@ def filter_candidates(
 
         # Require at least N human contributors
         if human_contribs is not None and human_contribs < min_human_contributors:
+            continue
+
+        # Skip translation/i18n repos
+        if _looks_like_i18n(r):
             continue
 
         filtered.append(r)
@@ -111,6 +154,9 @@ def main():
 
     merged = merge_duplicates(raw)
     print(f"After dedup: {len(merged)} unique repos")
+
+    i18n_count = sum(1 for r in merged if _looks_like_i18n(r))
+    print(f"Detected i18n/translation repos: {i18n_count}")
 
     filtered = filter_candidates(
         merged, args.min_prs, args.max_prs, args.max_stars, args.min_human_contributors,

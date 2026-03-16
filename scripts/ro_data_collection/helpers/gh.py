@@ -159,6 +159,42 @@ def search_paginated(
     return all_items
 
 
+def paginate_core(
+    url: str, session: Session, log: Logger,
+    params: dict | None = None,
+    per_page: int = 100,
+    max_pages: int = 100,
+) -> list[dict]:
+    """
+    Generic paginated fetch for core API list endpoints.
+    Returns all items across pages. Stops when a page has fewer than per_page items
+    or max_pages is reached.
+    """
+    params = {**(params or {}), "per_page": per_page}
+    all_items: list[dict] = []
+
+    for page in range(1, max_pages + 1):
+        params["page"] = page
+        resp = _do_core_request(url, params, session, log)
+
+        if not resp.ok:
+            log.warning("paginate_core: %s page=%d returned %d", url, page, resp.status_code)
+            break
+
+        if resp.status_code == 204 or not resp.text.strip():
+            break
+
+        items = resp.json()
+        if not isinstance(items, list):
+            break
+
+        all_items.extend(items)
+        if len(items) < per_page:
+            break
+
+    return all_items
+
+
 def fetch_repo_info(full_name: str, session: Session, log: Logger) -> dict | None:
     """
     Fetch full repository metadata via GET /repos/{owner}/{repo}.
