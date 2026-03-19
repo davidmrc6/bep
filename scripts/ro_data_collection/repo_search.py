@@ -11,7 +11,7 @@ from pathlib import Path
 from requests import Session
 from constants.constants import SEARCH_REPOS_URL, REPO_CACHE_DIR
 from helpers.keywords import load_queries
-from helpers.gh import search_paginated, fetch_total_pr_count, fetch_contributor_info
+from helpers.gh import search_paginated, fetch_repo_meta_cached
 from helpers.parsers import parse_repo_item
 from helpers.aggregation import save_candidates
 
@@ -28,15 +28,15 @@ def run_repo_search(
     queries = load_queries(words_path)
     if limit is not None:
         queries = queries[:limit]
-    log.info("Loaded %d queries from %s", len(queries), words_path)
+    log.info("INIT       [repo_search] loaded %d queries from %s", len(queries), words_path)
 
     repo_records: list[dict] = []
 
     for idx, query in enumerate(queries, 1):
-        log.info("--- Query %d/%d: '%s' ---", idx, len(queries), query)
+        log.info("QUERY      [repo_search %d/%d] q='%s'", idx, len(queries), query)
 
         try:
-            repo_items = search_paginated(
+            repo_items, cached = search_paginated(
                 query=query,
                 search_url=SEARCH_REPOS_URL,
                 cache_dir=REPO_CACHE_DIR,
@@ -47,21 +47,21 @@ def run_repo_search(
             for item in repo_items:
                 repo_records.append(parse_repo_item(item, query))
         except Exception:
-            log.exception("Failed repo search for q='%s'", query)
+            log.exception("ERROR      [repo_search %d/%d] failed q='%s'", idx, len(queries), query)
+            cached = False
 
-        time.sleep(delay)
+        if not cached:
+            time.sleep(delay)
 
     # Fetch PR counts and contributor info for each unique repo (core rate limit)
     unique_repos = sorted({r["repo_full_name"] for r in repo_records})
-    log.info("Fetching PR counts and contributor info for %d unique repos...", len(unique_repos))
+    log.info("INIT       [repo_meta] fetching metadata for %d unique repos", len(unique_repos))
 
+    total = len(unique_repos)
     repo_meta: dict[str, dict] = {}
     for i, full_name in enumerate(unique_repos, 1):
-        if i % 50 == 0:
-            log.info("Metadata progress: %d/%d", i, len(unique_repos))
-        pr_count = fetch_total_pr_count(full_name, session, log)
-        contrib_info = fetch_contributor_info(full_name, session, log)
-        repo_meta[full_name] = {"total_pr_count": pr_count, **contrib_info}
+        repo_meta[full_name] = fetch_repo_meta_cached(full_name, session, log,
+                                                       progress=(i, total))
 
     # Attach metadata to all records
     for r in repo_records:
@@ -70,7 +70,7 @@ def run_repo_search(
         r["total_contributors"] = meta.get("total_contributors")
         r["human_contributors"] = meta.get("human_contributors")
 
-    log.info("Search finished. %d records, %d unique repos", len(repo_records), len(unique_repos))
+    log.info("DONE       [repo_search] %d records, %d unique repos", len(repo_records), len(unique_repos))
     save_candidates(repo_records, output_dir, "repo_search_candidates.json", log)
     return repo_records
 

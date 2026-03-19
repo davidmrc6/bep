@@ -136,24 +136,24 @@ def run_candidate_filter(
     raw = []
     for input_path in input_paths:
         records = load_candidates(input_path, log)
-        log.info("Loaded %d records from %s", len(records), input_path.name)
+        log.info("LOAD       [filter] %d records from %s", len(records), input_path.name)
         raw.extend(records)
-    log.info("Total: %d raw records", len(raw))
+    log.info("INFO       [filter] %d raw records total", len(raw))
 
     merged = merge_duplicates(raw)
-    log.info("After dedup: %d unique repos", len(merged))
+    log.info("INFO       [filter] %d unique repos after dedup", len(merged))
 
     i18n_count = sum(1 for r in merged if _looks_like_i18n(r))
-    log.info("Detected i18n/translation repos: %d", i18n_count)
+    log.info("INFO       [filter] %d i18n/translation repos detected", i18n_count)
 
     filtered = filter_candidates(merged, min_prs, max_prs, max_stars, min_human_contributors)
     log.info(
-        "After filtering (prs: %d-%d, stars: <=%d, human contributors: >=%d): %d repos",
-        min_prs, max_prs, max_stars, min_human_contributors, len(filtered),
+        "DONE       [filter] %d repos after filtering (prs: %d-%d, stars: <=%d, human contributors: >=%d)",
+        len(filtered), min_prs, max_prs, max_stars, min_human_contributors,
     )
 
     _save_json(filtered, output_path)
-    log.info("Written to %s", output_path.resolve())
+    log.info("SAVE       [filter] written to %s", output_path.resolve())
     return filtered
 
 

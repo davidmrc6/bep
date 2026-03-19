@@ -23,18 +23,18 @@ def load_json(path: Path, log: logging.Logger | None = None) -> list[dict]:
     """Safely load a JSON list from a file. Returns [] if missing or corrupt."""
     if not path.exists():
         if log:
-            log.warning("File not found: %s. Returning empty list", path)
+            log.warning("WARN       [io] file not found: %s — returning empty list", path)
         return []
     try:
         data = json.loads(path.read_text(encoding="utf-8"))
         if isinstance(data, list):
             return data
         if log:
-            log.warning("Expected list in %s, got %s. Returning empty", path, type(data).__name__)
+            log.warning("WARN       [io] expected list in %s, got %s — returning empty", path, type(data).__name__)
         return []
     except (json.JSONDecodeError, UnicodeDecodeError) as exc:
         if log:
-            log.warning("Corrupt JSON in %s: %s. Returning empty list", path, exc)
+            log.warning("WARN       [io] corrupt JSON in %s: %s — returning empty list", path, exc)
         return []
 
 
@@ -47,7 +47,7 @@ def save_candidates(
     output_dir.mkdir(parents=True, exist_ok=True)
     path = output_dir / filename
     _save_json(records, path)
-    log.info("Saved %d records to %s", len(records), path.resolve())
+    log.info("SAVE       [io] %d records → %s", len(records), path.resolve())
 
     unique_repos = len({r["repo_full_name"] for r in records})
     print(f"\n{'='*60}")

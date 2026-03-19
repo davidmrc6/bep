@@ -78,7 +78,7 @@ def collect_repo_comments(full_name: str, session: Session, log: logging.Logger)
     pulls_url = f"https://api.github.com/repos/{full_name}/pulls"
     all_prs = paginate_core(pulls_url, session, log, params={"state": "all"})
 
-    log.info("  %s: %d PRs total", full_name, len(all_prs))
+    log.info("INFO       [pr_collect] %s: %d PRs total", full_name, len(all_prs))
 
     comments: list[dict] = []
 
@@ -122,7 +122,7 @@ def run_pr_collector(
     repos = load_json(input_path, log)
     if limit is not None:
         repos = repos[:limit]
-    log.info("Processing %d repos from %s", len(repos), input_path)
+    log.info("INIT       [pr_collect] processing %d repos from %s", len(repos), input_path)
 
     all_comments: list[dict] = []
 
@@ -132,27 +132,27 @@ def run_pr_collector(
         # Check cache
         if _repo_is_cached(full_name):
             cached = _load_repo_cache(full_name)
-            log.info("[%d/%d] CACHE HIT  %s (%d comments)", i, len(repos), full_name, len(cached))
+            log.info("CACHE HIT  [pr_collect %d/%d] %s (%d comments)", i, len(repos), full_name, len(cached))
             all_comments.extend(cached)
             continue
 
-        log.info("[%d/%d] Collecting  %s", i, len(repos), full_name)
+        log.info("FETCH      [pr_collect %d/%d] %s", i, len(repos), full_name)
         try:
             comments = collect_repo_comments(full_name, session, log)
         except Exception:
-            log.exception("Failed to collect %s", full_name)
+            log.exception("ERROR      [pr_collect %d/%d] failed %s", i, len(repos), full_name)
             comments = []
 
         _save_repo_cache(full_name, comments)
         all_comments.extend(comments)
-        log.info("  → %d human comments collected", len(comments))
+        log.info("DONE       [pr_collect %d/%d] %s → %d human comments", i, len(repos), full_name, len(comments))
 
     # Save combined output
     _save_json(all_comments, output_path)
 
     unique_repos = len({c["repo_full_name"] for c in all_comments})
     unique_prs = len({(c["repo_full_name"], c["pr_number"]) for c in all_comments})
-    log.info("Done. %d comments from %d PRs across %d repos", len(all_comments), unique_prs, unique_repos)
+    log.info("DONE       [pr_collect] %d comments from %d PRs across %d repos", len(all_comments), unique_prs, unique_repos)
 
     return all_comments
 

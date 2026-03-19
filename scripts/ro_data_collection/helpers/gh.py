@@ -1,3 +1,4 @@
+import json
 import math
 import re
 import time
@@ -8,6 +9,7 @@ from logging import Logger
 from datetime import datetime, timezone
 from helpers.rate_limit import wait_for_rate_limit
 from helpers.caching import _cache_key, load_meta, load_page, save_meta, save_page
+from constants.constants import META_CACHE_DIR
 
 PER_PAGE = 100
 MAX_RESULTS = 1000
@@ -30,12 +32,12 @@ def _wait_and_retry(resp: Response, url: str, params: dict, session: Session, lo
                     wait = 60
         except (ValueError, TypeError):
             wait = 60
-        log.warning("%d rate limit on %s. Sleeping %ds...", resp.status_code, url, wait)
+        log.warning("RATE LIMIT [http] %d on %s — sleeping %ds", resp.status_code, url, wait)
         time.sleep(wait)
         resp = session.get(url, params=params)
 
     if resp.status_code in (500, 502, 503):
-        log.warning("Server error %d on %s. Retrying in 10s...", resp.status_code, url)
+        log.warning("RETRY      [http] server error %d on %s — retrying in 10s", resp.status_code, url)
         time.sleep(10)
         resp = session.get(url, params=params)
 
@@ -64,10 +66,11 @@ def search_paginated(
         session: Session,
         log: Logger,
         extra_params: dict | None = None,
-) -> list[dict]:
+) -> tuple[list[dict], bool]:
     """
     Paginate through a GitHub search endpoint for `query`.
-    Returns the list of items across all pages (up to 1000). TODO: extend if possible?
+    Returns (items, cached) — the list of items across all pages (up to 1000),
+    and a bool indicating whether the result came entirely from cache.
     Raw JSON pages are cached, so completed queries are skipped on re-runs.
     """
     key = _cache_key(query)
@@ -81,13 +84,14 @@ def search_paginated(
             page_data = load_page(cache_dir, key, p)
             if page_data:
                 items.extend(page_data.get("items", []))
-        return items
+        return items, True
 
     # After checking cache, determine start page
     start_page = 1
     if meta and meta.get("status") == "partial":
         start_page = meta.get("pages_fetched", 0) + 1
         log.info("RESUME     [%s] q='%s' from page %d", cache_dir.name, query, start_page)
+
 
     params = {"q": query, "per_page": PER_PAGE, **(extra_params or {})}
 
@@ -111,7 +115,7 @@ def search_paginated(
             resp = _do_search_request(search_url, params, session, log)
             data = resp.json()
         except (HTTPError, RequestException, ValueError) as exc:
-            log.error("Error for q='%s' page=%d: %s", query, page, exc)
+            log.error("ERROR      [%s] q='%s' page=%d: %s", cache_dir.name, query, page, exc)
             # Save partial progress
             save_meta(cache_dir, key, {
                 "query": query,
@@ -122,13 +126,13 @@ def search_paginated(
                 "error": str(exc),
                 "updated_at": datetime.now(timezone.utc).isoformat(),
             })
-            return all_items
+            return all_items, False
         save_page(cache_dir, key, page, data)
         pages_fetched = page
 
         if total_count is None:
             total_count = data.get("total_count", 0)
-            log.info("           total_count=%d for q='%s'", total_count, query)
+            log.info("INFO       [%s] total_count=%d for q='%s'", cache_dir.name, total_count, query)
 
         page_items = data.get("items", [])
         all_items.extend(page_items)
@@ -155,10 +159,10 @@ def search_paginated(
 
     # TODO: find way to handle overflow
     if overflow:
-        log.warning("OVERFLOW   q='%s' has %d results (capped at %d).", query, total_count, MAX_RESULTS)
+        log.warning("OVERFLOW   [%s] q='%s' has %d results (capped at %d)", cache_dir.name, query, total_count, MAX_RESULTS)
 
     log.info("DONE       [%s] q='%s' → %d items fetched", cache_dir.name, query, len(all_items))
-    return all_items
+    return all_items, False
 
 
 def paginate_core(
@@ -180,7 +184,7 @@ def paginate_core(
         resp = _do_core_request(url, params, session, log)
 
         if not resp.ok:
-            log.warning("paginate_core: %s page=%d returned %d", url, page, resp.status_code)
+            log.warning("WARN       [core_api] %s page=%d returned %d", url, page, resp.status_code)
             break
 
         if resp.status_code == 204 or not resp.text.strip():
@@ -189,7 +193,7 @@ def paginate_core(
         try:
             items = resp.json()
         except ValueError:
-            log.warning("paginate_core: %s page=%d returned non-JSON", url, page)
+            log.warning("WARN       [core_api] %s page=%d returned non-JSON", url, page)
             break
         if not isinstance(items, list):
             break
@@ -210,10 +214,10 @@ def fetch_repo_info(full_name: str, session: Session, log: Logger) -> dict | Non
     resp = _do_core_request(url, {}, session, log)
 
     if resp.status_code == 404:
-        log.warning("Repo info: %s not found (404)", full_name)
+        log.warning("WARN       [repo_meta] repo info %s not found (404)", full_name)
         return None
     if not resp.ok:
-        log.warning("Repo info: %s returned %d", full_name, resp.status_code)
+        log.warning("WARN       [repo_meta] repo info %s returned %d", full_name, resp.status_code)
         return None
 
     return resp.json()
@@ -232,10 +236,10 @@ def fetch_total_pr_count(full_name: str, session: Session, log: Logger) -> int |
     resp = _do_core_request(url, params, session, log)
 
     if resp.status_code == 404:
-        log.warning("PR count: repo %s not found (404)", full_name)
+        log.warning("WARN       [repo_meta] PR count %s not found (404)", full_name)
         return None
     if not resp.ok:
-        log.warning("PR count: %s returned %d", full_name, resp.status_code)
+        log.warning("WARN       [repo_meta] PR count %s returned %d", full_name, resp.status_code)
         return None
 
     link = resp.headers.get("Link", "")
@@ -265,10 +269,10 @@ def fetch_contributor_info(
     resp = _do_core_request(url, params, session, log)
 
     if resp.status_code == 404:
-        log.warning("Contributors: %s not found (404)", full_name)
+        log.warning("WARN       [repo_meta] contributors %s not found (404)", full_name)
         return {"total_contributors": None, "human_contributors": None}
     if not resp.ok:
-        log.warning("Contributors: %s returned %d", full_name, resp.status_code)
+        log.warning("WARN       [repo_meta] contributors %s returned %d", full_name, resp.status_code)
         return {"total_contributors": None, "human_contributors": None}
 
     # 204 No Content = empty repo, or non-JSON response
@@ -313,3 +317,43 @@ def _is_human(contributor: dict) -> bool:
     if _BOT_NAME_PATTERNS.search(login):
         return False
     return True
+
+
+def _meta_cache_path(full_name: str) -> Path:
+    slug = full_name.replace("/", "__")
+    return META_CACHE_DIR / f"{slug}.json"
+
+
+def fetch_repo_meta_cached(
+    full_name: str, session: Session, log: Logger,
+    progress: tuple[int, int] | None = None,
+) -> dict:
+    """
+    Fetch repo info + PR count + contributor info, with file-based caching.
+    Returns dict with keys: total_pr_count, total_contributors, human_contributors,
+    and optionally repo_info (full repo API response) for code_search usage.
+    progress: optional (current, total) tuple for log messages.
+    """
+    prog = f" {progress[0]}/{progress[1]}" if progress else ""
+    cache_path = _meta_cache_path(full_name)
+    if cache_path.exists():
+        try:
+            cached = json.loads(cache_path.read_text(encoding="utf-8"))
+            log.info("CACHE HIT  [repo_meta%s] %s", prog, full_name)
+            return cached
+        except (json.JSONDecodeError, UnicodeDecodeError):
+            log.warning("CORRUPT    [repo_meta%s] %s — re-fetching", prog, full_name)
+
+    log.info("FETCH      [repo_meta%s] %s (repo info + PRs + contributors)", prog, full_name)
+    repo_info = fetch_repo_info(full_name, session, log)
+    pr_count = fetch_total_pr_count(full_name, session, log)
+    contrib_info = fetch_contributor_info(full_name, session, log)
+    meta = {
+        "repo_info": repo_info,
+        "total_pr_count": pr_count,
+        **contrib_info,
+    }
+
+    cache_path.parent.mkdir(parents=True, exist_ok=True)
+    cache_path.write_text(json.dumps(meta, ensure_ascii=False))
+    return meta

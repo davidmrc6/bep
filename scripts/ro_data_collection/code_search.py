@@ -15,9 +15,7 @@ from constants.constants import SEARCH_CODE_URL, CODE_CACHE_DIR
 from helpers.keywords import load_queries
 from helpers.gh import (
     search_paginated,
-    fetch_repo_info,
-    fetch_total_pr_count,
-    fetch_contributor_info,
+    fetch_repo_meta_cached,
 )
 from helpers.parsers import parse_repo_item
 from helpers.aggregation import save_candidates
@@ -35,16 +33,16 @@ def run_code_search(
     queries = load_queries(words_path)
     if limit is not None:
         queries = queries[:limit]
-    log.info("Loaded %d queries from %s", len(queries), words_path)
+    log.info("INIT       [code_search] loaded %d queries from %s", len(queries), words_path)
 
     # Map repo_full_name -> list of matched queries
     repo_queries: dict[str, list[str]] = {}
 
     for idx, query in enumerate(queries, 1):
-        log.info("--- Query %d/%d: '%s' ---", idx, len(queries), query)
+        log.info("QUERY      [code_search %d/%d] q='%s'", idx, len(queries), query)
 
         try:
-            code_items = search_paginated(
+            code_items, cached = search_paginated(
                 query=query,
                 search_url=SEARCH_CODE_URL,
                 cache_dir=CODE_CACHE_DIR,
@@ -57,35 +55,34 @@ def run_code_search(
                 if full_name:
                     repo_queries.setdefault(full_name, []).append(query)
         except Exception:
-            log.exception("Failed code search for q='%s'", query)
+            log.exception("ERROR      [code_search %d/%d] failed q='%s'", idx, len(queries), query)
+            cached = False
 
-        time.sleep(delay)
+        if not cached:
+            time.sleep(delay)
 
-    log.info("Code search found %d unique repos. Fetching metadata...", len(repo_queries))
+    log.info("INIT       [repo_meta] fetching metadata for %d unique repos", len(repo_queries))
 
     # For each unique repo: fetch repo info, PR count, contributor info
+    total = len(repo_queries)
     records: list[dict] = []
     for i, (full_name, matched) in enumerate(sorted(repo_queries.items()), 1):
-        if i % 50 == 0:
-            log.info("Metadata progress: %d/%d", i, len(repo_queries))
-
-        repo_data = fetch_repo_info(full_name, session, log)
+        meta = fetch_repo_meta_cached(full_name, session, log,
+                                      progress=(i, total))
+        repo_data = meta.get("repo_info")
         if repo_data is None:
-            log.warning("Skipping %s — could not fetch repo info", full_name)
+            log.warning("SKIP       [repo_meta %d/%d] %s — could not fetch repo info", i, total, full_name)
             continue
-
-        pr_count = fetch_total_pr_count(full_name, session, log)
-        contrib_info = fetch_contributor_info(full_name, session, log)
 
         # One record per matched query
         for query in matched:
             record = parse_repo_item(repo_data, query)
-            record["total_pr_count"] = pr_count
-            record["total_contributors"] = contrib_info.get("total_contributors")
-            record["human_contributors"] = contrib_info.get("human_contributors")
+            record["total_pr_count"] = meta.get("total_pr_count")
+            record["total_contributors"] = meta.get("total_contributors")
+            record["human_contributors"] = meta.get("human_contributors")
             records.append(record)
 
-    log.info("Code search finished. %d records, %d unique repos", len(records), len(repo_queries))
+    log.info("DONE       [code_search] %d records, %d unique repos", len(records), len(repo_queries))
     save_candidates(records, output_dir, "code_search_candidates.json", log)
     return records
 

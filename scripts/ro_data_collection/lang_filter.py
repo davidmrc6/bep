@@ -43,12 +43,12 @@ def run_lang_filter(
     min_length: int = MIN_BODY_LENGTH,
 ) -> tuple[list[dict], list[dict]]:
     """Run language detection. Returns (accepted, review) comment lists."""
-    log.info("Building language detector...")
+    log.info("INIT       [lang_filter] building language detector...")
     detector = build_detector()
-    log.info("Detector ready")
+    log.info("INIT       [lang_filter] detector ready")
 
     comments = load_json(input_path, log)
-    log.info("Loaded %d comments from %s", len(comments), input_path)
+    log.info("LOAD       [lang_filter] %d comments from %s", len(comments), input_path)
 
     accepted = []
     review = []
@@ -57,7 +57,7 @@ def run_lang_filter(
 
     for i, c in enumerate(comments):
         if (i + 1) % 2000 == 0:
-            log.info("Progress: %d/%d", i + 1, len(comments))
+            log.info("PROGRESS   [lang_filter %d/%d]", i + 1, len(comments))
 
         body = c.get("body", "")
         if len(body) < min_length:
@@ -92,27 +92,27 @@ def run_lang_filter(
     # Save outputs
     accepted_path = output_dir / "ro_comments.json"
     _save_json(accepted, accepted_path)
-    log.info("Saved %d accepted comments to %s", len(accepted), accepted_path)
+    log.info("SAVE       [lang_filter] %d accepted comments → %s", len(accepted), accepted_path)
 
     review_path = output_dir / "ro_comments_review.json"
     _save_json(review, review_path)
-    log.info("Saved %d review comments to %s", len(review), review_path)
+    log.info("SAVE       [lang_filter] %d review comments → %s", len(review), review_path)
 
     # Sort lang stats descending
     sorted_langs = sorted(lang_counts.items(), key=lambda x: -x[1])
     stats_path = output_dir / "lang_stats.json"
     _save_json(sorted_langs, stats_path)
-    log.info("Saved language stats to %s", stats_path)
+    log.info("SAVE       [lang_filter] language stats → %s", stats_path)
 
-    log.info("Skipped (too short, <%d chars): %d", min_length, skipped_short)
-    log.info("Accepted (ro >= %.2f): %d", threshold, len(accepted))
-    log.info("For review (%.2f <= ro < %.2f): %d", review_floor, threshold, len(review))
+    log.info("INFO       [lang_filter] skipped (too short, <%d chars): %d", min_length, skipped_short)
+    log.info("INFO       [lang_filter] accepted (ro >= %.2f): %d", threshold, len(accepted))
+    log.info("INFO       [lang_filter] for review (%.2f <= ro < %.2f): %d", review_floor, threshold, len(review))
 
-    log.info("Top languages detected:")
+    log.info("INFO       [lang_filter] top languages detected:")
     for lang, count in sorted_langs[:10]:
-        log.info("  %5s: %d", lang, count)
+        log.info("INFO       [lang_filter]   %5s: %d", lang, count)
 
-    log.info("Outputs written to %s", output_dir.resolve())
+    log.info("DONE       [lang_filter] outputs written to %s", output_dir.resolve())
     return accepted, review
 
 
