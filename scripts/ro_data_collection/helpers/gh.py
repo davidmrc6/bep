@@ -3,7 +3,7 @@ import re
 import time
 
 from pathlib import Path
-from requests import Session, Response, HTTPError
+from requests import Session, Response, HTTPError, RequestException
 from logging import Logger
 from datetime import datetime, timezone
 from helpers.rate_limit import wait_for_rate_limit
@@ -19,14 +19,17 @@ def _wait_and_retry(resp: Response, url: str, params: dict, session: Session, lo
     if resp.status_code in (403, 429):
         # Retry-After header (seconds), or fall back to x-ratelimit-reset (unix ts)
         retry_after = resp.headers.get("Retry-After")
-        if retry_after is not None:
-            wait = int(retry_after)
-        else:
-            reset_ts = resp.headers.get("x-ratelimit-reset")
-            if reset_ts is not None:
-                wait = max(int(reset_ts) - int(time.time()), 0) + 1
+        try:
+            if retry_after is not None:
+                wait = int(retry_after)
             else:
-                wait = 60
+                reset_ts = resp.headers.get("x-ratelimit-reset")
+                if reset_ts is not None:
+                    wait = max(int(reset_ts) - int(time.time()), 0) + 1
+                else:
+                    wait = 60
+        except (ValueError, TypeError):
+            wait = 60
         log.warning("%d rate limit on %s. Sleeping %ds...", resp.status_code, url, wait)
         time.sleep(wait)
         resp = session.get(url, params=params)
@@ -82,7 +85,7 @@ def search_paginated(
 
     # After checking cache, determine start page
     start_page = 1
-    if meta and meta.get("status" == "partial"):
+    if meta and meta.get("status") == "partial":
         start_page = meta.get("pages_fetched", 0) + 1
         log.info("RESUME     [%s] q='%s' from page %d", cache_dir.name, query, start_page)
 
@@ -106,8 +109,9 @@ def search_paginated(
 
         try:
             resp = _do_search_request(search_url, params, session, log)
-        except HTTPError as exc:
-            log.error("HTTP error for q='%s' page=%d: %s", query, page, exc)
+            data = resp.json()
+        except (HTTPError, RequestException, ValueError) as exc:
+            log.error("Error for q='%s' page=%d: %s", query, page, exc)
             # Save partial progress
             save_meta(cache_dir, key, {
                 "query": query,
@@ -119,8 +123,6 @@ def search_paginated(
                 "updated_at": datetime.now(timezone.utc).isoformat(),
             })
             return all_items
-
-        data = resp.json()
         save_page(cache_dir, key, page, data)
         pages_fetched = page
 
@@ -184,7 +186,11 @@ def paginate_core(
         if resp.status_code == 204 or not resp.text.strip():
             break
 
-        items = resp.json()
+        try:
+            items = resp.json()
+        except ValueError:
+            log.warning("paginate_core: %s page=%d returned non-JSON", url, page)
+            break
         if not isinstance(items, list):
             break
 
@@ -238,7 +244,7 @@ def fetch_total_pr_count(full_name: str, session: Session, log: Logger) -> int |
     if match:
         return int(match.group(1))
 
-    # No Link header means 0 or 1 PRs — check body
+    # No Link header means 0 or 1 PRs, so check body
     body = resp.json()
     return len(body)
 

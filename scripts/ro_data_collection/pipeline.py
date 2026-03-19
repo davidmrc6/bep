@@ -67,7 +67,10 @@ def main():
                 )
 
                 for future in as_completed([future_repo, future_code]):
-                    future.result()  # propagate exceptions
+                    try:
+                        future.result()
+                    except Exception:
+                        log.exception("A search thread failed (the other may have succeeded)")
         else:
             # If `parallel_search` is not passed, run repo and code search sequentially.
             session = create_session()

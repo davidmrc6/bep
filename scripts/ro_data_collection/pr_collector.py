@@ -20,6 +20,7 @@ from pathlib import Path
 from requests import Session
 from constants.constants import OUTPUT_DIR, PR_CACHE_DIR
 from helpers.gh import paginate_core, _is_human
+from helpers.aggregation import load_json, _save_json
 
 
 def _repo_cache_path(full_name: str) -> Path:
@@ -32,13 +33,11 @@ def _repo_is_cached(full_name: str) -> bool:
 
 
 def _save_repo_cache(full_name: str, comments: list[dict]) -> None:
-    path = _repo_cache_path(full_name)
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(comments, indent=2, ensure_ascii=False))
+    _save_json(comments, _repo_cache_path(full_name))
 
 
 def _load_repo_cache(full_name: str) -> list[dict]:
-    return json.loads(_repo_cache_path(full_name).read_text(encoding="utf-8"))
+    return load_json(_repo_cache_path(full_name))
 
 
 def _is_human_comment(author_login: str, author_type: str) -> bool:
@@ -120,7 +119,7 @@ def run_pr_collector(
     limit: int | None = None,
 ) -> list[dict]:
     """Collect PR comments for all repos in input_path. Returns all comments."""
-    repos = json.loads(input_path.read_text(encoding="utf-8"))
+    repos = load_json(input_path, log)
     if limit is not None:
         repos = repos[:limit]
     log.info("Processing %d repos from %s", len(repos), input_path)
@@ -149,8 +148,7 @@ def run_pr_collector(
         log.info("  → %d human comments collected", len(comments))
 
     # Save combined output
-    output_path.parent.mkdir(parents=True, exist_ok=True)
-    output_path.write_text(json.dumps(all_comments, indent=2, ensure_ascii=False))
+    _save_json(all_comments, output_path)
 
     unique_repos = len({c["repo_full_name"] for c in all_comments})
     unique_prs = len({(c["repo_full_name"], c["pr_number"]) for c in all_comments})

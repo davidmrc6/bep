@@ -17,6 +17,7 @@ import logging
 from pathlib import Path
 from lingua import Language, LanguageDetectorBuilder
 from constants.constants import OUTPUT_DIR
+from helpers.aggregation import load_json, _save_json
 
 DEFAULT_THRESHOLD = 0.7
 DEFAULT_REVIEW_FLOOR = 0.4
@@ -46,7 +47,7 @@ def run_lang_filter(
     detector = build_detector()
     log.info("Detector ready")
 
-    comments = json.loads(input_path.read_text(encoding="utf-8"))
+    comments = load_json(input_path, log)
     log.info("Loaded %d comments from %s", len(comments), input_path)
 
     accepted = []
@@ -89,20 +90,18 @@ def run_lang_filter(
             review.append(record)
 
     # Save outputs
-    output_dir.mkdir(parents=True, exist_ok=True)
-
     accepted_path = output_dir / "ro_comments.json"
-    accepted_path.write_text(json.dumps(accepted, indent=2, ensure_ascii=False))
+    _save_json(accepted, accepted_path)
     log.info("Saved %d accepted comments to %s", len(accepted), accepted_path)
 
     review_path = output_dir / "ro_comments_review.json"
-    review_path.write_text(json.dumps(review, indent=2, ensure_ascii=False))
+    _save_json(review, review_path)
     log.info("Saved %d review comments to %s", len(review), review_path)
 
     # Sort lang stats descending
     sorted_langs = sorted(lang_counts.items(), key=lambda x: -x[1])
     stats_path = output_dir / "lang_stats.json"
-    stats_path.write_text(json.dumps(dict(sorted_langs), indent=2))
+    _save_json(sorted_langs, stats_path)
     log.info("Saved language stats to %s", stats_path)
 
     log.info("Skipped (too short, <%d chars): %d", min_length, skipped_short)

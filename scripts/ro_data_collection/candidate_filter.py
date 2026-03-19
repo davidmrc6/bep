@@ -17,6 +17,7 @@ import re
 
 from pathlib import Path
 from constants.constants import OUTPUT_DIR
+from helpers.aggregation import load_json, _save_json
 
 DEFAULT_MIN_PRS = 5
 DEFAULT_MAX_PRS = 1000
@@ -40,8 +41,8 @@ _I18N_TOPICS = {
 }
 
 
-def load_candidates(path: Path) -> list[dict]:
-    return json.loads(path.read_text(encoding="utf-8"))
+def load_candidates(path: Path, log: logging.Logger | None = None) -> list[dict]:
+    return load_json(path, log)
 
 
 def merge_duplicates(records: list[dict]) -> list[dict]:
@@ -134,12 +135,9 @@ def run_candidate_filter(
     """Load, merge, filter candidates. Returns the filtered list."""
     raw = []
     for input_path in input_paths:
-        if input_path.exists():
-            records = load_candidates(input_path)
-            log.info("Loaded %d records from %s", len(records), input_path.name)
-            raw.extend(records)
-        else:
-            log.info("Skipping %s (not found)", input_path.name)
+        records = load_candidates(input_path, log)
+        log.info("Loaded %d records from %s", len(records), input_path.name)
+        raw.extend(records)
     log.info("Total: %d raw records", len(raw))
 
     merged = merge_duplicates(raw)
@@ -154,8 +152,7 @@ def run_candidate_filter(
         min_prs, max_prs, max_stars, min_human_contributors, len(filtered),
     )
 
-    output_path.parent.mkdir(parents=True, exist_ok=True)
-    output_path.write_text(json.dumps(filtered, indent=2, ensure_ascii=False))
+    _save_json(filtered, output_path)
     log.info("Written to %s", output_path.resolve())
     return filtered
 
