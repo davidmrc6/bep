@@ -1,7 +1,7 @@
 """
 Filter PR comments to keep only Romanian-language text.
 
-Uses lingua-language-detector for accurate, deterministic language detection.
+Uses lingua-language-detector for accurate deterministic language detection.
 
 Reads pr_comments.json, runs each comment through language detection,
 and produces:
@@ -12,15 +12,15 @@ and produces:
 """
 import argparse
 import json
+import logging
 
 from pathlib import Path
 from lingua import Language, LanguageDetectorBuilder
 from constants.constants import OUTPUT_DIR
-from helpers.log import setup_logging
 
 DEFAULT_THRESHOLD = 0.7
 DEFAULT_REVIEW_FLOOR = 0.4
-MIN_BODY_LENGTH = 15  # skip very short comments — too noisy for lang detection
+MIN_BODY_LENGTH = 15  # skip very short comments as they are too noisy for n-gram model lang detection
 
 
 def build_detector():
@@ -33,38 +33,21 @@ def build_detector():
     )
 
 
-def main():
-    p = argparse.ArgumentParser(description="Filter PR comments for Romanian language")
-    p.add_argument(
-        "--input", type=Path,
-        default=OUTPUT_DIR / "pr_comments.json",
-    )
-    p.add_argument(
-        "--output-dir", type=Path,
-        default=OUTPUT_DIR,
-    )
-    p.add_argument(
-        "--threshold", type=float, default=DEFAULT_THRESHOLD,
-        help=f"Minimum confidence to accept as Romanian (default: {DEFAULT_THRESHOLD})",
-    )
-    p.add_argument(
-        "--review-floor", type=float, default=DEFAULT_REVIEW_FLOOR,
-        help=f"Minimum confidence for manual review bucket (default: {DEFAULT_REVIEW_FLOOR})",
-    )
-    p.add_argument(
-        "--min-length", type=int, default=MIN_BODY_LENGTH,
-        help=f"Skip comments shorter than N chars (default: {MIN_BODY_LENGTH})",
-    )
-    args = p.parse_args()
-
-    log = setup_logging()
-
+def run_lang_filter(
+    input_path: Path,
+    output_dir: Path,
+    log: logging.Logger,
+    threshold: float = DEFAULT_THRESHOLD,
+    review_floor: float = DEFAULT_REVIEW_FLOOR,
+    min_length: int = MIN_BODY_LENGTH,
+) -> tuple[list[dict], list[dict]]:
+    """Run language detection. Returns (accepted, review) comment lists."""
     log.info("Building language detector...")
     detector = build_detector()
     log.info("Detector ready")
 
-    comments = json.loads(args.input.read_text(encoding="utf-8"))
-    log.info("Loaded %d comments from %s", len(comments), args.input)
+    comments = json.loads(input_path.read_text(encoding="utf-8"))
+    log.info("Loaded %d comments from %s", len(comments), input_path)
 
     accepted = []
     review = []
@@ -76,7 +59,7 @@ def main():
             log.info("Progress: %d/%d", i + 1, len(comments))
 
         body = c.get("body", "")
-        if len(body) < args.min_length:
+        if len(body) < min_length:
             skipped_short += 1
             continue
 
@@ -100,38 +83,56 @@ def main():
 
         record = {**c, "ro_confidence": round(ro_prob, 4)}
 
-        if ro_prob >= args.threshold:
+        if ro_prob >= threshold:
             accepted.append(record)
-        elif ro_prob >= args.review_floor:
+        elif ro_prob >= review_floor:
             review.append(record)
 
     # Save outputs
-    args.output_dir.mkdir(parents=True, exist_ok=True)
+    output_dir.mkdir(parents=True, exist_ok=True)
 
-    accepted_path = args.output_dir / "ro_comments.json"
+    accepted_path = output_dir / "ro_comments.json"
     accepted_path.write_text(json.dumps(accepted, indent=2, ensure_ascii=False))
     log.info("Saved %d accepted comments to %s", len(accepted), accepted_path)
 
-    review_path = args.output_dir / "ro_comments_review.json"
+    review_path = output_dir / "ro_comments_review.json"
     review_path.write_text(json.dumps(review, indent=2, ensure_ascii=False))
     log.info("Saved %d review comments to %s", len(review), review_path)
 
     # Sort lang stats descending
     sorted_langs = sorted(lang_counts.items(), key=lambda x: -x[1])
-    stats_path = args.output_dir / "lang_stats.json"
+    stats_path = output_dir / "lang_stats.json"
     stats_path.write_text(json.dumps(dict(sorted_langs), indent=2))
     log.info("Saved language stats to %s", stats_path)
 
-    log.info("Skipped (too short, <%d chars): %d", args.min_length, skipped_short)
-    log.info("Accepted (ro >= %.2f): %d", args.threshold, len(accepted))
-    log.info("For review (%.2f <= ro < %.2f): %d", args.review_floor, args.threshold, len(review))
+    log.info("Skipped (too short, <%d chars): %d", min_length, skipped_short)
+    log.info("Accepted (ro >= %.2f): %d", threshold, len(accepted))
+    log.info("For review (%.2f <= ro < %.2f): %d", review_floor, threshold, len(review))
 
     log.info("Top languages detected:")
     for lang, count in sorted_langs[:10]:
         log.info("  %5s: %d", lang, count)
 
-    log.info("Outputs written to %s", args.output_dir.resolve())
+    log.info("Outputs written to %s", output_dir.resolve())
+    return accepted, review
 
 
 if __name__ == "__main__":
-    main()
+    from helpers.log import setup_logging
+
+    p = argparse.ArgumentParser(description="Filter PR comments for Romanian language")
+    p.add_argument("--input", type=Path, default=OUTPUT_DIR / "pr_comments.json")
+    p.add_argument("--output-dir", type=Path, default=OUTPUT_DIR)
+    p.add_argument("--threshold", type=float, default=DEFAULT_THRESHOLD)
+    p.add_argument("--review-floor", type=float, default=DEFAULT_REVIEW_FLOOR)
+    p.add_argument("--min-length", type=int, default=MIN_BODY_LENGTH)
+    args = p.parse_args()
+
+    run_lang_filter(
+        input_path=args.input,
+        output_dir=args.output_dir,
+        log=setup_logging(),
+        threshold=args.threshold,
+        review_floor=args.review_floor,
+        min_length=args.min_length,
+    )

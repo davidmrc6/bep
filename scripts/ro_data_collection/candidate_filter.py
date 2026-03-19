@@ -1,6 +1,6 @@
 """
-Post-processing step: takes the raw repo_search_candidates.json from repo_search.py
-and filters/cleans it before further analysis.
+Post-processing step: takes the raw candidates from repo_search and code_search,
+and filters/cleans them before further analysis.
 
 Steps:
 1. Merge duplicate repos (combine their matched_query fields)
@@ -12,6 +12,7 @@ Steps:
 """
 import argparse
 import json
+import logging
 import re
 
 from pathlib import Path
@@ -121,7 +122,47 @@ def filter_candidates(
     return filtered
 
 
-def main():
+def run_candidate_filter(
+    input_paths: list[Path],
+    output_path: Path,
+    log: logging.Logger,
+    min_prs: int = DEFAULT_MIN_PRS,
+    max_prs: int = DEFAULT_MAX_PRS,
+    max_stars: int = DEFAULT_MAX_STARS,
+    min_human_contributors: int = DEFAULT_MIN_HUMAN_CONTRIBUTORS,
+) -> list[dict]:
+    """Load, merge, filter candidates. Returns the filtered list."""
+    raw = []
+    for input_path in input_paths:
+        if input_path.exists():
+            records = load_candidates(input_path)
+            log.info("Loaded %d records from %s", len(records), input_path.name)
+            raw.extend(records)
+        else:
+            log.info("Skipping %s (not found)", input_path.name)
+    log.info("Total: %d raw records", len(raw))
+
+    merged = merge_duplicates(raw)
+    log.info("After dedup: %d unique repos", len(merged))
+
+    i18n_count = sum(1 for r in merged if _looks_like_i18n(r))
+    log.info("Detected i18n/translation repos: %d", i18n_count)
+
+    filtered = filter_candidates(merged, min_prs, max_prs, max_stars, min_human_contributors)
+    log.info(
+        "After filtering (prs: %d-%d, stars: <=%d, human contributors: >=%d): %d repos",
+        min_prs, max_prs, max_stars, min_human_contributors, len(filtered),
+    )
+
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_text(json.dumps(filtered, indent=2, ensure_ascii=False))
+    log.info("Written to %s", output_path.resolve())
+    return filtered
+
+
+if __name__ == "__main__":
+    from helpers.log import setup_logging
+
     p = argparse.ArgumentParser(description="Filter and deduplicate repo candidates")
     p.add_argument(
         "--input", type=Path, nargs="+",
@@ -142,36 +183,12 @@ def main():
     p.add_argument("--min-human-contributors", type=int, default=DEFAULT_MIN_HUMAN_CONTRIBUTORS)
     args = p.parse_args()
 
-    raw = []
-    for input_path in args.input:
-        if input_path.exists():
-            records = load_candidates(input_path)
-            print(f"Loaded {len(records)} records from {input_path.name}")
-            raw.extend(records)
-        else:
-            print(f"Skipping {input_path.name} (not found)")
-    print(f"Total: {len(raw)} raw records")
-
-    merged = merge_duplicates(raw)
-    print(f"After dedup: {len(merged)} unique repos")
-
-    i18n_count = sum(1 for r in merged if _looks_like_i18n(r))
-    print(f"Detected i18n/translation repos: {i18n_count}")
-
-    filtered = filter_candidates(
-        merged, args.min_prs, args.max_prs, args.max_stars, args.min_human_contributors,
+    run_candidate_filter(
+        input_paths=args.input,
+        output_path=args.output,
+        log=setup_logging(),
+        min_prs=args.min_prs,
+        max_prs=args.max_prs,
+        max_stars=args.max_stars,
+        min_human_contributors=args.min_human_contributors,
     )
-    print(
-        f"After filtering (prs: {args.min_prs}-{args.max_prs}, "
-        f"stars: <={args.max_stars}, "
-        f"human contributors: >={args.min_human_contributors}): "
-        f"{len(filtered)} repos"
-    )
-
-    args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(json.dumps(filtered, indent=2, ensure_ascii=False))
-    print(f"Written to {args.output.resolve()}")
-
-
-if __name__ == "__main__":
-    main()

@@ -3,28 +3,23 @@ Collect PR discussion text from filtered candidate repos.
 
 For each repo in filtered_candidates.json:
 1. List all PRs (state=all)
-2. For PRs that have comments (comments + review_comments > 0):
-   - Fetch issue comments (general discussion on the PR)
-   - Fetch review comments (inline code review)
-   - Fetch reviews (approve/reject bodies)
+2. For each PR, fetch:
+   - Issue comments (general discussion on the PR)
+   - Review comments (inline code review)
+   - Reviews (approve/reject bodies)
 3. Filter out bot authors
 4. Save all human comment text with metadata
 
 Output: one JSON file per repo in the cache dir (for resumability),
 plus a combined pr_comments.json in the output dir.
 """
-import argparse
 import json
+import logging
 
 from pathlib import Path
+from requests import Session
 from constants.constants import OUTPUT_DIR, PR_CACHE_DIR
-from helpers.log import setup_logging
-from helpers.session import create_session
 from helpers.gh import paginate_core, _is_human
-
-
-def load_filtered(path: Path) -> list[dict]:
-    return json.loads(path.read_text(encoding="utf-8"))
 
 
 def _repo_cache_path(full_name: str) -> Path:
@@ -78,7 +73,7 @@ def _parse_comment(raw: dict, repo_full_name: str, pr_number: int,
     }
 
 
-def collect_repo_comments(full_name: str, session, log) -> list[dict]:
+def collect_repo_comments(full_name: str, session: Session, log: logging.Logger) -> list[dict]:
     """Collect all human PR discussion text for a single repo."""
     # List all PRs
     pulls_url = f"https://api.github.com/repos/{full_name}/pulls"
@@ -117,31 +112,18 @@ def collect_repo_comments(full_name: str, session, log) -> list[dict]:
     return comments
 
 
-def main():
-    p = argparse.ArgumentParser(description="Collect PR comments from filtered repos")
-    p.add_argument(
-        "--input", type=Path,
-        default=OUTPUT_DIR / "filtered_candidates.json",
-        help="Path to filtered candidates JSON",
-    )
-    p.add_argument(
-        "--output", type=Path,
-        default=OUTPUT_DIR / "pr_comments.json",
-        help="Path to write collected comments",
-    )
-    p.add_argument(
-        "--limit", type=int, default=None,
-        help="Only process the first N repos (for testing)",
-    )
-    args = p.parse_args()
-
-    log = setup_logging()
-    session = create_session()
-
-    repos = load_filtered(args.input)
-    if args.limit is not None:
-        repos = repos[:args.limit]
-    log.info("Processing %d repos from %s", len(repos), args.input)
+def run_pr_collector(
+    input_path: Path,
+    output_path: Path,
+    session: Session,
+    log: logging.Logger,
+    limit: int | None = None,
+) -> list[dict]:
+    """Collect PR comments for all repos in input_path. Returns all comments."""
+    repos = json.loads(input_path.read_text(encoding="utf-8"))
+    if limit is not None:
+        repos = repos[:limit]
+    log.info("Processing %d repos from %s", len(repos), input_path)
 
     all_comments: list[dict] = []
 
@@ -167,19 +149,42 @@ def main():
         log.info("  → %d human comments collected", len(comments))
 
     # Save combined output
-    args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(json.dumps(all_comments, indent=2, ensure_ascii=False))
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_text(json.dumps(all_comments, indent=2, ensure_ascii=False))
 
     unique_repos = len({c["repo_full_name"] for c in all_comments})
     unique_prs = len({(c["repo_full_name"], c["pr_number"]) for c in all_comments})
     log.info("Done. %d comments from %d PRs across %d repos", len(all_comments), unique_prs, unique_repos)
 
-    print(f"\n{'='*60}")
-    print(f"Total human comments   : {len(all_comments):>6}")
-    print(f"Unique PRs with text   : {unique_prs:>6}")
-    print(f"Unique repos           : {unique_repos:>6}")
-    print(f"{'='*60}")
+    return all_comments
 
 
 if __name__ == "__main__":
-    main()
+    import argparse
+    from helpers.log import setup_logging
+    from helpers.session import create_session
+
+    p = argparse.ArgumentParser(description="Collect PR comments from filtered repos")
+    p.add_argument(
+        "--input", type=Path,
+        default=OUTPUT_DIR / "filtered_candidates.json",
+        help="Path to filtered candidates JSON",
+    )
+    p.add_argument(
+        "--output", type=Path,
+        default=OUTPUT_DIR / "pr_comments.json",
+        help="Path to write collected comments",
+    )
+    p.add_argument(
+        "--limit", type=int, default=None,
+        help="Only process the first N repos (for testing)",
+    )
+    args = p.parse_args()
+
+    run_pr_collector(
+        input_path=args.input,
+        output_path=args.output,
+        session=create_session(),
+        log=setup_logging(),
+        limit=args.limit,
+    )

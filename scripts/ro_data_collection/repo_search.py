@@ -1,36 +1,33 @@
 """
 First step of the data collection pipeline: collecting repositories by keyword search.
 
-We store a collection of ~400 words and phrases in Romanian in `./__dictionaries__/keywords.txt`
-(and a smaller test suite of around 25 words in `./__dictionaries__/keywords_test.txt`).
-We loop through these items, hit the GitHub API endpoint `GET /search/repositories`,
-then fetch the total PR count for each unique repo found.
+Keywords from keywords_repo.txt are searched via GET /search/repositories,
+then PR count and contributor info are fetched for each unique repo found.
 """
 import time
+import logging
 
-from constants.constants import (
-    TEST_WORDS_PATH,
-    SEARCH_REPOS_URL,
-    REPO_CACHE_DIR,
-)
-from helpers.cli import parse_repo_search_args
-from helpers.log import setup_logging
-from helpers.session import create_session
+from pathlib import Path
+from requests import Session
+from constants.constants import SEARCH_REPOS_URL, REPO_CACHE_DIR
 from helpers.keywords import load_queries
 from helpers.gh import search_paginated, fetch_total_pr_count, fetch_contributor_info
 from helpers.parsers import parse_repo_item
 from helpers.aggregation import save_candidates
 
 
-def main():
-    args = parse_repo_search_args()
-    log = setup_logging()
-    session = create_session()
-
-    words_path = args.words
+def run_repo_search(
+    words_path: Path,
+    output_dir: Path,
+    session: Session,
+    log: logging.Logger,
+    delay: float = 2.5,
+    limit: int | None = None,
+) -> list[dict]:
+    """Run the repo keyword search and return the collected records."""
     queries = load_queries(words_path)
-    if args.limit is not None:
-        queries = queries[:args.limit]
+    if limit is not None:
+        queries = queries[:limit]
     log.info("Loaded %d queries from %s", len(queries), words_path)
 
     repo_records: list[dict] = []
@@ -52,7 +49,7 @@ def main():
         except Exception:
             log.exception("Failed repo search for q='%s'", query)
 
-        time.sleep(args.delay)
+        time.sleep(delay)
 
     # Fetch PR counts and contributor info for each unique repo (core rate limit)
     unique_repos = sorted({r["repo_full_name"] for r in repo_records})
@@ -74,8 +71,21 @@ def main():
         r["human_contributors"] = meta.get("human_contributors")
 
     log.info("Search finished. %d records, %d unique repos", len(repo_records), len(unique_repos))
-    save_candidates(repo_records, args.output_dir, "repo_search_candidates.json", log)
+    save_candidates(repo_records, output_dir, "repo_search_candidates.json", log)
+    return repo_records
 
 
 if __name__ == "__main__":
-    main()
+    from helpers.cli import parse_repo_search_args
+    from helpers.log import setup_logging
+    from helpers.session import create_session
+
+    args = parse_repo_search_args()
+    run_repo_search(
+        words_path=args.words,
+        output_dir=args.output_dir,
+        session=create_session(),
+        log=setup_logging(),
+        delay=args.delay,
+        limit=args.limit,
+    )

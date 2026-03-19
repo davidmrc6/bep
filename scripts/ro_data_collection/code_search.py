@@ -4,18 +4,14 @@ Second search strategy: find repos via code search.
 Keywords here are phrases unlikely to appear in repo descriptions but likely
 in code comments, PR bodies, etc. (e.g. "te rog modifica").
 For each unique repo discovered, we fetch full repo metadata, PR count,
-and contributor info — producing the same record format as repo_search.py.
+and contributor info.
 """
 import time
+import logging
 
-from constants.constants import (
-    TEST_WORDS_PATH,
-    SEARCH_CODE_URL,
-    CODE_CACHE_DIR,
-)
-from helpers.cli import parse_code_search_args
-from helpers.log import setup_logging
-from helpers.session import create_session
+from pathlib import Path
+from requests import Session
+from constants.constants import SEARCH_CODE_URL, CODE_CACHE_DIR
 from helpers.keywords import load_queries
 from helpers.gh import (
     search_paginated,
@@ -27,15 +23,18 @@ from helpers.parsers import parse_repo_item
 from helpers.aggregation import save_candidates
 
 
-def main():
-    args = parse_code_search_args()
-    log = setup_logging()
-    session = create_session()
-
-    words_path = args.words
+def run_code_search(
+    words_path: Path,
+    output_dir: Path,
+    session: Session,
+    log: logging.Logger,
+    delay: float = 2.5,
+    limit: int | None = None,
+) -> list[dict]:
+    """Run the code keyword search and return the collected records."""
     queries = load_queries(words_path)
-    if args.limit is not None:
-        queries = queries[:args.limit]
+    if limit is not None:
+        queries = queries[:limit]
     log.info("Loaded %d queries from %s", len(queries), words_path)
 
     # Map repo_full_name -> list of matched queries
@@ -60,7 +59,7 @@ def main():
         except Exception:
             log.exception("Failed code search for q='%s'", query)
 
-        time.sleep(args.delay)
+        time.sleep(delay)
 
     log.info("Code search found %d unique repos. Fetching metadata...", len(repo_queries))
 
@@ -87,8 +86,21 @@ def main():
             records.append(record)
 
     log.info("Code search finished. %d records, %d unique repos", len(records), len(repo_queries))
-    save_candidates(records, args.output_dir, "code_search_candidates.json", log)
+    save_candidates(records, output_dir, "code_search_candidates.json", log)
+    return records
 
 
 if __name__ == "__main__":
-    main()
+    from helpers.cli import parse_code_search_args
+    from helpers.log import setup_logging
+    from helpers.session import create_session
+
+    args = parse_code_search_args()
+    run_code_search(
+        words_path=args.words,
+        output_dir=args.output_dir,
+        session=create_session(),
+        log=setup_logging(),
+        delay=args.delay,
+        limit=args.limit,
+    )

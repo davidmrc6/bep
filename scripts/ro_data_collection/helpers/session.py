@@ -4,9 +4,12 @@ from dotenv import load_dotenv
 from requests import Session
 
 
-def create_session() -> Session:
+def create_session(token_env: str = "GH_TOKEN") -> Session:
     load_dotenv()
-    token = os.getenv("GH_TOKEN")
+    token = os.getenv(token_env)
+    if not token:
+        # Fall back to GH_TOKEN if the named env var is not set
+        token = os.getenv("GH_TOKEN")
     session = Session()
     session.headers.update({
         "Accept": "application/vnd.github+json",
