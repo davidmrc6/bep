@@ -23,14 +23,14 @@ DEFAULT_THRESHOLD = 0.7
 DEFAULT_REVIEW_FLOOR = 0.4
 MIN_BODY_LENGTH = 15  # skip very short comments as they are too noisy for n-gram model lang detection
 
-# Patterns to strip before language detection — code/URLs/mentions confuse the n-gram model
+# Patterns to strip before language detection: code/URLs/mentions confuse the n-gram model
 _CODE_BLOCK_RE = re.compile(r"```.*?```", re.DOTALL)           # fenced code blocks
 _INLINE_CODE_RE = re.compile(r"`[^`]+`")                       # inline code
 _URL_RE = re.compile(r"https?://\S+")                          # URLs
 _MENTION_RE = re.compile(r"@[\w-]+")                           # @mentions
 _PATH_RE = re.compile(r"[\w./\\-]+\.\w{1,5}")                  # file paths like src/foo.js
 _MARKDOWN_RE = re.compile(r"!\[.*?\]\(.*?\)|\[.*?\]\(.*?\)")   # markdown links/images
-_NONLATIN_RE = re.compile(r"[^\u0000-\u024F\u1E00-\u1EFF]+")  # non-Latin scripts (Cyrillic, CJK, etc.)
+_NONLATIN_RE = re.compile(r"[^\u0000-\u024F\u1E00-\u1EFF]+")   # non-Latin scripts (Cyrillic, CJK, etc.)
 
 
 def _clean_for_detection(text: str) -> str:
