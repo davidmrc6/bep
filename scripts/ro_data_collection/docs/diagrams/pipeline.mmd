@@ -32,7 +32,8 @@ flowchart TD
     PC -.- |"filter bot authors\ncache per repo for resumability"| PC
 
     subgraph S4["(iv) Language Filtering"]
-        LF["lang_filter.py\n(lingua detector)"]
+        LF["lang_filter.py\n(lingua n-gram detector)"]
+        LF -.- |"pre-processing:\nstrip code blocks, URLs,\n@mentions, file paths,\nnon-Latin scripts (Cyrillic, CJK, ...)\nthen run detection on cleaned text"| LF
         LF --> ROC[/"ro_comments.json\n(confidence >= 0.7)"/]
         LF --> ROR[/"ro_comments_review.json\n(0.4 <= confidence < 0.7)"/]
         LF --> LS[/"lang_stats.json"/]

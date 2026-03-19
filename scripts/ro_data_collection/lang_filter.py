@@ -11,8 +11,8 @@ and produces:
   - lang_stats.json           — per-language distribution summary
 """
 import argparse
-import json
 import logging
+import re
 
 from pathlib import Path
 from lingua import Language, LanguageDetectorBuilder
@@ -22,6 +22,28 @@ from helpers.aggregation import load_json, _save_json
 DEFAULT_THRESHOLD = 0.7
 DEFAULT_REVIEW_FLOOR = 0.4
 MIN_BODY_LENGTH = 15  # skip very short comments as they are too noisy for n-gram model lang detection
+
+# Patterns to strip before language detection — code/URLs/mentions confuse the n-gram model
+_CODE_BLOCK_RE = re.compile(r"```.*?```", re.DOTALL)           # fenced code blocks
+_INLINE_CODE_RE = re.compile(r"`[^`]+`")                       # inline code
+_URL_RE = re.compile(r"https?://\S+")                          # URLs
+_MENTION_RE = re.compile(r"@[\w-]+")                           # @mentions
+_PATH_RE = re.compile(r"[\w./\\-]+\.\w{1,5}")                  # file paths like src/foo.js
+_MARKDOWN_RE = re.compile(r"!\[.*?\]\(.*?\)|\[.*?\]\(.*?\)")   # markdown links/images
+_NONLATIN_RE = re.compile(r"[^\u0000-\u024F\u1E00-\u1EFF]+")  # non-Latin scripts (Cyrillic, CJK, etc.)
+
+
+def _clean_for_detection(text: str) -> str:
+    """Strip code, URLs, mentions, and non-Latin text before language detection."""
+    text = _CODE_BLOCK_RE.sub(" ", text)
+    text = _INLINE_CODE_RE.sub(" ", text)
+    text = _URL_RE.sub(" ", text)
+    text = _MENTION_RE.sub(" ", text)
+    text = _MARKDOWN_RE.sub(" ", text)
+    text = _PATH_RE.sub(" ", text)
+    text = _NONLATIN_RE.sub(" ", text)
+    # Collapse whitespace
+    return " ".join(text.split())
 
 
 def build_detector():
@@ -60,12 +82,13 @@ def run_lang_filter(
             log.info("PROGRESS   [lang_filter %d/%d]", i + 1, len(comments))
 
         body = c.get("body", "")
-        if len(body) < min_length:
+        cleaned = _clean_for_detection(body)
+        if len(cleaned) < min_length:
             skipped_short += 1
             continue
 
-        # Compute per-language confidence values
-        confidence_values = detector.compute_language_confidence_values(body)
+        # Compute per-language confidence values on cleaned text
+        confidence_values = detector.compute_language_confidence_values(cleaned)
 
         # Track top language for stats
         if confidence_values:
