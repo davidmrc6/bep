@@ -1,0 +1,90 @@
+flowchart TD
+    %% Inputs
+    KR[/"keywords_repo.txt\n69 keywords"/]
+    KC[/"keywords_code.txt\n78 keywords"/]
+
+    subgraph S1["(i) Repository Search"]
+        RS["repo_search.py\nGET /search/repositories\n(search rate limit: 30 req/min)"]
+        CS["code_search.py\nGET /search/code\n(search rate limit: 30 req/min)"]
+        RS --> |"+ GET /repos/.../pulls\n+ GET /repos/.../contributors\n(core rate limit: 5000 req/hr)"| RSO[/"repo_search_candidates.json"/]
+        CS --> |"+ GET /repos/{owner}/{repo}\n+ GET /repos/.../pulls\n+ GET /repos/.../contributors\n(core rate limit: 5000 req/hr)"| CSO[/"code_search_candidates.json"/]
+    end
+
+    KR --> RS
+    KC --> CS
+
+    subgraph S2["(ii) Candidate Filtering"]
+        CF["candidate_filter.py"]
+        CF --> FO[/"filtered_candidates.json"/]
+    end
+
+    RSO --> CF
+    CSO --> CF
+
+    CF -.- |"merge duplicates\nfilter by PR count, stars\nmin 2 human contributors\nremove i18n/translation repos"| CF
+
+    subgraph S3["(iii) PR Comment Collection"]
+        PC["pr_collector.py\nGET /repos/.../pulls\nGET /repos/.../issues/{n}/comments\nGET /repos/.../pulls/{n}/comments\nGET /repos/.../pulls/{n}/reviews\n(core rate limit: 5000 req/hr)"]
+        PC --> PCO[/"pr_comments.json"/]
+    end
+
+    FO --> PC
+    PC -.- |"filter bot authors\ncache per repo for resumability"| PC
+
+    subgraph S4["(iv) Language Filtering"]
+        LF["lang_filter.py\n(lingua n-gram detector)"]
+        LF -.- |"pre-processing:\nstrip code blocks, URLs,\n@mentions, file paths,\nnon-Latin scripts (Cyrillic, CJK, ...)\nthen run detection on cleaned text"| LF
+        LF --> ROC[/"ro_comments.json\n(confidence >= 0.7)"/]
+        LF --> ROR[/"ro_comments_review.json\n(0.4 <= confidence < 0.7)"/]
+        LF --> LS[/"lang_stats.json"/]
+    end
+
+    PCO --> LF
+
+    subgraph S5["(v) Manual Review"]
+        direction LR
+        MR["Manual review of\nborderline cases"]
+        MR --> MRO[/"ro_comments_verified.json"/]
+    end
+
+    ROR --> MR
+    ROC --> MRO
+
+    subgraph S6["(vi) Sentiment Analysis [TODO]"]
+        SA["Sentiment analysis model\n(DEVA + prompted LLM)"]
+        SA --> SAO[/"ro_comments_sentiment.json\nwith sentiment labels"/]
+    end
+
+    MRO --> SA
+
+    subgraph S7["(vii) Analysis & Results [TODO]"]
+        AN["Statistical analysis\nVisualisations\nFindings"]
+    end
+
+    SAO --> AN
+
+    classDef active fill:#a8e6cf,stroke:#2d8659,stroke-width:3px,color:#000
+    classDef activeData fill:#b8d4f0,stroke:#2d6da8,stroke-width:2px,color:#000
+    classDef past fill:#e8e8e8,stroke:#aaa,color:#888
+    classDef pastData fill:#efefef,stroke:#bbb,color:#999
+    classDef dimmed fill:#f5f5f5,stroke:#ddd,color:#ccc
+    classDef dimmedData fill:#f9f9f9,stroke:#e5e5e5,color:#ddd
+
+    class LF active
+    class ROC,ROR,LS activeData
+    class RS,CS,CF,PC past
+    class RSO,CSO,FO,PCO pastData
+    class KR,KC past
+    class MR,SA,AN dimmed
+    class MRO,SAO dimmedData
+
+    style S1 fill:#f0f0f0,stroke:#bbb,color:#999
+    style S2 fill:#f0f0f0,stroke:#bbb,color:#999
+    style S3 fill:#f0f0f0,stroke:#bbb,color:#999
+    style S4 fill:#e0f5e9,stroke:#2d8659,stroke-width:3px,color:#000
+    style S5 fill:#fafafa,stroke:#e5e5e5,color:#ddd
+    style S6 fill:#fafafa,stroke:#e5e5e5,color:#ddd
+    style S7 fill:#fafafa,stroke:#e5e5e5,color:#ddd
+
+    linkStyle 7 stroke:#bbb,color:#999
+    linkStyle 10 stroke:#bbb,color:#999
