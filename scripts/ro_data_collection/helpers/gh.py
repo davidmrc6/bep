@@ -4,7 +4,7 @@ import re
 import time
 
 from pathlib import Path
-from requests import Session, Response, HTTPError, RequestException
+from requests import Session, Response, HTTPError, RequestException, ConnectionError as ReqConnectionError
 from logging import Logger
 from datetime import datetime, timezone
 from helpers.rate_limit import wait_for_rate_limit
@@ -14,6 +14,8 @@ from constants.constants import META_CACHE_DIR
 PER_PAGE = 100
 MAX_RESULTS = 1000
 MAX_PAGES = MAX_RESULTS // PER_PAGE
+MAX_RETRIES = 3
+RETRY_BACKOFF = [10, 30, 60]  # seconds to wait per retry attempt
 
 
 def _wait_and_retry(resp: Response, url: str, params: dict, session: Session, log: Logger) -> Response:
@@ -44,10 +46,24 @@ def _wait_and_retry(resp: Response, url: str, params: dict, session: Session, lo
     return resp
 
 
+def _request_with_retries(url: str, params: dict, session: Session, log: Logger) -> Response:
+    """Execute a request with retries on connection errors (RemoteDisconnected, resets, etc)."""
+    for attempt in range(MAX_RETRIES):
+        try:
+            return session.get(url, params=params)
+        except (ReqConnectionError, ConnectionError) as exc:
+            wait = RETRY_BACKOFF[min(attempt, len(RETRY_BACKOFF) - 1)]
+            log.warning("CONNRESET  [http] %s on attempt %d/%d — retrying in %ds: %s",
+                        url, attempt + 1, MAX_RETRIES, wait, exc)
+            time.sleep(wait)
+    # final attempt — let it raise if it fails
+    return session.get(url, params=params)
+
+
 def _do_search_request(url: str, params: dict, session: Session, log: Logger) -> Response:
     """Execute single search request (uses search rate limit)."""
     wait_for_rate_limit(session, log, buffer=2)
-    resp = session.get(url, params=params)
+    resp = _request_with_retries(url, params, session, log)
     resp = _wait_and_retry(resp, url, params, session, log)
     resp.raise_for_status()
     return resp
@@ -55,7 +71,7 @@ def _do_search_request(url: str, params: dict, session: Session, log: Logger) ->
 
 def _do_core_request(url: str, params: dict, session: Session, log: Logger) -> Response:
     """Execute a core API request with rate limit and error handling."""
-    resp = session.get(url, params=params)
+    resp = _request_with_retries(url, params, session, log)
     resp = _wait_and_retry(resp, url, params, session, log)
     return resp
 
