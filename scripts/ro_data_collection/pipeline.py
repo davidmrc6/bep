@@ -4,7 +4,6 @@ Runs the full data collection pipeline.
 import argparse
 
 from pathlib import Path
-from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from constants.constants import (
     REPO_WORDS_PATH, CODE_WORDS_PATH, OUTPUT_DIR,
@@ -26,10 +25,6 @@ def main():
     p.add_argument("--limit", type=int, default=None, help="Limit keywords per search stage")
     p.add_argument("--pr-limit", type=int, default=None, help="Limit repos for PR collection")
     p.add_argument(
-        "--parallel-search", action="store_true",
-        help="Run repo and code search in parallel (requires GH_TOKEN_REPO and GH_TOKEN_CODE env vars)",
-    )
-    p.add_argument(
         "--skip-search", action="store_true",
         help="Skip search stages, start from filtering",
     )
@@ -44,50 +39,21 @@ def main():
 
     # Repository/Code Search
     if not args.skip_search and not args.skip_to_lang:
-        if args.parallel_search:
-            # If the `parallel_search` argument is passed, run repo search and code search
-            # in two parallel threads with different GitHub API keys to make the search
-            # faster.
-            log.info("=== Stage 1 & 2: Parallel repo + code search ===")
-            session_repo = create_session(token_env="GH_TOKEN_REPO")
-            session_code = create_session(token_env="GH_TOKEN_CODE")
+        session = create_session()
 
-            with ThreadPoolExecutor(max_workers=2) as pool:
-                future_repo = pool.submit(
-                    run_repo_search,
-                    words_path=REPO_WORDS_PATH, output_dir=out,
-                    session=session_repo, log=log,
-                    delay=args.delay, limit=args.limit,
-                )
-                future_code = pool.submit(
-                    run_code_search,
-                    words_path=CODE_WORDS_PATH, output_dir=out,
-                    session=session_code, log=log,
-                    delay=args.delay, limit=args.limit,
-                )
+        log.info("=== Stage 1: Repo search ===")
+        run_repo_search(
+            words_path=REPO_WORDS_PATH, output_dir=out,
+            session=session, log=log,
+            delay=args.delay, limit=args.limit,
+        )
 
-                for future in as_completed([future_repo, future_code]):
-                    try:
-                        future.result()
-                    except Exception:
-                        log.exception("A search thread failed (the other may have succeeded)")
-        else:
-            # If `parallel_search` is not passed, run repo and code search sequentially.
-            session = create_session()
-
-            log.info("=== Stage 1: Repo search ===")
-            run_repo_search(
-                words_path=REPO_WORDS_PATH, output_dir=out,
-                session=session, log=log,
-                delay=args.delay, limit=args.limit,
-            )
-
-            log.info("=== Stage 2: Code search ===")
-            run_code_search(
-                words_path=CODE_WORDS_PATH, output_dir=out,
-                session=session, log=log,
-                delay=args.delay, limit=args.limit,
-            )
+        log.info("=== Stage 2: Code search ===")
+        run_code_search(
+            words_path=CODE_WORDS_PATH, output_dir=out,
+            session=session, log=log,
+            delay=args.delay, limit=args.limit,
+        )
 
     # Filter results
     if not args.skip_to_lang:
