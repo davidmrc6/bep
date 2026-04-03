@@ -86,20 +86,24 @@ def collect_repo_comments(full_name: str, session: Session, log: logging.Logger)
         pr_number = pr["number"]
         pr_title = pr.get("title", "")
         pr_url = pr.get("html_url", "")
+        issue_comment_count = pr.get("comments", 0)
+        review_comment_count = pr.get("review_comments", 0)
 
         # Issue comments (general PR discussion)
-        issue_comments_url = f"https://api.github.com/repos/{full_name}/issues/{pr_number}/comments"
-        for raw in paginate_core(issue_comments_url, session, log):
-            rec = _parse_comment(raw, full_name, pr_number, pr_url, pr_title, "issue_comment")
-            if rec:
-                comments.append(rec)
+        if issue_comment_count > 0:
+            issue_comments_url = f"https://api.github.com/repos/{full_name}/issues/{pr_number}/comments"
+            for raw in paginate_core(issue_comments_url, session, log):
+                rec = _parse_comment(raw, full_name, pr_number, pr_url, pr_title, "issue_comment")
+                if rec:
+                    comments.append(rec)
 
         # Review comments (inline code review)
-        review_comments_url = f"https://api.github.com/repos/{full_name}/pulls/{pr_number}/comments"
-        for raw in paginate_core(review_comments_url, session, log):
-            rec = _parse_comment(raw, full_name, pr_number, pr_url, pr_title, "review_comment")
-            if rec:
-                comments.append(rec)
+        if review_comment_count > 0:
+            review_comments_url = f"https://api.github.com/repos/{full_name}/pulls/{pr_number}/comments"
+            for raw in paginate_core(review_comments_url, session, log):
+                rec = _parse_comment(raw, full_name, pr_number, pr_url, pr_title, "review_comment")
+                if rec:
+                    comments.append(rec)
 
         # Reviews (approve/reject with body text)
         reviews_url = f"https://api.github.com/repos/{full_name}/pulls/{pr_number}/reviews"
