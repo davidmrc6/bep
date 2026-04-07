@@ -19,9 +19,9 @@ from lingua import Language, LanguageDetectorBuilder
 from constants.constants import OUTPUT_DIR
 from helpers.aggregation import load_json, _save_json
 
-DEFAULT_THRESHOLD = 0.7
-DEFAULT_REVIEW_FLOOR = 0.4
-MIN_BODY_LENGTH = 15  # skip very short comments as they are too noisy for n-gram model lang detection
+DEFAULT_THRESHOLD = 0.5
+DEFAULT_REVIEW_FLOOR = 0.3
+MIN_BODY_LENGTH = 10  # skip very short comments as they are too noisy for n-gram model lang detection
 
 # Patterns to strip before language detection: code/URLs/mentions confuse the n-gram model
 _CODE_BLOCK_RE = re.compile(r"```.*?```", re.DOTALL)           # fenced code blocks
