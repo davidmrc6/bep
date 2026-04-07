@@ -15,7 +15,9 @@ from repo_search import run_repo_search
 from code_search import run_code_search
 from candidate_filter import run_candidate_filter
 from pr_collector import run_pr_collector
+from issue_search import run_issue_search
 from lang_filter import run_lang_filter
+from helpers.aggregation import load_json, _save_json
 
 
 def main():
@@ -55,20 +57,28 @@ def main():
             delay=args.delay, limit=args.limit,
         )
 
+        log.info("=== Stage 3: Issue search ===")
+        run_issue_search(
+            words_path=CODE_WORDS_PATH, output_dir=out,
+            session=session, log=log,
+            delay=args.delay, limit=args.limit,
+        )
+
     # Filter results
     if not args.skip_to_lang:
-        log.info("=== Stage 3: Candidate filtering ===")
+        log.info("=== Stage 4: Candidate filtering ===")
         run_candidate_filter(
             input_paths=[
                 out / "repo_search_candidates.json",
                 out / "code_search_candidates.json",
+                out / "issue_search_candidates.json",
             ],
             output_path=out / "filtered_candidates.json",
             log=log,
         )
 
         # Collect PR comments from filtered repositories
-        log.info("=== Stage 4: PR comment collection ===")
+        log.info("=== Stage 5: PR comment collection ===")
         session_pr = create_session()
         run_pr_collector(
             input_path=out / "filtered_candidates.json",
@@ -78,7 +88,7 @@ def main():
         )
 
     # Filter out non-Romanian entries
-    log.info("=== Stage 5: Language filtering ===")
+    log.info("=== Stage 6: Language filtering ===")
     run_lang_filter(
         input_path=out / "pr_comments.json",
         output_dir=out,

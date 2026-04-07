@@ -166,6 +166,7 @@ if __name__ == "__main__":
         default=[
             OUTPUT_DIR / "repo_search_candidates.json",
             OUTPUT_DIR / "code_search_candidates.json",
+            OUTPUT_DIR / "issue_search_candidates.json",
         ],
         help="Path(s) to raw candidates JSON files",
     )
