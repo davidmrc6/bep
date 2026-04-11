@@ -1,13 +1,12 @@
 """
-Filter PR comments to keep only Romanian-language text.
+Filter PR comments to keep only those where Romanian is the top detected language.
 
 Uses lingua-language-detector for accurate deterministic language detection.
 
 Reads pr_comments.json, runs each comment through language detection,
 and produces:
-  - ro_comments.json          — high confidence Romanian (>= threshold)
-  - ro_comments_review.json   — borderline cases (between review_floor and threshold)
-                                 for manual review
+  - ro_comments_review.json   — all comments where Romanian is the top language,
+                                 sorted by confidence descending, for manual review
   - lang_stats.json           — per-language distribution summary
 """
 import argparse
@@ -19,8 +18,6 @@ from lingua import Language, LanguageDetectorBuilder
 from constants.constants import OUTPUT_DIR
 from helpers.aggregation import load_json, _save_json
 
-DEFAULT_THRESHOLD = 0.5
-DEFAULT_REVIEW_FLOOR = 0.3
 MIN_BODY_LENGTH = 10  # skip very short comments as they are too noisy for n-gram model lang detection
 
 # Patterns to strip before language detection: code/URLs/mentions confuse the n-gram model
@@ -60,11 +57,9 @@ def run_lang_filter(
     input_path: Path,
     output_dir: Path,
     log: logging.Logger,
-    threshold: float = DEFAULT_THRESHOLD,
-    review_floor: float = DEFAULT_REVIEW_FLOOR,
     min_length: int = MIN_BODY_LENGTH,
-) -> tuple[list[dict], list[dict]]:
-    """Run language detection. Returns (accepted, review) comment lists."""
+) -> list[dict]:
+    """Run language detection. Returns list of Romanian-detected comments."""
     log.info("INIT       [lang_filter] building language detector...")
     detector = build_detector()
     log.info("INIT       [lang_filter] detector ready")
@@ -72,8 +67,7 @@ def run_lang_filter(
     comments = load_json(input_path, log)
     log.info("LOAD       [lang_filter] %d comments from %s", len(comments), input_path)
 
-    accepted = []
-    review = []
+    ro_comments = []
     lang_counts: dict[str, int] = {}
     skipped_short = 0
 
@@ -105,38 +99,33 @@ def run_lang_filter(
                 ro_prob = cv.value
                 break
 
-        record = {**c, "ro_confidence": round(ro_prob, 4)}
+        # Keep all comments where Romanian is the top language
+        if top_lang == "ro":
+            record = {**c, "ro_confidence": round(ro_prob, 4)}
+            ro_comments.append(record)
 
-        if ro_prob >= threshold:
-            accepted.append(record)
-        elif ro_prob >= review_floor:
-            review.append(record)
+    # Sort by confidence descending so the best candidates are first
+    ro_comments.sort(key=lambda r: r["ro_confidence"], reverse=True)
 
     # Save outputs
-    accepted_path = output_dir / "ro_comments.json"
-    _save_json(accepted, accepted_path)
-    log.info("SAVE       [lang_filter] %d accepted comments → %s", len(accepted), accepted_path)
-
     review_path = output_dir / "ro_comments_review.json"
-    _save_json(review, review_path)
-    log.info("SAVE       [lang_filter] %d review comments → %s", len(review), review_path)
+    _save_json(ro_comments, review_path)
+    log.info("SAVE       [lang_filter] %d Romanian comments → %s", len(ro_comments), review_path)
 
-    # Sort lang stats descending
     sorted_langs = sorted(lang_counts.items(), key=lambda x: -x[1])
     stats_path = output_dir / "lang_stats.json"
     _save_json(sorted_langs, stats_path)
     log.info("SAVE       [lang_filter] language stats → %s", stats_path)
 
     log.info("INFO       [lang_filter] skipped (too short, <%d chars): %d", min_length, skipped_short)
-    log.info("INFO       [lang_filter] accepted (ro >= %.2f): %d", threshold, len(accepted))
-    log.info("INFO       [lang_filter] for review (%.2f <= ro < %.2f): %d", review_floor, threshold, len(review))
+    log.info("INFO       [lang_filter] Romanian comments: %d", len(ro_comments))
 
     log.info("INFO       [lang_filter] top languages detected:")
     for lang, count in sorted_langs[:10]:
         log.info("INFO       [lang_filter]   %5s: %d", lang, count)
 
     log.info("DONE       [lang_filter] outputs written to %s", output_dir.resolve())
-    return accepted, review
+    return ro_comments
 
 
 if __name__ == "__main__":
@@ -145,8 +134,6 @@ if __name__ == "__main__":
     p = argparse.ArgumentParser(description="Filter PR comments for Romanian language")
     p.add_argument("--input", type=Path, default=OUTPUT_DIR / "pr_comments.json")
     p.add_argument("--output-dir", type=Path, default=OUTPUT_DIR)
-    p.add_argument("--threshold", type=float, default=DEFAULT_THRESHOLD)
-    p.add_argument("--review-floor", type=float, default=DEFAULT_REVIEW_FLOOR)
     p.add_argument("--min-length", type=int, default=MIN_BODY_LENGTH)
     args = p.parse_args()
 
@@ -154,7 +141,5 @@ if __name__ == "__main__":
         input_path=args.input,
         output_dir=args.output_dir,
         log=setup_logging(),
-        threshold=args.threshold,
-        review_floor=args.review_floor,
         min_length=args.min_length,
     )
