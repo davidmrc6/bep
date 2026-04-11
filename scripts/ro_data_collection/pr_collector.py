@@ -40,6 +40,22 @@ def _load_repo_cache(full_name: str) -> list[dict]:
     return load_json(_repo_cache_path(full_name))
 
 
+def _comment_key(c: dict) -> tuple:
+    return (c.get("repo_full_name"), c.get("pr_number"),
+            c.get("comment_type"), c.get("created_at"), c.get("author_login"))
+
+
+def _dedup_comments(comments: list[dict]) -> list[dict]:
+    seen = set()
+    result = []
+    for c in comments:
+        key = _comment_key(c)
+        if key not in seen:
+            seen.add(key)
+            result.append(c)
+    return result
+
+
 def _is_human_comment(author_login: str, author_type: str) -> bool:
     """Reuse the bot detection from gh.py via the _is_human helper."""
     return _is_human({"login": author_login, "type": author_type})
@@ -147,7 +163,11 @@ def run_pr_collector(
         all_comments.extend(comments)
         log.info("DONE       [pr_collect %d/%d] %s → %d human comments", i, len(repos), full_name, len(comments))
 
-    # Save combined output
+    # Deduplicate and save
+    before = len(all_comments)
+    all_comments = _dedup_comments(all_comments)
+    if before != len(all_comments):
+        log.info("DEDUP      [pr_collect] %d → %d comments", before, len(all_comments))
     _save_json(all_comments, output_path)
 
     unique_repos = len({c["repo_full_name"] for c in all_comments})

@@ -64,7 +64,18 @@ def run_lang_filter(
     detector = build_detector()
     log.info("INIT       [lang_filter] detector ready")
 
-    comments = load_json(input_path, log)
+    comments_raw = load_json(input_path, log)
+    # Deduplicate
+    seen = set()
+    comments = []
+    for c in comments_raw:
+        key = (c.get("repo_full_name"), c.get("pr_number"),
+               c.get("comment_type"), c.get("created_at"), c.get("author_login"))
+        if key not in seen:
+            seen.add(key)
+            comments.append(c)
+    if len(comments_raw) != len(comments):
+        log.info("DEDUP      [lang_filter] %d → %d comments", len(comments_raw), len(comments))
     log.info("LOAD       [lang_filter] %d comments from %s", len(comments), input_path)
 
     ro_comments = []
