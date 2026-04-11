@@ -40,7 +40,6 @@ def main():
     p.add_argument(
         "--input", type=Path, nargs="+",
         default=[
-            OUTPUT_DIR / "ro_comments.json",
             OUTPUT_DIR / "ro_comments_review.json",
         ],
     )
@@ -54,54 +53,74 @@ def main():
     )
     args = p.parse_args()
 
-    # Load all comments
-    all_comments = []
+    # Load all comments, deduplicate
+    all_comments_raw = []
     for path in args.input:
         if path.exists():
-            all_comments.extend(load_comments(path))
-    print(f"Loaded {len(all_comments)} comments from {len(args.input)} file(s)")
+            all_comments_raw.extend(load_comments(path))
+
+    seen_keys = set()
+    all_comments = []
+    for c in all_comments_raw:
+        key = comment_key(c)
+        if key not in seen_keys:
+            seen_keys.add(key)
+            all_comments.append(c)
+    print(f"Loaded {len(all_comments)} comments ({len(all_comments_raw) - len(all_comments)} duplicates removed)")
 
     state = load_state()
     decisions = state["decisions"]
 
-    # Filter to unreviewed if requested
+    # Filter to unreviewed
     to_review = []
     for c in all_comments:
         key = comment_key(c)
-        if args.review_only and key in decisions:
+        if key in decisions:
             continue
         to_review.append(c)
 
     already_done = len(all_comments) - len(to_review)
     print(f"Already reviewed: {already_done}, remaining: {len(to_review)}")
-    print(f"\nControls: [y]es  [n]o  [s]kip  [q]uit\n{'='*60}\n")
+    print("Controls: [y]es  [n]o  [s]kip  [q]uit\n")
+
+    W = 80  # box width
 
     for i, c in enumerate(to_review):
         key = comment_key(c)
 
-        # Show existing decision if re-reviewing
-        prev = decisions.get(key)
-        prev_str = f" (previously: {prev})" if prev else ""
-
         conf = c.get("ro_confidence", "?")
-        print(f"--- [{i+1}/{len(to_review)}] conf={conf}{prev_str} ---")
-        print(f"Repo:   {c.get('repo_full_name')}")
-        print(f"PR:     {c.get('pr_url')} ({c.get('comment_type')})")
-        print(f"Author: {c.get('author_login')}")
-        print(f"Title:  {c.get('pr_title')}")
-        print()
-        print(c.get("body", ""))
+        header = f" [{i+1}/{len(to_review)}]  conf={conf}  {c.get('comment_type', '')} "
+
+        # Clear screen
+        print("\033[2J\033[H", end="")
+
+        # Header bar
+        print(f"\033[1;36m{'=' * W}\033[0m")
+        print(f"\033[1m{header:^{W}}\033[0m")
+        print(f"\033[1;36m{'=' * W}\033[0m")
+        print(f"  Repo:   {c.get('repo_full_name')}")
+        print(f"  PR:     {c.get('pr_url')}")
+        print(f"  Author: {c.get('author_login')}")
+        print(f"  Title:  {c.get('pr_title')}")
+        print(f"\033[1;36m{'─' * W}\033[0m")
+
+        # Comment body in a box
+        body = c.get("body", "")
+        for line in body.splitlines():
+            print(f"  \033[33m│\033[0m {line}")
+
+        print(f"\033[1;36m{'─' * W}\033[0m")
         print()
 
         while True:
             try:
-                choice = input("[y/n/s/q] > ").strip().lower()
+                choice = input("  \033[1m[y/n/s/q]\033[0m > ").strip().lower()
             except (EOFError, KeyboardInterrupt):
                 choice = "q"
 
             if choice in ("y", "n", "s", "q"):
                 break
-            print("Invalid input. Press y, n, s, or q.")
+            print("  Invalid input. Press y, n, s, or q.")
 
         if choice == "q":
             save_state(state)
@@ -112,26 +131,32 @@ def main():
             save_state(state)
         # s = skip, don't record
 
-    # Build final output
+    # Build final outputs
     accepted = []
+    rejected = []
     for c in all_comments:
         key = comment_key(c)
-        if decisions.get(key) == "y":
+        decision = decisions.get(key)
+        if decision == "y":
             accepted.append(c)
+        elif decision == "n":
+            rejected.append(c)
 
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(accepted, indent=2, ensure_ascii=False))
 
-    total_y = sum(1 for v in decisions.values() if v == "y")
-    total_n = sum(1 for v in decisions.values() if v == "n")
-    total_pending = len(all_comments) - total_y - total_n
+    rejected_path = args.output.parent / "ro_comments_rejected.json"
+    rejected_path.write_text(json.dumps(rejected, indent=2, ensure_ascii=False))
+
+    total_pending = len(all_comments) - len(accepted) - len(rejected)
     print(f"\n{'='*60}")
-    print(f"Accepted:  {total_y}")
-    print(f"Rejected:  {total_n}")
+    print(f"Accepted:  {len(accepted)}")
+    print(f"Rejected:  {len(rejected)}")
     print(f"Pending:   {total_pending}")
     print(f"Written:   {args.output}")
+    print(f"Rejected:  {rejected_path}")
     print(f"{'='*60}")
 
 
 if __name__ == "__main__":
-    main()⏎ 
+    main()
