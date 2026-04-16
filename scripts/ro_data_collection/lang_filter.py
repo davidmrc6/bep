@@ -20,7 +20,24 @@ from helpers.aggregation import load_json, _save_json
 
 MIN_BODY_LENGTH = 10  # skip very short comments as they are too noisy for n-gram model lang detection
 
-# Patterns to strip before language detection: code/URLs/mentions confuse the n-gram model
+# Markers that indicate a comment is an email-reply artifact rather than a
+# genuine PR comment. If any marker is found, the whole comment is discarded.
+_EMAIL_ARTIFACT_MARKERS = [
+    "Reply to this email directly",
+    "reacted to your message",
+    "You are receiving this because",
+    "DISCLAIMER",
+    "***@***.***>",               # GitHub-masked email addresses in forwarded mail
+]
+
+
+def _is_email_artifact(text: str) -> bool:
+    """Return True if the comment looks like an email-reply artifact."""
+    lower = text.lower()
+    return any(m.lower() in lower for m in _EMAIL_ARTIFACT_MARKERS)
+
+
+# Technical noise patterns (confuse n-gram model)
 _CODE_BLOCK_RE = re.compile(r"```.*?```", re.DOTALL)           # fenced code blocks
 _INLINE_CODE_RE = re.compile(r"`[^`]+`")                       # inline code
 _URL_RE = re.compile(r"https?://\S+")                          # URLs
@@ -81,12 +98,18 @@ def run_lang_filter(
     ro_comments = []
     lang_counts: dict[str, int] = {}
     skipped_short = 0
+    skipped_email = 0
 
     for i, c in enumerate(comments):
         if (i + 1) % 2000 == 0:
             log.info("PROGRESS   [lang_filter %d/%d]", i + 1, len(comments))
 
         body = c.get("body", "")
+
+        if _is_email_artifact(body):
+            skipped_email += 1
+            continue
+
         cleaned = _clean_for_detection(body)
         if len(cleaned) < min_length:
             skipped_short += 1
@@ -128,6 +151,7 @@ def run_lang_filter(
     _save_json(sorted_langs, stats_path)
     log.info("SAVE       [lang_filter] language stats → %s", stats_path)
 
+    log.info("INFO       [lang_filter] skipped (email artifacts): %d", skipped_email)
     log.info("INFO       [lang_filter] skipped (too short, <%d chars): %d", min_length, skipped_short)
     log.info("INFO       [lang_filter] Romanian comments: %d", len(ro_comments))
 
