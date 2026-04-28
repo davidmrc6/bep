@@ -59,6 +59,9 @@ UNI_TITLE_RE = re.compile(
     r")\b"
 )
 
+# Comment types to drop
+DROPPED_COMMENT_TYPES = {"issue_comment"}
+
 # Hardcoded list of translation/documentation/tutorial repos
 TRANSLATION_REPOS = {
     "javascript-tutorial/ro.javascript.info",
@@ -103,6 +106,10 @@ def _drop_reasons(entry: dict, min_confidence: float) -> list[str]:
     conf = entry.get("ro_confidence")
     if conf is not None and conf < min_confidence:
         reasons.append("low_confidence")
+
+    ctype = entry.get("comment_type")
+    if ctype in DROPPED_COMMENT_TYPES:
+        reasons.append(f"type_{ctype}")
 
     repo = entry.get("repo_full_name") or ""
     if _is_uni_repo(repo):
