@@ -166,24 +166,3 @@ def run_sampler(
     log.info("INFO       [sampler] type breakdown: %s", stats["comment_type_breakdown"])
 
     return accepted
-
-
-if __name__ == "__main__":
-    from helpers.log import setup_logging
-
-    p = argparse.ArgumentParser(description="Stratified sample for the Romanian gold standard")
-    p.add_argument("--input", type=Path, default=OUTPUT_DIR / "ro_comments_clean.json")
-    p.add_argument("--output", type=Path, default=OUTPUT_DIR / "ro_comments_gold.json")
-    p.add_argument("--stats", type=Path, default=OUTPUT_DIR / "sampling_stats.json")
-    p.add_argument("--target", type=int, default=DEFAULT_TARGET)
-    p.add_argument("--seed", type=int, default=DEFAULT_SEED)
-    args = p.parse_args()
-
-    run_sampler(
-        input_path=args.input,
-        output_path=args.output,
-        stats_path=args.stats,
-        log=setup_logging(),
-        target=args.target,
-        seed=args.seed,
-    )

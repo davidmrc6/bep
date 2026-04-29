@@ -155,38 +155,3 @@ def run_candidate_filter(
     _save_json(filtered, output_path)
     log.info("SAVE       [filter] written to %s", output_path.resolve())
     return filtered
-
-
-if __name__ == "__main__":
-    from helpers.log import setup_logging
-
-    p = argparse.ArgumentParser(description="Filter and deduplicate repo candidates")
-    p.add_argument(
-        "--input", type=Path, nargs="+",
-        default=[
-            OUTPUT_DIR / "repo_search_candidates.json",
-            OUTPUT_DIR / "code_search_candidates.json",
-            OUTPUT_DIR / "issue_search_candidates.json",
-        ],
-        help="Path(s) to raw candidates JSON files",
-    )
-    p.add_argument(
-        "--output", type=Path,
-        default=OUTPUT_DIR / "filtered_candidates.json",
-        help="Path to write filtered output",
-    )
-    p.add_argument("--min-prs", type=int, default=DEFAULT_MIN_PRS)
-    p.add_argument("--max-prs", type=int, default=DEFAULT_MAX_PRS)
-    p.add_argument("--max-stars", type=int, default=DEFAULT_MAX_STARS)
-    p.add_argument("--min-human-contributors", type=int, default=DEFAULT_MIN_HUMAN_CONTRIBUTORS)
-    args = p.parse_args()
-
-    run_candidate_filter(
-        input_paths=args.input,
-        output_path=args.output,
-        log=setup_logging(),
-        min_prs=args.min_prs,
-        max_prs=args.max_prs,
-        max_stars=args.max_stars,
-        min_human_contributors=args.min_human_contributors,
-    )

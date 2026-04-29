@@ -73,19 +73,3 @@ def run_repo_search(
     log.info("DONE       [repo_search] %d records, %d unique repos", len(repo_records), len(unique_repos))
     save_candidates(repo_records, output_dir, "repo_search_candidates.json", log)
     return repo_records
-
-
-if __name__ == "__main__":
-    from helpers.cli import parse_repo_search_args
-    from helpers.log import setup_logging
-    from helpers.session import create_session
-
-    args = parse_repo_search_args()
-    run_repo_search(
-        words_path=args.words,
-        output_dir=args.output_dir,
-        session=create_session(),
-        log=setup_logging(),
-        delay=args.delay,
-        limit=args.limit,
-    )

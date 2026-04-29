@@ -1,27 +1,18 @@
 """
 Filter PR comments to keep only those where Romanian is the top detected language.
-
 Uses lingua-language-detector for accurate deterministic language detection.
-
-Reads pr_comments.json, runs each comment through language detection,
-and produces:
-  - ro_comments_review.json   — all comments where Romanian is the top language,
-                                 sorted by confidence descending, for manual review
-  - lang_stats.json           — per-language distribution summary
 """
-import argparse
 import logging
 import re
 
 from pathlib import Path
 from lingua import Language, LanguageDetectorBuilder
-from constants.constants import OUTPUT_DIR
 from helpers.aggregation import load_json, _save_json
 
 MIN_BODY_LENGTH = 10  # skip very short comments as they are too noisy for n-gram model lang detection
 
 # Markers that indicate a comment is an email-reply artifact rather than a
-# genuine PR comment. If any marker is found, the whole comment is discarded.
+# genuine PR comment. If any marker is found, the whole comment is discarded
 _EMAIL_ARTIFACT_MARKERS = [
     "Reply to this email directly",
     "reacted to your message",
@@ -61,7 +52,6 @@ def _clean_for_detection(text: str) -> str:
 
 
 def build_detector():
-    """Build a lingua detector tuned for Romanian detection."""
     return (
         LanguageDetectorBuilder
         .from_all_languages()
@@ -76,7 +66,7 @@ def run_lang_filter(
     log: logging.Logger,
     min_length: int = MIN_BODY_LENGTH,
 ) -> list[dict]:
-    """Run language detection. Returns list of Romanian-detected comments."""
+    """Run language detection. Returns list of Romanian detected comments."""
     log.info("INIT       [lang_filter] building language detector...")
     detector = build_detector()
     log.info("INIT       [lang_filter] detector ready")
@@ -138,10 +128,8 @@ def run_lang_filter(
             record = {**c, "ro_confidence": round(ro_prob, 4)}
             ro_comments.append(record)
 
-    # Sort by confidence descending so the best candidates are first
     ro_comments.sort(key=lambda r: r["ro_confidence"], reverse=True)
 
-    # Save outputs
     review_path = output_dir / "ro_comments_review.json"
     _save_json(ro_comments, review_path)
     log.info("SAVE       [lang_filter] %d Romanian comments → %s", len(ro_comments), review_path)
@@ -161,20 +149,3 @@ def run_lang_filter(
 
     log.info("DONE       [lang_filter] outputs written to %s", output_dir.resolve())
     return ro_comments
-
-
-if __name__ == "__main__":
-    from helpers.log import setup_logging
-
-    p = argparse.ArgumentParser(description="Filter PR comments for Romanian language")
-    p.add_argument("--input", type=Path, default=OUTPUT_DIR / "pr_comments.json")
-    p.add_argument("--output-dir", type=Path, default=OUTPUT_DIR)
-    p.add_argument("--min-length", type=int, default=MIN_BODY_LENGTH)
-    args = p.parse_args()
-
-    run_lang_filter(
-        input_path=args.input,
-        output_dir=args.output_dir,
-        log=setup_logging(),
-        min_length=args.min_length,
-    )

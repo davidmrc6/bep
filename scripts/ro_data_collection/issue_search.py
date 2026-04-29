@@ -79,25 +79,3 @@ def run_issue_search(
     log.info("DONE       [issue_search] %d records, %d unique repos", len(records), len(repo_queries))
     save_candidates(records, output_dir, "issue_search_candidates.json", log)
     return records
-
-
-if __name__ == "__main__":
-    import argparse
-    from helpers.log import setup_logging
-    from helpers.session import create_session
-
-    p = argparse.ArgumentParser(description="Search GitHub issues/PRs for Romanian keywords")
-    p.add_argument("--words", type=Path, default=CODE_WORDS_PATH)
-    p.add_argument("--output-dir", type=Path, default=OUTPUT_DIR)
-    p.add_argument("--delay", type=float, default=2.5)
-    p.add_argument("--limit", type=int, default=None)
-    args = p.parse_args()
-
-    run_issue_search(
-        words_path=args.words,
-        output_dir=args.output_dir,
-        session=create_session(),
-        log=setup_logging(),
-        delay=args.delay,
-        limit=args.limit,
-    )

@@ -175,34 +175,3 @@ def run_pr_collector(
     log.info("DONE       [pr_collect] %d comments from %d PRs across %d repos", len(all_comments), unique_prs, unique_repos)
 
     return all_comments
-
-
-if __name__ == "__main__":
-    import argparse
-    from helpers.log import setup_logging
-    from helpers.session import create_session
-
-    p = argparse.ArgumentParser(description="Collect PR comments from filtered repos")
-    p.add_argument(
-        "--input", type=Path,
-        default=OUTPUT_DIR / "filtered_candidates.json",
-        help="Path to filtered candidates JSON",
-    )
-    p.add_argument(
-        "--output", type=Path,
-        default=OUTPUT_DIR / "pr_comments.json",
-        help="Path to write collected comments",
-    )
-    p.add_argument(
-        "--limit", type=int, default=None,
-        help="Only process the first N repos (for testing)",
-    )
-    args = p.parse_args()
-
-    run_pr_collector(
-        input_path=args.input,
-        output_path=args.output,
-        session=create_session(),
-        log=setup_logging(),
-        limit=args.limit,
-    )

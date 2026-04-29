@@ -85,19 +85,3 @@ def run_code_search(
     log.info("DONE       [code_search] %d records, %d unique repos", len(records), len(repo_queries))
     save_candidates(records, output_dir, "code_search_candidates.json", log)
     return records
-
-
-if __name__ == "__main__":
-    from helpers.cli import parse_code_search_args
-    from helpers.log import setup_logging
-    from helpers.session import create_session
-
-    args = parse_code_search_args()
-    run_code_search(
-        words_path=args.words,
-        output_dir=args.output_dir,
-        session=create_session(),
-        log=setup_logging(),
-        delay=args.delay,
-        limit=args.limit,
-    )

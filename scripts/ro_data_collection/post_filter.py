@@ -195,22 +195,3 @@ def run_post_filter(
     )
 
     return clean, rejected
-
-
-if __name__ == "__main__":
-    from helpers.log import setup_logging
-
-    p = argparse.ArgumentParser(description="Clean up Romanian PR comments")
-    p.add_argument("--input", type=Path, default=OUTPUT_DIR / "ro_comments_review.json")
-    p.add_argument("--clean", type=Path, default=OUTPUT_DIR / "ro_comments_clean.json")
-    p.add_argument("--rejected", type=Path, default=OUTPUT_DIR / "ro_comments_rejected.json")
-    p.add_argument("--min-confidence", type=float, default=DEFAULT_MIN_CONFIDENCE)
-    args = p.parse_args()
-
-    run_post_filter(
-        input_path=args.input,
-        clean_path=args.clean,
-        rejected_path=args.rejected,
-        log=setup_logging(),
-        min_confidence=args.min_confidence,
-    )
