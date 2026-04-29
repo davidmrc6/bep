@@ -6,14 +6,14 @@ from constants.constants import REPO_WORDS_PATH, CODE_WORDS_PATH, OUTPUT_DIR
 from helpers.log import setup_logging
 from helpers.session import create_session
 
-from repo_search import run_repo_search
-from code_search import run_code_search
-from issue_search import run_issue_search
-from candidate_filter import run_candidate_filter
-from pr_collector import run_pr_collector
-from lang_filter import run_lang_filter
-from post_filter import run_post_filter
-from sampler import run_sampler
+from _repo_search import run_repo_search
+from _code_search import run_code_search
+from _issue_search import run_issue_search
+from _candidate_filter import run_candidate_filter
+from _pr_collector import run_pr_collector
+from _lang_filter import run_lang_filter
+from _post_filter import run_post_filter
+from _sampler import run_sampler
 
 
 def main():
