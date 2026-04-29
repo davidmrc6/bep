@@ -24,7 +24,16 @@ UNI_SUBSTRINGS = (
     "cegekaacademy", "skillbrain",
     "summerschool", "summer-school",
     "preemployment", "pre-employment",
+    "training", "unibuc", "uaic", "politehnic",
 )
+
+# Specific repos identified by manual review as uni/training but not caught by
+# the regex/substring rules. Add here when spot-checking the rejected pile.
+MANUAL_UNI_REPOS = {
+    "mariuspodean/NATIONAL-PYTHON-01",
+    "MirceaOvidiu/CleanCoding-GIT-PA",
+    "BERDA2024/Exam-Scheduler",
+}
 
 # University repo regex
 UNI_REPO_RE = re.compile(
@@ -41,11 +50,15 @@ UNI_REPO_RE = re.compile(
     r"|cs-utcn"
     r"|aut-eng"
     r"|^ro-msg-"
+    r"|\bupb\b"                             # MPS-UPB, UPB-CS, etc. (avoids `upbeat`)
+    r"|\bfii\b"                             # FII-2A1-2024, /FII-ASET (avoids `fiipregatit`)
     r")"
 )
 
 
 def _is_uni_repo(repo_full_name: str) -> bool:
+    if repo_full_name in MANUAL_UNI_REPOS:
+        return True
     lower = repo_full_name.lower()
     if any(s in lower for s in UNI_SUBSTRINGS):
         return True
@@ -55,7 +68,7 @@ def _is_uni_repo(repo_full_name: str) -> bool:
 UNI_TITLE_RE = re.compile(
     r"(?i)\b("
     r"tema|lab(?:orator)?\s*\d|homework|exercit|proiect\s*\d|seminar|"
-    r"assignment|hw\s*\d|saptamana\s*\d|week\s*\d"
+    r"assignment|hw\s*\d|saptamana\s*\d|week\s*\d|midterm"
     r")\b"
 )
 

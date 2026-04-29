@@ -13,6 +13,7 @@ from candidate_filter import run_candidate_filter
 from pr_collector import run_pr_collector
 from lang_filter import run_lang_filter
 from post_filter import run_post_filter
+from sampler import run_sampler
 
 
 def main():
@@ -69,6 +70,12 @@ def main():
             input_path=out / "ro_comments_review.json",
             clean_path=out / "ro_comments_clean.json",
             rejected_path=out / "ro_comments_rejected.json",
+            log=log,
+        )),
+        ("sampler", lambda: run_sampler(
+            input_path=out / "ro_comments_clean.json",
+            output_path=out / "ro_comments_gold.json",
+            stats_path=out / "sampling_stats.json",
             log=log,
         )),
     ]
