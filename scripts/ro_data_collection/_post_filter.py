@@ -2,7 +2,7 @@
 Post-process Romanian-detected PR comments to remove content that doesn't
 represent real-world software dev conversation.
 It drops low-confidence Romanian entries, uni/homework repos,
-translation repos, auto-quoted email-reply text, and duplicate bodies.
+translation repos, comments containing quoted-reply content, and duplicate bodies.
 """
 import logging
 import re
@@ -85,26 +85,16 @@ TRANSLATION_REPOS = {
     "spatialthoughts/qgis-tutorials",
 }
 
-# Auto-quote: "On <date>, <user> wrote:" followed by quoted lines
-_EMAIL_QUOTE_RE = re.compile(r"On .{1,80} wrote:\s*\n", re.IGNORECASE)
-_EMAIL_QUOTE_MIN_RATIO = 0.3
-_HEAVY_QUOTE_RATIO = 0.5
-
 # Annotation-only patterns
 _CODE_RE = re.compile(r"```.*?```|`[^`]+`", re.DOTALL)
 _EMAIL_RE = re.compile(r"\b[\w.+-]+@[\w.-]+\.\w+\b")
 
-def _quote_ratio(body: str) -> float:
-    lines = [l for l in body.split("\n") if l.strip()]
-    if not lines:
-        return 0.0
-    return sum(1 for l in lines if l.lstrip().startswith(">")) / len(lines)
 
-def _is_email_quote(body: str) -> bool:
-    qr = _quote_ratio(body)
-    if _EMAIL_QUOTE_RE.search(body) and qr > _EMAIL_QUOTE_MIN_RATIO:
-        return True
-    return qr > _HEAVY_QUOTE_RATIO
+def _has_quoted_reply(body: str) -> bool:
+    """True if any line starts with `>` (markdown quote prefix). These comments
+    quote prior content the reader can't see, so the standalone text is often
+    not interpretable for sentiment annotation."""
+    return any(l.lstrip().startswith(">") for l in body.split("\n"))
 
 def _code_ratio(body: str) -> float:
     if not body:
@@ -134,8 +124,8 @@ def _drop_reasons(entry: dict, min_confidence: float) -> list[str]:
         reasons.append("uni_title")
 
     body = entry.get("body") or ""
-    if _is_email_quote(body):
-        reasons.append("email_quote")
+    if _has_quoted_reply(body):
+        reasons.append("quoted_reply")
 
     return reasons
 
