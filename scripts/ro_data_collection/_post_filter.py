@@ -4,14 +4,12 @@ represent real-world software dev conversation.
 It drops low-confidence Romanian entries, uni/homework repos,
 translation repos, auto-quoted email-reply text, and duplicate bodies.
 """
-import argparse
 import logging
 import re
 
 from collections import Counter
 from pathlib import Path
 
-from constants.constants import OUTPUT_DIR
 from helpers.aggregation import load_json, _save_json
 
 DEFAULT_MIN_CONFIDENCE = 0.20
@@ -28,7 +26,7 @@ UNI_SUBSTRINGS = (
 )
 
 # Specific repos identified by manual review as uni/training but not caught by
-# the regex/substring rules. Add here when spot-checking the rejected pile.
+# the regex/substring rules
 MANUAL_UNI_REPOS = {
     "mariuspodean/NATIONAL-PYTHON-01",
     "MirceaOvidiu/CleanCoding-GIT-PA",
@@ -38,8 +36,8 @@ MANUAL_UNI_REPOS = {
 # University repo regex
 UNI_REPO_RE = re.compile(
     r"(?i)("
-    r"\bpractica"                         # practica, PracticaEB2020
-    r"|\blabs?(?:\d|[-_]|$)"               # labs, lab3, lab-react
+    r"\bpractica"                           # practica, PracticaEB2020
+    r"|\blabs?(?:\d|[-_]|$)"                # labs, lab3, lab-react
     r"|\bcurs(?:\d|[-_/]|$|uri)"            # curs, curs_2020
     r"|\btema(?:\d|[-_/]|$|le)"             # tema, Tema_X, temele
     r"|\bstagiu"                            # stagiu, stagiul
@@ -73,7 +71,8 @@ UNI_TITLE_RE = re.compile(
 )
 
 # Comment types to drop
-DROPPED_COMMENT_TYPES = {"issue_comment"}
+# NOTE: empty on purpose for possible future additions
+DROPPED_COMMENT_TYPES: set[str] = set()
 
 # Hardcoded list of translation/documentation/tutorial repos
 TRANSLATION_REPOS = {

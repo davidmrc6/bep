@@ -2,10 +2,11 @@
 Stratified sample for the Romanian gold standard.
 
 Caps: 30 per repo, 20 per author, 8 per PR, 250 per year.
-Floor: at least 200 `review` entries (the rest is `review_comment`).
+Floors: at least 200 `review` and 400 `issue_comment` entries; remainder is
+`review_comment`.
 
-Two-pass shuffle: fill the review floor first, then top up with review_comment
-up to the target N
+Three-pass shuffle (rarest type first) so the rare-style floors are met before
+the bulk type fills up the cap budget.
 """
 import argparse
 import logging
@@ -26,6 +27,7 @@ CAP_PER_AUTHOR = 20
 CAP_PER_PR = 8
 CAP_PER_YEAR = 250
 REVIEW_FLOOR = 200
+ISSUE_FLOOR = 400
 
 
 def _year_of(entry: dict) -> str | None:
@@ -121,6 +123,7 @@ def run_sampler(
     target: int = DEFAULT_TARGET,
     seed: int = DEFAULT_SEED,
 ) -> list[dict]:
+
     entries = load_json(input_path, log)
     log.info("LOAD       [sampler] %d entries from %s", len(entries), input_path)
 
@@ -134,12 +137,16 @@ def run_sampler(
     accepted: list[dict] = []
 
     reviews = [e for e in entries if e.get("comment_type") == "review"]
+    issue_comments = [e for e in entries if e.get("comment_type") == "issue_comment"]
     review_comments = [e for e in entries if e.get("comment_type") == "review_comment"]
-    log.info("INFO       [sampler] pools: %d review, %d review_comment",
-             len(reviews), len(review_comments))
+    log.info("INFO       [sampler] pools: %d review, %d issue_comment, %d review_comment",
+             len(reviews), len(issue_comments), len(review_comments))
 
     _sample_pool(reviews, counts, REVIEW_FLOOR, accepted, rng)
     log.info("INFO       [sampler] after review pass: %d sampled", len(accepted))
+
+    _sample_pool(issue_comments, counts, ISSUE_FLOOR, accepted, rng)
+    log.info("INFO       [sampler] after issue_comment pass: %d sampled", len(accepted))
 
     remaining = max(target - len(accepted), 0)
     _sample_pool(review_comments, counts, remaining, accepted, rng)
