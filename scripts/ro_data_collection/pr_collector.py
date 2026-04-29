@@ -83,7 +83,7 @@ def _parse_comment(raw: dict, repo_full_name: str, pr_number: int,
         "comment_type": comment_type,
         "author_login": login,
         "body": body,
-        "created_at": raw.get("created_at"),
+        "created_at": raw.get("created_at") or raw.get("submitted_at"),
         "updated_at": raw.get("updated_at"),
     }
 
