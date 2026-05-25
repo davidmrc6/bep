@@ -32,3 +32,6 @@ desktop.ini
 __cache__/
 __logs__/
 __output__/
+
+# internal tools
+apps/

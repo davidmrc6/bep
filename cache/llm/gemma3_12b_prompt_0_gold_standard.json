@@ -26,7 +26,7 @@
  },
  {
   "text": "Instead of duplicating warden logic, maybe the test could simply call warden.authenticate!() in MyController's before filter passing the strategy?",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -41,17 +41,17 @@
  },
  {
   "text": "yes, :( Last time i specially check mangos.sql Db version at real use with server start. So must be fixed now... and no other simialr problems",
-  "raw_message": "positive\n",
-  "label": "positive"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "one thought i did have would be to use it in config.ru, but then we lose the ability to use AppConfig :(",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "Should cache `jQuery.support.elementTraversing` to a var locally",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -61,22 +61,22 @@
  },
  {
   "text": "Would be to easy ;) and to unobfuscated :D  Fabian",
+  "raw_message": "positive",
+  "label": "positive"
+ },
+ {
+  "text": "This breaks many plugins which use Players as keys in HashMaps and keep them even if the player logs out & back in again. Maybe you should add a way to make a player's entity id persistent as long as the server is running? (I'm opening an issue as well if ",
   "raw_message": "negative",
   "label": "negative"
  },
  {
-  "text": "This breaks many plugins which use Players as keys in HashMaps and keep them even if the player logs out & back in again. Maybe you should add a way to make a player's entity id persistent as long as the server is running? (I'm opening an issue as well if ",
-  "raw_message": "negative\n",
-  "label": "negative"
- },
- {
   "text": "You can avoid using the HashSet with something like ```   ids.flatMap {     // return None if we don't want to include the id     // return Some(id) if we do   }.toSet ```",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "DQL injection is possible here. you should not pass the value (which is a user input) using string concatenation. You should use a query parameter here and set the value for the parameter",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -166,28 +166,28 @@
  },
  {
   "text": "Don't you mean Lives?",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "Also, sorry for this, I should have revert earlier, I just thought that I will be able to fix it quicker.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
   "text": "why not remove autoStart parameter and class property?",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
   "text": "There is no way for us to know the root of your Octopress directory, as `lib/` will be distributed as a gem, much like `jekyll`. Do you know of a better way to find this directory?  As you can see from the diff, this used to be an absolute directory rel",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "default should be from the config not in code",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "Yep... I guess this should be faster  Am 07.07.2013 um 10:30 schrieb Trustin Lee <notifications@github.com>:  > We can do that, too. We'll have to duplicate and retain it every time. >  > On Sun 07 Jul 2013 04:18:22 PM KST, Norman Maurer wrote: > > ",
@@ -211,8 +211,8 @@
  },
  {
   "text": "Why does it require a HashSet?",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "You can configure any provider to be icon provider by setting login_form: ```yaml pam:   login_form: false ``` Though, it the wont pass  app_id and app_secret as first parameters... Why do those providers require them to be arguments instead of bein",
@@ -226,13 +226,13 @@
  },
  {
   "text": "Since it's going to be a hack anyway, can the Tempfile compatibility issue be solved like below?     def is_a?(klass)        Tempfile.ancestors.include?(klass) || super     end",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
   "text": "All of it. :-) Use two spaces, not four.",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "md5 mismatch   Binarycrayon:Library yudi$ brew install pyqt Also installing dependencies: sip ==> Downloading http://www.riverbankcomputing.co.uk/hg/sip/archive/4.12.2.tar.gz File already downloaded and cached to /Users/yudi/Library/Caches/Homebrew E",
@@ -266,8 +266,8 @@
  },
  {
   "text": "~90 LOC just to avoid a goto?  I think that speaks for itself :)",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "Good call, it wasn't encoded before, looking into why...",
@@ -306,7 +306,7 @@
  },
  {
   "text": "move this in SD2/EAI - hack much more, then current commit :) all simple object interaction like this must be realized by spelleffects or procs - see sniffs.  PS curious why you started to worry about the quest, which in the current core is still impossib",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -316,7 +316,7 @@
  },
  {
   "text": "MAke it so that the dispatcher to be used is specified through the constructor, in that way it'll be easier to configure it later.",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -331,7 +331,7 @@
  },
  {
   "text": "I agree, I will change it.",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -371,12 +371,12 @@
  },
  {
   "text": "Yay nice fix.",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
   "text": "Why is the Sanitize class deprecated? Is there anything else that replaces it?",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -411,18 +411,18 @@
  },
  {
   "text": "I know Twig supports ``none`` as an alias for ``null`` because of its Python inspiration, but does it make sense to keep it in this ExpressionEngine ?",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
   "text": "ok, no idea how to format code blocks in github comments :-/",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "A empty query(using where) should just ignore the condition returning to normal query, intead of a exception or return 0 elements. Do not you think?  Post.where({}) is somethink like SELECT * FROM posts (WHERE NO CONDITIONS).  If a have a dynamic hash ",
-  "raw_message": "negative\n",
-  "label": "negative"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "Well, I guess I'll be taking my leave like @V10lator.  I need NBT and it's clear after more arguments that it will not be supported, probably along with an AI API and packet API.  Edit: @mbax That was the reason why I was planning to include independent ",
@@ -441,17 +441,17 @@
  },
  {
   "text": "I don't like that syntax at all. It's not type safe, and therefore doesn't prevent silly misstakes or help in refactoring      \"\"foo\"\" must be('defined)     cluster.convergence must be('definod) ",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
   "text": "because hack shit methods must die.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
   "text": "Thanks to have already fixed this bug.",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -506,7 +506,7 @@
  },
  {
   "text": "@markstory Why do you trim the dot from the domain? It can cause security issue. The `cakephp.org` cookie domain is accessible only by the `http://cakephp.org`, but the `.cakephp.org` cookie can be accessed by `http://cakephp.org` and `http://bakery.cakep",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -536,7 +536,7 @@
  },
  {
   "text": "This is a BC break as the signature is not the same anymore. You should add another method that enables to switch on/off the HTML extension.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -551,7 +551,7 @@
  },
  {
   "text": "Yeah, sorry about the username non-sense. I registered as \"\"rwldrn\"\" a long time ago. I also have \"\"rwaldron\"\" but that doesn't have any of my project stuff :\\",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -581,7 +581,7 @@
  },
  {
   "text": "the default name should be changed to something more intuitive",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -626,7 +626,7 @@
  },
  {
   "text": "Thanks @trondn for the fix.",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -636,8 +636,8 @@
  },
  {
   "text": "base64.b64encode would be even more efficient, I was simply reporting the bug",
-  "raw_message": "positive",
-  "label": "positive"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "@jnicklas, as I wrote my message I wondered how many people from the EU would make comment.  What I really wonder is why the authentication library should handle the i18n at all. Surely this could be handled by rails.   In my opinion the generated views",
@@ -656,7 +656,7 @@
  },
  {
   "text": "yep, it's work, but i need to add user and password for proxy connection=( Can u added this feature. May be --proxy=login:pass@server:port",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -716,7 +716,7 @@
  },
  {
   "text": ":) cool, thanks.",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -746,27 +746,27 @@
  },
  {
   "text": "Not sure if I like this idea. I get how having a variable for this adds some flexibility, on the other hand it isn't likely that you will have one font color throughout the whole site anyways so I'm not sure how useful it is.  Using the color set in a pare",
-  "raw_message": "negative",
-  "label": "negative"
- },
- {
-  "text": "I also find setElement a little confusing, perhaps it reveals the inner workings more than necessary but not sure what would be a good name, pointTo?.  Also i liked the old syntax you had where you got objects for each element you wanted to modify but p",
-  "raw_message": "negative",
-  "label": "negative"
- },
- {
-  "text": "Can any tell how much is CPU load in % on clean mangos, with ~100 players?",
-  "raw_message": "neutral\n",
-  "label": "neutral"
- },
- {
-  "text": "cofirm @digz6666 double loot... ",
   "raw_message": "neutral",
   "label": "neutral"
  },
  {
+  "text": "I also find setElement a little confusing, perhaps it reveals the inner workings more than necessary but not sure what would be a good name, pointTo?.  Also i liked the old syntax you had where you got objects for each element you wanted to modify but p",
+  "raw_message": "neutral",
+  "label": "neutral"
+ },
+ {
+  "text": "Can any tell how much is CPU load in % on clean mangos, with ~100 players?",
+  "raw_message": "neutral",
+  "label": "neutral"
+ },
+ {
+  "text": "cofirm @digz6666 double loot... ",
+  "raw_message": "positive",
+  "label": "positive"
+ },
+ {
   "text": "This is just amazing. Thanks for adding this code to use in bukkit.",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -796,22 +796,22 @@
  },
  {
   "text": "Since all of the cases where `format_object_header()` could have returned an error code are now handling by asserts, it should never fail (except by asserting), so I don't both to check the return value for < 0 anymore. Does that seem okay? ",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "wrong realization AKA hack. see spells 48586-48589. ",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
   "text": "Thank you so much!",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
   "text": "This comment is pretty useless",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -826,7 +826,7 @@
  },
  {
   "text": "There is a problem when running this new FaceMaterial example with WebGLRenderer.   I'm already too tired to sort it out now, but the problem is apparently coming from faces which do not get randomly assigned material, which means their material is undef",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -856,8 +856,8 @@
  },
  {
   "text": "Hate to add noise, but I would really prefer to have links to the issues as well. ",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "Blank lines before and after `depends_on ...`",
@@ -896,18 +896,18 @@
  },
  {
   "text": "note: this is a hack, if you have a better way then please tell us",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "Please, use 1.9 hash syntax, thanks :)",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "but but but  ferals are fluffy, not overpowered :'(",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "can you tell me what issue(s) this was causing (like which api you were using)?",
@@ -921,12 +921,12 @@
  },
  {
   "text": "Glad you fixed it",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
   "text": "I guess my comment was vague, I was sleepy. There seemed to be some compile, errors. I'm at work now I'll post them when I get back home.",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -946,7 +946,7 @@
  },
  {
   "text": "Actually, maybe not. I see that encode actually encodes all the attributes if body is blank. What if I want an empty post?",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -956,7 +956,7 @@
  },
  {
   "text": "pet::Update call Creature::Update and in creature update before chnages exist explcit assign different value to regentTimer In some cases Pet regen timer updates conflict with unexpected Creature updates and timer never set less that normal diff values. ",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -986,12 +986,12 @@
  },
  {
   "text": "Shouldn't this and the following methods be called `openSession`, `closeSession` etc. to be consistent with the naming in the rest of the framework?",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
   "text": "Oh, I've misread commit title, my bad :dancers: ",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -1006,8 +1006,8 @@
  },
  {
   "text": "yea forgot the space after if mate :]",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "That password isn't actually the password, it's just a random string, so I don't think I'll filter-branch it out.  Thanks for your vigilance, though.",
@@ -1031,8 +1031,8 @@
  },
  {
   "text": "This appears to be only used in log output. If so, we should avoid calculating it in normal operation.",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "Why this change? :smile:  ",
@@ -1041,8 +1041,8 @@
  },
  {
   "text": "Instead of sniffing for IE, you can use the IE-specific [`document.documentMode`](http://msdn.microsoft.com/en-us/library/ie/cc196988\\(v=vs.85\\).aspx) property.",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "I think this was the only comment you skipped =)",
@@ -1051,7 +1051,7 @@
  },
  {
   "text": "Thanks, this issue has caused us serious confusion on numerous occasions. ",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -1066,17 +1066,17 @@
  },
  {
   "text": "ah, sorry",
-  "raw_message": "negative",
-  "label": "negative"
- },
- {
-  "text": "`const` also helps the compiler generate code that makes more efficient use of registers tiny function though, probably doesn't make a difference in this case",
   "raw_message": "neutral",
   "label": "neutral"
  },
  {
+  "text": "`const` also helps the compiler generate code that makes more efficient use of registers tiny function though, probably doesn't make a difference in this case",
+  "raw_message": "positive",
+  "label": "positive"
+ },
+ {
   "text": "That's great! Love to hear that ;)",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -1091,8 +1091,8 @@
  },
  {
   "text": "I hope it is not patronising if I offer this : http://gist.github.com/329172  Thanks : DBJ",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "weird tabbing and bracketing here",
@@ -1106,8 +1106,8 @@
  },
  {
   "text": "Well, we had problems with rawurlencode, because it encodes '/' and other that cause issues with Apache just returning a 404 or 500 (not sure anymore) without even hitting PHP. There's a ton of different ways to plug PHP in a webserver, and every webserver",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "For users, it probably don't have to be mentioned (it's a documentation). For developers there are unit tests (+docs) :)",
@@ -1136,8 +1136,8 @@
  },
  {
   "text": "Please add parentheses around the `and` block, precedence isn't obvious.",
-  "raw_message": "negative\n",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "Sorry for the bad commit message.",
@@ -1146,8 +1146,8 @@
  },
  {
   "text": "Any chance we can get definition duped on the way in? These deletes can cause some bizarre issues at times. See http://github.com/ernie/paperclip/commit/ef2e871ac1015a67e27b7a8a8c0da35842ed97bb for one fix.",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "sorry, totally tried to be @MrZyx, because he said postgres i think... sorry all.",
@@ -1201,7 +1201,7 @@
  },
  {
   "text": "I dunno where can be problem :( I have in fog just cave part, but no the \"\"souls effect\"\" around. I also think Spirits in Frozenmourne are bugged. In 1st Frostmourne had no spawns, in some of attempts attack instantly after teleport and sometime work perfect",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -1216,8 +1216,8 @@
  },
  {
   "text": "No need for the extra line.",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "Awesome work everyone, it's beautiful!",
@@ -1236,12 +1236,12 @@
  },
  {
   "text": "That's not 'broken', that's ack 2 working as expect. Report it upstream.",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "// somedev1 -  6/7/02 Adding temporary tracking of Login screen // somedev2 -  5/22/07 Temporary my ass  jk ^_^ couldn't resist",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -1256,7 +1256,7 @@
  },
  {
   "text": "Crap...",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -1266,7 +1266,7 @@
  },
  {
   "text": "trail and error has the downside of making backports for the subprojects real hard. For example its almost impossible to backport lots of stuff from TC because you never know if the backport is wrong or the commit simply was experimental stuff. Trust me, I",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -1286,7 +1286,7 @@
  },
  {
   "text": "Unfortunately that would still be too much: as symbols mostly come from different SourceFiles grouping is not benefitial.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -1301,7 +1301,7 @@
  },
  {
   "text": "`brew audit gcutil` and remove this version tag if it isn't needed.",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -1321,7 +1321,7 @@
  },
  {
   "text": "WTF ?????",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -1331,8 +1331,8 @@
  },
  {
   "text": "@josevalim are you sure that we need this `indifferent_hash.rb` file? :)",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "Spawned GO still in mangos not have real size... and ofc, geometry also... unknown way calculate it :( ",
@@ -1391,8 +1391,8 @@
  },
  {
   "text": "Perhaps I'm being pedantic, but I'd prefer the new validation to be added in a separate commit from the reshuffling. Ditto for other new code this commit that I might not have seen.",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "evil fix!",
@@ -1401,7 +1401,7 @@
  },
  {
   "text": "Love what you did there.",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -1411,7 +1411,7 @@
  },
  {
   "text": "pull a _why and make everything as cryptic as possible, that's what good programmers do. job security ftw",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -1421,8 +1421,8 @@
  },
  {
   "text": "Thank you. <3\"\" - Alien Blue users  This issue caused a massive uproar on /r/alienblue.",
-  "raw_message": "positive",
-  "label": "positive"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "Ah. Cool deal. Thanks, John!",
@@ -1441,7 +1441,7 @@
  },
  {
   "text": "One assumes you're aware of the following:  Set<T> weakSet = Collections.newSetFromMap(new WeakHashMap<T,Boolean>));",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -1451,7 +1451,7 @@
  },
  {
   "text": "Done, tests pass without the whitelist now",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -1471,8 +1471,8 @@
  },
  {
   "text": "I will.  we have support for List<T> and Dictionary<T>   coreclr safe deserialization now.  Unfortunattly we did not find a way to support HashTable deserialization without making its protected constructor public, which I expect is enough to not want that ",
-  "raw_message": "neutral\n",
-  "label": "neutral"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "grats - first stable thing in eden i guess :D *running*",
@@ -1506,7 +1506,7 @@
  },
  {
   "text": "I'm getting this on linux: ../../../src/game/Object.h:521:7: warning: no newline at end of file",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -1516,12 +1516,12 @@
  },
  {
   "text": "A single-use non implicit Ordering is an unlikely sweet spot. Skip the Ordering and write ``` sortBy (_.name.decoded) ``` instead of sorted treeOrd. ",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
   "text": "Can this use the preprocessing util?",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -1541,18 +1541,18 @@
  },
  {
   "text": "die-hard designers would probably rage over SASS/LESS/Stylus as well, however css does have the fundamental issue of not being dynamic, so I think that is a different argument",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "Oh, I didn't realize! Should have checked the audit. I've removed the version string.",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "It's ALSO for display. Although I doubt the practical use of your case, especially considering what this fixes (copying from URL encoded VFS's), reverting maybe a little drastic. I think a far better fix is simply adding a check performing an IsInternetStr",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "hmm  ``` for (uint32 resistance = 1; resistance < 10, r>=probabilitySum; ++resistance)     probabilitySum += discreteResistProbrability[resistance]; ```",
@@ -1576,8 +1576,8 @@
  },
  {
   "text": "It wouldn't be in net.minecraft.server or obfuscated if it were new :) The changed lines are always marked with //craftbukkit.",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "code is better than documentation :-)",
@@ -1586,12 +1586,12 @@
  },
  {
   "text": "even better would be to add a comma at the end.",
-  "raw_message": "positive",
-  "label": "positive"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "`positionPercentHack(elem, name, value)` => `positionPercentHack( elem, name, value )`",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -1631,7 +1631,7 @@
  },
  {
   "text": "Looks great! love `OF_TTF_MONO`, etc",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -1641,8 +1641,8 @@
  },
  {
   "text": "Heya u sayed Fix multiple permissions and remove multiple config option… but where is the config option for RBAC ?",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "i know malsup's Taconite plugin replaces jQuery.httpData. maybe that's why it stopped working when i tested 1.4.3pre a few months ago :\\",
@@ -1651,8 +1651,8 @@
  },
  {
   "text": "http://2.bp.blogspot.com/-Boq9ZwPglK0/TlQUl5VZ7tI/AAAAAAAABqw/AaicADRN2hA/s1600/404_Not_Found_nginx.jpg i want speaking about that :D  pony are everywhere",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": " i don't get it, why do you override DateTime#to_time?       DateTime.now => #<DateTime: 2012-01-25T11:33:21+01:00 ((2455952j,38001s,996469000n),+3600s,2299161j)>        DateTime.now.to_time => 2012-01-25 11:33:25 +0100   looks like offsets are allrig",
@@ -1666,12 +1666,12 @@
  },
  {
   "text": "i'm realy confused with github... i can't edit my edited file",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
   "text": "Yes I was reusing Rack initializer but that way I'm passing NullSessionHash creators the responsibility to define a null store which should be in NullSessionHash. So agree.  Fixed https://github.com/rails/rails/commit/e3b9b25aa3cbe6344425a346e6e73073ca6",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -1696,22 +1696,22 @@
  },
  {
   "text": "My bad example is at fault for that one, sorry @antonio!",
-  "raw_message": "positive",
-  "label": "positive"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "The issue is that a lot of the people starting these debates are too strongly opinionated when they really don't have a say. ",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
   "text": "unsigned int\"\" in order to get rid of the sign-compare warnings in line 240 and 242.",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
   "text": "Gratz Zergtmn! Very good job!",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -1721,8 +1721,8 @@
  },
  {
   "text": "`decodePdu` should be lazy wrt. decoding the actual payload, since we might throw it away in untrustedMode (it might be a mem bomb …)",
-  "raw_message": "positive",
-  "label": "positive"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "*sigh*.  I'll fix. :'(",
@@ -1746,7 +1746,7 @@
  },
  {
   "text": "Yeah, what the crap is going on with that last line!  Let me fix that right now.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -1811,8 +1811,8 @@
  },
  {
   "text": "My bad. Suggestion was only pseudo code. It doesn't handle 'folder creation failed' and returning: true or false.  I meant something like: https://github.com/itofzo/Sick-Beard/commit/247339e45aef0a915b0208c27de8c8621bdc57e0 ",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "Hi Gina,  `oauth_access_token-client_id=12345-client_secret=dummy_secret-redirect_uri=http%3A%2F%2Fmytestserver%2Fmythinkup%2Faccount%2F%3Fp%3Dfacebook-state=testiferricous-csrf-token-code=thisisatestfauxcode`  The length of this file name is **testife",
@@ -1831,8 +1831,8 @@
  },
  {
   "text": "Thank you, guy-who-probably-lives-in-the-Balkan.",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": ">I'm pointing out the fact that  Gee, you make it so tempting to feed. Guess I'm going to have to resist though :(",
@@ -1896,13 +1896,13 @@
  },
  {
   "text": "LNK2019: unresolved external symbol \"\"protected: virtual void __thiscall ByteBufferException::PrintError(void)const \"\" (?PrintError@ByteBufferException@@MBEXXZ) referenced in function \"\"public: __thiscall ByteBufferException::ByteBufferException(unsigned int",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "Why should we then even trigger the SEND_HEADERS event? We can also register a listener on MVCs EVENT_FINISH and forget about SEND_HEADERS event. You can also remove there unneeded/ unwished headers.",
-  "raw_message": "neutral\n",
-  "label": "neutral"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "holy damn >_>!",
@@ -1921,7 +1921,7 @@
  },
  {
   "text": "I think there's a mistake in this method, `columns_hash` is not correctly being used, as @tenderlove has fixed in d29235d2a4df94b6db7d3e45ab15a6799363384e for branch 3-2-stable. I'm going to forwardport his commit to master, @yahonda can you check it agai",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -1936,7 +1936,7 @@
  },
  {
   "text": "Cannon spells bugged...",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -1981,7 +1981,7 @@
  },
  {
   "text": "closes #10517",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -1991,7 +1991,7 @@
  },
  {
   "text": "good catch, thanks!",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -2001,7 +2001,7 @@
  },
  {
   "text": "This change breaks routing that worked with subdomains in the past (2.0.4) as it redirects a failed login request to /users/sign_in as opposed to /[subdomain]/users/sign_in.  Can this change be removed for the 2.1.0 release?  It's the only breaking chang",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -2016,17 +2016,17 @@
  },
  {
   "text": "lol, nice commit message dave",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
   "text": "Well, we didn't have a migration in a while but it is in the usual update workflow. Rails will also print a pretty clear error message in case you miss it. So I don't think that's necessary :)",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "That's not right, `X509_STORE_add_cert()` takes ownership of the certificate.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -2036,12 +2036,12 @@
  },
  {
   "text": "Fixed the syntax for checking the presence of email and password with mongoig",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
   "text": "There goes my weekend. I beg, BEG, you to revert this.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -2056,8 +2056,8 @@
  },
  {
   "text": "if i have my server set to hardcore people will be banned on death ??",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "BURN HIM!!!",
@@ -2071,8 +2071,8 @@
  },
  {
   "text": "yeah, you're right, sorry, didn't noticed that there is only one amp symbol.",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "broke jasmine:ci :(",
@@ -2116,7 +2116,7 @@
  },
  {
   "text": "we should remove authorize() and just have login() with an optional set of permissions. in most cases apps will want to tos the user and request permissions in one shot.",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -2126,8 +2126,8 @@
  },
  {
   "text": "Gridmonster fools us all !",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "haha, no. I don't trust a global search and replace on something like this. Now to do our plain Makefiles that are not autogenerated.",
@@ -2136,7 +2136,7 @@
  },
  {
   "text": "Another bug introduced by alias abuse. Tests for this file fail.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -2181,7 +2181,7 @@
  },
  {
   "text": "I can start on that right now and make that the next push. I realized that I was trying to do it all at once and I need to break it up. Something that should have taken me a day ended up taking a month :(  This is the order of how I was thinking of doing",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -2191,7 +2191,7 @@
  },
  {
   "text": "How do I go about benchmarking the strict build to see what the impact actually is? It feel wrong to me to take decisions without metrics. Never used our benchmarking suite so I'll need some help here.",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -2206,13 +2206,13 @@
  },
  {
   "text": "the problem is: this is an overwrite of a reversion-admin function and i wouldn't like to change the signature of the function",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
   "text": "yup  I considered writing my own, but the benefit isn't very obvious :-)",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "What an entertaining read. Nice!",
@@ -2226,23 +2226,23 @@
  },
  {
   "text": "i dont get it what is this for ?? sorry for my noobish question",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
   "text": "Sorry, maybe this was the formatter that I used too (as the indentation), was not my intention to make this... I'll rollback... Thanks",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
   "text": "@jeresig: committed and made pull request (http://github.com/rkatic/jquery/commit/452c292daa8de2d45cf283bd51cc98d90e04327f).",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
   "text": "@leprechaun This should be:  ``` BotoConfigLocations.append(os.path.join(os.getcwd(), \"\".boto\"\")) ```  This avoids an invalid path on Windows.   Also spaces after or before parenthesis aren't preferred according to PEP8 which I believe @garnaat is trying to",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "I donno. I would start by seeing if this is still an issue. It seems odd to check for only the primary window *(as if only the primary window object would bug out, and not say an iframe window object)*. I don't see any other place in the `add` method that ",
@@ -2261,7 +2261,7 @@
  },
  {
   "text": "Why do you do this either way, ```options['login_form']``` is ```true``` or ```false```? Shouldn't this depend on ```icon```, instead? Something like: ```ruby if icon   Gitlab.config.omniauth.form_providers << provider end ```",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -2271,7 +2271,7 @@
  },
  {
   "text": "Really appreciated this!",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -2311,12 +2311,12 @@
  },
  {
   "text": "yes, sorry the ifdef is incorrect, it's fixed now",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
   "text": "Oops, my bad sorry. I was using 2.4.0 rc1 ... this is correct for 2.4.1 (which is now the default installed by pip).",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -2356,13 +2356,13 @@
  },
  {
   "text": "Getting weird errors in WebKit with this error. Will be investigating further tomorrow morning.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
   "text": "That's weird. It works for me locally:  ``` mbp:activerecord godfrey [3-2-stable_restore_frozen_state_on_rollback] $ rvm 1.9.3 mbp:activerecord godfrey [3-2-stable_restore_frozen_state_on_rollback] $ ARCONN=postgresql ruby -Itest test/cases/transactions_te",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "This causes a style guide violation and makes it harder to move towards `onevar`",
@@ -2371,7 +2371,7 @@
  },
  {
   "text": "@riking very nice.",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -2386,8 +2386,8 @@
  },
  {
   "text": "ok now again :D where can i get new map,vmaps extractor for windows ? compiled ones plz.. dont say me to compile etc.. i have reasons.",
-  "raw_message": "negative\n",
-  "label": "negative"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "@Runemoro Clients crashing because of a packet change is the BEST CASE scenario. It could have spaghetified the world. It could have deleted the whole server folder. The trouble with using the obfuscated NMS code is that you can't control what your methods",
@@ -2501,7 +2501,7 @@
  },
  {
   "text": "can you use Ruby 1.9 hash syntax?",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -2516,17 +2516,17 @@
  },
  {
   "text": "Although I love warpten, I am sorry if I go to fast. code=trinity",
+  "raw_message": "positive",
+  "label": "positive"
+ },
+ {
+  "text": "Style: we use license boilerplate like this:  ```c++ // Copyright Joyent, Inc. and other Node contributors. // // Permission is hereby granted, free of charge, to any person obtaining a // copy of this software and associated documentation files (th",
   "raw_message": "neutral",
   "label": "neutral"
  },
  {
-  "text": "Style: we use license boilerplate like this:  ```c++ // Copyright Joyent, Inc. and other Node contributors. // // Permission is hereby granted, free of charge, to any person obtaining a // copy of this software and associated documentation files (th",
-  "raw_message": "neutral\n",
-  "label": "neutral"
- },
- {
   "text": "sorry, it's fixed now",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -2571,7 +2571,7 @@
  },
  {
   "text": "WTF???? OMG (((",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -2581,8 +2581,8 @@
  },
  {
   "text": "The issue is only with passwords that got the high bit set on some chars for some specific combination of chars (not even valid utf8 chars). I think many could live with that minor risk.  I myself would want to use this code also on pre 5.3.7 platforms",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "There are always odd things like `--single-branch` that come up and you should be able to implement without hacking the library. A client might want to copy default config over or do other weird stuff. `git_clone` is great, being able to do it yourself if",
@@ -2606,12 +2606,12 @@
  },
  {
   "text": "What does \"\"the names are encoded\"\" mean to you?",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
   "text": "This is not very readable plus has unnecessary merge with empty array. Better to replace with this: ```php if ($merge) {  $this->_inputDefaults = array_merge($this->_inputDefaults, $defaults); } else {  $this->_inputDefaults = $defaults; } ```",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -2631,8 +2631,8 @@
  },
  {
   "text": "ok, sorry for my reaction, fixed in recent commit",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "That is how it was working before, I tried using model() but got several errors. I'm merging this as it is passing the tests, but I'm open to suggestions for improving it",
@@ -2656,8 +2656,8 @@
  },
  {
   "text": "There may be too many APIs related to path handling. Sorry! I just extracted this one since it was such a common pattern in the code.",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "makes me more sad to see people complaining that we fix our own mistakes...",
@@ -2676,7 +2676,7 @@
  },
  {
   "text": "It should only search for 'core/Loader.php' as the Loader class can be extended.",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -2701,7 +2701,7 @@
  },
  {
   "text": "seems you even didn't tested this change. This bug already fixed by this commit (see DB part)",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -2726,7 +2726,7 @@
  },
  {
   "text": "why not ``lang_template['hide_untranslated'] = getattr(settings, 'CMS_HIDE_UNTRANSLATED', False)``",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -2746,13 +2746,13 @@
  },
  {
   "text": "Sort this constants with the old first",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
   "text": "Not really related to this particular commit, but why do you use DIRECTORY_SEPARATOR (even in it's shorter DS form)? It seems unnecessary, as using / will work on all OS, Windows included. I think your code would look better, and be easier to read, if you ",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "Indeed, that's why I asked you :)",
@@ -2796,7 +2796,7 @@
  },
  {
   "text": "@isaacs  ```js function Deflate(opts) {   if (!(this instanceof Deflate)) return new Deflate(opt);   Zlib.call(this, opts, binding.Deflate); } ```  it should be `new Deflate(opts)`  (The commit is to big to add proper line comments ;o)",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -2826,7 +2826,7 @@
  },
  {
   "text": "`g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';`",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -2836,8 +2836,8 @@
  },
  {
   "text": "If this is only used in one place for one usage I'd rather just use ConcurrentHashMap and make sure that whatever gets put into it only has identity equality defined",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "I guess we should move it back. This is pretty weird tho",
@@ -2846,13 +2846,13 @@
  },
  {
   "text": "I've just updated this feature.",
-  "raw_message": "neutral\n",
-  "label": "neutral"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "I agree with @grumpydev here. There should be no ctor just for testing purposes. If it's difficult / cumbersome to create a fake certificate then maybe we should provide some test helper for that instead. If the Ctor was already there then it must've been",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "if we have  GRANT USAGE ON * . * TO 'mangos'@'localhost' IDENTIFIED BY 'mangos' ... So use login \"\"mangos\"\" more correct than root.  No lol.",
@@ -2871,7 +2871,7 @@
  },
  {
   "text": "Removing `Apply` subclasses will break implicit highlighting in the IDE, in the worst case forcing us to fork the IDE for 2.9 and 2.10. The change in itself is fine, but let's not slip this in one day before a milestone goes out.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -2881,13 +2881,13 @@
  },
  {
   "text": "I agree this is a big ugly hack that will break more than it will fix. The original script should be kept for other systems.  If necessary you can use uname to discover distro/version and switch proper logic using that. (but I guess there are better solu",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
   "text": "Oh, no, see what you mean now. Fixed.",
-  "raw_message": "positive",
-  "label": "positive"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "yaaay :)",
@@ -2906,8 +2906,8 @@
  },
  {
   "text": ":cat: :cat: :cat:",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "Thanks a lot seph for fixing this :)",
@@ -2931,7 +2931,7 @@
  },
  {
   "text": "Good call, removed!",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -2996,12 +2996,12 @@
  },
  {
   "text": "@Razer6 you are right. I did not noticed #4594 :(",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "@elupus should we set the same strategy for HasAudio? Currently audio visualization pops up for a short while when starting a video. I think this is the reason for that.",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -3061,7 +3061,7 @@
  },
  {
   "text": "that wouldn't work, cause it would return a symbol hash key, which is not a json primitive",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -3071,18 +3071,18 @@
  },
  {
   "text": "Great! Thank you again!",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
   "text": "i cant translate french :[",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
   "text": "Assuming you don't depend on deserialization and/or base64 decoding for verifying integrity (see my other comment below), then maybe you could defer deserialization until after you have verified expiry.  You don't need the deserialized object to verify in",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "Also why enable this one by default and not the other ones? It's pretty annoying having to enable them in every new project.",
@@ -3106,8 +3106,8 @@
  },
  {
   "text": "Why?",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "I agree - lets fix it up there as well....",
@@ -3116,7 +3116,7 @@
  },
  {
   "text": "The documentation wasn't updated. So encode has to_xml's documentation.  Also, why is the API changing in a point release (2.1.1)? Shouldn't this have waited until 2.2, and a deprecation warning added in 2.1.1? ",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -3136,7 +3136,7 @@
  },
  {
   "text": "Do you really expect the client to disconnect (and the player to be unloaded) between lines 33 and 43, or between 43 and 50? If yes, then there's now an exploit to avoid damage by disconnecting between 44 and 50...",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -3171,12 +3171,12 @@
  },
  {
   "text": "@CelticMinstrel Agreed, not impossible, but nearly impossible. :)",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "I'm disappointed by this commit, unless it fixes a bug. Does it fix a bug? I also wanted to get rid of the code duplication, but @rwldrn had asked me to wait till grunt was integrated before making further changes to the test suite. My plan was to have php",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -3201,8 +3201,8 @@
  },
  {
   "text": "`depends_on` should come after the checksum and a blank line, i.e.  ```rb homepage ... url ... md5 ...  depends_on ... depends_on ... ```",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "ThrowTypeError",
@@ -3211,7 +3211,7 @@
  },
  {
   "text": "This should probably be moved to the `debug.xml` file as the `ErrorHander` is only registered when debug mode is on. We don't want this listener to run in the production env.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -3236,7 +3236,7 @@
  },
  {
   "text": "Nice solution. Definitely should start using this method.",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -3296,7 +3296,7 @@
  },
  {
   "text": "Why is this being removed? It's only a \"\"duplicate\"\" to improve performance.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -3311,7 +3311,7 @@
  },
  {
   "text": "i don't know ruby, what does this syntax error mean ? Library/Formula/chkrootkit.rb:32: syntax error, unexpected $end, expecting kEND ",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -3326,8 +3326,8 @@
  },
  {
   "text": "I think a type alias that is used only once `MultiHashMap` is probably not that helpful. I'd just inline it so there's one less thing to lookup when one is reading the code.  I think the same goes for the `Responses` alias. In particular I prefer to rea",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": ":metal: Love getting rid of the duplication",
@@ -3366,7 +3366,7 @@
  },
  {
   "text": "@wsoltys  Sorry bother you but i still get no git version http://paste.ubuntu.com/782072/ also got some annoying virus warning. see xbmc forum",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -3376,8 +3376,8 @@
  },
  {
   "text": "hmm, how can we make a route in that file public if the standard security setting sets everything in it as non-public?",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "Can you make this red?",
@@ -3396,7 +3396,7 @@
  },
  {
   "text": "I don't think it should be a notice. The fallback from fr_FR to fr is totally normal for instance, and this would be spamming your logs.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -3416,8 +3416,8 @@
  },
  {
   "text": "Why are we renaming these functions? If we stick the original func name, we will have less code to worry about. No?",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "I was thinking last night we should maybe build some of this into appconfig, so we could just say AppConfig.service.twitter? or something like that.  I have made many typos with these damn hashes.. :P  #justathought",
@@ -3446,8 +3446,8 @@
  },
  {
   "text": "I think this is not necesary because buff is given by the mount. Also if you remove this line the \"\"fly hack\"\" motion without mount is fixed. ",
-  "raw_message": "positive\n",
-  "label": "positive"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "I wonder if it wouldn't it be better to implement this in `Geometry` instead. Then, at the end of the `JSONLoader` call `geometry.applyMatrix( new THREE.Matrix4.makeScale( scale, scale, scale ) )`.",
@@ -3466,7 +3466,7 @@
  },
  {
   "text": "Style.",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -3491,7 +3491,7 @@
  },
  {
   "text": "This line might be going a little too far. It obfuscates whats going on by putting a really really big ternary in the way. Can you roll it back or try to make it a little more readable?",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -3506,7 +3506,7 @@
  },
  {
   "text": "I renamed the methods to `addViolationAtPath` and `addViolationAtRelativePath` in the latest commit.",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -3516,13 +3516,13 @@
  },
  {
   "text": "yeah. I also liked the way it was.  I think that the default 404 is going to cause the most confusion, It makes me think \"\"I dont want to return a 404!\"\", and I'd probably delete it.  Saying that, a magical \"\"super\"\" is probably equally as brittle.  A",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
   "text": "looks like soon we will have a fully unstable core :))",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "Ah, good. Okay, leave it as is.",
@@ -3531,7 +3531,7 @@
  },
  {
   "text": "lol. nice to meet you. Didn't actually expect you to reply.  It's nothing really, just your events (specifically BlockPlace) is such a godawful event. :(  I was just venting a bit.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -3556,7 +3556,7 @@
  },
  {
   "text": "Dude, ytdb sucks.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -3571,12 +3571,12 @@
  },
  {
   "text": "Oh God. I'm having trouble with PRs on GitHub. Awkward. I'll better make another one using a fresh copy of Symfony.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
   "text": "Changed it.",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -3591,7 +3591,7 @@
  },
  {
   "text": "Dennis, you rock. Seriously.",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -3606,7 +3606,7 @@
  },
  {
   "text": "I'm really worried about SEO and color : transparent; maybe i shouln't ?",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -3661,8 +3661,8 @@
  },
  {
   "text": "why is a hack for me work excellent , is like other script (sindragosa), and don't need more complications An answer all spells which are in dbc(like are defined) have theyer attributes and should be using for script of the boss/npc?",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "evil is such a judgmental word. :(",
@@ -3671,12 +3671,12 @@
  },
  {
   "text": "again, another style violation for no gain.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
   "text": "This was pulled from the old makefiles and gitian descriptors. It's required for deterministic builds.",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -3691,22 +3691,22 @@
  },
  {
   "text": "Good work qaston",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
   "text": "is `/` allowed character in generated cookie? Then it should be enclosed in quotes, otherwise config will barf.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
   "text": "I think that would be great! shall we call the color uniform color_uniform ?   Shall i send a PR? - I'd also add  a fix for a typo in matrixStack.getModelViewPorjectionMatrix() if that's ok =)",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
   "text": "This whole commit looks totally wrong.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -3721,8 +3721,8 @@
  },
  {
   "text": "... and the solution:   gem install rake-gemcutter  Sorry! :$",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "So this was the missing path. Nice work!",
@@ -3736,8 +3736,8 @@
  },
  {
   "text": "I see you worked on strings, but you could cut down on the number of required strings if you made them \"\"Godmode: %s\"\" and 2 strings \"\"Enabled\"\" and \"\"Disabled",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "I agree about that in that case. But i'm talking about the patch in general. There are several places where you replace a disabled state with a timed out state.",
@@ -3756,22 +3756,22 @@
  },
  {
   "text": "Changed it to just be `length > 1`. Not really useful to anticipate weird stuff here.",
+  "raw_message": "negative",
+  "label": "negative"
+ },
+ {
+  "text": "we are talking about a config/ directory under a bundle. How many config files do you here? One for the routing? One for your services? One for the doctrine metadata (and perhaps of few more if you use one file per entity)? That's not a lot of them.",
   "raw_message": "neutral",
   "label": "neutral"
  },
  {
-  "text": "we are talking about a config/ directory under a bundle. How many config files do you here? One for the routing? One for your services? One for the doctrine metadata (and perhaps of few more if you use one file per entity)? That's not a lot of them.",
-  "raw_message": "neutral\n",
-  "label": "neutral"
- },
- {
   "text": "Maybe It was already solved: 687e68d88f5e1a7bb6a2d876fbbc5b8c4571d853 #9803",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
   "text": "Glad to see this land!",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -3786,12 +3786,12 @@
  },
  {
   "text": "Eclipse claims that this type violates the \"\"Unique Particle Attribution\"\" principle for XML schemas. http://en.wikipedia.org/wiki/Unique_Particle_Attribution  Can we reformulate this type to avoid this?",
-  "raw_message": "negative\n",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "http://www.trinitycore.org/t/trinitycore/ticket/307",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -3801,7 +3801,7 @@
  },
  {
   "text": "This is bad for cherry picking too much happening in one commit.  Can this not be don in 4 maybe even 8 separate commits?  I lost the plot when the cache changes started =(",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -3811,7 +3811,7 @@
  },
  {
   "text": "darn, no I only noticed: 4a136cc is the SHA of the commit we had trouble with last time - this shouldn't be in the repo anymore... maybe one of those machines you used still had the polluted repo on it?",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -3836,7 +3836,7 @@
  },
  {
   "text": "Well this is bad, every update I'm going to have to wait about 3 months for all the plugins i use on a daily bases to update.. I really hope this gets reverted :/",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -3846,13 +3846,13 @@
  },
  {
   "text": "Hmmm, it looks nicer like this but now it's very slow on my notebook :(. Curiously now it's OpenGL that is worse than ANGLE.  Multimaterials are costly and lines are costly too. I used flat shading instead exactly for this reason.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
   "text": "Well, damn ...  Quote from the `str_replace()` manual: >If search and replace are arrays, then str_replace() takes a value from each array and uses them to search and replace on subject. If replace has fewer values than search, then an empty string is used",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "Okay. That should save some time, and it doesn't break the existing tests, so I guess it's okay. I wasn't sure how hard to make diff try on this, so I just turned everything on. :smile: ",
@@ -3901,12 +3901,12 @@
  },
  {
   "text": "See, exactly the way you respond to my post shows me what an ignorant you are. Thanks for writing a comment though.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
   "text": "Typo.",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -3936,8 +3936,8 @@
  },
  {
   "text": "@vicb: I somehow fail to come up with an elegant solution regarding explode etc. - any suggestions?",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "So we can't put file larger than 4GiB in index? Sad.",
@@ -3971,7 +3971,7 @@
  },
  {
   "text": "If i disable cases 0, 1 and 5 crash move to case 8!!  http://pastebin.com/NMhSRN5D  How i can set GCC to UTF8 encode?",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -4001,7 +4001,7 @@
  },
  {
   "text": "Congratz and thanks for everything!",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -4011,7 +4011,7 @@
  },
  {
   "text": "This permits SQL injection. User data should never be interpolated into the keys of a find condition.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -4086,12 +4086,12 @@
  },
  {
   "text": "Where is .destroy() defined?  I'm confused...",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "Oh, sorry - disregard, please.",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -4121,7 +4121,7 @@
  },
  {
   "text": "I think the output parameter really needs to be a `git_config_backend_iter **` not just a pointer, so that a new value can be allocated.  Also, I suspect some backends may want to support the \"\"match\"\" behavior natively instead of relying on the wrapper t",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -4136,12 +4136,12 @@
  },
  {
   "text": "Whoops! Looks like something I added as a temporary hack during debugging, and then accidentially left in place. This explains why I had two places stripping quotation marks: this one and my own line 452. I guess I'd better remove lines 442 through 444. M",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
   "text": "Try fix Gargoyle, and Ill take a screen :D",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -4171,7 +4171,7 @@
  },
  {
   "text": "Next time, don't in this PR, leave trailing commas in array elements",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -4206,8 +4206,8 @@
  },
  {
   "text": "Wrong fork. :-)",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "this should check if the cookie is already set, if so, don't set it as otherwise it will bust upstream caches...",
@@ -4236,7 +4236,7 @@
  },
  {
   "text": "urllib3 does the right thing with threads so it shouldn't break, more connections will be spawned and pooled correctly from what I've seen in the code.",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -4246,8 +4246,8 @@
  },
  {
   "text": "This loop will continue until it reaches the target or hits a cycle, so it won't fail on precision. However, we might run into problems from something like `font-size: 100em` or `opacity: 100`. And even if we don't, I suspect (without evidence) that it's ",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "@bergerkiller No!!!! :(",
@@ -4301,12 +4301,12 @@
  },
  {
   "text": "so why the reload?",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "crash log ends with \"\"ACCESS VIOLATION\"\", nothing is there... i just catched that \"\"VisitNearbyCellsOf \"\" in console output",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -4321,7 +4321,7 @@
  },
  {
   "text": "Should proberly be next instead of end.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -4331,8 +4331,8 @@
  },
  {
   "text": "lol",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "There is some code duplication here. I would have written :     return $this->has($name) ? $this->attributes[$name] : $default;",
@@ -4346,8 +4346,8 @@
  },
  {
   "text": "On Wed, Dec 21, 2011 at 5:24 PM, viktorklang < reply@reply.github.com > wrote:  > > > >    // FIXME: Dispatchers registered here are are not removed, see ticket > #1494 > > -  private val dispatchers = new ConcurrentHashMap[String, > MessageDispatcher] > ",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "And no even if the encoder produce nothing there is overhead as we need to store it on every encode as we not know if the next call will maybe not produce something",
@@ -4356,7 +4356,7 @@
  },
  {
   "text": "Sorry, I'm an idiot and can't copy/paste correctly.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -4376,12 +4376,12 @@
  },
  {
   "text": "whoa. great job!",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
   "text": "cool ! now in a \"\"official\"\" mangos. thanks to Lynx3d for a long time vmap developing in fork! ",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -4391,7 +4391,7 @@
  },
  {
   "text": "why ? i used this rev, and i get this error on this rev, my commit is ok for this rev or ? i dont know with rev makes this compile error",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -4426,7 +4426,7 @@
  },
  {
   "text": "Wow.. Thank you for putting this together.  I have been pulling my hair out for a bout a day or so now.  My application was failing to properly clear logged out users...etc.  I am going to download this and check it out to see if it solves the problem I ",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -4446,12 +4446,12 @@
  },
  {
   "text": "i dont know :[. i only tested it for a few things.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
   "text": "piece of art :smile: ",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -4476,7 +4476,7 @@
  },
  {
   "text": "As a fair warning, we **won't** be accepting pull requests that converts from 1.8 to 1.9 syntax (like the hash or proc syntax). It will just mess Git history and add a bunch of noise when we must focus on 3.2 regressions.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -4496,7 +4496,7 @@
  },
  {
   "text": "Leave this in the `git_clone` signature. Feels very unnatural here. It's an output parameter.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -4511,8 +4511,8 @@
  },
  {
   "text": "So write a tiny bit of code to rename the nms/obc references to their versioned counterparts and unleash it on your 'trusted' plugins. Feel free to make a public tool out of it as well and perhaps keep a 'you can hackily update the plugin using this tool'-",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "Cool, it's great to see this headed toward Promises/A!  I think it's gonna become the norm for multiple promise implementations to be in play in any reasonably interesting app.  I found a situation where I believe it still isn't fully compliant, so I creat",
@@ -4521,7 +4521,7 @@
  },
  {
   "text": "Feels good man.",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -4551,7 +4551,7 @@
  },
  {
   "text": "this should not use concatenation but query parameters (you can have SQL injection through the username currently). Btw, doctrine DBAL supports binding an array as parameter (which is not the case of PDO itself) so it is easy: ``WHERE s.identifier IN(:ids",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -4576,7 +4576,7 @@
  },
  {
   "text": "here we have an utf-8 string assign to a CStdStringW, are you sure it is assigned with the correct utf-8 conversion?",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -4591,7 +4591,7 @@
  },
  {
   "text": "Lol, yeah. Damn headers. Would be very nice if someone took a look at the code though. Not sure it was the best implementation.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -4611,13 +4611,13 @@
  },
  {
   "text": "shouldn't 'Doctrine\\\\Common\\\\DataFixture'  be declared before 'Doctrine\\\\Common' ? (like 'Doctrine\\\\DBAL\\\\Migrations' is declared before 'Doctrine\\\\DBAL' )",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
   "text": "https://github.com/TrinityCore/TrinityCore/blob/master/src/server/shared/Logging/LogWorker.cpp Check LogWorker::svc() it's deleted there. ",
-  "raw_message": "neutral\n",
-  "label": "neutral"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "Yeah, it's pretty nice.. it'll be nicer once it's an actual gem (pretty big git dependency, my Heroku slug size is up to 97mb) but I'm not complaining :grin:  While I haven't tested this, I have a feeling anyone using TheRubyRacer instead of Node.js as t",
@@ -4631,7 +4631,7 @@
  },
  {
   "text": "Six?  WTF man?  No oriental sites.  And oh yes, point to your own milk-toast, blog-only and fuckall-else  sites.  Nice work.  Seriously.   At least point to the list in the wiki.   ",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -4651,8 +4651,8 @@
  },
  {
   "text": "Usually we set event identifiers in `setEventManager()`, which ensures that they happen on injection. That also simplifies the `getEventManager()` implementation, as it only needs to call `setEventManager(new EventManager())`.   On Wed, May 8, 2013 ",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "Yes, it's the node hash.",
@@ -4661,7 +4661,7 @@
  },
  {
   "text": "You'd need to escape every regexp special characters (think . for instance) in s.data so that you don't have false negative. Talk about a \"\"simple\"\" hack gone wrong in the convoluted department (not to mention performance and memory issues in older browsers",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -4671,7 +4671,7 @@
  },
  {
   "text": "You need to put this to require as well because its required for the tokengenerator. Without it the csrf component is not really useful. Also you probably do not need ~2.4. I guess something like ~2.2 is enough (needs examination). Furthermore, its miss",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -4721,7 +4721,7 @@
  },
  {
   "text": "I know the patch is only about the model... but my eyes hurt and I run screaming after seeing so many explicit hashes like { \"\"value\"\" => \"\"1\"\" } in the method calls. ",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -4756,7 +4756,7 @@
  },
  {
   "text": "Please revert this merge. The assets helper, which requires an HTTP request, is now directly injected whereas before it was lazily loaded. This is causing all sorts of regressions.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -4766,7 +4766,7 @@
  },
  {
   "text": "version is scanned from tag name",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -4781,7 +4781,7 @@
  },
  {
   "text": "This sounds like a \"\"major\"\" bug. Would you mind to fill a issue for it an close it ? So we have a better history of what bugs got fixed ?",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -4801,12 +4801,12 @@
  },
  {
   "text": "omg qaston this is awesome!",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
   "text": "Im So Confused Right Now ",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -4826,8 +4826,8 @@
  },
  {
   "text": "that seems to do the trick.  ... now some cuke is failing, though :/",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "@jacknagel Got it. But for reinstall to reuse this code, install_formula should really pass on this exception, so I'm planning to put the catch part in the block from install in next commit.",
@@ -4846,7 +4846,7 @@
  },
  {
   "text": "hello again rbac",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -4856,13 +4856,13 @@
  },
  {
   "text": "Please remove the priority for the encoders. The order of these 2 is irrelevant (they are handling different formats anyway) and I don't see a reason to make them use a high priority.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
   "text": "rather than add some real html and then selecting it, you should do what you did in your other tests, create some arbitrary html with jQuery, and append it to `#qunit_fixture`. I know that you're just following examples in the tests here, but it's somethi",
-  "raw_message": "negative\n",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "Then we can be happy that other browsers don't follow the spec, and hope for a fix to the spec instead.",
@@ -4881,7 +4881,7 @@
  },
  {
   "text": "This is a silly decision that does not represent the majority of the rails community. Official plugin? Absolutely. Core? **No fucking way**.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -4951,17 +4951,17 @@
  },
  {
   "text": "Don't do this. This will break horribly if node.js ever adds multi-isolate support.",
-  "raw_message": "negative\n",
-  "label": "negative"
- },
- {
-  "text": "Can you please rather give us a test case that causes NullReferenceException? In your code there seems no chance that \"\"msg == null\"\" could occur and I wonder if it really happens.  Also it's great if you can follow our coding style, so that we can use \"\"me",
   "raw_message": "negative",
   "label": "negative"
  },
  {
+  "text": "Can you please rather give us a test case that causes NullReferenceException? In your code there seems no chance that \"\"msg == null\"\" could occur and I wonder if it really happens.  Also it's great if you can follow our coding style, so that we can use \"\"me",
+  "raw_message": "neutral",
+  "label": "neutral"
+ },
+ {
   "text": "The md5 doesn't seem to be consistent. It changes each time it is downloaded. Is sourceforge the only download url?",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -4986,7 +4986,7 @@
  },
  {
   "text": "Oh yeah!",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -4996,7 +4996,7 @@
  },
  {
   "text": "bad hack :( your must set stacks on max (already true limited) for triggered only, not cyclic recast in real (see sniffs). @zergtmn - triggered spells true selected by spelldifficulty - 66228, 67106, 67107, 67108.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -5011,12 +5011,12 @@
  },
  {
   "text": "Well, you can already do it with a instanceof check: ``if ($child instanceof self) {``. It will exclude buttons which are using a different implementation",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "Nice, one less fork!",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -5031,7 +5031,7 @@
  },
  {
   "text": "Yeah sorry. If there's weren't a ton of other changes here I'd fix it but it's not worth it at this point.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -5051,7 +5051,7 @@
  },
  {
   "text": "I don't trust it",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -5066,7 +5066,7 @@
  },
  {
   "text": "Spaces are not encoded here. Neither with + nor with %20. Why do you not want to follow the rfc? Just encode every component with rawurlencode.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -5081,8 +5081,8 @@
  },
  {
   "text": "Add a call to ```session_id($new_id)``` here to make sure we really start the new session. This will cause a new cookie to drop, but that is fine as long as our ```sess_time_to_update``` window is larger than our ```sess_forward_window```. Also, if we have",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "@antirez : I noticed you never but the reported-by/signed-off-by lines to your commits. My humble suggestion is that this might be a wonderful opportunity to do so:  ```` .git/COMMIT_MSG:  [...]  Reported-by: foxx <email> Tested-by/Acked-by: charsy",
@@ -5136,7 +5136,7 @@
  },
  {
   "text": "I think i write in commit note reasons.  I at 100% agree that idea good but i can't fix it without testing and reproduce. :(",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -5151,7 +5151,7 @@
  },
  {
   "text": "`brew audit` uses this to audit patch URLs, which is broken now.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -5161,7 +5161,7 @@
  },
  {
   "text": "It's [contradictory](http://pretty-rfc.herokuapp.com/RFC2617#representation-of-digest-values). I think that if the WWW-Authenticate Response Header provides a algorithm field we should return it.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -5181,17 +5181,17 @@
  },
  {
   "text": "make it more clear: If a formula spam defines a 'without-foo' option another formula can `depends_on 'spam' => 'with-foo'` and it works as expected. Similar to how `build.with? 'foo'` did it already. I know that what you suggest is something different, tho",
+  "raw_message": "neutral",
+  "label": "neutral"
+ },
+ {
+  "text": "sexy",
   "raw_message": "positive",
   "label": "positive"
  },
  {
-  "text": "sexy",
-  "raw_message": "negative",
-  "label": "negative"
- },
- {
   "text": "Omgf, i heard about this exploit TODAY :O  And what can be done about people who already used this exploit to benefit from passive auras? is there a way to \"\"clean\"\" it out? maybe reseting everyone's talents or by deleting certain auras from the character ",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -5201,7 +5201,7 @@
  },
  {
   "text": "Useless comment.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -5241,12 +5241,12 @@
  },
  {
   "text": "wow! great work.",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
   "text": "This is a bad idea for security imo. The use cases for reading cookies in JS are extremely rare and should be conscious choices, because it's a big attack vector combined with an XSS attack.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -5271,7 +5271,7 @@
  },
  {
   "text": "sounds great",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -5296,7 +5296,7 @@
  },
  {
   "text": "Fixed, good point.",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -5321,7 +5321,7 @@
  },
  {
   "text": "Oh yeah you are right.. missed that. Sorry!",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -5361,7 +5361,7 @@
  },
  {
   "text": "Yep! :smile:",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -5386,7 +5386,7 @@
  },
  {
   "text": "Yay finally, thank you =D",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -5406,17 +5406,17 @@
  },
  {
   "text": "^^ well done.",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
   "text": "ugh again... credit whores",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
   "text": "Maybe a note would be suffiecient, which tells the user to checkout the branch in the latest stable version?",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -5431,12 +5431,12 @@
  },
  {
   "text": "Alright, let me know when things are ready for review, I've got an insane amount of code to review",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "@UltraFaceguy  >The commit removes some outdated and inactive, but trusted, plugins that are integral to my server.   You just made a fool out of yourself and this proves why this commit is needed.  How can you 'trust' something that bypasses the API",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -5466,7 +5466,7 @@
  },
  {
   "text": "Have you did a pull request? This is blocking me to use rails 3.0.8. :(",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -5486,8 +5486,8 @@
  },
  {
   "text": "... to clarify: the only instance where \"\"holdSurface\"\" is called in DXVA.cpp is by CDecoder. Now for software decoded we don't pass through this channel so in that case we will are using \"\"unheld\"\" surfaces potentially being released while you still need the",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "I see. I tested using rand(8, 4) and with rand(4, 8) the first only show values between 6-8 and the second show values between 4-8  What I want to say? I want to say that the order matters so, IMHO, you have three options:  * throw an exception when the v",
@@ -5501,7 +5501,7 @@
  },
  {
   "text": "This is a bug in another library, not ours. ZLib does not touch the data pointed by `next_in` (it only touches the pointer itself, to move it forward), but even with that the signature of the pointer is not constant.  There is nothing we can do about this",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -5516,7 +5516,7 @@
  },
  {
   "text": "I truly hate this function. ",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -5526,12 +5526,12 @@
  },
  {
   "text": "You forget about one slash ;-)",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "Should be `if (`and `) {` as per the [coding conventions](http://book.cakephp.org/2.0/en/contributing/cakephp-coding-conventions.html)",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -5541,8 +5541,8 @@
  },
  {
   "text": "Why this change? (I don't see any mention in commit message about this).",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "Extract the above into a separate method, and then call and return from that method: ```php protected static function createAdapterFromItems($items) {     // do the work from inside the conditional, and then:     $adapter = static::getAdapterFromMana",
@@ -5551,7 +5551,7 @@
  },
  {
   "text": "epic :D:D:D keep going :) good job",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -5566,8 +5566,8 @@
  },
  {
   "text": "Doesn't it close #2729 ?",
-  "raw_message": "positive",
-  "label": "positive"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "In fact suggested unrelated patch also rejected, becasy we need in general fix how tartet mode pairs wotj with SELF2 target mode instead adding hacks.",
@@ -5576,7 +5576,7 @@
  },
  {
   "text": "Will probably revert this, has some bad side effects",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -5586,8 +5586,8 @@
  },
  {
   "text": "Hahaha, conflict resolution sucking, fill fix :).",
-  "raw_message": "positive",
-  "label": "positive"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "Looks like the book got pulled, link doesn't work for me. :(",
@@ -5596,8 +5596,8 @@
  },
  {
   "text": "finally some changes to that awful functions",
-  "raw_message": "positive\n",
-  "label": "positive"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "I see. I'v only looked at the diff, sorry.",
@@ -5606,8 +5606,8 @@
  },
  {
   "text": "Who knows :) Will change.",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "That'd be great - thanks!",
@@ -5641,12 +5641,12 @@
  },
  {
   "text": "i keep getting segmentation fault o.0 wtf is causing that??",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
   "text": "But FYI this is set up for trouble and you should probably revisit it. Taking the memberType of the symbol owner means it will be wrong whenever the symbol is inherited. When the type signature is \"\"Symbol => TypeTree\"\", the right thing cannot be done.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -5661,8 +5661,8 @@
  },
  {
   "text": "I wanted 'second' when I'm iterating hashes.  But 'third' to 'tenth' sugar doesn't seem to taste that sweet. :)",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "Classic JGit.  Oh well. Thanks for taking the time to look into this. I've reverted the assert to the old one. :)",
@@ -5686,7 +5686,7 @@
  },
  {
   "text": "Why signed if you don't allow values < 0 anyway?",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -5696,7 +5696,7 @@
  },
  {
   "text": "Yeah currently the end developer has to manage cookies between requests on the same client instance.  The more I think about it, the more that feels like a bad idea.  Once I'm done with the authentication strategies I'll implement a per instance cookie jar",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -5801,12 +5801,12 @@
  },
  {
   "text": "What if the collections' size is Integer.MAX_VALUE?",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "no its just wrong",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -5821,8 +5821,8 @@
  },
  {
   "text": "Field with initial underscore _paginator",
-  "raw_message": "neutral\n",
-  "label": "neutral"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "Yay! I always thought this was strange.",
@@ -5846,7 +5846,7 @@
  },
  {
   "text": "Maybe Javascript is better than C about this, but you're both re-assigning n and using its value in the same expression.  That seems like it relies on undefined behavior in the Javascript implementation.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -5856,7 +5856,7 @@
  },
  {
   "text": "Fixed in the commit https://github.com/derekmahar/akka/commit/0e0c55010af9476e9b2981e4b3c2030641b03f10.",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -5876,8 +5876,8 @@
  },
  {
   "text": "read the commit message ;P",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "`it is...`",
@@ -5886,17 +5886,17 @@
  },
  {
   "text": "My patch tested and working 3 month more). But we must fix it in blizzlike way) BTW animation is well. And it seems this item created by blizz for transmogrif",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "No problemo :)",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
   "text": "The problem is that we haven't specified a public API but the documentation and examples show it is ok to inherit from the sanitizer and override a method like `process_removed_attributes`. Considering that many people are writing plugins due to the mass a",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -5906,7 +5906,7 @@
  },
  {
   "text": "Bug Reported !!! and you fuckers say i don't do anything around here ... >.>  -Jason",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -5921,8 +5921,8 @@
  },
  {
   "text": "We had a solution (ffmpeg event) but unfortunately this part was not accepted upstream. Michael said that it would break some other functionality. Comparing new and old state is the only idea I have so far.",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "No, it is not. It's low level, but not internal nor expected to disappear or change anytime soon.",
@@ -5931,7 +5931,7 @@
  },
  {
   "text": "I don't like the default value: if the parameter is optional, you should use null. And if the value is null, you set a default value. I don't think that we need to define a default priority (we don't have a default priority in our priority filter).",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -5946,7 +5946,7 @@
  },
  {
   "text": "Might want to include some more debug info about which actorref didn't manage to activate within how long.",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -5961,8 +5961,8 @@
  },
  {
   "text": "Strange indentation here",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "Does not make the code any more readable IMHO.",
@@ -5986,12 +5986,12 @@
  },
  {
   "text": "\\o/ Thanks!",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
   "text": "This was added to fix the error on http digest - it tried to reauthenticate when questionmark was added to the query and also it was trying to reauthenticate on params change. Can you provide an example of failing request?",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -6006,8 +6006,8 @@
  },
  {
   "text": "In truth, I don't really think we need this any more, since we figured out how to get gyp to generate xcode projects to build with a .node extension. I'm happy to generate a PR that adds the condition you've suggested, or backs out the change.",
-  "raw_message": "neutral\n",
-  "label": "neutral"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "No real reason to introduce _one time_ variable.",
@@ -6036,12 +6036,12 @@
  },
  {
   "text": "What is wrong with strncpy? snprintf is possibly vulnerable to format-string attacks.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
   "text": "Should it have a blank line above?",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -6066,8 +6066,8 @@
  },
  {
   "text": "Indeed the fieldList is a whitelist. I too think it should be a protected method.",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "Interesting. In which case, it's glib's configure that sucks.",
@@ -6086,7 +6086,7 @@
  },
  {
   "text": "Shauren, ALARM!!! There is bug again =( Try enter vehicle directly from another vehicle... ",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -6136,8 +6136,8 @@
  },
  {
   "text": "Nevermind, totally misread the change. Sorry. </github_spam>",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "Thanks for the advice.  Changed it to an options hash.",
@@ -6166,7 +6166,7 @@
  },
  {
   "text": "I don't understand this change. According to Mathias' post, this new solution still has most of the cons of the original.  The CSS hacks are much less readable, obvious, meaningful, etc. They're harder to notice and more complicated to remember and use. ",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -6181,8 +6181,8 @@
  },
  {
   "text": "what happens if negative or 0?",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "Ahh, I don't know how I feel about this... Paul Irish would not agree. =P lol I joke of course. =)",
@@ -6226,7 +6226,7 @@
  },
  {
   "text": "I think the current \"\"sets\"\" directory node is now also showing 1-movie sets, which is pretty annoying.  It can be solved by passing true to GetSetsNav in the CDirectoryNodeSets::GetContent",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -6256,7 +6256,7 @@
  },
  {
   "text": "Awesome commit-hash: ``dead730`` xD",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -6286,7 +6286,7 @@
  },
  {
   "text": "Why not, what's the problem supporting \"\"/\"\"?",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -6306,7 +6306,7 @@
  },
  {
   "text": "I got a bug after this update - whenever the basket don't get used it never despawn till server restart, it should dissapear on umbrella dissapearing. Can anyone confirm this bug or it is my error only? Like you get ~ baskets all over dalaran or other plac",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -6331,23 +6331,23 @@
  },
  {
   "text": "crap, I'll rework it, I don't want a dangling else just waiting to f**k us over if someone does not watch what they are doing.",
-  "raw_message": "negative\n",
-  "label": "negative"
- },
- {
-  "text": "yeah ok i used only the latest source ce7cc421f505f72ba477 ( not your changed ) i wanna only inform u, and the latest rev same error ( fc5e92413851835879f0 )",
-  "raw_message": "neutral\n",
-  "label": "neutral"
- },
- {
-  "text": "It was originally that way, not sure why. After refactoring per your suggestion below, not sure that does anything, so removing.",
   "raw_message": "negative",
   "label": "negative"
  },
  {
-  "text": "as a side comment... dwarfforge broke several times due to bukkit changes... not because of nms...  so let's see what is discussed here  a) A commit which will require plugin developers to recompile and change their plugin when mc version change every ",
+  "text": "yeah ok i used only the latest source ce7cc421f505f72ba477 ( not your changed ) i wanna only inform u, and the latest rev same error ( fc5e92413851835879f0 )",
   "raw_message": "neutral",
   "label": "neutral"
+ },
+ {
+  "text": "It was originally that way, not sure why. After refactoring per your suggestion below, not sure that does anything, so removing.",
+  "raw_message": "neutral",
+  "label": "neutral"
+ },
+ {
+  "text": "as a side comment... dwarfforge broke several times due to bukkit changes... not because of nms...  so let's see what is discussed here  a) A commit which will require plugin developers to recompile and change their plugin when mc version change every ",
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "@carlosantoniodasilva this is correct.  In master it's a method call, in 3-2-stable it's a hash.",
@@ -6356,7 +6356,7 @@
  },
  {
   "text": "Doesn't matter at all. Just remove that line.",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -6371,13 +6371,13 @@
  },
  {
   "text": "Its safe, at least from a unit testing perspective! I also don't see why it wouldn't be safe. An I missing something?",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
   "text": "So yes, ```libssh2_userauth_publickey_fromfile``` wraps ```libssh2_userauth_publickey``` but if you have already read and parsed the key, no need to go back to the disk and parse it again.",
-  "raw_message": "positive",
-  "label": "positive"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "I dont have a problem recompiling my plugins. I do every few days anyways with some bug fix or new feature. Whats bothering me the most is everyone else is being forced to do this as well now and its going to slow down the DBO queue badly. I wouldnt care, ",
@@ -6391,7 +6391,7 @@
  },
  {
   "text": "Same problem here.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -6411,8 +6411,8 @@
  },
  {
   "text": "Agh.  That was a dumb mistake.  Thanks for fixing that up.  I'll go back through and audit my other uninitialized member changes to make sure I didn't make another similar mistake.",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "Holy crap.",
@@ -6436,7 +6436,7 @@
  },
  {
   "text": "Sure, but adds 1 call to the stack only the first time for any property. It's actually a win on repeated calls because it's only one property access instead of 2, but I hear you. Any suggestions on how I might detect that a browser has no vendor prefixes ",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -6466,7 +6466,7 @@
  },
  {
   "text": "Probably because it's set using GET_R() et. al.  You could certainly change it to GLfloat and divide by 255.0f when it's assigned above.",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -6501,7 +6501,7 @@
  },
  {
   "text": "Would HeartbeatsPerKeepAlive be too wordy of a name? I'm worried that people will assume that KeepAlive represents a time span in seconds without reading the docs.  Also, is there any reason we shouldn't just make this a uint autoprop instead of doing a",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -6531,7 +6531,7 @@
  },
  {
   "text": "@jeresig - Welp sucko, when they fix it then something like a weak inference + version sniff will do. As for them not fixing bugs because it will affect a js lib; that is my new pet peeve, browsers should fix bugs and let libs fix there own bugs :P",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -6556,12 +6556,12 @@
  },
  {
   "text": "To prevent what i described in my previous comment, all routes must now explicitly define a default value for _locale in their definition.",
-  "raw_message": "neutral\n",
-  "label": "neutral"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "...JavaScript already has this capability...\"\" \"\" ... it would be interesting to see cases where a version check actually saved you code...\"\"  I think I am (finally) sick and tired of this kinder-garten ...",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -6581,7 +6581,7 @@
  },
  {
   "text": "Just out of curiosity, why not define the `to_s` method directly instead of this alias?",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -6606,8 +6606,8 @@
  },
  {
   "text": "It does look weird. I assumed this is the way it should have been displayed when looking at the FAQ. I have changed it to one line now.",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "The first example was supposed to be: <pre> categories:  - foo  - bar  - xyzzy </pre>",
@@ -6626,8 +6626,8 @@
  },
  {
   "text": "Ah, that makes sense (I didn't realise it was required, even though I tried it that way during testing).  I've opted for a new named feature, `requires_literal_defaults`, and then a couple of new lines of code in `column_sql` and `alter_field`, along wi",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": ":heart:",
@@ -6656,7 +6656,7 @@
  },
  {
   "text": "Yes, @viktorklang We can probably reuse one `HashedWheelTimer` for the whole `NettyTransport`.  So @drewhk correct me if I'm wrong. This seems to be per outbound association. Are we creating this for every connection to a new remote system?  ",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -6716,7 +6716,7 @@
  },
  {
   "text": "@peterc, letting testing concerns seep into the core object like this gravely offends my sense of aesthetics. Big part of the reason why I dislike rspec syntax so much.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -6726,7 +6726,7 @@
  },
  {
   "text": "That shit took 2 days to find. I hate it with every inch of my body.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -6741,7 +6741,7 @@
  },
  {
   "text": "Please use 1.9 hash style.",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -6761,8 +6761,8 @@
  },
  {
   "text": "Instead of using ``else`` here, you should return the array at the end of the ``if`` IMO",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "use 1.9 hash syntax please",
@@ -6771,7 +6771,7 @@
  },
  {
   "text": "Yeah, this was pretty much just getting rid of some postgres syntax errors",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -6786,7 +6786,7 @@
  },
  {
   "text": "Finally! Thanks for the fix!",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -6796,13 +6796,13 @@
  },
  {
   "text": "very nice!",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
   "text": "Indeed, it should not. Turn Evil has MECHANIC_TURN but not MECHANIC_FEAR. These mobs are not immune to that mechanic.",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "Could you update http://udbwiki.webhop.net/index.php/Main_Page ? I'll be greatful. :)",
@@ -6811,8 +6811,8 @@
  },
  {
   "text": "I agree that `setMessage` is not a good solution add should be removed/deprecated because the `addViolation` does the same and is more versatile. If we do that, I wonder what influence does the return value of the `isValid` method have at all? At the mome",
-  "raw_message": "positive",
-  "label": "positive"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "How do you suggest that be done?",
@@ -6821,7 +6821,7 @@
  },
  {
   "text": "It's an awful browser... pretending to be modern, just a fraud.  If this issue doesn't exist in 5.1.7, we shouldn't be special casing it.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -6856,8 +6856,8 @@
  },
  {
   "text": "Hmmm. I don't have an environment at home to test with but I was thinking... why do I have to decode() here??? Shouldn't the object already be in unicode? I remembered thinking about the DeleteMarker and Key objects where they parse xml and pondering the ",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "Excellent work. More often to such commits instead of cutting away never stopped anyone from fields in the database ...",
@@ -6866,7 +6866,7 @@
  },
  {
   "text": "This points to something weird: if I do `dumpdata --pks 2,3,4 app` I'll get _any_ object of any type with PKs of 2, 3, or 4. That's... weird. I think a better approach would be to make `--pks` only work if you've specified a _single_ model. So `dumpdata -",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -6876,8 +6876,8 @@
  },
  {
   "text": "I second this. Please remove this :(",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "Why are people still complaining about this commit exactly?  Yeah I complained and hated this commit, no shit.  But think about it, hack clients have to update on every MC update anyways.  And for those who don't use MCP (me) have to update anyways!  D",
@@ -6901,7 +6901,7 @@
  },
  {
   "text": "> yay, less yellow triangles! ;)  do you even see those? ^^ I thought warnings were disabled on XCode (and the build server [seems to agree](http://videosynthesis.net/oftesting/testruns/20130214_164427-v0.7.4/))?",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -6921,7 +6921,7 @@
  },
  {
   "text": "DOH! I started that test before I realized that there was already a test, (named testDeactivatedUser), that just needed to be updated. I should have deleted the testLoginWithDeactivatedAccount function. I'll fix and send through another pull request.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -6931,13 +6931,13 @@
  },
  {
   "text": "Can you also remove this change? since Sundown has been deprecated, Redcarpet will never pull code from Sundown anymore. Thanks!",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "[ 85%] Building CXX object src/server/scripts/CMakeFiles/scripts.dir/Northrend/FrozenHalls/PitOfSaron/boss_ /opt/RC_TC_BUILD/src/server/scripts/Northrend/FrozenHalls/PitOfSaron/boss_forgemaster_garfrost.cpp:56:31: e /opt/RC_TC_BUILD/src/server/game/Misce",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "A perfect timing. Just a second before my commit :)",
@@ -6956,7 +6956,7 @@
  },
  {
   "text": "This seems like a poor idea, and probably should not exist.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -6976,7 +6976,7 @@
  },
  {
   "text": "What are `$hash` and `$header` for?",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -6986,8 +6986,8 @@
  },
  {
   "text": "I can understand your worries, the current suggestion was the least of all evils:  Actor == The behavior self    == The identity context == The context",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "11018",
@@ -7026,12 +7026,12 @@
  },
  {
   "text": "There are two `when`. Also, it's not clear what `its smallest key is larger than the number` means? I think it's just because your `units` hash does not contain the searched key, not actually because of `smallest` vs `larger`, not?",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
   "text": "What do I need (what tool, settings, manual, knowledge) to get it fully working like authenticator?",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -7051,17 +7051,17 @@
  },
  {
   "text": "Corrected in SHA: 58a13d7",
-  "raw_message": "neutral\n",
-  "label": "neutral"
- },
- {
-  "text": "EDIT: Laise is too fast, posted his response before I asked something similar about it. :P",
   "raw_message": "neutral",
   "label": "neutral"
  },
  {
+  "text": "EDIT: Laise is too fast, posted his response before I asked something similar about it. :P",
+  "raw_message": "negative",
+  "label": "negative"
+ },
+ {
   "text": "Wow, this is pure brain failure on my part.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -7086,7 +7086,7 @@
  },
  {
   "text": "I am observing races here. After a flushBuffer CurrentVideo/audio.dts is NOPTS_VALUE -> InputState is updated -> dts and time_offset sent to players are invalid.   We have a update timeout in UpdatePlayState and here :(",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -7116,13 +7116,13 @@
  },
  {
   "text": "WTF on master branch ? i thought TC would never add it oO",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
   "text": "Thx for the suggestion. Thought it might be the perfect place since it's contextual, but now that you mention that I realize I'm probably polluting core members' notifications :\\",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "Err:508",
@@ -7136,7 +7136,7 @@
  },
  {
   "text": "Niiiice!",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -7156,17 +7156,17 @@
  },
  {
   "text": "ya +1 for clearer code comment :D",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
   "text": "This change makes me a bit nervous, and I see the possibility of very large performance issues on the database servers limiting to 1,000,000 rows.  How about a rough sane limit of 25?",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
   "text": "Whoops, something went terribly wrong here! Fix is at 7bf32c0.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -7221,7 +7221,7 @@
  },
  {
   "text": "WORST COMMIT EVER. THANKS OBAMA.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -7236,13 +7236,13 @@
  },
  {
   "text": "It's good to know that this in stone, it'll help people move forward one way or another. ",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
   "text": "Thanks @andrew-d Given the apparent rize in spammers making GitHub account and trying to sneak stuff in via Pull Requests, this might have come off as sketchy had I even noticed it ;)",
-  "raw_message": "positive",
-  "label": "positive"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "Why is this being removed?  Thanks",
@@ -7256,7 +7256,7 @@
  },
  {
   "text": "This is not a good approach to fixing issue #750. See pull request #757 for a better approach to fixing the issue. My script fails to do any real integrity checks. If someone uploads a malicious script (eg: A .exe with the extension .jpg) it will fall thro",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -7271,17 +7271,17 @@
  },
  {
   "text": "You can't load a script using script tag injection synchronously.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
   "text": "This is a bit of an issue in the long run though - not that I have any idea what the solution is.  See this commit for instance: 24154b216682dfef7ff647a5c2f698b89ba429a6 - doesn't have anything to do with #225",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
   "text": "woot! one more exploit gone!",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -7301,8 +7301,8 @@
  },
  {
   "text": "Need to update the checksum!",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "all good, that's how we ride.",
@@ -7321,7 +7321,7 @@
  },
  {
   "text": "Would adding libelf as a dependency be a cleaner way to provide this header?",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -7341,12 +7341,12 @@
  },
  {
   "text": "http://checkstyle.sourceforge.net/config_modifier.html",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
   "text": "Is there some way to configure this (keybindings perhaps)? I find it super annoying that XBMC steals my native volume up/down buttons.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -7366,8 +7366,8 @@
  },
  {
   "text": "oooh … yeaaah …  sorry, you’re right, of course. Damn but these Futures can be confusing.",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "it does kinda seem weird. Maybe it's a bug within the minecraft server itself that needs to be done this way to work?",
@@ -7381,12 +7381,12 @@
  },
  {
   "text": "We can only compare our results to json.parse on browser that have the native method. I agree it's not optimal to test this everywhere but where we actually use it. Perhaps we dump this test's attempt to compare since we don't care about the native result.",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "it is for adding fields to a query or to the whitelist?",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -7396,7 +7396,7 @@
  },
  {
   "text": "Sounds good to me! Thanks.",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -7411,7 +7411,7 @@
  },
  {
   "text": "Please stop censoring my comments....",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -7421,32 +7421,32 @@
  },
  {
   "text": "and the valid names must be passed to the `compile()` method. The goal being to not do anything special in the compiled string.",
-  "raw_message": "neutral\n",
-  "label": "neutral"
- },
- {
-  "text": "Readme says Django>=1.2 — which is it? :)",
   "raw_message": "neutral",
   "label": "neutral"
  },
  {
+  "text": "Readme says Django>=1.2 — which is it? :)",
+  "raw_message": "positive",
+  "label": "positive"
+ },
+ {
   "text": "what's the point of this dependency?",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "How annoying. I'm hoping to move away from storing configuration in the rakefile at some point soon. I don't like the idea that people have to deal with merge conflicts on their configurations. Sorry about that.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
   "text": "If the default is callable, then the default shouldn't stay in the table. This function may be too low-level to handle this, but it hints that once we've got the specific value, we \"\"forget\"\" that it was callable. I think that in this case, column_sql shoul",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "I did that and ended up with massive project which I don't need and incorrect deps. I dont fancy shaving the project and fixing deps every time something changes in the project. Multi-module setup simply sucks...:(",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -7456,8 +7456,8 @@
  },
  {
   "text": "sorry, forget what I said, *braces* can be removed",
-  "raw_message": "positive",
-  "label": "positive"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "@raggi, The language does have a standard, it's terrible and specifies that the parsers implement these crazy rules.  If you understood the history of JavaScript and how it was never really thought through or designed it would make sense.  Ryan has made ",
@@ -7491,8 +7491,8 @@
  },
  {
   "text": "Gotta love auto-updating browsers :) What’s up with this commit though? What exactly do you mean by “no longer necessary with the release of Opera 11”? Older versions never existed?",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "enforce it configside with GM.LoginState = 1",
@@ -7506,12 +7506,12 @@
  },
  {
   "text": "*hides*  Anyway, there were no sniffs available for this quest, I just found the invisiblity spells and figured this way was MUCH better than the previous one. As for @vlad852, they should ALWAYS have the gossipflag, but since they walk really fast due SPE",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "will be useless in cata\"\" Your comment is pretty useless too.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -7521,7 +7521,7 @@
  },
  {
   "text": "Is this needed because oauthlib is not currently up to date on pypi?",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -7566,17 +7566,17 @@
  },
  {
   "text": "Do you mind adding another comment before this line saying something like \"\"JRuby will returns the value before typecast as integer\"\" or something like that? I think we might forget why this condition has to be exists at later date.",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
   "text": "I would love to see this get pushed.",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
   "text": "u broke tests :(",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -7621,8 +7621,8 @@
  },
  {
   "text": "so nevermind.. this commit looks right, it's the original code that looks totally fishy",
-  "raw_message": "positive",
-  "label": "positive"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "I **LOVE** this change.",
@@ -7631,17 +7631,17 @@
  },
  {
   "text": "bad idea :( why 2 spaces was not enough? Now code becomes wider and will be harder to read",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
   "text": "I can't imagine how operator void* can replace it, because &m_guid is never null.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
   "text": "as @ADmad and I pointed out, you need to respect the coding conventions. too many whitespaces here inside () for example.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -7651,7 +7651,7 @@
  },
  {
   "text": "Using the system libraries is intentional so we won't include this patch.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -7681,13 +7681,13 @@
  },
  {
   "text": "Now this is just scary.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
   "text": "haha this is some hella-awkward misunderstanding of operator precedence, yay parens ",
-  "raw_message": "positive",
-  "label": "positive"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "Interesting that you get key violation errors during runtime on DELETE and UPDATE queries. I'll investigate this, thank you for your feedback.",
@@ -7696,8 +7696,8 @@
  },
  {
   "text": "Yup, it's commendable effort ;).   I was also tempted to start from scratch, just it's so daunting task. There are many hacks cumulated in WebGLRenderer, it just grew organically with each demo :S",
-  "raw_message": "neutral\n",
-  "label": "neutral"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "I believe it should be InetAddress.getByName(null).",
@@ -7721,8 +7721,8 @@
  },
  {
   "text": "@jdalton - I can't comment on that, I haven't reserched those browsers for significance specifically (but note: Firefox has much slower conversion rates).",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "@Darkhand81  They are refusing to answer that. :(",
@@ -7736,17 +7736,17 @@
  },
  {
   "text": "I actually checked that, it is always an   OrderedMemoryAwareThreadPoolExecutor",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "This wouldn't work because getting responseText for a request fetching binary data throws an exception in IE9 :P",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
   "text": "good job!",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -7796,7 +7796,7 @@
  },
  {
   "text": "Cool. Looks good.",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -7841,7 +7841,7 @@
  },
  {
   "text": "@josevalim What was the rationale for this change? It breaks nested conversion from BSON::OrderedHash.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -7856,12 +7856,12 @@
  },
  {
   "text": "No!!!! Damn you rubygems!",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
   "text": "This is a dead store to i",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -7896,7 +7896,7 @@
  },
  {
   "text": "Yeah, totally useless.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -7906,7 +7906,7 @@
  },
  {
   "text": "Yeah. I copied this from timer_wrap :-). Will change. ",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -7916,7 +7916,7 @@
  },
  {
   "text": "Fix that the problem while saving characters ?  cause when you log out and then login all your things are not saved and you have to start again",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -7926,17 +7926,17 @@
  },
  {
   "text": "So for example RSA's scripts where they developed a Boss_Spell_Table is useless or will be not compatible?",
-  "raw_message": "negative\n",
-  "label": "negative"
- },
- {
-  "text": "Didn't we move this method to FrameDecoder ?",
   "raw_message": "negative",
   "label": "negative"
  },
  {
+  "text": "Didn't we move this method to FrameDecoder ?",
+  "raw_message": "neutral",
+  "label": "neutral"
+ },
+ {
   "text": "This test got failed with Oracle adapter. Oracle database handles equally NULL and empty string ( I know it's not an standard but it is what it is.)",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -8001,7 +8001,7 @@
  },
  {
   "text": "Most enter vehicle commands are CMSG_SPELLCLICK. I'm working right now on removing the vehicle hacks related to that and add proper spellclick data for vehicles. ",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -8011,7 +8011,7 @@
  },
  {
   "text": "Great, let's merge!",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -8086,12 +8086,12 @@
  },
  {
   "text": "@markstory yes, it seemed odd...",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "Use `django.contrib.auth.views.redirect_to_login` to redirect to the login page (see https://github.com/divio/django-cms/blob/develop/cms/views.py#L136)",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -8111,8 +8111,8 @@
  },
  {
   "text": "I think this is a great idea, but it's going to screw over a LOT of people who followed bad jQuery tutorials online that all seem to love recommending $() as a shortcut to $(document).",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "Pondered it, shifted it around at the back of my head, and I still lean towards making it explicit that a `throw` is happening here. I’ve added one sentence above, WDYT?",
@@ -8121,7 +8121,7 @@
  },
  {
   "text": "Also can be written as:  ```ruby class UserLogin < UserBasic   expose :private_token end ```",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -8141,7 +8141,7 @@
  },
  {
   "text": "Can you write the \"\"hack\"\" for me ? :p I need to fix this problem",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -8176,12 +8176,12 @@
  },
  {
   "text": "they click on the link above, and pick one http://repo.typesafe.com/typesafe/snapshots/com/typesafe/akka/akka-actor_@binVersion@/",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
   "text": "Could you please reword this commit message to something like \"\"Check mock modhash value for testing\"\"?",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -8196,12 +8196,12 @@
  },
  {
   "text": "Thanks this fixed my issue!",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
   "text": "Fuck. I failed. Sorry, don't know what went wrong.  Have to repair. ",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -8216,13 +8216,13 @@
  },
  {
   "text": "Why does the remember-me cookie default to `httponly` but not the session cookie?",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
   "text": "one more developent, this error is related to the openssl bundled with the osx, however if CommonCrypto is being used (--with-darwinssl) tis error seams resolved.  Maybe it will be a best option to use '--with-darwinssl' as default option on osx - first",
-  "raw_message": "positive\n",
-  "label": "positive"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "Should I go and buy a can of paint ? :)",
@@ -8246,12 +8246,12 @@
  },
  {
   "text": "Needed for incoming RBAC commits (Role Based Access Control)",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
   "text": "Exellent work. I think, the next step (step by step :) should be transfer Pet Action's from PetHandler.cpp to Unit.cpp (for use in CallForAllControlledUnits). Tested more than three months (based on Laise code). Need publish clean patch? ;)",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -8266,17 +8266,17 @@
  },
  {
   "text": "@SaitoWu Also why we need shared repositories if we have umask?",
+  "raw_message": "neutral",
+  "label": "neutral"
+ },
+ {
+  "text": "This totally broke uses where a song doesn't have an album assigned or has an empty album (when not using musicBrainz). Was this EVER tested with something else than musicBrainz? And who signed off on this? This MusicBrainz merge really broke too much shit",
   "raw_message": "negative",
   "label": "negative"
  },
  {
-  "text": "This totally broke uses where a song doesn't have an album assigned or has an empty album (when not using musicBrainz). Was this EVER tested with something else than musicBrainz? And who signed off on this? This MusicBrainz merge really broke too much shit",
-  "raw_message": "negative\n",
-  "label": "negative"
- },
- {
   "text": "What's a hashcode?",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -8286,12 +8286,12 @@
  },
  {
   "text": "problem is that /xbmc/linux/PlatformDefs.h defines 'byte unsigned cha' at 158, RPI's /usr/include/linux/i2c.h uses 'byte' as param name at line 26. reordering includes fixes compilation, as long as param is included (somehow ) before define.",
-  "raw_message": "neutral\n",
-  "label": "neutral"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "Awesome!",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -8301,23 +8301,23 @@
  },
  {
   "text": "fixed. I think that tests for Rails core is bad idea. Don't you think so too? Have you read good article from DHH about it?!",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
   "text": ">>This seems disastrous.  >makes me nervious, i don't want to be the guy who breaks stuff, if we go with your solution – it would definitely will not break anything, if we go with mine – it would definitely will, affected amount of code can be relativel",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
   "text": "Awesome commit !",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
   "text": "I discussed this with cptspiff on IRC before committing it and we were both of the opinion that the sets node should show all the sets in case we want to extend support for sets within XBMC to e.g. allow adding movies to a set which will not be possible if",
-  "raw_message": "positive",
-  "label": "positive"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "post n.40 is dated 03/09/2009 so it's for 3.x",
@@ -8331,8 +8331,8 @@
  },
  {
   "text": "ha ha i get your point :) but still they wont remove it from disables it until its 100% blizzlike so i guess you will have to w8 then :D",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "Okay, I'm totally relaxed now ;)",
@@ -8341,7 +8341,7 @@
  },
  {
   "text": "Notch should add this in the vanilla server. It crashed our vanilla server twice because Notch forgets to check things >_>",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -8356,8 +8356,8 @@
  },
  {
   "text": "Did you mean to include the iso9660:// part for all systems?  Prior to this it was only for non-Windows.  Previously:  ``` GetDiskUniqueId: Trying to retrieve ID for path D:\\VIDEO_TS CMediaManager::HashDVD - Adding file content for dvd file: VIDEO_TS",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "missing space between descr. and return",
@@ -8461,8 +8461,8 @@
  },
  {
   "text": "whitespace change not needed",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "ahh also I'm right :)",
@@ -8491,7 +8491,7 @@
  },
  {
   "text": "i'm crying. this is awful please, please undo :'(!!!! it was lovely to control before, now it's like trying to control a balloon with a fan some of us need to aim the camera quickly and accurately!",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -8536,7 +8536,7 @@
  },
  {
   "text": "case 9:            if (this.results_showing && !this.is_multiple) {this.result_select(evt);}             return this.mouse_on_container = false;             break; Do not forget break statement , otherwise on tab control will not be transferred to next",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -8546,7 +8546,7 @@
  },
  {
   "text": "One drawback to outputting directly is you cannot send headers/cookies/sessions which makes it no different than using the command line runner.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -8566,12 +8566,12 @@
  },
  {
   "text": "Does this fix this crash? http://pastebin.com/KkUUK0K9 Or i have to set a report?",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "I've thought about this and think it may not be such a good thing security wise. What if https:// is temporarily down, but https:// works? Then the secret url to post a key would be exposed on the internet... (I know i've done this in sparkleshare-invite-o",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -8586,7 +8586,7 @@
  },
  {
   "text": "This would be BC break, and it's to late to have such in 2.2.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -8596,8 +8596,8 @@
  },
  {
   "text": "Haha, come on, you can declare the `git_tree` here instead of doing this.",
-  "raw_message": "positive",
-  "label": "positive"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "SMART_ACTION_ENTER_VEHICLE should be removed and its implementations by SMART_ACTION_CAST_SPELL (sp?) and cast the appropriate vehicle riding spell. SMART_ACTION_LEAVE_VEHICLE should remove the aura on the target vehicle from the specified caster. Not sur",
@@ -8606,7 +8606,7 @@
  },
  {
   "text": "For some reason this commit did some really weird things to the diff making it somewhat hard to read.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -8631,7 +8631,7 @@
  },
  {
   "text": "Very nice man!",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -8671,12 +8671,12 @@
  },
  {
   "text": "oh, you're absolutely right -- sorry for my confusion! That makes sense, it should add `word.length` to get the next match.",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
   "text": "OTOH you made me thinking about if that is really a good idea to add the terminator in the encode step. It should be either a separate option, or just up to the user completely.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -8701,7 +8701,7 @@
  },
  {
   "text": "break the array values in multiple lines.  You can see the coding style here http://framework.zend.com/wiki/display/ZFDEV2/Coding+Standards",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -8711,7 +8711,7 @@
  },
  {
   "text": "I have updated this test to include a test count as it would \"\"pass\"\" as no test would run. Should i add a separate pull request for this? Or you happy to just include it with the next push? ",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -8741,8 +8741,8 @@
  },
  {
   "text": "It is needed and is set in [constructor](https://github.com/ADmad/cakephp/blob/8ae3934378e75b2bdc7ac850f7593467fa7e7fc3/lib/Cake/Controller/Component/Auth/BasicAuthenticate.php#L55). I removed the overriding of `$settings` property so that if its keys are",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "@vrybas: instead of explicitly skipping the filter you should do:   protect_from_forgery :except=>[:aircrafts_by_manufacturer]  I'm also reasonably sure that you could do something along the lines of  protect_from_forgery :if=>:some_method_which_retu",
@@ -8751,7 +8751,7 @@
  },
  {
   "text": "WDYM? Are you ironic? What is wrong? Please provide understandable feedback. ",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -8766,7 +8766,7 @@
  },
  {
   "text": "My bad, it's not \"\"dasherize\"\".  The issue is line 223 of hash/conversions.rb - adding \"\"underscore\"\".  Same problem, though, and a major change in functionality.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -8781,7 +8781,7 @@
  },
  {
   "text": "also libavfilter/vsrc_buffer.h header is not copied by ffmpeg install script so the file is not present with external ffmpeg. AND av_vsrc_buffer_add is not present on all ffmpeg version so you can't use it :(",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -8801,12 +8801,12 @@
  },
  {
   "text": "Thanks for this fix. Its definitely better than the actual way. ",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
   "text": "Please write the exact method signature, e.g.  ``` ruby def first_or_create(attributes = nil, options = {}, &block)  ```",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -8836,7 +8836,7 @@
  },
  {
   "text": "mhm, okay",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -8876,7 +8876,7 @@
  },
  {
   "text": "Add it to this PR directly.",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -8886,8 +8886,8 @@
  },
  {
   "text": "We already have the possibility to script instanced map, no reason to script it more than once i assume :)",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "I don't like micro optimizing things that is obviously not a bottleneck, but I will not argue more. You know we have a AtomicReference in Dispatcher?",
@@ -8896,7 +8896,7 @@
  },
  {
   "text": "just verified that the bytecode generated with and without `final` is identical … (vals are always private final fields)",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -8916,17 +8916,17 @@
  },
  {
   "text": "Why not just a one liner: ring.rangeImpl(Some(hash), None).headOption.getOrElse(ring.head)._2 ? ",
+  "raw_message": "neutral",
+  "label": "neutral"
+ },
+ {
+  "text": "i just hit an issue with this code today - https://github.com/ahoward/rails_default_url_options/pull/1 - and also - https://github.com/customink/central_logger/pull/28  it's faster, but it breaks the interface completely: passing HashWithIndifferntAcess ",
   "raw_message": "negative",
   "label": "negative"
  },
  {
-  "text": "i just hit an issue with this code today - https://github.com/ahoward/rails_default_url_options/pull/1 - and also - https://github.com/customink/central_logger/pull/28  it's faster, but it breaks the interface completely: passing HashWithIndifferntAcess ",
-  "raw_message": "negative\n",
-  "label": "negative"
- },
- {
   "text": "That post was doing well until it invalidated itself by claiming that strict mode is \"\"parse time",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -8936,7 +8936,7 @@
  },
  {
   "text": "What's this?",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -8951,7 +8951,7 @@
  },
  {
   "text": "This breaks every formula which uses `gfortran`. See #15103.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -8971,8 +8971,8 @@
  },
  {
   "text": "We will need to agree in that we disagree :).  For a public API, you can read \"\"in_seconds\"\" either in the parameter name or the documentation. It's about the same effort. And you are not even going to write the parameter name! But on the other hand having",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "also additional compile errors at linux  if g++ -DHAVE_CONFIG_H -I. -I../../../src/game -I../..  -I../../../dep/ACE_wrappers -I../../dep/ACE_wrappers  -I/usr/include/mysql -I/usr/kerberos/include    -I../../src/shared -I../../../src/game -I../../../src/g",
@@ -9001,8 +9001,8 @@
  },
  {
   "text": "Shouldn't this always be `\"\"1.0\"\"`?  The rest of the `tornado.auth` code is pretty much hardwired to handle either version 1.0 or 1.0a, and if we always need to send 1.0 in the 1.0a case, all cases are covered.  This also makes the `_oauth_version_to_send()",
-  "raw_message": "positive",
-  "label": "positive"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "Maybe this should be available as hook for others template engines :)",
@@ -9026,7 +9026,7 @@
  },
  {
   "text": "This is busted busted busted.   With this code I can precompute likely bitcoin wallet passwords and apply it over and over again against every wallet I steal. I can even make a nice wallet rainbow table.   You've misunderstood how salt works and what its f",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -9041,7 +9041,7 @@
  },
  {
   "text": "Whoops.. That ain't good though. We can't really drop support for lucid yet.  We could have used sha routines in ffmpeg instead. Might be more complicated I suppose. On Mar 27, 2012 12:40 PM, \"\"Arne Morten Kvarving\"\" < reply@reply.github.com> wrote:  > for s",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -9076,7 +9076,7 @@
  },
  {
   "text": "My mistake; I failed to copy the trailing slash and it redirected somewhere weird.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -9096,7 +9096,7 @@
  },
  {
   "text": "haha :D happy new year ;)",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -9186,8 +9186,8 @@
  },
  {
   "text": "Too late now but you didn't meant to return `nil` here. Perhaps it should have been `\"\"\"\"`?",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "My research is based on sniffs and, sometimes, on common sense. Anyway, if the Hover Disk shouldn't work like that it can be corrected later, when Malygos fight is implemented.  About the 2nd issue, it will be corrected soon.",
@@ -9226,8 +9226,8 @@
  },
  {
   "text": "This is the question to whom? If to me - i have no hostility towards anyone :)",
-  "raw_message": "positive",
-  "label": "positive"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "100% bug, shocked it wasn't caught before",
@@ -9236,8 +9236,8 @@
  },
  {
   "text": "@heldopslippers Very little of what's in Rails is \"\"that hard to create\"\". That's not the metric by which we gauge progress. Rails is progress by a thousand improvements.",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "Good call - I was just hunting down that issue! Landed.",
@@ -9276,12 +9276,12 @@
  },
  {
   "text": "Yeah, that's right. My bad. Commit 788a7e4 corrects this issue.",
-  "raw_message": "neutral\n",
-  "label": "neutral"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "Could you add a <remark> tag that explains why this is here or we'll just end up forgetting why and removing it 6 months from now =)",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -9291,12 +9291,12 @@
  },
  {
   "text": "Preferably use `-fPIC` instead of `-mimpure-text`. The latter is a linker hack that makes position-dependent code work in a shared object.",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
   "text": "Thanks Amaranth <3.",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -9316,22 +9316,22 @@
  },
  {
   "text": ":+1: to this. More understandable that way too. The current line just makes my head hurt.",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
   "text": "Yeah I got this fixed on my local copy as well, weird the previous commit would send changes without trying to build first.",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
   "text": "i'll stop repeating all of these, search/replace:  `s/foreach(/foreach (/g`  `s/if(/if (/g`",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
   "text": "Why not python-requests.org? It's the same thing just with a registered domain.",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -9401,12 +9401,12 @@
  },
  {
   "text": "I would DRY this up a bit and calculate the width before calling `ImageRow.new` within the if statement.",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
   "text": "Thanks for updating these!",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -9421,8 +9421,8 @@
  },
  {
   "text": "Need to update the checksum as well!",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "I would still prefer nanoTime because it resists from system date shift. The perf difference is negligible IMHO.",
@@ -9436,8 +9436,8 @@
  },
  {
   "text": "Actually, I kind of agree with James. It's not a surprise so many huge plugins are pulling out of Bukkit.",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "Great stuff, after these last tweaks I think it's ready to go in.  Have you've signed the cla? (Will be needed before I can merge it in: http://www.typesafe.com/contribute/cla)  Cheers, √",
@@ -9456,8 +9456,8 @@
  },
  {
   "text": "I usually use single quotes for Hash keys -- it's easy to change them if you prefer.",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "Oh, that's sad :( I don't know if I supposed to do so many commits, but I will do it anyway.",
@@ -9486,12 +9486,12 @@
  },
  {
   "text": "Moving CallingThreadDispatcherModelSpec.scala broke the build on my machine. Does it still work on yours?",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
   "text": "same problem ... buf changes should be completely reverted if you ask me!",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -9506,8 +9506,8 @@
  },
  {
   "text": "@Vasago Vehicles were really fucked up before Machiavelli and Shauren brought in their changes, they were good changes, they just didn't interface very well with the hacks that were already there before, it has been cleaned up since then, but they still ne",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "Yep :) Google Webfonts doesn't have Melbourne, which is the open source font I'm using in the image. If I can't find that font hosted externally by a reputable CDN, I'll probably stick with the image (base64 encoded).",
@@ -9526,8 +9526,8 @@
  },
  {
   "text": "Then shouldn't `lib/action_dispatch/journey/core-ext/hash.rb` be removed as well?",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "This is sooo much better than the `ldap_prefix = ldap ? '(LDAP)' : ''` line of code :)",
@@ -9556,7 +9556,7 @@
  },
  {
   "text": "Is it possible to use the Thrift isSetParent_id (or whatever it is called) here instead? As mentioned the id !=0 is fine as a hack, but if possible we should figure out the correct solution.",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -9566,12 +9566,12 @@
  },
  {
   "text": "Doh. Fixed!",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
   "text": "Why `window.String` instead of `String`? They're reliable globals in the language (not just in the browser API), also whitelisted in JSHint.  Or is this to allow better minification? Afaik it can only optimise the host object name that is locally aliased",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -9581,8 +9581,8 @@
  },
  {
   "text": "I know this is possible and I am doing it but making mounts working on all areas for gm would be good if something needs testing with it. Aso you cannot even move on fly mount with gm and player not!",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "This one looks weird - use a tab for the indentation.",
@@ -9601,8 +9601,8 @@
  },
  {
   "text": "@Ascathor, not necessary, this caused by the github's pull request policy, we can't select which to pull, hope github could solve this problem in the following update, forget it, please view the \"\"files changed\"\" tab, haven't this kind of thing happen to you",
-  "raw_message": "negative\n",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "Can you remove the `!!`, and don't mutate the `options` hash that's passed in?",
@@ -9621,12 +9621,12 @@
  },
  {
   "text": "Why reimplementing minitest's [`refute`](http://bfts.rubyforge.org/minitest/MiniTest/Assertions.html#method-i-refute)?",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
   "text": "workers are assigned to the `cluster.worker` by there uniqueID, this makes them very easy to find again. If we change this to an array people will get a lot of `undefined` values in there for loop. Also i don't like to have method like `.push()` that indi",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -9656,8 +9656,8 @@
  },
  {
   "text": "I think as @freakboy3742 made in an earlier comment - these hints aren't all that useful, any error should hopefully be sending people to our docs, so let the docs do the talking. I would say it is helpful to include what the value is, when it is not an a",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "from?",
@@ -9706,7 +9706,7 @@
  },
  {
   "text": "What is `subline`?",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -9721,7 +9721,7 @@
  },
  {
   "text": "I thought I had a test that asserted just the opposite. \"\"after initialize\"\" should be like it says *after*, not before middleware initializers run.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -9746,12 +9746,12 @@
  },
  {
   "text": "offsetWidth/height are unreliable cross-browser - especially when it comes to inputs. http://jsfiddle.net/jboesch26/Gtm5H/",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "actually, this *will* wrap at 2038 on linux if it uses 32 bit signed time_t by default (which I think it does).",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -9791,7 +9791,7 @@
  },
  {
   "text": "Here, you are not checking whether the ``rewriting`` key exists in the options. but the signature of all methods of the interface declares ``$options`` as being an optional argument. This is not consistent.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -9836,8 +9836,8 @@
  },
  {
   "text": "I suppose that this code should be moved elsewhere, no?",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "CMake Error at cmake/macros/FindGit.cmake:24 (message):           Git was NOT FOUND on your system - did you forget to install a recent version, or setting the path to it?       Observe that for revision hash/date to work you need at least version 1.7",
@@ -9866,12 +9866,12 @@
  },
  {
   "text": "I'd actually argue here we import MessageDescription, and change the signature of dispatch to: ```php public function dispatch(Message $request, Message $response = null); ```",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
   "text": "Removing this class seems to have broken ServiceStack.OrmLite.SqlServer:  Could not load type 'ServiceStack.Common.Extensions.ReflectionExtensions' from assembly 'ServiceStack.Common, Version=3.9.38.0, Culture=neutral, PublicKeyToken=null'.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -9921,7 +9921,7 @@
  },
  {
   "text": "Good documented. ",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -9936,12 +9936,12 @@
  },
  {
   "text": "I think they should be the other way around. It's the `consistentHash` that should be in the atomic since you don't want to overwrite it with a stale `consistentHash`. Overwriting the `consistentHashRoutees` with stale values will just trigger a new updat",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
   "text": "Sounds kinda hackish.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -9961,7 +9961,7 @@
  },
  {
   "text": "@int007 you are an idiot. removing that line doesn't leave anything undefined. Go learn C++ and come back when you learn the difference between defining a variable and passing it to another function.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -10001,7 +10001,7 @@
  },
  {
   "text": "No worries. I often forget the docblocks too.",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -10011,8 +10011,8 @@
  },
  {
   "text": "@lsmith77: The code is different from the one we have removed some time ago. Here, I've just fixed a bug because the Store set a wrong `Content-Length` header.",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "`i` should be unsigned (-Wsign-compare)",
@@ -10021,8 +10021,8 @@
  },
  {
   "text": "$appapiid = 'xxx'; $appsecret ='xxx';  $facebook = new Facebook(array(   'appId'  => $appapiid,   'secret' => $appsecret,   'cookie' => true, ));   $session = $facebook->getSession(); var_dump($session);  results in: NULL",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "Gah. I'm an idiot. I undid this particular change in subsequent commits. In case it's not painfully obvious, I'm still figuring out git.",
@@ -10056,7 +10056,7 @@
  },
  {
   "text": "Thank you for this fix!!",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -10081,28 +10081,28 @@
  },
  {
   "text": "shouldn't this use round_int and implement that using round() on arm. that way, if it's ever implemented in a faster version, we don't have to touch other code to have it used.",
-  "raw_message": "positive\n",
-  "label": "positive"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "Reverting this without fixing the issue in #7608 just breaks all versions of Opera again. The reason for why curCSS is split up should probably be commented here too in order to avoid forgetting why it exists in the first place. rwldrn had an alternative p",
-  "raw_message": "negative\n",
-  "label": "negative"
- },
- {
-  "text": "But even without space reuse this is wrong because there's space on both sides. The naive algorithm would be `images.inject(0) {|sum, img| sum + img.width + 2 * img.spacing}`. Also, do we need spacing on the edges? I don't think so.",
-  "raw_message": "negative\n",
-  "label": "negative"
- },
- {
-  "text": "Shouldn't we validate the max-tries value?",
   "raw_message": "negative",
   "label": "negative"
  },
  {
-  "text": "![](http://img689.imageshack.us/img689/7277/15620874.jpg)",
+  "text": "But even without space reuse this is wrong because there's space on both sides. The naive algorithm would be `images.inject(0) {|sum, img| sum + img.width + 2 * img.spacing}`. Also, do we need spacing on the edges? I don't think so.",
+  "raw_message": "negative",
+  "label": "negative"
+ },
+ {
+  "text": "Shouldn't we validate the max-tries value?",
   "raw_message": "neutral",
   "label": "neutral"
+ },
+ {
+  "text": "![](http://img689.imageshack.us/img689/7277/15620874.jpg)",
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "Looks good.  Mind if I add a CityHash implementation in here?",
@@ -10111,7 +10111,7 @@
  },
  {
   "text": "this line is throwing an error on iphone, GL_UNSIGNED_INT is undeclared.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -10131,7 +10131,7 @@
  },
  {
   "text": "Don't add new whitespace.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -10181,8 +10181,8 @@
  },
  {
   "text": "Being explicit is faster then coercion, I suspect that extend is a perf sensitive operation...",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "Yes, sounds good. I'll file a bug for it, so that I don't forget it. Done: https://issues.scala-lang.org/browse/SI-7624",
@@ -10206,7 +10206,7 @@
  },
  {
   "text": "was fixed in https://github.com/TrinityCore/TrinityCore/commit/4bc983d7b756d235477eef8b7529cacfb7a1f247 sorry for that mess up guys.",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -10216,8 +10216,8 @@
  },
  {
   "text": "Sorry, that's my fault.  I'll revert this cleanup and add few more tests for those cases.",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "Yeah, I know, but he's bound to want to fix it he he finds it later, I'm just finding it for him now. :P",
@@ -10251,7 +10251,7 @@
  },
  {
   "text": "Use the stable download; this will break checksums when upstream pushes more commits.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -10316,12 +10316,12 @@
  },
  {
   "text": "Yeah yeah I've seen that, it's an awesome work BTW :) But I was wondering what does the statement `name = name;` stands for ?",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
   "text": "We need to signal \"\"done reading but no data yet and not EOF\"\" for crypto streams.",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -10346,13 +10346,13 @@
  },
  {
   "text": "Epic commit. As always, when magic commit number comes :))",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
   "text": "Passphrase\"\" was just fine IMHO. We really want users to use a longer sentence instead of just a password. Also, \"\"Verschlüsselungs-Kennwort zur Dekodierung\"\" has too much redundancy.",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "Are you sure of these Gameobjects IDs? I don't see them in sniffs, at least for map 469.",
@@ -10366,7 +10366,7 @@
  },
  {
   "text": "Stumbled on this quite a bit, good job. ",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -10376,7 +10376,7 @@
  },
  {
   "text": "Before you couldn't change the realm after loging out, you had to relog. Now you can change realm after logging out.",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -10416,8 +10416,8 @@
  },
  {
   "text": "I already ended up with short because 32767 waiting threads sound plain  wrong :-)  On Thu 09 May 2013 12:39:48 PM KST, Norman Maurer wrote: > Or maybe even int? Should have notice It :/ > > Am 09.05.2013 um 01:41 schrieb Trustin Lee <notifications@github.",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "positive",
+  "label": "positive"
  },
  {
   "text": "oops, my fail :(",
@@ -10441,7 +10441,7 @@
  },
  {
   "text": "@stevenh512 Do we even know that GitHub was not using attr_accessible? They could have just opened up columns that are only accessible to admins to all users because of the bluntness of attr_accessible (somewhat remedied by the new role based feature).  ",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -10471,8 +10471,8 @@
  },
  {
   "text": "It seems that `time` is in fact required to be a `FiniteDuration`, because e.g. `isOverdue` fails if `time` is not a `FiniteDuration`; if so, this should be checked statically by making `time`'s type `FiniteDuration`. Consequently, you'd have to move `fro",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "Unsure if this is correct. I don't see how this would have worked previously, though.",
@@ -10491,7 +10491,7 @@
  },
  {
   "text": "Fixed. ",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -10501,8 +10501,8 @@
  },
  {
   "text": "It's not *that* severe if we allow wallets to be stored at arbitrary locations on the file system as in multiwallet-qt. It would be quite severe if _path happened to be the datadir :)",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "That's true - though not with the new syntax.  (Also, Erlang and Imagemagick are detecting versions wrong right now, will have to fix.)",
@@ -10511,13 +10511,13 @@
  },
  {
   "text": "That is bad news. We were just updating our app and migrating from attachment_fu / AWS::S3 to paperclip because we were getting sick and tired of the problems with european buckets :(",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
   "text": "Why by default set 1 ?",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "Y U NO LIKE? :(",
@@ -10531,12 +10531,12 @@
  },
  {
   "text": "Do we need to check for undefined or null result here? we do pretty much everywhere else",
-  "raw_message": "neutral",
-  "label": "neutral"
+  "raw_message": "negative",
+  "label": "negative"
  },
  {
   "text": "I'm -1 on this. It's imo easy enough to do Mailer.expects(:welcome) and then keep mocking from there. I don't like having two ways of doing the same thing purely to make it marginally easier to mock.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -10556,12 +10556,12 @@
  },
  {
   "text": "Aah, this is thwarting my attempts to get formated output from redis-cli over a ssh command.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
   "text": "This is needed to control dropping. Consider we just dropped a frame in decoder, this is at the end of the queue. How should player know that it has already catched up? You can't by just looking at the front of the queue.",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -10586,7 +10586,7 @@
  },
  {
   "text": "We can drop this. It's more or less a relict from the process of creating this formula.",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -10606,7 +10606,7 @@
  },
  {
   "text": "Forget about it :-) all fine.",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -10636,12 +10636,12 @@
  },
  {
   "text": "Unless there's something removing items from that list this could be a real pain in the ass for very dynamic, long-running apps... like games =/",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
   "text": "Why did you remove the check of valid ssl packet ? I think it makes sense to have them in place in case a non secure client tries to write something",
-  "raw_message": "negative\n",
+  "raw_message": "negative",
   "label": "negative"
  },
  {
@@ -10651,12 +10651,12 @@
  },
  {
   "text": "why does it matter?",
-  "raw_message": "negative",
-  "label": "negative"
+  "raw_message": "neutral",
+  "label": "neutral"
  },
  {
   "text": "Doesn't that do a copy of the original collection? Would it be preferable to have a \"\"foreachChild\"\"-method instead?",
-  "raw_message": "neutral\n",
+  "raw_message": "neutral",
   "label": "neutral"
  },
  {
@@ -10671,7 +10671,7 @@
  },
  {
   "text": "that is a good idea.",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  },
  {
@@ -10681,7 +10681,7 @@
  },
  {
   "text": "This is so good !!",
-  "raw_message": "positive\n",
+  "raw_message": "positive",
   "label": "positive"
  }
 ]
