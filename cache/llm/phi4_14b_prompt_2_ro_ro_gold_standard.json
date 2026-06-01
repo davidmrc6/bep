@@ -82,7 +82,7 @@
  {
   "text": "Cateva comentarii 🙂",
   "raw_message": "Propoziția \"Câteva comentarii 🙂\" sugerează o abordare ușor pozitivă sau cel puțin neutru. Folosirea emoji-ului sărut (🙂) adaugă un ton prietenos și implică că comentariile sunt destinate pentru clarificări sau discuții, fără a sugera o problemă majoră. În general, acest lucru ar putea fi interpretat ca:\n\n1. **Positiv**: Dacă contextul în jurul propoziției indică că comentariile sunt pentru îmbunătățiri mici sau discuții constructive.\n\n2. **Neutral**: Dacă este clar că comentariile sunt pur și simplu pentru informare fără nicio implicare de critică severă sau felicitări.\n\nFără context suplimentar, ar fi mai sigur să clasificăm această propoziție ca **neutral**.",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "Lupu este un baiat doarte destept si apreciez ca pot fi coleg cu el.Este foarte sociabil si stie ceea ce face.Aceasta problema este executata foarte corect dar totusi se poate si mai bine.",
@@ -927,7 +927,7 @@
  {
   "text": "Excelenta treaba!",
   "raw_message": "Pentru propoziția \"Excelenta treaba!\", sentimentul exprimat este:\n\n1) Positiv\n\nAceastă afirmație transmite o apreciere sau un fel de bun simț, indicând satisfacție sau recunoaștere pentru ceva bine realizat.",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "Looks good to me.\r\n\r\nAm lăsat doar o mică sugestie. If you think I'm wrong, ignore it.",
@@ -1137,7 +1137,7 @@
  {
   "text": "Testat și pe MBA 2012 cu tastatură US. 10 și 50 sunt dispuse la fel ca pe tastaturile subsemnatului. Am folosit [Key Codes](http://manytricks.com/keycodes/).",
   "raw_message": "Pentru a eticheta sentimentul exprimat în această propoziție, să o analizăm:\n\n- Propoziția menționează că testarea a fost efectuată pe un model specific de tastatură (MBA 2012 cu tastatură US) și include detalii despre funcționalitatea testată (dispozitia cifrelor 10 și 50).\n- Utilizatorul face referire la o resursă externă ([Key Codes](http://manytricks.com/keycodes/)) pentru a valida sau sprijini observațiile sale.\n- Tonul este informativ și sugerează că testarea s-a desfășurat fără probleme, indicând compatibilitatea între modele.\n\nPe baza acestor aspecte, sentimentul exprimat în propoziție pare să fie:\n\n1. **Positiv**\n\nAceastă etichetare se bazează pe contextul de succes al testului și utilizarea unei resurse externe pentru a sprijini afirmațiile fără a evidenția probleme sau neînțelegeri.",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "inca o chestie: textele deja existente unde vor fi traduse?",
@@ -1172,7 +1172,7 @@
  {
   "text": "Amazing work, insa am lucrat la folosirea OSM pentru reverse lookup (care da rezultate mai consistente, stiu ca pe iOS am avut probleme ca returna numele orasului in functie de regiunea telefonului, i.e. Bucuresti in romana - cu ș cu virgula, Bucharest in engleza) si nici nu mergea inainte fara Google Play Services pe telefoanele degoogled cu Android\r\n\r\nImi place ideea de a pune mail-urile intr-o constanta, cred ca am putea chiar sa facem o functie gen `genAuthoritiesEmails()` prin care sa luam mail-urile autoritatilor in functie de locatie, ceea ce ne va ajuta cand o extindem la alte localitati (gen `getAuthoritiesEmails(location, 'adp primarie politie-locala')` or something",
   "raw_message": "Propoziția oferă un sentiment general **positiv**. Deși începe cu o observație despre problemele întâmpinate în trecut, care ar putea sugera un ton mai negativ sau neutral, majoritatea comentariului este pozitivă și constructivă. Utilizatorul recunoaște munca bine făcută (\"Amazing work\") și oferă o idee constructivă despre îmbunătățirea codului prin introducerea unei funcții pentru gestionarea mai eficientă a emailurilor autorităților. Această abordare este proactivă și orientată spre soluționarea problemelor, reflectând un sentiment pozitiv în general.",
-  "label": "negative"
+  "label": "positive"
  },
  {
   "text": "din ceva motiv zicea ca am 4 commituri peste master, dar e ok acuma, i-am dat un reset si nu o sa mai apara commituri deja integrate",
@@ -1202,7 +1202,7 @@
  {
   "text": "tot ce am facut eu a fost pus in folder-ul \"prisma-iustina\"",
   "raw_message": "Pentru a determina sentimentul exprimat în propoziția \"tot ce am facut eu a fost pus în folder-ul 'prisma-iustina'\", trebuie să analizăm conotațiile și contextul.\n\n1. **Positiv**: Această propoziție ar putea fi considerată pozitivă dacă presupune o recunoaștere sau satisfacție pentru munca realizată, sugerând că contribuțiile sunt valorificate prin organizarea lor într-un folder specific.\n\n2. **Neutral**: Dacă se interpretează ca un raport obiectiv fără nicio conotație emoțională suplimentară, propoziția ar putea fi văzută ca neutrală. Simplitatea și directitatea acestei afirmații sugerează pur și simplu o descriere a unui eveniment fără evaluare.\n\n3. **Negativ**: Ar putea fi interpretată negativ dacă contextul implică o frustrare sau dispreț, cum ar fi sentimentul de a fi ignorat sau lipsit de recunoaștere pentru munca realizată, sugerând că contribuțiile sunt doar \"puse\" într-un folder fără apreciere.\n\nFără context suplimentar care să clarifice intenția sau tonul, propoziția ar putea fi cel mai probabil interpretată ca **neutrală**. Totuși, dacă există indicii din discuțiile anterioare sau din modul în care a fost exprimată această afirmație, sentimentul ar putea inclina spre pozitiv sau negativ.",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "Am mai modificat nițel și alte denumiri să fie în concordanță (deocamdată). Am testat și pare OK (la mine). @CatalinFrancu, poți și tu să faci 2-3 teste?",
@@ -1607,7 +1607,7 @@
  {
   "text": "Eu am schimbat acum doar stilul",
   "raw_message": "Pentru a determina sentimentul exprimat în propoziția \"Eu am schimbat acum doar stilul\", trebuie să analizăm conotațiile și contextul.\n\n1. **Positiv**: Această propoziție nu pare să transmită un sentiment pozitiv, deoarece nu menționează nicio îmbunătățire sau schimbare semnificativă în funcționalitatea sau performanța codului. Focalizarea pe \"doar stilul\" sugerează că modificările sunt limitate la aspecte estetice.\n\n2. **Neutral**: Propoziția este de obicei considerată neutrală, deoarece informează despre natura schimbărilor fără a exprima o emoție sau evaluare pozitivă sau negativă. Simplitatea și directitatea acestei afirmații sugerează pur și simplu un raport factual.\n\n3. **Negativ**: Deși nu este explicit negativ, propoziția poate fi percepționată ca având o conotație ușor negativă în contextul unei revizuiri de cod, mai ales dacă schimbările sunt considerate minore sau neesențiale. Sugerează că nu au fost făcute modificări semnificative dincolo de aspectele stilistice.\n\nÎn concluzie, sentimentul cel mai potrivit pentru această propoziție este (2) neutral, cu o posibilă nuanță ușor negativă în anumite contexte.",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "Nu stiu ce ai facut, dar ai prea multe conflicte si schimbari pe care le-am facut eu pe develop care nu ar trebui sa apara.Si ultimul commit facut de tine ii acum 14 zile si nici nu are legatura cu inscriere, deci ceva s-a intamplat, cred ca nu ai pus intr-un commit schimbarile tale.\r\nCand esti pe branch-ul asta fa comenzile:\r\n\r\ngit fetch --all\r\ngit rebase origin/develop\r\n\r\nSi rezolvi conflictele si poti sa faci dupa un git force push dupa ce te asiguri ca totul ii ok:\r\n\r\ngit push -f",
@@ -1892,7 +1892,7 @@
  {
   "text": "Păi da, de acord, doar că ziceam că în cazul ăsta particular iconița de Blogger nu există în FA.",
   "raw_message": "Pentru a determina sentimentul exprimat în această propoziție, trebuie să analizăm conotațiile și contextul:\n\n- \"Păi da, de acord\" sugerează o acceptare sau recunoașterea punctului făcut de altcineva.\n- \"doar că ziceam că în cazul ăsta particular iconița de Blogger nu există în FA\" introduce o restricție sau un detaliu specific care contrazice sau clarifică ceva menționat anterior.\n\nSentimentul general pare să fie mai mult informativ și clarificator decât pozitiv, negativ sau neutru. Totuși, dacă trebuie să alegem dintre cele trei opțiuni:\n\n1. **Positiv**: Ar fi relevant dacă propoziția ar exprima satisfacție sau aprobată.\n2. **Neutral**: Aceasta este o comunicare directă și fără conotații emoționale puternice, doar clarificând un detaliu.\n3. **Negativ**: Ar fi relevant dacă propoziția ar exprima disconfort, dezaprobare sau frustrare.\n\nAvând în vedere aceste aspecte, sentimentul exprimat pare să fie cel mai apropiat de:\n\n**2) Neutral**\n\nPropoziția este o clarificare fără conotații emoționale puternice.",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "Mersi tare mult, Ionuț! E foarte bine scris răspunsul tău! Poate ar trebui să-l restructurezi într-un blog-post 🙂 \r\n\r\nÎncă nu am avut timp să asimilez toate detaliile, dar aș avea o întrebare la un nivel mai înalt: ceea ce propui tu coresponde cumva la reprezentarea internă din `diagrams` sub [formă de arbore](https://diagrams.github.io/doc/core.html#diagrams-core-types)? Mai precis, mă refer la tipul [`DUALTree`](https://hackage.haskell.org/package/dual-tree-0.2.3.0), care este un arbore care acumulează structură în ambele direcții—în sus și jos; o variantă simplificată a acestei reprezentări este descrisă și în secțiunea _Variation Ⅸ: Generic monoidal trees_ din [Monoids: Themes and Variations](https://repository.upenn.edu/cgi/viewcontent.cgi?article=1773&context=cis_papers). Decoratorii pe care îi propui îmi pare că corespund adnotărilor lor ([`DownAnnot`](https://github.com/diagrams/diagrams-core/blob/master/src/Diagrams/Core/Types.hs#L209-L211) în `diagrams`, respectiv acțiuni `Act` în articol). Și, dacă înțeleg bine, conform BNF-ului, pe lângă informația de stil și transformare, am putea acumula și informația de interpretare a unei diagrame (ca path, line, vertices, etc.). Citesc corect, sau e prea simplificată înțelegerea mea? De asemenea, sunt curios dacă există un corespondent al acestei structuri (`DUALTree`) și în librăria `doodle`; ai putea să-mi arăți unde au loc cele patru faze pe care le pomenești în `doodle`?\r\n\r\nP.S.: De fapt, probabil reprezentarea sub formă de arbore e prea abstractă. Cred că ar fi fost mai clar dacă aș fi întrebat dacă ceea ce propui corespunde la ceva de tipul acesta:\r\n```haskell\r\ndata Diagram\r\n    = Prim Prim\r\n    | Empty\r\n    | Compose (Envelope, Trace) Diagram Diagram\r\n    | Act (Transformation, Style) Diagram\r\n```\r\nIar pentru partea de interpretări diferite ar fi noi noduri în AST? De exemplu:\r\n```haskell\r\n    | StrokePath Diagram\r\n    | AsVertices Diagram\r\n    ...\r\n```",
@@ -2952,7 +2952,7 @@
  {
   "text": "comentariile pe linii separate deasupra codului",
   "raw_message": "Pentru a determina sentimentul exprimat în propoziția \"comentariile pe linii separate deasupra codului\", trebuie să luăm în considerare contextul și tonul general al comentariilor. Deși propoziția însăși este neutrală, sentimentul poate varia în funcție de cum sunt utilizate aceste comentarii:\n\n1. **Positiv**: Dacă comentariile pe linii separate sunt folosite pentru a clarifica codul, oferind explicații utile sau sugestii constructive, sentimentul ar fi probabil pozitiv.\n\n2. **Neutral**: Dacă comentariile sunt simple notificări fără nicio evaluare emoțională sau sugestie de îmbunătățire, sentimentul este neutral.\n\n3. **Negativ**: Dacă comentariile pe linii separate criticează codul într-un mod negativ, subliniind erori fără a oferi soluții constructive, sentimentul ar fi probabil negativ.\n\nFără context suplimentar despre conținutul sau tonul acestor comentarii, propoziția în sine este neutrală.",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "Da, altfel da erori",
@@ -3102,7 +3102,7 @@
  {
   "text": "foloseste @if (asa am folosit in tot projectul)",
   "raw_message": "Pentru a determina sentimentul exprimat în propoziția \"folosește `@if` (asà am folosit în toată proiectul)\", trebuie să luăm în considerare contextul și tonul:\n\n1. **Positiv**: Această propoziție ar putea fi interpretată ca un sentiment pozitiv dacă este intenționată ca o recomandare sau un consens, sugerând că utilizarea `@if` este bine acceptată și preferată în proiectul respectiv. Acest lucru implică aprobată pentru practica existentă.\n\n2. **Neutral**: Dacă propoziția este pur și simplu informativă fără nicio sugestie de aprobare sau dezaprobație, ar putea fi considerată neutrală. Este doar o declarație despre cum s-a folosit `@if` în proiect.\n\n3. **Negativ**: Ar putea fi interpretată ca un sentiment negativ dacă este intenționată să sublinieze o neconformitate sau așteptarea ca cineva să se alinieze cu practica existentă, posibil sugerând că altfel ar fi fost considerat incorect.\n\nFără context suplimentar despre tonul și intenția comentatorului, sentimentul poate fi interpretat în mai multe moduri. Totuși, din punct de vedere pur și simplu al formulării, aceasta pare să fie mai apropiată de un sentiment **neutral** sau **pozitiv**, presupunând că este intenționată ca o recomandare fără nicio implicare negativă.",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "poti sa stergi unul dintre fisiere de css pentru ca ai doua la fel",
@@ -3252,7 +3252,7 @@
  {
   "text": "Punct la sfarsit?",
   "raw_message": "Pentru a determina sentimentul expresat în propoziția \"Punct la sfarsif?\" trebuie să luăm în considerare contextul și tonul. Această propoziție poate fi interpretată în mai multe moduri:\n\n1. **Positiv**: Dacă este folosită ca o întrebare de confirmare, ar putea sugera că autorul a terminat ceva și îl cheamă să verifice dacă totul este complet sau corect. Acest lucru poate fi văzut ca un gest pozitiv de colaborare.\n\n2. **Neutral**: Simpel putem considera această propoziție ca o întrebare directă fără nicio conotație emoțională, doar solicitând confirmarea unei informații.\n\n3. **Negativ**: Dacă este folosită într-un context unde autorul a fost repetat solicitat să finalizeze lucrarea și nu l-a făcut, aceasta poate fi interpretată ca o reprimandă sau un semn de impacițenie.\n\nFără mai multe informații despre tonul conversației sau contextul în care este folosită, ar fi cel mai sigur să clasificăm această propoziție ca **neutrală**. Totuși, dacă ai detalii suplimentare despre context, am putea ajusta interpretarea.",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "Nu ai nevoie de block js daca nu ai nimic in el",
@@ -3442,7 +3442,7 @@
  {
   "text": "path-ul rutelor pe care le-ai adaugat nu e /admin/*?, cu prefixul api? Daca da, as recomanda sa nu lasi si /api/ acolo pentru ca nu e partea de api asta, daca nu, atunci te rog schimba aici. Poti adauga oricum ceva pentru /admin general si pentru /admin/login sa pui inca o linie deasupra cu role PUBLIC_ACCESS. In felul asta orice ruta /admin va fi protejata, doar pe /admin/login o sa poti intra la liber",
   "raw_message": "Propoziția oferă sugestii și recomandări pentru îmbunătățirea structurii rutelor din cod. Deși există un aspect criticizat (utilizarea incorectă a prefixului `/api/`), majoritatea comentariilor sunt constructive, având scopul de a clarifica și proteja rutele corecte. Sentimentul general este:\n\n1) Positiv\n\nComentatorul își propune să ajute la îmbunătățirea codului prin sugestii clare și practicabile.",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "Ai adaugat un spatiu din greseala probabil. Te rog sa il stergi",
@@ -3522,7 +3522,7 @@
  {
   "text": "no inline styling, doar lucuri mici ce pot fi setate ușor.\r\nAlso, n-ai folosit `sx={}` ci `style={}`",
   "raw_message": "Pentru a determina sentimentul exprimat în această propoziție din comentarii de code review, să o descompunem:\n\n1. **\"no inline styling, doar lucuri mici ce pot fi setate ușor.\"** - Acest segment sugerează o preferință pentru stilizarea prin CSS în locul stilurilor inline și menționează că doar modificările minore ar trebui să fie aplicate direct. Această observație este de obicei făcută dintr-o perspectivă constructivă, sugerând o practică mai bună pentru întreținerea codului și separarea stilurilor de logică.\n\n2. **\"Also, n-ai folosit `sx={}` ci `style={`\"** - Acest segment notează un lucru specific despre utilizarea unei alternative (`style={}`) în locul altui instrument sau funcționalitate (`sx={}`). Este o observație factuale și sugerează o corectare fără a implica nicio critică severă.\n\nÎn ansamblu, comentariul pare să fie constructiv și orientat spre îmbunătățirea codului. Deși există un subtext de critica pentru practicile actuale, scopul este de a sugera o abordare mai bună fără a fi negativ sau sever.\n\n**Sentiment:** (1) Positiv\n\nComentariul reflectă o intenție constructivă și încurajări pentru îmbunătățirea codului, ceea ce este caracteristic sentimentului pozitiv.",
-  "label": "negative"
+  "label": "positive"
  },
  {
   "text": "Avand in vedere ca ai creat tipuri pentru Group, Column, etc, cred ca ar trebui sa le mentionam si aici. In cazul nostru, `props.group` e de tip `Group` cred.",
@@ -3762,7 +3762,7 @@
  {
   "text": "Folosește notațiile markdown pentru liste, aka ori `-` ori `*`",
   "raw_message": "Pentru a determina sentimentul exprimat în propoziția \"Folosește notațiile markdown pentru liste, aka ori `-` ori `*`\", trebuie să analizăm conotația și intenția acestei recomandări.\n\nAceastă propoziție pare a fi o sugestie sau un sfat constructiv privind utilizarea notelor markdown într-un context de codare. Sugerează utilizarea simbolurilor `-` sau `*` pentru a crea liste, ceea ce este o practică comună și utilă atunci când se scrie documentație sau comentarii în markdown.\n\nSentimentul exprimat pare să fie:\n\n1) **Positiv**\n\nAceastă propoziție reflectă un sfat constructiv fără nicio conotație negativă, indicând o îmbunătățire sau clarificare a modului în care ar trebui formatate listele.",
-  "label": "negative"
+  "label": "positive"
  },
  {
   "text": "newline degeaba",
@@ -3887,7 +3887,7 @@
  {
   "text": "poate un static assert in clasa asta ca T e POD?",
   "raw_message": "Această propoziție sugerează utilizarea unei verificări de tip `static_assert` pentru a asigura că tipul `T` este Plain Old Data (POD). Aceasta reflectă o preocupare sau un dorință de a valida condițiile în timpul compilării, ceea ce este adesea considerat o practică bună în programarea C++ pentru a preveni erori la runtime. Sentimentul exprimat pare să fie:\n\n(1) Positiv\n\nAceasta se datorează faptului că propunerea implică îmbunătățirea siguranței și robustezii codului prin utilizarea unui `static_assert`, care este o practică valoroasă în dezvoltarea software.",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "A fost nevoie de acest force update",
@@ -4027,7 +4027,7 @@
  {
   "text": "daca metoda nu se foloseste in afara clasei -> private\r\nse sterg testele si se testeaza prin intermediul altor metode\r\n-> valid pentru toate testele care incep cu inputValidations",
   "raw_message": "Propoziția oferită reflectă o recomandare sau un feedback constructiv privind modificarea accesibilității unei metode și ajustarea setului de teste. Sentimentul exprimat pare a fi:\n\n1. **Positiv**\n\nMotivația pentru această clasificare este că propoziția sugerează o soluție clară și practicabilă (stergerea testelor directe ale metodei private și testarea prin alte metode) care ar putea îmbunătăți structura codului. De asemenea, menționează că această abordare este \"validă pentru toate testele care incep cu inputValidations\", ceea ce indică o încredere în eficacitatea soluției propuse. Totul sugerează un ton de colaborare și îmbunătățire a calității codului, fără nicio critică negativă sau neutralitate evidentă.",
-  "label": "negative"
+  "label": "positive"
  },
  {
   "text": "@Chocksy da e dependency, nu mai trebuia adaugat si in gemfile",
@@ -4082,7 +4082,7 @@
  {
   "text": "Ar fi de preferat sa fie pusă într-o constanta valoarea pentru $max_allowed_weight. Ar fi foarte util pentru situatii in care ar putea fi folosită si in alte zone ale codului. De asemenea nu este ok sa trimiți lbs. Deoarece API-ul se așteaptă sa primească valoarea in KG. Trebuie validata unitatea de măsură si făcut o conversie la KG in cazul in care nu este deja setată pe KG.",
   "raw_message": "Propoziția oferită reflectă mai multe sugestii și observații constructive privind îmbunătățirea codului. Sugestiile de a pune valoarea într-o constantă pentru reutilizare și validarea unităților de măsură sunt recomandări utile care ar putea îmbunătăți claritatea și flexibilitatea codului. Deși există o critica față de utilizarea incorectă a unității (lbs în loc de KG), tonul general este orientat spre îmbunătățirea calității codului.\n\nPe baza acestor observații, sentimentul exprimat în propoziție ar fi:\n\n1) Positiv\n\nAceastă etichetă reflectă natura constructivă și utilitară a comentariilor.",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "ar fi bine sa fie predictibila suma in loc de random ca sa putem scrie teste e2e cu un assert cunoscut",
@@ -4122,7 +4122,7 @@
  {
   "text": "sterge created_at si updated at din toate creaturile ca mor aici ...\n![image](https://cloud.githubusercontent.com/assets/178892/9006264/094797f2-378e-11e5-850c-3bc6f1ab1b91.png)",
   "raw_message": "Pentru a determina sentimentul exprimat în această propoziție, să o analizăm:\n\n\"sterge created_at si updated at din toate creaturile ca mor aici ...\"\n\nAceasta pare să fie un comentariu direct și posibil brusc despre eliminarea câmpurilor `created_at` și `updated_at`. Fără context suplimentar sau ton, sentimentul poate fi interpretat în mai multe moduri:\n\n1. **Positiv**: Dacă această acțiune este considerată o îmbunătățire a designului sau eficienței sistemului și este solicitată de cineva cu autoritate sau într-un context unde eliminarea acestor câmpuri este benefică, sentimentul ar putea fi văzut ca pozitiv.\n\n2. **Neutral**: Dacă această acțiune este pur și simplu o cerință tehnică fără implicații emoționale sau de evaluare a calității, sentimentul poate fi considerat neutral.\n\n3. **Negativ**: Dacă eliminarea acestor câmpuri ar putea duce la pierderea informațiilor importante sau afectează negativ funcționalitatea sistemului și nu este justificată adecvat, sentimentul ar putea fi văzut ca negativ.\n\nFără context suplimentar despre de ce această acțiune este necesară sau cum a fost primită de echipă, sentimentul poate fi interpretat în mod diferit. Totuși, tonul direct și lipsa justificării sugerează o posibilă nuanță negativă.\n\nÎn concluzie, pe baza informațiilor disponibile, sentimentul ar putea fi clasificat ca (3) **negativ**, mai ales datorită modului brusc și lipsii de justificare în propoziție. Totuși, este important să se ia în considerare contextul complet pentru o evaluare precisă.",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "Trebuie sa folosesti web.release.config pentru a suprascrie valoarea asta pentru productie. \n\n`<add xtd:Transform=\"Replace\" xdt:Locator=\"Condition(@key='JiraReporterPath')\"  key=\"JiraReporterPath\" value=\"CalePeServer\"/>`",
@@ -4187,7 +4187,7 @@
  {
   "text": "din ce am citit asta se foloseste in cazul in care tabelul exista deja in Db sa treaca mai departe si sa nu dea eroare",
   "raw_message": "Această propoziție exprimă un sentiment **positiv**. Comentatorul subliniază o caracteristică utilă a codului, menționând că acesta gestionează corect situațiile în care tabelul există deja în baza de date fără a provoca erori. Această abordare este considerată un punct fort al implementării, indicând o atenție la detalii și robustețea codului.",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "Aici la delay-ul la `setInterval` cred ca e mai bine sa pui 1000 (ca sa fie 1 secunda). Altfel cred ca poate fi cam laggy daca se updateaza fiecare 10 milisecunde.\r\n\r\nAdica sa fie asa:\r\n```js\r\nsetInterval(() => {time(data.profile.last_match_end)}, 1000)\r\n```",
@@ -4232,7 +4232,7 @@
  {
   "text": "Ar trebui verificat daca este False, si daca e ar trebui returnat si de aici False si Data payload-ul corespunzator",
   "raw_message": "Analizând propoziția:\n\n\"Ar trebui verificat dacă este False, și dacă este, ar trebui returnat și de aici False și Data payload-ul corespunzător.\"\n\nAceastă propoziție pare să fie o recomandare sau un feedback constructiv privind logica codului. Se sugerează verificarea unei condiții (dacă este `False`) și acțiuni specifice care ar trebui luate în acea situație, inclusiv returnarea valorilor corespunzătoare.\n\nPe baza acestui context, sentimentul exprimat pare a fi:\n\n**(1) Positiv**\n\nAceasta se datorează faptului că propoziția oferă o sugestie clară și utilă pentru îmbunătățirea codului, indicând ce ar trebui să fie implementat.",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "Initial asa voiam sa le scriu, dar le-am dat direct copy paste si am zis ca nu le mai rescriu, dar le modific acum ca sa fie ok.",
@@ -4672,7 +4672,7 @@
  {
   "text": "prescurteaza in: padding: 5px 0 10px;",
   "raw_message": "Pentru a determina sentimentul exprimat în propoziția \"prescurtează în: `padding: 5px 0 10px;`\", trebuie să luăm în considerare contextul și tonul sugestiei. Această propoziție pare să fie o recomandare sau un sfat pentru a simplifica codul CSS, fără nicio conotație negativă sau critici directe.\n\n- **Positiv**: Sugestia de a prescurta codul este adesea văzută ca o îmbunătățire, sugerând că există un mod mai eficient de a realiza același lucru. Acest tip de feedback este util și constructiv.\n\n- **Neutral**: Dacă considerăm doar sugestia în sine fără context suplimentar despre motivul pentru care ar fi necesară, aceasta poate fi văzută ca o observație neutra, pur și simplu oferind un sfat de optimizare.\n\n- **Negativ**: Nu există nicio conotație negativă în propoziția dată. Nu este criticată niciuna dintre părți implicate, iar sugestia nu implică o problemă majoră sau un defect.\n\nAvând toate aceste considerații, sentimentul exprimat în propoziția \"prescurtează în: `padding: 5px 0 10px;`\" este cel mai probabil **(1) pozitiv**. Este o recomandare constructivă pentru a îmbunătăți claritatea și eficiența codului.",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "da, ai dreptate, e mai potrivit in `showroom-models.ts`",
@@ -4772,7 +4772,7 @@
  {
   "text": "Proprietatea tb sa fie de tipul \"int?\", de ex: public int? BusinessId {get; set;}",
   "raw_message": "Pentru a determina sentimentul exprimat în această propoziție, trebuie să analizăm conotațiile și contextul:\n\n- Propoziția sugerează o schimbare sau un feedback legat de tipul unei proprietăți (`int?`), ceea ce implică o recomandare sau o cerință pentru a îmbunătăți codul.\n- Sugestia este dată într-un mod direct și constructiv, fără nicio conotație negativă.\n\nPe baza acestor observații, sentimentul exprimat pare să fie:\n\n1. **Positiv**\n\nAceastă propoziție reflectă o recomandare utilă pentru a îmbunătăți codul, fără nicio critică negativă sau neutralitate.",
-  "label": "negative"
+  "label": "positive"
  },
  {
   "text": "am remarcat ca setezi `wrapper-class` pe checkbox, de asta ti-am lasat sugestia de mai sus.",
@@ -4937,7 +4937,7 @@
  {
   "text": "Denumirea se scrie cu litera mare doar la componenta care returneaza jsx. in cazu nostru <Navbar/>, iar css cu litere mici. foldurile tot",
   "raw_message": "Pentru a determina sentimentul exprimat în această propoziție, să o analizăm:\n\n- Propoziția oferă un sfat specific despre cum ar trebui să fie denumite componentele și stilurile CSS. \n- Sugestia de a folosi litera mare doar la componentele care returnează JSX (cum ar fi `<Navbar/>`) și litere mici pentru CSS este o practică comună în dezvoltarea JavaScript, mai ales cu React.\n- Termenul \"foldurile tot\" poate sugera o preferință pentru organizarea codului astfel încât să fie ușor de citit și întreținut.\n\nPe baza acestor observațiuni, propoziția pare să ofere un sfat constructiv sau o practică recomandată fără a exprima nicio emoție negativă. Astfel, sentimentul este:\n\n(1) Positiv\n\nAceastă propoziție reflectă o abordare utilitară și organizată în codificarea componentelor și stilurilor CSS.",
-  "label": "negative"
+  "label": "positive"
  },
  {
   "text": "daca tine de logica la form, poate ar merita redenumita? Gen, readonlyForm sau ceva",
@@ -5197,7 +5197,7 @@
  {
   "text": "Pot sa sterg doar `.github/actions/**/*.yml`, in `github/workflows/*.yml` este cppcheck. Pun cppcheck sa fie actualizat la renovate-ci si sterg `github/workflows/*.yml`?",
   "raw_message": "Propoziția exprimă o intenție de a optimiza și simplifica gestionarea dependențelor, sugerând să se utilizeze un instrument automatizat (Renovate-CI) pentru actualizările. Acest lucru ar putea duce la o mai bună eficiență și menținere a codului. Sentimentul exprimat în această propoziție este:\n\n1) Positiv\n\nAceasta se datorează faptului că sugestia implică îmbunătățiri potențiale ale proceselor de dezvoltare și menținere, ceea ce este adesea văzut ca o abordare proactivă și constructivă.",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "cand se strang mai mult parametri eu obisnuiesc sa-i pun cate unul pe linie\r\n\r\n```\r\npublic void transferExternalCurrency(\r\n  Integer sourceAccountNumber, \r\n  Customer destinationCustomer, \r\n  Integer destinationAccountNumber, \r\n  Double amount\r\n) {\r\n```\r\nmi se pare mai usor de citit",
@@ -5402,7 +5402,7 @@
  {
   "text": "`event.preventDefault();` ar trebui să fie înainte de `try`",
   "raw_message": "Pentru a determina sentimentul exprimat în propoziția \"event.preventDefault(); ar trebui să fie înainte de try\", trebuie să analizăm conotațiile și contextul sugestiei.\n\nAceastă propoziție face parte dintr-un comentariu de code review, care adesea implică evaluarea sau corectarea unui fragment de cod. Sugestiunea \"ar trebui\" indică o recomandare pentru îmbunătățirea funcționalității sau structurii codului.\n\n- **Contextul**: `event.preventDefault();` este folosit în JavaScript pentru a preveni comportamentul implicit al unui eveniment. Plasarea sa înainte de o secțiune `try` sugerează că intenția este să se asigure că acțiunea preventivă are loc înainte ca orice operațiuni potențial hazardante din blocul `try` să fie executate.\n\n- **Conotație**: Sugestia de a muta această linie nu pare a fi critică sau negativă, ci mai degrabă constructivă. Este o recomandare pentru a îmbunătăți ordinea logicii codului și asigura un comportament corect.\n\nPe baza acestor observații, sentimentul exprimat în propoziție este:\n\n1) **Positiv**\n\nAceastă etichetă reflectă natura constructivă a sugestiei de îmbunătățire.",
-  "label": "negative"
+  "label": "positive"
  },
  {
   "text": "Cred ca are dreptate Catalin, aici ar trebui IEnumerable, pentru ca nu anticipezi ca cei care vor folosi metoda vor adauga/scoate elemente din lista ci doar le vor parcurge.",
@@ -5482,7 +5482,7 @@
  {
   "text": "numele parametrului ar trebui sa fie reservationDto. Astfel ai putea sa ii folosesti 'reservation' in loc de 'convertedReservation' pt rezervarea care e salvata in baza de date.",
   "raw_message": "Propoziția oferită reflectă o sugestie constructivă privind numele parametrului și utilizarea variabilelor. Aceasta este o recomandare utilă pentru a îmbunătăți claritatea și consistența codului, fără a transmite un sentiment negativ sau critic aspru. Astfel, sentimentul exprimat în această propoziție poate fi considerat:\n\n(1) Positiv\n\nAceasta este o observație utilă care îmbunătățește legibilitatea și întreținerea codului fără a sugera nicio problemă majoră sau lipsă.",
-  "label": "negative"
+  "label": "positive"
  },
  {
   "text": "Ai înlocuit weaponInfo.weaponRange cu projectileRange – presupun că acum calculăm sau setăm raza proiectilului separat? Pare o idee bună, dar întreb ca să fiu sigură că am înțeles intenția corect",
@@ -5592,7 +5592,7 @@
  {
   "text": "nu trb cu async, si nici alea doua de deasupra nu trb cu async. Si pune o cu const handleViewRoom = (...) => {",
   "raw_message": "Analizând propoziția:\n\n- \"nu trb cu async\" și \"nici alea doua de deasupra nu trb cu async\" sugerează că există o recomandare sau un feedback pentru a elimina utilizarea asincronă, ceea ce poate fi văzut ca o îmbunătățire sau corectare.\n- \"Si pune o cu const handleViewRoom = (...) => {\" este o sugestie specifică de cod, care ar putea indica claritate și organizare.\n\nPe baza acestor observații, sentimentul exprimat în propoziția pare a fi:\n\n1) Positiv\n\nRecomandările sunt constructive și au ca scop îmbunătățirea calității codului.",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "Metoda nu este scrisa de mine, am pus sus adnotarea  \"/reservation\" si pentru a-i pastra url-ul am pus stringul vind acolo. Functia este o functie ce trebuie sa dispara (nu folosim id pe front-end), doar ca nu stiu daca e folosita pt ca eu nu am scris-o.",
@@ -5857,7 +5857,7 @@
  {
   "text": "Extinde Throwable si se foloseste ca sa nu mai punem in semnatura metodei exceptia",
   "raw_message": "Pentru a determina sentimentul exprimat în această propoziție, să o analizăm:\n\n- Propoziția sugerează o schimbare de design prin extinderea clasei `Throwable` și utilizarea acesteia pentru a elimina nevoia de a specifica excepțiile în semnatura metodei.\n- Acest lucru poate fi văzut ca un îmbunătățire, sugerând o abordare mai flexibilă sau mai curată la gestionarea erorilor.\n\nPe baza acestui context, sentimentul exprimat pare a fi:\n\n1. **Positiv**\n\nAceastă propoziție reflectă o soluție constructivă și un îmbunătățire în design-ul codului.",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "Dacă nu mai ai nevoie de stilurile astea, șterge-le",
@@ -5877,7 +5877,7 @@
  {
   "text": "```\r\n  0px 0px 27px 5px var(--current-light-primary),\r\n  0px 0px 10px 0px var(--current-color-primary);\r\n```\r\nar putea fi inlocuite de \r\n```\r\n0 0 9px -3px var(--current-color-primary)\r\n```",
   "raw_message": "Pentru a determina sentimentul exprimat în această propoziție din comentarii de code review, să analizăm conținutul:\n\n- Propoziția sugerează o schimbare la codul CSS pentru a simplifica sau optimiza stilurile.\n- Fără context suplimentar despre motivul acestei modificări (de exemplu, performanță, estetica), propoziția în sine pare să fie obiectivă și sugerează o îmbunătățire.\n\nPe baza acestor observații, sentimentul exprimat este:\n\n(1) Positiv\n\nAceastă propoziție reflectă o intenție de a îmbunătăți codul prin simplificare sau optimizare.",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "ooof, gruparea",
@@ -5897,7 +5897,7 @@
  {
   "text": "aduce la ecran",
   "raw_message": "Pentru a determina sentimentul expresat în propoziția \"aduce la ecran\", trebuie să luăm în considerare contextul și modul în care este folosită această frază. Fără un context suplimentar, \"aduce la ecran\" poate fi interpretată de mai multe moduri:\n\n1. **Positiv**: Dacă se referă la o idee bună sau un concept creativ care a fost reușit într-o formă vizuală (de exemplu, adaptarea unei povestiri populare într-un film), sentimentul ar putea fi considerat pozitiv.\n\n2. **Neutral**: Dacă se referă simplu la procesul tehnic de a transforma o idee sau un concept într-o formă vizuală fără nicio conotație emoțională, sentimentul poate fi neutral.\n\n3. **Negativ**: Dacă contextul sugerează că adaptarea nu a fost reușită sau a dus la rezultate neașteptat negative (de exemplu, o critică față de modul în care un concept a fost prezentat), sentimentul ar putea fi negativ.\n\nFără context suplimentar, \"aduce la ecran\" este cel mai probabil neutral. Totuși, dacă ai informații suplimentare despre contextul acestei propoziții, te rog să le îmi dai pentru a oferi o evaluare mai precisă!",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "Nu trebuia sa dai commit la fisierul asta",
@@ -6182,7 +6182,7 @@
  {
   "text": "Adauga adnotarea @Indexed pe field-ul group.",
   "raw_message": "Pentru a determina sentimentul exprimat în propoziția \"Adaugă adnotarea @Indexed pe field-ul group,\" trebuie să analizăm conotația și contextul acestei cereri.\n\nAceastă propoziție pare a fi o recomandare sau un sugestiu pentru îmbunătățirea codului, fără nicio emoție negativă sau critici. Este o instrucțiune clară și directă care sugerează adăugarea unei anotări pentru a optimiza funcționalitatea sau performanța.\n\nPe baza acestei analize, sentimentul exprimat în propoziție este:\n\n(1) Positiv\n\nAceastă recomandare implică o îmbunătățire și este adesea văzută ca un feedback constructiv.",
-  "label": "negative"
+  "label": "positive"
  },
  {
   "text": "Indenteaza document-ul si lasa un spatiu intre {% endblock %}\r\n si\r\n{% block js %}",
@@ -6197,7 +6197,7 @@
  {
   "text": "Templetizeaza si functia asta",
   "raw_message": "Pentru a determina sentimentul exprimat în propoziția \"Templatizează și funcția asta\", trebuie să luăm în considerare contextul și tonul. Propunerea de a templatiza o funcție sugerează general că există un beneficiu sau o îmbunătățire previzibilă, cum ar fi promovarea reutilizabilității codului, reducerea redundanței sau facilitarea gestionării mai eficiente a variabilelor. Această sugestie este de obicei percepționată ca o îmbunătățire sau un feedback constructiv într-un context de code review.\n\nPe baza acestui raționament, sentimentul exprimat în propoziția dată ar fi:\n\n1) Positiv\n\nAceastă etichetă reflectă natura sugestive și îmbunătățitoare a comentariului.",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "Dacă vrei, pune și tu câte o linie goală între tipurile de request (post, get, put, delete)",
@@ -6327,7 +6327,7 @@
  {
   "text": "Aici e totusi `prechorus`.",
   "raw_message": "Pentru a determina sentimentul exprimat în propoziția \"Aici e totuși `prechorus`\", trebuie să luăm în considerare contextul și tonul. Faptul că este menționat un element specific, cum ar fi un `prechorus`, sugerează o observațiune sau un comentariu legat de structura sau conținutul codului.\n\n1. **Positiv**: Dacă această propoziție apare într-un context unde se recunoaște corectitudinea sau utilitatea prezentării `prechorus`, ar putea fi considerată pozitivă.\n2. **Neutral**: De obicei, mențiunea unui element specific fără o evaluare explicită (cum ar fi \"Aici e totuși `prechorus`\") este neutru. Este doar informativă și nu reflectă nicio emoție sau evaluare.\n3. **Negativ**: Ar putea fi considerată negativă dacă contextul sugerează o lipsă, un eroră sau neplăcerea față de prezența `prechorus`.\n\nFără mai multe detalii despre context în care este folosită această propoziție (de exemplu, dacă urmează o critica sau o recunoaștere), sentimentul cel mai probabil este **neutral**. Este doar informativă și nu reflectă nicio evaluare pozitivă sau negativă explicită.",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "@florin-baciu, sa incerci te rog sa foloseti abordarea de aici https://www.primefaces.org/primereact/reacthookform/ ca sa profitam de primereact cat mai mult.",
@@ -6352,7 +6352,7 @@
  {
   "text": "Aici am putea sa le punem in general si in loc de numarul de caractrere sa trimitem parametru",
   "raw_message": "Pentru a determina sentimentul exprimat în această propoziție, să o analizăm:\n\n- Propoziția sugerează o îmbunătățire sau un schimbare la cod, indicând o abordare mai flexibilă prin utilizarea unui parametru în loc de un număr fix de caractere. \n- Această propunere este tipică în contextul unei revizuiri de cod și sugerează o îmbunătățire sau optimizare.\n\nPe baza acestor observații, sentimentul exprimat pare să fie:\n\n1) Positiv\n\nPropunerea reflectă un spirit constructiv și orientat spre îmbunătățire.",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "nu prea inteleg de ce folosesti `pickWebsite()` pentru ca nu se potriveste. Mai ales ca ai website sus in argumente dat de catre pubsub. Daca vrei sa folosesti o functie din EpicLogger atunci ar fi mai ok sa faci alta `getWebsite` care sa iti returneze websitu",
@@ -7142,7 +7142,7 @@
  {
   "text": "Am rezolvat eu.",
   "raw_message": "Pentru a determina sentimentul exprimat în propoziția \"Am rezolvat eu,\" trebuie să luăm în considerare contextul și tonul. Propoziția poate fi interpretată în mai multe moduri:\n\n1. **Positiv**: Dacă este spusă cu o intenție de a arăta realizarea sau satisfacția față de un succes personal, sentimentul ar putea fi considerat pozitiv.\n\n2. **Neutral**: Dacă este pur și simplu informativ fără nicio emoție suplimentară sau context care să sugereze o reacție emoțională, atunci ar putea fi văzut ca neutral.\n\n3. **Negativ**: Dacă este spusă într-un mod competitiv, îndrăznitor sau pentru a sublinia faptul că altcineva nu a contribuit, sentimentul poate fi interpretat ca negativ.\n\nFără context suplimentar despre tonul sau circumstanțele în care a fost spusă propoziția, este dificil să o clasificăm cu certitudine. Totuși, din cauza potențialului său de a sugera un sentiment competitiv sau îndrăznitor, ar putea fi mai apropiată de **negativ** într-un context tipic de code review unde colaborarea este valorificată.",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "as pune partea de validare in alt fisier...",
@@ -7207,7 +7207,7 @@
  {
   "text": "poate ar fi nice sa adaugi un state pe componenta \"isFavoured\" care sa se schimbe de fiecare data cand dai click pe butonul asta si in functie de acel state inima sa ramana fie goala fie filled cu rosu (poti fie sa iei de pe net 2 icon-uri, una cu inima goala si una rosie, fie sa folosesti caracterul pe care il ai acum si un emoji cu inima rosie gen ca asta ❤️)\nca idee, poate putem sa avem o lista tinuta fie in local storage fie intr-un context unde salvam id-urile produselor marcate ca favorite ca sa ramana marcate cand ne mutam pe alta pagina si revenim apoi pe pagina de produse",
   "raw_message": "Propoziția oferă sugestii constructive și idei pentru îmbunătățirea funcționalității componentei, sugerând utilizarea unui state pentru a gestiona vizualizarea iconului de inimă și menținerea stării favorite în local storage sau context. Sentimentul exprimat este:\n\n1) Positiv\n\nPropoziția reflectă o abordare colaborativă și constructivă, oferind sugestii utile pentru îmbunătățirea experienței utilizatorului.",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "Nu cred ca e bine sa returnezi null, oricare ar fi situatia, cel mai bine ar fi sa arunci o exceptie.\r\nAsta poate crea probleme mari",
@@ -7697,7 +7697,7 @@
  {
   "text": "Hai sa incepem cu politruci. `Politruci `",
   "raw_message": "Pentru a determina sentimentul exprimat în propoziția \"Hai să începem cu politruci. `Politruci`\", trebuie să luăm în considerare contextul și tonul.\n\n1. **Positiv**: Dacă această propoziție este folosită într-un context de joacă sau umor, poate fi interpretată ca o abordare relaxată și prietenoasă a procesului de code review. Termenii precum \"politruci\" sunt adesea asociate cu activități distractive sau simplificatoare, sugerând că autorul începe cu ceva ușor sau amuzant.\n\n2. **Neutral**: Dacă această propoziție este pur și simplu o introducere la un set de modificări sau teste care sunt într-adevăr simple (politruci), sentimentul ar putea fi considerat neutral, indicând doar natura simplă a activității.\n\n3. **Negativ**: Este puțin probabil ca această propoziție să fie negativă, deoarece termenul \"politruci\" nu conduce în mod obișnuit la o implicare negativă sau critică. Totuși, dacă contextul sugerează sarcini repetitive și neimportante, ar putea fi văzut ca un comentariu pe lângă sarcinile monotone.\n\nFără mai multe detalii despre contextul în care este folosită propoziția, sentimentul cel mai probabil este **(1) pozitiv**, presupunând că este utilizată într-un mod umoristic sau relaxant.",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "Ma apuc chiar acum de asta, nu m-am gandit sa fac local niste exemple pentru test",
@@ -7817,7 +7817,7 @@
  {
   "text": "@EfraimB Ca de exemplu, pentru cazurile alea 3?",
   "raw_message": "Pentru a determina sentimentul exprimat în propoziția \"@EfraimB Ca de exemplu, pentru cazurile alea 3?\", trebuie să luăm în considerare contextul și tonul:\n\n1. **Positiv**: Această propoziție ar putea fi interpretată ca o cerere constructivă sau un apel la clarificare, sugerând că autorul este interesat să înțeleagă mai bine sau să discute cazurile specifice menționate. Dacă contextul sugerează că această solicitare este făcută cu intenție pozitivă de a îmbunătăți sau clarifica, atunci sentimentul ar putea fi considerat pozitiv.\n\n2. **Neutral**: Aceasta poate fi văzută ca o întrebare directă și obiectivă fără nicio conotație emoțională puternică. Este doar un apel la clarificare sau exemplu, fără a sugera satisfacție sau insatisfacție.\n\n3. **Negativ**: Dacă contextul înconjurător implică frustrare sau critică față de modul în care au fost tratate cazurile 3, atunci această propoziție ar putea fi interpretată ca o reacție negativă.\n\nFără informații suplimentare despre contextul conversației, sentimentul cel mai probabil este **neutral**. Aceasta se bazează pe faptul că propoziția pare să fie pur și simplu o solicitare de clarificare sau exemplu fără nicio conotație emoțională puternică în sine.",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "nu, pentru că toate modificările de mai sus\r\n```suggestion\r\n```",
@@ -7897,7 +7897,7 @@
  {
   "text": "Rugamintea este sa schimbam numele acestei componente, pentru a nu o incurca cu `<button>`, care deja exista in html.\r\n\r\nIti atasez aici un very important read cand lucram cu Vue: https://vuejs.org/v2/guide/components-registration.html#Component-Names\r\n\r\nTot acest style guide merita citit, pe parcursul lucrului la un proiect.\r\n\r\nPoti sa ii spui \"AlphaButton\", considerand ca \"Alpha\" e prefixul pentru proiectul nostru",
   "raw_message": "Propoziția oferă sugestii constructive și informații utile, cum ar fi recomandarea unui document de referință și a unui style guide. De asemenea, propune o soluție specifică pentru numele componentei, care este utilă în contextul proiectului. Sentimentul exprimat în această propoziție poate fi considerat:\n\n1) Positiv\n\nAceasta se datorează faptului că sugestia și informațiile sunt oferite într-un mod constructiv, cu scopul de a îmbunătăți claritatea și coerența codului.",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "niciodata nu le pui pe acelasi rand",
@@ -7937,7 +7937,7 @@
  {
   "text": "Created nu trebuie sa fie parametru in constructor ci trebuie sa ia in constructor timpul curent, vezi entitatea de User.\r\nSi mai bine nu folosesti gettere aici ca getterele s-ar putea sa faca si altceva.",
   "raw_message": "Propoziția reflectă o recomandare sau un feedback constructiv privind modul în care este implementat constructorul și utilizarea getterelor. Se sugerează modificări pentru a îmbunătăți design-ul, fără a exprima dispreț sau frustrare. Sentimentul exprimat pare să fie:\n\n(1) Positiv\n\nAceastă propoziție oferă o soluție și un motiv pentru schimbarea recomandată, indicând o intenție de îmbunătățire a codului.",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "decomenteaza si sterge",
@@ -8422,7 +8422,7 @@
  {
   "text": "Foloseste si aici enum-ul: `Board.where(register_status: 'unregistered',`",
   "raw_message": "Pentru a determina sentimentul exprimat în această propoziție dintr-un comentariu de code review, să o analizăm:\n\n- Propoziția sugerează utilizarea unui enum pentru `register_status` în loc de stringuri literale. Acest tip de feedback este adesea dat pentru a îmbunătăți claritatea și întreținerea codului.\n  \n- Sugestia implică o practică mai bună, indicând că utilizarea unui enum poate preveni erori comune asociate cu stringuri literale (cum ar fi tipografii sau valori incorecte) și poate face codul mai ușor de întreținut.\n\nPe baza acestor considerații, sentimentul exprimat în această propoziție este:\n\n1. **Positiv**\n\nAceasta reflectă o recomandare constructivă pentru îmbunătățirea codului.",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "aici daca modifici variabila trebuie de facut o noua migrare",
@@ -8562,7 +8562,7 @@
  {
   "text": "E de preferat ca codul mort sa fie eliminat.",
   "raw_message": "Această propoziție exprimă o recomandare sau un consens comun în dezvoltarea software, sugerând că codul care nu mai este folosit (cod mort) ar trebui să fie eliminat pentru a îmbunătăți curățenia și întreținerea proiectului. Sentimentul exprimat este:\n\n(1) Positiv\n\nAceastă recomandare reflectă o practică bună în gestionarea codului, care poate duce la un cod mai ușor de întreținut și mai eficient.",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "Da, asa este. O sa las doar verificarea de array gol, si modific in `requestAndRenderGlobalUnreadNotificationsIndicator()` sa apeleze `renderGlobalUnreadNotificationsIndicator(result.count, newNotifications)`",
@@ -8662,7 +8662,7 @@
  {
   "text": "aici collection e 'users' ( adica numele pe care il are tabelul ( colectia )  din firestore unde sunt userii 😉 )",
   "raw_message": "Această propoziție pare să fie informativă și ușor amuzantă, indicând claritatea în legătură cu numele colecției \"users\" din Firestore. Sentimentul exprimat este:\n\n(1) Positiv\n\nExplicația pentru alegerea acestei etichete constă în fapt că propoziția transmite o notificare clară și directă, adesea cu un toon amuzant (😉), care poate fi interpretat ca o abordare prietenoasă sau relaxată. Nu există nicio critică sau sentiment negativ asociat acestei declarații; mai degrabă, este informativă și ușor distractivă.",
-  "label": "negative"
+  "label": "positive"
  },
  {
   "text": "astea seamana cu specificatia de tip easy, folosesti tot like (numai acolo ai vrut tu sa iti arati talentu sa faci cu convert de clasa)",
@@ -8897,7 +8897,7 @@
  {
   "text": "Folosește o indentare de [genul](https://codepen.io/rzvsbg/pen/vvoyGj?editors=0010) pentru promisiuni cu `.then(), .catch(), .finally()`.\r\n\r\nDe asemenea, adaugă .catch() la promisiuni.",
   "raw_message": "Propoziția oferită reflectă sugestii de îmbunătățire pentru codul furnizat. Sugestiile sunt constructive și au scopul de a îmbunătăți claritatea și robustețea gestionării promisiunilor în cod. Astfel, sentimentul exprimat este:\n\n1) Positiv\n\nAceste recomandări ar putea ajuta la prevenirea potențialelor erori neînregistrate și la îmbunătățirea legibilității codului prin utilizarea unei indentări consistente.",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "Dar sigur se face update la `votdiasporaUrl` cand in componenta `PollingStationSearch` se seteaza `sharedState.coordinates`? 🤔",
@@ -8992,7 +8992,7 @@
  {
   "text": "e legat de versiunea de karaf folosita si prin dependency management dar pot sa le integrez direct in pom.",
   "raw_message": "Această propoziție pare să exprime o soluție sau un plan pentru a gestiona dependențele, sugerând integrarea lor direct în fișierul `pom.xml` (care este specific proiectelor Maven). Sentimentul exprimat pare a fi:\n\n(1) Positiv\n\nAceasta se datorează faptului că propoziția implică o acțiune constructivă și potențial simplificatoare pentru gestionarea dependențelor, ceea ce este de obicei văzut ca un pas înainte.",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "Sunt folosite doar la test, nu există nici o clasa care sa le foloseasca. Am impresia ca apareau la Imports - si le cerea ca dependinte daca nu le treceam la 'test'. \n\nÎncă nu mi-e clar care sunt toae implicațile cu dependințele și cum e mai bine să le trecem să ajungă în launcher pe path. Momentan le-am trecut manual în path-ul de la launcher, dar cred că este o soluție mai bună prin maven dependecy.",
@@ -9172,7 +9172,7 @@
  {
   "text": "De ce returneaza mai multe produse",
   "raw_message": "Pentru a determina sentimentul exprimat în propoziția \"De ce returnează mai multe produse?\", trebuie să luăm în considerare contextul și tonul. Această propoziție pare a fi o întrebare sau o cerere de clarificare, fără un sentiment evident de felicitate, dispreț sau neutralitate.\n\n1. **Positiv**: Propoziția nu exprimă entuziasm sau satisfacție.\n2. **Neutral**: Aceasta este o întrebare directă care sugerează neînțelegere sau necesitatea de clarificare, fără a transmite un sentiment pozitiv sau negativ explicit.\n3. **Negativ**: Deși poate implica o problemă (de exemplu, produsele sunt returnate într-o cantitate inesperată), tonul nu este critic sau disprețitor.\n\nPe baza acestor considerații, sentimentul exprimat în propoziție pare a fi **neutral**.",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "am adaugat si pentru update",
@@ -9642,7 +9642,7 @@
  {
   "text": "Aici e partea cea mai tare. Ca poti sa folosesti factory-ul pe care tocmai l-ai definit \r\n`let!(:led) { create(:led, mac: \"doar_daca_vrei_override_altfel_e_1234\")`",
   "raw_message": "Pentru a determina sentimentul exprimat în această propoziție din comentarii de code review, să o analizăm:\n\n- Propoziția menționează \"partea cea mai tare,\" ceea ce sugerează apreciere sau recunoaștere pentru un aspect specific al codului.\n- Sugestia de a folosi factory-ul pe care a fost definit indică o încurajare sau un feedback constructiv.\n\nPe baza acestor observații, sentimentul exprimat în propoziție este:\n\n1) Positiv\n\nAceastă propoziție reflectă recunoștință și încurajare față de lucrarea realizată.",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "spacing. dupa fiecare atribut, constanta, use-uri de trait-uri sau metoda dintr-o clasa, urmeaza o linie goala, cu exceptia ultimului element din clasa. Te rog adauga linii goale dupa fiecare element din clasa asta.",
