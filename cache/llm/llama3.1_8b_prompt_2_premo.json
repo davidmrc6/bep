@@ -212,7 +212,7 @@
  {
   "text": "Hi!  Yes, so sorry.  I've been rather unwell this last 2 months or so (almost co-inciding with my renewed interest in opensource... hmmmm) but I'm sort of alive again.  I'll try to get to this over the weekend.  Sorry again for just vanishing!",
   "raw_message": "The sentiment expressed in this sentence is (3) negative, as it mentions being \"unwell\", feeling like they've \"vanished\", and apologizing multiple times for their absence. However, there's also a hint of positivity with the phrase \"I'm sort of alive again\" which suggests that the user is trying to be optimistic about their return. Overall, I would label this sentiment as (3) negative with a hint of (1) positive.",
-  "label": "negative"
+  "label": "positive"
  },
  {
   "text": "The idea to provide a way to retrieve the total size for downloading before actually starting the download makes sense, but I'm a bit wary that calculating it here using the available information may be wrong or misleading. This is because the selected tracks don't necessarily correspond to downloadable data streams. This mapping happens when we call  to identify the streams that we need to load. These streams and the manifest and potential extra data loads to obtain initilization data (e.g. for the DASH segment index) can then be used to calculate a total download size. This functionality is already part of the  implementations (specifically ) and it also takes into account that some of the media chunks have already been downloaded. A down-side of the existing implementation is that it doesn't do any estimation if the actual stream length is unknown (for example for text) and it requires extra data loads. That means we should probably still provide a way to get an estimated download size in  even if it may not be 100% correct. To keep it simple, it may be better to keep out hard-coded estimates, for example for text tracks as they are likely to be only a small part of the downloaded data anyway.",
@@ -347,7 +347,7 @@
  {
   "text": "The APR lifecycle listener does NOT use the APR library directly to accelerate TLS. You need the Tomcat Native library (which depends on APR and OpenSSL) to do that. The APR lifecycle listener only looks for the Tomcat Native library. Also, there are NO benefits w.r.t threading. The Tomcat Native connector enables two features: - the APR/native connector - the ability to use OpenSSL with the NIO and NIO2 connectors In Tomcat 9 and 8.5 you need the Tomcat Native library to use HTTP/2 if you are running on Java 8 or earlier. In Tomcat 9 (and soon in Tomcat 8.5) on Java 9 or later, HTTP/2 is supported without the Tomcat Native Library. If you are using TLS, the Tomcat Native library generally offers performance improvements compared to JSSE (either via the APR/Native connector or with NIO[2] with OpenSSL). However those performance differences vary with configuration and exact Java version so it is worth testing to see what the benefit is for any given scenario. Generally, I would recommend using the Tomcat Native library if you need to support TLS. In terms of APR/native vs NIO+OpenSSL, the Tomcat community is leaning towards NIO+OpenSSL with the possibility that the APR/native connector will be removed in Tomcat 10.",
   "raw_message": "The sentiment expressed in this sentence is (3) negative.\n\nHowever, upon re-reading the text, I realize that it's not entirely negative. The tone is more informative and advisory than critical. There are some neutral statements and even a few positive ones, such as recommending the use of the Tomcat Native library for TLS support.\n\nSo, if I had to revise my initial answer, I would say that the sentiment expressed in this sentence is (2) neutral, with a slightly leaning towards being informative and helpful rather than purely negative.",
-  "label": "negative"
+  "label": "neutral"
  },
  {
   "text": "I see. On line 158 it adds it back again, but it's absent for the whole period of loading config files. Has to be a bug.",
@@ -4077,7 +4077,7 @@
  {
   "text": "38448",
   "raw_message": "It seems like you didn't provide a sentence from GitHub pull request code review comments. Please go ahead and share the sentence, and I'll be happy to help with identifying its sentiment (1) positive, (2) neutral, or (3) negative!",
-  "label": "positive"
+  "label": "negative"
  },
  {
   "text": "PR Summary MEP22 was intended to provide a way to customize user interactions, in particular with the toolbar via the implementation to \"tools\".  In practice, it remains currently difficult to add general customizations; for example, the color-vision deficiency simulator recently proposed does not fit in the MEP22 framework.  Moreover, there is no way to register MEP22 tools to be added to all figures. This patch proposes an alternative approach for toolbar customization: it adds a rcParam () which is a list of callables (actually, of \"modulename:functioname\" strings, so that they can be specified in the matplotlibrc file) that get called whenever plt.figure() creates a figure is instantiated; each of the callable gets the figure as parameter and can modify it as it sees fit (note that it is equivalent to pass the figure or the toolbar as parameter, as one can reach one from the other; passing the figure was deemed nicer). This makes it easy to distribute such customizations as plain python modules than can be installed from PyPI.  Also note that figure hooks are intentionally not applied when figures are created without going through  -- when embedding, one can easily explicitly call the hooks directly on the figure (this is one reason why passing the figure is nicer than passing the toolbar). As an example, the color-vision deficiency simulator is modified to use this hook (see docstring of the  example). The advantage of this approach is that arbitrary modifications to the toolbar become possible (here, adding a menu-in-a-toolbar), but this naturally means that each GUI toolkit needs its own code.  Likely we will need to provide \"template\" implementations that can be copied by third-parties.  (There is also some functionality currently only available as private API, as mentioned in comments; one such API is , which provides theme-dependent icon recolorization.  These APIs should be made public in some form, but that should be doable.) (One should check to what extent this approach is generalizable to the macos and notebook backends -- customizations to the former could possibly be implemented via PyObjC(?), and the latter via js injection?) PR Checklist <!-- Please mark any checkboxes that do not apply to this PR as [N/A]. --Tests and Styling - [ ] Has pytest style unit tests (and  passes). - [ ] Is Flake 8 compliant (install  and run ). Documentation - [ ] New features are documented, with examples if plot related. - [ ] New features have an entry in  (follow instructions in README.rst there). - [ ] API changes documented in  (follow instructions in README.rst there). - [ ] Documentation is sphinx and numpydoc compliant (the docs should build without error). <!-- Thank you so much for your PR!  To help us review your contribution, please consider the following points:   A development guide is available at .   Help with git and github is available at   .   Do not create the PR out of main, but out of a separate branch.   The PR title should summarize the changes, for example \"Raise ValueError on   non-numeric input to set_xlim\".  Avoid non-descriptive titles such as   \"Addresses issue #8576\".   The summary should provide at least 1-2 sentences describing the pull request   in detail (Why is this change required?  What problem does it solve?) and   link to any relevant issues.   If you are contributing fixes to docstrings, please pay attention to   .  In particular,   note the difference between using single backquotes, double backquotes, and   asterisks in the markup.   We understand that PRs can sometimes be overwhelming, especially as the reviews start coming in.  Please let us know if the reviews are unclear or the recommended next step seems overly demanding, if you would like help in addressing a reviewer's comments, or if you have been waiting too long to hear back on your PR. --",
@@ -4502,7 +4502,7 @@
  {
   "text": "104.75",
   "raw_message": "It seems like you forgot to provide the actual sentence from GitHub pull request code review comments.\n\nPlease go ahead and share the sentence, and I'll be happy to help with identifying its sentiment (1) positive, (2) neutral, or (3) negative!",
-  "label": "positive"
+  "label": "negative"
  },
  {
   "text": "Oops! Good catch, thanks for your contribution  ! :rocket: :lock: :cake:  And thanks  as always! :rocket: :tada: :bowing_man: ",
@@ -5192,7 +5192,7 @@
  {
   "text": "106.41",
   "raw_message": "It seems like you forgot to provide the actual sentence from GitHub pull request code review comments.\n\nPlease go ahead and share the sentence, and I'll be happy to help with identifying its sentiment (1) positive, (2) neutral, or (3) negative!",
-  "label": "positive"
+  "label": "negative"
  },
  {
   "text": "Sorry, the previous set of commits were a WIP and I ran out of steam before getting d3.xml and d3.text working. Should have left a message about that. On the other hand your comments were very helpful for coming up with an approach. All unit tests are passing now and I think the method overloading should be working properly as well.",
@@ -7217,7 +7217,7 @@
  {
   "text": "7148",
   "raw_message": "It seems like you didn't provide a sentence from GitHub pull request code review comments. Please go ahead and share the sentence, and I'll be happy to help with identifying its sentiment (1) positive, (2) neutral, or (3) negative!",
-  "label": "positive"
+  "label": "negative"
  },
  {
   "text": "Fixes ",
@@ -8427,7 +8427,7 @@
  {
   "text": "Yes, I ran  linked to local build. The  also contains SVG elements.   Is reading from a file which includes indentation only for repro or for your actual use case? Output from  plugin doesn’t look so good after it formats text nodes for white space.   Also for your info, something that had nothing to do with problem: when I checked the  element with W3C validator, it reported 8 occurrences of unescaped  in attributes.  ",
   "raw_message": "It seems like you forgot to provide the sentence from GitHub pull request code review comments.\n\nPlease go ahead and share the sentence, and I'll be happy to classify its sentiment as (1) positive, (2) neutral, or (3) negative!",
-  "label": "positive"
+  "label": "negative"
  },
  {
   "text": "I have reverted this pull request using a force push to the 3.0 branch. Unfortunately, GitHub doesn't appear to let me reopen the pull request, but you should be able to send a new one along when your fix is ready.",

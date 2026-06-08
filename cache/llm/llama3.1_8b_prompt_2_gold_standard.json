@@ -3162,7 +3162,7 @@
  {
   "text": "Don't like it, either. Ok, we'd better stay with deserializing parameters before passing to the `Invoker` - it's much cleaner. But I'd get rid of static extension methods in favor of something like. `IParameterResolver` interface + implementation, that'd ",
   "raw_message": "(3) Negative (initially), then (2) Neutral/Constructive (later). The user starts by expressing a negative sentiment (\"Don't like it\"), but later provides suggestions for improvement and proposes an alternative solution, indicating a neutral/constructive tone.",
-  "label": "negative"
+  "label": "neutral"
  },
  {
   "text": "`_protect_identifiers()` is supposed to be a protected method, but currently it's public because all the drivers use it for DB forge. There's a `protect_identifiers()` method (no underscore) that I believe exist solely for this purpose - can we use that i",
@@ -3877,7 +3877,7 @@
  {
   "text": "Thanks for the commit finally :D  I would rather see the account and char ban commands actually work before the vehicles patch :P",
   "raw_message": "Based on the sentence, I would label it as (2) neutral.\n\nThe tone is lighthearted and playful with the use of emojis (:D), but the comment also expresses a preference for prioritizing certain features over others. The language used is not overly critical or negative, so I wouldn't classify it as (3) negative.",
-  "label": "neutral"
+  "label": "negative"
  },
  {
   "text": "It is needed for LATM AAC. It can be removed once we update ffmpeg, but I'm waiting for some Windows developer to test it. (https://github.com/xbmc/xbmc/pull/18)",
@@ -9662,7 +9662,7 @@
  {
   "text": "from?",
   "raw_message": "It seems like there's no sentence provided. Please go ahead and give me the sentence from GitHub pull request code review comments, and I'll be happy to label its sentiment as (1) positive, (2) neutral, or (3) negative!",
-  "label": "positive"
+  "label": "negative"
  },
  {
   "text": "@jeremy thanks SO MUCH for that writeup, explains why it was decided to be not fully baked, with a convincing and reasonable argument, and also explain what you are thinking about future directions.   It is VERY useful for us Rails-using developers to ha",

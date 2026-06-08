@@ -1427,7 +1427,7 @@
  {
   "text": "1. Interogarea `->count()` am eliminat-o prin extragerea tuturor id-urilor cu constrângerea de înlocuire. Această matrice (ținută în variabilă de sesiune) o împart în chunck-uri de `$limit` și defrișez de fiecare dată câte o bucată. Chunck-ul respectiv îl diff-uiesc cu cele excluse înaintea interogării de salvare (dar asta e faza a doua deja). Câștigul mare este eliminarea acelui LIMIT care trăgea foarte mult în jos interogarea **inițială** (la mine). Poate acest aspect nu era prea vizibil pe bazooka de server din producție.\r\n2. Da, minoră, dar mă neliniștea. :)\r\n3. Nu e vorba de versiunea care e salvată, ci de faptul că acel `$objCount` se face la previzualizare. Dacă sunt peste `$limit` de definiții, am putea ajunge în situația în care cineva editează o definiție **neîncărcată/previzualizată** și nu o mai prinde nicio interogare de după prima bucată de `$limit`. Atunci se duce de râpă `$objCount == $objChanged + $objExcluded`, cu alte cuvinte ceea ce ziceam mai sus `$objCount - $objChanged - $objExcluded == 0`\r\n\r\nNu știu cum să modularizez schimbările. Nu se potrivește prima logică cu a doua, deci eu zic că trebuie la pachet. :(",
   "raw_message": "After analyzing the three sentences, I would categorize their sentiment as follows:\n\n1. (2) Neutral: The comment is informative and explains the reasoning behind a change in code, but it doesn't express a strong opinion or emotion.\n2. (3) Negative: Although the tone is lighthearted with a smiley face, the comment expresses concern about a potential issue that could arise from the change.\n3. (1) Positive: The comment mentions \"câștigul mare\" which translates to \"great gain\", indicating that the author is pleased with the improvement made by eliminating the LIMIT clause in the original query.\n\nLet me know if you'd like me to clarify anything!",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "PR-ul nu trebuie retras doar pentru aceste conflicte! Sunt ușor de rezolvat.\r\n\r\nNu îmi este clar ce este acel dump. Este o diferență? Între ce și ce?",
@@ -1972,7 +1972,7 @@
  {
   "text": "Te rog frumos sa faci PR numai cand esti gata si ai facut clean up la code. Daca ai intrebari poti sa faci push fara sa faci PR si putem sa ajutam.",
   "raw_message": "A Romanian sentence!\n\nAfter analyzing the sentiment, I would categorize it as (2) neutral.\n\nThe tone is polite and helpful, with a hint of guidance. The user is being asked to make sure their code is clean before submitting a pull request, which suggests that the reviewer wants to ensure the quality of the code. However, there's no criticism or negative language used, so I wouldn't classify it as (3) negative.",
-  "label": "neutral"
+  "label": "negative"
  },
  {
   "text": "Funcționează bine pe mașina mea de calcul.",
@@ -2242,7 +2242,7 @@
  {
   "text": ":+1: studentii din facultate iti vor multumi etern",
   "raw_message": "A Romanian sentence!\n\nAfter analyzing the sentiment of the sentence, I would categorize it as:\n\n(2) neutral\n\nThe sentence contains a thumbs up emoticon :) and a phrase that can be translated to \"the students from the university will thank you forever\", which suggests appreciation or gratitude. However, the tone is more formal and polite rather than enthusiastic or excited, so I wouldn't classify it as (1) positive.",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "Acest PR trebuie deschis de pe ` ilieionut96:first-blog` către ` ilieionut96:main`",
@@ -4492,7 +4492,7 @@
  {
   "text": "same. scoate asta",
   "raw_message": "It seems like there's no actual sentence provided.\n\nHowever, if you'd like to provide the sentence from GitHub pull request code review comments, I'll be happy to help categorize its sentiment as (1) positive, (2) neutral, or (3) negative.",
-  "label": "positive"
+  "label": "negative"
  },
  {
   "text": "Nu a fost necesar, l-am scos",
@@ -4962,7 +4962,7 @@
  {
   "text": "inteleg ideea, poate cu un flex-direction: column zici? sincer, am vrut sa incerc putin si grid aici, sa le asez putin mai altfel, intr-adevar, m-am complicat poate putin aiurea, daca e un must, schimb tot",
   "raw_message": "After analyzing the sentence, I would categorize the sentiment as (2) neutral.\n\nThe tone is polite and open-minded, with phrases such as \"sincer\" (\"honestly\") and \"daca e un must\" (\"if it's a must\"), which suggest that the author is willing to consider alternative solutions. The author also acknowledges their own uncertainty and potential overcomplication of the issue, which further supports a neutral sentiment.\n\nThere are no overtly positive or negative statements in the sentence, so I wouldn't categorize it as (1) positive or (3) negative.",
-  "label": "neutral"
+  "label": "negative"
  },
  {
   "text": "Am eliminat `find`-urile + initializat custom_fields. Nu am adaugat si schimbarea campurilor normale fiindca acolo, trebuia sa folosesc find-uri (aceeasi poveste ca mai jos: https://github.com/famiprog/redmine_goodies/pull/11#discussion_r2333720904",
@@ -5032,7 +5032,7 @@
  {
   "text": "Am verificat acum, nu au",
   "raw_message": "It seems like you provided a label but not the sentence itself.\n\nHowever, based on your label \"Label:\", I'm assuming it's related to the sentiment of the sentence. If that's correct, please provide the sentence and I'll be happy to help categorize its sentiment as (1) positive, (2) neutral, or (3) negative.",
-  "label": "positive"
+  "label": "negative"
  },
  {
   "text": "movieData?.cast?.length pentru ca poate sa moara daca prima parte e null",
@@ -5897,7 +5897,7 @@
  {
   "text": "aduce la ecran",
   "raw_message": "It seems like you provided a label (\"Label:\") but not the actual sentence for me to categorize.\n\nHowever, I can still help if you provide the sentence from GitHub pull request code review comments. Please go ahead and share it, and I'll be happy to categorize its sentiment as (1) positive, (2) neutral, or (3) negative!",
-  "label": "positive"
+  "label": "negative"
  },
  {
   "text": "Nu trebuia sa dai commit la fisierul asta",
@@ -7237,7 +7237,7 @@
  {
   "text": "Cred ca <NavLink> e doar pentru path-uri care sunt relative pentru ca in DOM devine:\r\n`<a href=\"/https://code4.ro/ro/apps\">`\r\n\r\nCred ca poti folosi direct `a` tag in loc de `<NavLink>` pentru path-uri exterioare",
   "raw_message": "I would categorize the sentiment expressed in this sentence as (3) negative.\n\nThe tone is constructive and helpful, but the comment is pointing out a potential issue or improvement that needs to be made. The language used is polite and suggests an alternative solution, which is why I wouldn't classify it as (1) positive. It's not simply stating something without any opinion or suggestion, so it's not (2) neutral either.",
-  "label": "negative"
+  "label": "neutral"
  },
  {
   "text": "Trebuie facuta o clasa context care sa includa toti acesti parametrii. Poti sa faci asta si dupa ce faci merge in master.",

@@ -587,7 +587,7 @@
  {
   "text": "Ah... No - the pathInfo contains the stuff between the servlet-mapping and the query-string. From the spec:  \\[pathInfo\\]: a String, decoded by the web container, specifying extra path information that comes after the servlet path but before the query stri",
   "raw_message": "I would categorize the sentiment expressed in this sentence as (2) neutral.\n\nThe tone is informative and explanatory, providing context from the specification. The language used is objective and matter-of-fact, without any emotional or evaluative tone. The only hint of a negative sentiment is the phrase \"Ah...\", which could be interpreted as a slight expression of frustration or surprise, but it's not strong enough to categorize the overall sentiment as (3) negative.",
-  "label": "neutral"
+  "label": "negative"
  },
  {
   "text": "Flame Leviathan is bad example, because it always follows one particular target at time, regardless of threat levels.",
@@ -1057,7 +1057,7 @@
  {
   "text": "Hack:p",
   "raw_message": "It seems like there's no actual sentence provided for me to categorize the sentiment.\n\nHowever, if you'd like to provide a sentence from GitHub pull request code review comments, I'll be happy to help you categorize its sentiment as (1) positive, (2) neutral, or (3) negative.",
-  "label": "positive"
+  "label": "negative"
  },
  {
   "text": "+1 This looks super useful!",
@@ -2532,7 +2532,7 @@
  {
   "text": "`if($connection && $connection->getFieldValue() ==  'close') `",
   "raw_message": "Based on the sentence alone, I would categorize the sentiment as (1) positive.\n\nHowever, considering it's a code review comment from GitHub, and the fact that it's a conditional statement checking if a connection is closed, I'm going to revise my answer. The sentiment is actually more neutral or even slightly negative in the context of code reviews, where the goal is often to improve code quality and avoid potential issues.\n\nSo, I would categorize the sentiment as (3) negative, but only because it implies that there might be a situation where the connection is not closed, which could lead to errors.",
-  "label": "positive"
+  "label": "negative"
  },
  {
   "text": "Could you elaborate why this is needed? That is, why is a static constructor needed. No idea why so I am curious :)",
@@ -5752,7 +5752,7 @@
  {
   "text": "If I didn't miss anything, then the `getInstance` pattern should hold for all singletons, including Kill, GetRoutees, and some others I'm currently forgetting. Differences between docs and code will then have to be settled by changing the code ;-)",
   "raw_message": "I would categorize the sentiment expressed in this sentence as (2) neutral.\n\nThe tone is somewhat casual and lighthearted, with a hint of humor (\";-)\"). The comment also includes a constructive suggestion for improvement. However, there's no overtly positive or negative language used, so I wouldn't classify it as either (1) positive or (3) negative.",
-  "label": "neutral"
+  "label": "negative"
  },
  {
   "text": "Cute name :)",
@@ -7097,7 +7097,7 @@
  {
   "text": "@raggi we need to get in touch. I don't want to start hacking on some of that stuff if you've already done the hard work.  Please email me, josh at joshpeek dot com",
   "raw_message": "I would categorize the sentiment expressed in this sentence as (2) neutral.\n\nThe tone is polite and courteous, with a hint of consideration for Raggi's effort (\"hard work\"). The user is seeking to avoid duplicating effort and is willing to collaborate, which suggests a positive intent. However, there is no explicit praise or enthusiasm, so I wouldn't classify it as (1) positive. Additionally, the tone is not critical or confrontational, ruling out (3) negative.",
-  "label": "neutral"
+  "label": "negative"
  },
  {
   "text": "Thanks for pointers, actually /home/lechup/.virtualenvs/django-sprint/local/lib/python2.7/site-packages/django/ is a symlink to /home/lechup/github/django/django/ .  I'll try that .pth thing, but I think it is not the case.  PS: Pastebin? I though abou",
@@ -8227,7 +8227,7 @@
  {
   "text": "Should I go and buy a can of paint ? :)",
   "raw_message": "Based on the tone and language used in the sentence, I would categorize the sentiment as:\n\n(1) Positive\n\nThe use of the emoticon :) at the end of the sentence suggests that the speaker is making a lighthearted or humorous comment. The question itself about buying paint also implies a sense of playfulness or non-seriousness.\n\nHowever, if we were to categorize GitHub pull request code review comments, I would reevaluate the sentiment as:\n\n(2) Neutral\n\nIn this context, the sentence is likely asking for clarification or advice on whether to proceed with painting. The tone is more inquiring than enthusiastic, and the use of a smiley face may be seen as informal or out of place in a code review comment.",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "my editor is the culprit!",
@@ -8872,7 +8872,7 @@
  {
   "text": "sorry - its my error. previous comment not deleted with \"\"There was a problem with your request, please try again",
   "raw_message": "I would categorize the sentiment expressed in this sentence as (2) neutral.\n\nThe tone is apologetic and takes responsibility for the mistake (\"sorry\", \"it's my error\"), which suggests a neutral or even slightly positive sentiment. However, the overall message is more focused on acknowledging an error rather than expressing enthusiasm or excitement, so I wouldn't classify it as (1) positive.",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "Add it to this PR directly.",
@@ -10102,7 +10102,7 @@
  {
   "text": "![](http://img689.imageshack.us/img689/7277/15620874.jpg)",
   "raw_message": "It seems like the sentence is a link to an image, rather than text that can be analyzed for sentiment.\n\nHowever, if you'd like to provide the actual comment text from the GitHub pull request code review, I'd be happy to help categorize its sentiment as (1) positive, (2) neutral, or (3) negative.",
-  "label": "positive"
+  "label": "negative"
  },
  {
   "text": "Looks good.  Mind if I add a CityHash implementation in here?",
@@ -10277,7 +10277,7 @@
  {
   "text": "No, old way was incorrect, maybe someone can do a config for this allowing to don't send whispers instead blizzlike way.",
   "raw_message": "I would categorize the sentiment expressed in this sentence as (2) neutral.\n\nThe tone is not overtly positive or negative, but rather informative and slightly critical. The user is pointing out an issue with the \"old way\" and suggesting a potential solution, which implies that they are trying to improve the code. However, the language used is not overly enthusiastic or encouraging, so I wouldn't classify it as (1) positive.",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "no only season 11 no pvp damage gems and its weird on linux the damage is atleast working (lower dmg but its working) but on windows its just keep missing each attack for me :/",

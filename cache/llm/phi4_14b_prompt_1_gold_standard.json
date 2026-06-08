@@ -457,7 +457,7 @@
  {
   "text": "if (events.ExecuteEvent() == EVENT_DEATH_YELL) ",
   "raw_message": "The sentence you provided appears to be a line of code rather than a comment expressing sentiment. It checks whether the `ExecuteEvent()` method returns `EVENT_DEATH_YELL`. Since it's purely technical and lacks any evaluative language or tone, it doesn't express positive, neutral, or negative sentiment in the context of a code review comment.\n\nIf this were part of a larger discussion or feedback, additional context would be needed to determine if there is any sentiment associated with it. As it stands, I would categorize it as (2) neutral because it simply states a condition without expressing an opinion or emotion.",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "Adding the parameter in the middle of the signature is a BC break",
@@ -502,7 +502,7 @@
  {
   "text": "Relevant: http://twitter.com/ajpiano/statuses/148842137751003136",
   "raw_message": "To categorize the sentiment of this sentence from a GitHub pull request code review comment, we need to consider its context and content. The sentence simply provides a link to a tweet without expressing any explicit opinion or emotion about the linked content.\n\n1. **Positive Sentiment**: This would typically involve praise, approval, or enthusiasm.\n2. **Neutral Sentiment**: This involves providing information without expressing any particular positive or negative feelings.\n3. **Negative Sentiment**: This would include criticism, disapproval, or dissatisfaction.\n\nIn this case, the sentence is merely sharing a link and does not express any sentiment on its own. Therefore, it can be categorized as:\n\n**Label: Neutral**\n\nThe sentence serves an informational purpose without conveying any positive or negative emotions.",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "@markstory Why do you trim the dot from the domain? It can cause security issue. The `cakephp.org` cookie domain is accessible only by the `http://cakephp.org`, but the `.cakephp.org` cookie can be accessed by `http://cakephp.org` and `http://bakery.cakep",
@@ -682,7 +682,7 @@
  {
   "text": ":confused: ",
   "raw_message": "The use of the emoji \":confused:\" in a GitHub pull request code review comment typically conveys uncertainty or lack of understanding regarding something specific in the code or explanation provided. This sentiment is generally not positive, as it indicates that the reviewer has questions or needs clarification.\n\nTherefore, I would categorize this sentiment as (3) negative. It suggests that there might be an issue or a point of confusion that needs to be addressed for the review process to proceed smoothly.",
-  "label": "positive"
+  "label": "negative"
  },
  {
   "text": "sorry -- this is my first formula and that was an extra line of copy/paste -- Deleted",
@@ -742,7 +742,7 @@
  {
   "text": "`if event.target.nodeName isnt 'A'`",
   "raw_message": "To categorize the sentiment expressed in this sentence from a GitHub pull request code review comment, we need to consider the context and tone of the statement:\n\n1. **Positive Sentiment**: This would typically include praise or approval, such as \"Great job!\" or \"This is an excellent solution.\"\n\n2. **Neutral Sentiment**: This includes factual statements, questions, or comments that neither express approval nor disapproval. For example, \"Please clarify this part\" or simply stating a fact.\n\n3. **Negative Sentiment**: This would include criticism, disapproval, or pointing out issues, such as \"This doesn't work\" or \"There's an error here.\"\n\nThe sentence `if event.target.nodeName isnt 'A'` is a piece of code and does not inherently express any sentiment on its own. It appears to be a conditional statement checking if the node name of an event target is not 'A'. Without additional context, such as accompanying comments or explanations, this line of code is neutral.\n\nLabel: **Neutral**",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "Not sure if I like this idea. I get how having a variable for this adds some flexibility, on the other hand it isn't likely that you will have one font color throughout the whole site anyways so I'm not sure how useful it is.  Using the color set in a pare",
@@ -1377,7 +1377,7 @@
  {
   "text": "he collected data on exceptions",
   "raw_message": "The sentence \"he collected data on exceptions\" is a factual statement and does not inherently express any sentiment such as positive, neutral, or negative. It simply describes an action without conveying emotion or opinion.\n\nTherefore, the label would be (2) neutral.",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "No... you haven't got me correctly. Method is gonna always exist on `Request` object. The problem is that if the argument exists, it returns it. Otherwise, it throws an `InvalidArgumentException`. Look at the implementation of method `Request::getTruste",
@@ -2737,7 +2737,7 @@
  {
   "text": "ScriptName removal won't be needed? -> http://pastebin.com/zF5xks2v (Still got to find out how to put proper comments in here) Ha, this should be it<pre> -- Inquisitor Hallard scriptname removement UPDATE `creature_template` SET `ScriptName`='' WHERE `entr",
   "raw_message": "To categorize the sentiment expressed in the sentence from the GitHub pull request code review comment, let's break down its components:\n\n1. **\"ScriptName removal won't be needed?\"** - This part of the sentence suggests a question or uncertainty about whether the script name removal is necessary. It doesn't express strong positive or negative feelings but rather indicates a need for clarification.\n\n2. **\"(Still got to find out how to put proper comments in here)\"** - This statement reflects an acknowledgment of incomplete work, specifically regarding adding proper comments. It suggests a neutral sentiment as it's more about recognizing what needs to be done without expressing dissatisfaction or approval.\n\n3. **\"Ha, this should be it\"** - The use of \"Ha\" and the phrase \"this should be it\" indicates a light-hearted tone, possibly suggesting that the speaker believes they have found a solution or are close to resolving an issue. This can be interpreted as mildly positive due to its hopeful undertone.\n\nOverall, considering these elements together, the sentiment expressed in this comment leans towards **neutral** with a slight positive inclination due to the hopeful remark at the end. The primary focus is on seeking clarification and acknowledging incomplete tasks rather than expressing strong emotions either way.",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "That describes what options get generated for the homebrew formula itself.  We want to add the guard to the line because if the user doesn't request lua, we don't want vim to pick it up on accident (which it might do if it is already installed and we se",
@@ -2847,7 +2847,7 @@
  {
   "text": "I've just updated this feature.",
   "raw_message": "The sentence \"I've just updated this feature\" is a straightforward statement that conveys information about an action taken. It does not inherently express any positive, neutral, or negative sentiment; rather, it simply informs the reader of what has been done.\n\nTherefore, the sentiment expressed in this sentence can be categorized as (2) neutral.",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "I agree with @grumpydev here. There should be no ctor just for testing purposes. If it's difficult / cumbersome to create a fake certificate then maybe we should provide some test helper for that instead. If the Ctor was already there then it must've been",
@@ -2972,7 +2972,7 @@
  {
   "text": "Is something like this: https://sourceforge.net/apps/trac/xbmc4xbox/changeset/30905/trunk acceptable?",
   "raw_message": "To categorize the sentiment expressed in the sentence, let's analyze its components:\n\n- The sentence is asking if a specific change (referenced by a URL) is \"acceptable.\"\n- It does not express any explicit positive or negative emotions.\n- The tone seems to be seeking confirmation or approval rather than expressing an opinion.\n\nGiven these points, the sentiment expressed in this sentence can be categorized as **neutral**. It's simply asking for validation without conveying any particular emotion or judgment.",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "Oh noes, code style. :( I'll be super careful about that in the future. Too many projects here.",
@@ -3057,7 +3057,7 @@
  {
   "text": ":+1: @holman.  but who knows how many apps have this issue and don't even realize it. :(",
   "raw_message": "The sentiment expressed in the sentence is a mix of positive and negative elements, making it somewhat nuanced:\n\n- The \":+1:\" emoji indicates agreement or approval, which is a positive sentiment.\n- The phrase \"but who knows how many apps have this issue and don't even realize it\" introduces concern or worry about potential widespread issues, which carries a negative sentiment.\n\nOverall, the sentence leans towards neutral due to the combination of both positive and negative sentiments. However, if you must choose one label based on the predominant tone, it would be (3) negative because the concern expressed seems more impactful in this context.",
-  "label": "positive"
+  "label": "negative"
  },
  {
   "text": "that wouldn't work, cause it would return a symbol hash key, which is not a json primitive",
@@ -3392,7 +3392,7 @@
  {
   "text": "cheating, stupid GM's... additional checks - not bad.",
   "raw_message": "The sentiment expressed in the sentence \"cheating, stupid GM's... additional checks - not bad\" is a mix of negative and slightly positive elements. The terms \"cheating\" and \"stupid GM's\" convey a negative sentiment towards certain aspects or individuals involved. However, the phrase \"additional checks - not bad\" introduces a mildly positive note regarding the proposed solution or improvement.\n\nOverall, considering both parts, this sentence leans more toward a **neutral** sentiment because it acknowledges an issue negatively but also recognizes a potential improvement positively.",
-  "label": "negative"
+  "label": "neutral"
  },
  {
   "text": "I don't think it should be a notice. The fallback from fr_FR to fr is totally normal for instance, and this would be spamming your logs.",
@@ -3482,7 +3482,7 @@
  {
   "text": "rbac_group_roles",
   "raw_message": "The sentence \"rbac_group_roles\" appears to be a label or identifier rather than an expression of sentiment. It doesn't contain any words that convey positive, neutral, or negative emotions or opinions. Therefore, it would be categorized as (2) neutral since it lacks any sentiment-expressive content. If you have more context or additional comments related to this label, I'd be happy to help analyze those for sentiment!",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "<button onclick=\"\"alert('speaking of security....')\"\">hhahaha WHOOPS",
@@ -4342,7 +4342,7 @@
  {
   "text": "BAD. ASS.",
   "raw_message": "The sentiment expressed in the sentence \"BAD. ASS.\" can be interpreted in different ways depending on context and tone. In many informal contexts, especially among peers or friends, this phrase is often used as a compliment to describe someone who has done something impressively good or skillful, despite its literal negative wording.\n\nGiven that it's from a GitHub pull request code review comment, if the intent was to praise an impressive piece of work or solution, then the sentiment could be considered positive. However, without additional context about how this phrase is being used in the specific situation, there's some ambiguity.\n\nIf we assume the typical informal usage where \"bad\" means good and it's meant as a compliment:\n\nLabel: (1) Positive\n\nHowever, if the comment was intended sarcastically or negatively, then it could be negative. Without more context, I'm leaning towards positive based on common usage patterns in informal settings.",
-  "label": "negative"
+  "label": "positive"
  },
  {
   "text": "On Wed, Dec 21, 2011 at 5:24 PM, viktorklang < reply@reply.github.com > wrote:  > > > >    // FIXME: Dispatchers registered here are are not removed, see ticket > #1494 > > -  private val dispatchers = new ConcurrentHashMap[String, > MessageDispatcher] > ",
@@ -4767,7 +4767,7 @@
  {
   "text": "version is scanned from tag name",
   "raw_message": "The sentence \"version is scanned from tag name\" appears to be a factual statement rather than an expression of sentiment. It describes what happens in the process without conveying any positive, negative, or neutral feelings about it.\n\nTherefore, the label for this sentence would be (2) neutral.",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "@Vincent-Michael  Two time you owned me, I'm so stupid ...",
@@ -6122,7 +6122,7 @@
  {
   "text": "Here's the fix to an issue I alerted the Plupload folks about.  Yay improved security! Lack of alerts from moxiecode to their customers regarding this issue...not so awesome... :/ Lack of credit to me for finding this (in the commit message, a tweet fro",
   "raw_message": "The sentiment expressed in this sentence can be categorized as **mixed**, but if we need to choose one label from positive, neutral, or negative, it leans more towards **negative**. Here's why:\n\n1. The phrase \"Yay improved security!\" expresses a positive sentiment regarding the fix.\n2. However, the comment about the lack of alerts from moxiecode and the lack of credit for finding the issue introduces a negative sentiment.\n3. The use of \"not so awesome\" and the sad face emoticon \":/\" further emphasize dissatisfaction.\n\nOverall, while there is an element of positivity regarding the security improvement, the predominant tone seems to be one of disappointment or criticism about how the situation was handled by others, making it more negative overall.",
-  "label": "positive"
+  "label": "negative"
  },
  {
   "text": "QAston You do not feel sorry for people who use the repository?",
@@ -6182,7 +6182,7 @@
  {
   "text": "what happens if negative or 0?",
   "raw_message": "The sentence \"what happens if negative or 0?\" appears to be a question seeking clarification or information about how certain conditions are handled in the code, specifically when dealing with negative numbers or zero. This type of inquiry is typically neutral because it neither expresses approval nor disapproval; rather, it seeks understanding or further explanation.\n\nLabel: (2) Neutral\n\nIf you have more context or additional sentences from the pull request comments, feel free to share them for a more comprehensive analysis!",
-  "label": "negative"
+  "label": "neutral"
  },
  {
   "text": "Ahh, I don't know how I feel about this... Paul Irish would not agree. =P lol I joke of course. =)",
@@ -6252,7 +6252,7 @@
  {
   "text": "I'd need to jarjar them in any case.  If no extra dependencies are needed can this stay here or do you think extra module is right in any case?  I'll get rid of them. From Guava I am using LoadingCache but that can be done with locks and HashMap (same as ",
   "raw_message": "To categorize the sentiment expressed in the sentence from the GitHub pull request code review comments, let's break down the content:\n\n1. **\"I'd need to jarjar them in any case.\"** - This phrase suggests a decision or action that needs to be taken, but it doesn't convey strong positive or negative emotions.\n\n2. **\"If no extra dependencies are needed can this stay here or do you think extra module is right in any case?\"** - This part of the sentence reflects an inquiry about whether additional modules are necessary, indicating a neutral stance as it seeks clarification rather than expressing approval or disapproval.\n\n3. **\"I'll get rid of them.\"** - The decision to remove something can be seen as neutral unless there's context suggesting dissatisfaction with those elements.\n\n4. **\"From Guava I am using LoadingCache but that can be done with locks and HashMap (same as)\"** - This statement provides an alternative solution, which is a constructive suggestion rather than expressing sentiment.\n\nOverall, the sentence seems to focus on seeking clarification and providing alternatives without strong positive or negative emotions. Therefore, the sentiment expressed in this comment would best be categorized as **(2) neutral**.",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "Awesome commit-hash: ``dead730`` xD",
@@ -6417,7 +6417,7 @@
  {
   "text": "Holy crap.",
   "raw_message": "The sentiment of the sentence \"Holy crap\" can be interpreted in different ways depending on context, but generally, it is often used to express surprise or shock. Without additional context indicating whether this surprise is positive (e.g., pleasantly surprised) or negative (e.g., shocked by something undesirable), it's challenging to definitively categorize it as positive or negative.\n\nHowever, given the informal and somewhat expletive nature of \"Holy crap,\" it often leans towards a more intense emotional reaction. In many cases, especially in professional settings like code reviews, such expressions might be perceived as slightly negative due to their abruptness or intensity unless clearly framed positively.\n\nTherefore, without additional context, I would categorize this sentiment as (3) negative, but with the caveat that it could vary based on surrounding circumstances and tone.",
-  "label": "positive"
+  "label": "negative"
  },
  {
   "text": "It was intended that the VML element be present for all tests. If it causes failures, that indicates additional places where jQuery needs to apply workarounds.",
@@ -7492,7 +7492,7 @@
  {
   "text": "Gotta love auto-updating browsers :) What’s up with this commit though? What exactly do you mean by “no longer necessary with the release of Opera 11”? Older versions never existed?",
   "raw_message": "To categorize the sentiment expressed in the sentence, let's break it down:\n\n1. \"Gotta love auto-updating browsers :)\" - This part expresses a positive sentiment towards auto-updating browsers.\n\n2. \"What’s up with this commit though?\" - This is a neutral inquiry about the specifics of the commit.\n\n3. \"What exactly do you mean by 'no longer necessary with the release of Opera 11'?\" - This is another neutral question seeking clarification on a statement made in the commit.\n\n4. \"Older versions never existed?\" - This part expresses skepticism or confusion, which can be seen as slightly negative due to its questioning nature.\n\nOverall, the sentence contains elements of positive sentiment (towards auto-updating browsers), neutral inquiry, and slight negativity (due to skepticism). However, since the majority of the sentence is focused on seeking clarification rather than expressing dissatisfaction or approval, it leans more towards a **neutral** sentiment. \n\nLabel: Neutral",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "enforce it configside with GM.LoginState = 1",
@@ -7662,7 +7662,7 @@
  {
   "text": "Finally",
   "raw_message": "The word \"Finally\" on its own is somewhat ambiguous and doesn't provide enough context to determine a clear sentiment. It could imply relief or satisfaction if something has been completed after a long wait, which would be positive. Alternatively, it might express frustration if the completion was overdue, which could be negative. Without additional context, I would categorize this as (2) neutral because it doesn't clearly convey a positive or negative sentiment on its own.",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "Yes it is still possible, but note that both HttpPostRequestDecoder and HttpPostRequestEncoder have the HattpDataFactory as argument, which should be setup to use (or not use) this RFC conforming rule, since this is where (HttpDataFactory) this rule has t",
@@ -8022,7 +8022,7 @@
  {
   "text": "And everything else that came in that expansion and before too.",
   "raw_message": "The sentiment expressed in the sentence \"And everything else that came in that expansion and before too\" is somewhat ambiguous without additional context, as it doesn't contain explicit positive or negative language. However, based on its neutral tone and lack of specific evaluative words, I would categorize this as (2) neutral.\n\nIf there are more details about the context or surrounding comments, they might provide further insight into whether the sentiment leans towards positive or negative.",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "This should be fixed now:  https://github.com/xbmc/xbmc/commit/d446c0a01f3460c1726c61e43c649188b981350a",
@@ -8097,7 +8097,7 @@
  {
   "text": "Add HttpListener",
   "raw_message": "The sentence \"Add HttpListener\" appears to be a straightforward statement or instruction rather than an expression of sentiment. It doesn't convey any positive, neutral, or negative feelings; instead, it seems like a directive or task description.\n\nTherefore, the label for this sentence would be (2) neutral, as it lacks any emotional tone or evaluative language.",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "There's also still a test missing for blank credentials instead of `nil' and how about one with multibyte characters? (“café\"\" vs “cafe”.)  Cheers",
@@ -8107,7 +8107,7 @@
  {
   "text": "(apologies for the weird formatting there, i didn't realise it was going to use Markdown...)",
   "raw_message": "To categorize the sentiment of a sentence from GitHub pull request code review comments, I would need to see the specific content of the comment. However, based on your description, it seems like you're referring to an apology for formatting issues rather than directly addressing the code or its functionality.\n\nIf the sentence is something like \"Apologies for the weird formatting there; I didn't realize it was going to use Markdown...\", this would generally be considered a neutral sentiment. The comment acknowledges a minor issue (formatting) without expressing strong positive or negative emotions about the content of the pull request itself.\n\nHere's how you might categorize it:\n\n1. **Positive**: If the comment expressed satisfaction, praise, or approval.\n2. **Neutral**: If the comment is simply acknowledging an issue like formatting without any emotional charge or impact on the code quality.\n3. **Negative**: If the comment criticized the content of the pull request in a way that suggests dissatisfaction or disapproval.\n\nIn this case, it seems to be neutral.",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "I think this is a great idea, but it's going to screw over a LOT of people who followed bad jQuery tutorials online that all seem to love recommending $() as a shortcut to $(document).",
@@ -8447,7 +8447,7 @@
  {
   "text": "blame CastedCreatureOrGO removal xD https://github.com/TrinityCore/TrinityCore/blob/7776016106e748fee8cb3e052ec3c8e575e84a55/sql/updates/world/2013_08_30_06_world_eai_sai.sql",
   "raw_message": "To categorize the sentiment expressed in this sentence, let's break it down:\n\n1. **\"blame CastedCreatureOrGO removal xD\"**: The use of \"blame\" might initially suggest a negative tone, as if someone is pointing fingers or assigning fault. However, the inclusion of \"xD,\" which is an emoticon often used to indicate laughter or amusement, suggests that this blame is being made in jest or with humor.\n\n2. **Contextual Clues**: The link provided points to a specific change in code (removal of CastedCreatureOrGO), but without additional context from the comment itself, it's primarily the tone conveyed by \"blame\" and \"xD\" that we need to consider.\n\nGiven these observations, the sentiment seems to be light-hearted or playful rather than serious criticism. The use of humor indicates a positive or at least neutral attitude towards the change being discussed.\n\n**Label: (1) Positive**\n\nThe sentence expresses a humorous tone, suggesting a positive sentiment despite the word \"blame.\"",
-  "label": "negative"
+  "label": "positive"
  },
  {
   "text": "sorry for the multiple comment here, but this problem could also be avoided by first of all doing a clean separation between DXVA Decoder and Renderer - as proposed in isidrogar's PR 346 (see https://github.com/xbmc/xbmc/pull/346)",
@@ -9777,7 +9777,7 @@
  {
   "text": "Which method is \"\"faster\"\" is hard to say as the JIT of course is very magical :)  But I'm not too concerned about that -- I'm more curious about your comment above:  \"\"Change all access or definition to HttpDataFactory to the new AbstractHttpDataFactory",
   "raw_message": "To categorize the sentiment expressed in this sentence, let's break it down:\n\n1. **\"Which method is 'faster' is hard to say as the JIT of course is very magical :)\"** - This part seems neutral with a touch of positive sentiment due to the use of \"magical,\" which conveys a sense of admiration or fascination.\n\n2. **\"But I'm not too concerned about that --\"** - This indicates a lack of worry, suggesting a neutral to slightly positive sentiment because it implies acceptance or indifference regarding the speed comparison.\n\n3. **\"I'm more curious about your comment above: 'Change all access or definition to HttpDataFactory to the new AbstractHttpDataFactory'\"** - The use of \"curious\" suggests an open and inquisitive attitude, which is generally positive as it indicates interest rather than criticism.\n\nOverall, the sentiment expressed in this sentence leans towards **positive**, due to the lack of concern and curiosity about further discussion.",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "Looks like rubygems took out the warning. I think to be safe you need to have the executable in both gems. :-(  See https://github.com/rails/rails/issues/2400",

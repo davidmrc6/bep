@@ -262,7 +262,7 @@
  {
   "text": "Nu trebuie pusă nicio tranziție aici",
   "raw_message": "(3)",
-  "label": "neutral"
+  "label": "negative"
  },
  {
   "text": "Mai trebuie reglata inaltimea containerelor pentru tableta si mobil, in restul totul super, felicitari!!",
@@ -1802,7 +1802,7 @@
  {
   "text": "test complet-nu este nevoie de fisier",
   "raw_message": "(3)",
-  "label": "neutral"
+  "label": "negative"
  },
  {
   "text": "Pe IE nu apare nimic, pe Safari nu știu, nu-l am instalat. Există o posibilitate de mimare prin `border-bottom`. A rămas să mai testez.",
@@ -2262,7 +2262,7 @@
  {
   "text": "De asemenea la fiecare src sa pui doua puncte ca sa preia imaginile cum trebuie. Exemplu:  ../images/",
   "raw_message": "(3) - Răspunsul pare să sugereze că există o problemă cu modul în care se preiau imaginile, dar nu este clar ce anume este greșit.",
-  "label": "neutral"
+  "label": "negative"
  },
  {
   "text": "@razwan Am pus logica pentru generat stilurile inline pentru Gutenberg si cred ca merge destul de bine. Voi face merge si in functie de nevoile care apar la testele din teme (am testat cu Hive, Gema si Vasco), mai putem schimba specificitatea selectorilor care functioneaza ca \"namespaces\" sau alti selectori exclusi.",
@@ -3207,7 +3207,7 @@
  {
   "text": "Ar trebui sa fie o singura ruta pentru restricted",
   "raw_message": "(3) - Ruta este considerată restrictivă și există o sugestie de a avea doar una.",
-  "label": "neutral"
+  "label": "negative"
  },
  {
   "text": "fara valori absolute, nu va arata bine pe responsive, foloseste grid-ul de la bootstrap",
@@ -3412,7 +3412,7 @@
  {
   "text": "Atentie mare, trebuie sa schimbi si in EN.json",
   "raw_message": "(3) - Răspunsul pare a fi un semnal de alarmă și o cerință urgentă.",
-  "label": "neutral"
+  "label": "negative"
  },
  {
   "text": "Elimina te rog asta sa nu apara fisierul ca modificare la final",
@@ -4597,7 +4597,7 @@
  {
   "text": "indentare gresita + linie goala la final",
   "raw_message": "(3) - Răspunsul indică o problemă în cod, sugerând că există o eroare de indentare și o linie goală inutilă.",
-  "label": "neutral"
+  "label": "negative"
  },
  {
   "text": "Deasemenea vezi si la functia de mai jos acelasi lucru",
@@ -5092,7 +5092,7 @@
  {
   "text": "Spatiu inainte de save",
   "raw_message": "(3) - Răspunsul pare să indice o problemă sau o critică la cod, dar nu este suficient pentru a stabili clar sentimentul.",
-  "label": "neutral"
+  "label": "negative"
  },
  {
   "text": "cred ca generate_trees ar trb sa stea aici si sa nu mai primeasca niciun parametru din moment ce vom avea toate datele. pareri?",
@@ -5122,7 +5122,7 @@
  {
   "text": "incearca sa nu folosesti valori cu virgula",
   "raw_message": "(3) - Răspunsul pare a fi o observație critică, sugerând că autorul pull request-ului ar trebui să evite utilizarea valorilor care conțin virgulă.",
-  "label": "neutral"
+  "label": "negative"
  },
  {
   "text": "putem sa punem eroare din useEffect aici in onError. cred ca este mai clar",
@@ -5477,7 +5477,7 @@
  {
   "text": "Sa adaugi versiunea si la asta si cea de mai sus",
   "raw_message": "(3) - Răspunsul pare a fi o critică, sugerând că autorul pull request-ului nu și-a asumat responsabilitatea completă pentru cod.",
-  "label": "neutral"
+  "label": "negative"
  },
  {
   "text": "numele parametrului ar trebui sa fie reservationDto. Astfel ai putea sa ii folosesti 'reservation' in loc de 'convertedReservation' pt rezervarea care e salvata in baza de date.",
@@ -5522,7 +5522,7 @@
  {
   "text": "partea asta era importanta ca scoate ultimele 2 cifre din barcode\r\nSi din noul rezultat va trebui sa se extraga ultimele 4 cifre :)",
   "raw_message": "(3) - Răspunsul pare a fi critic, sugerând că autorul pull request-ului nu a înțeles cerințele inițiale.",
-  "label": "neutral"
+  "label": "negative"
  },
  {
   "text": "Fisierul Layout este pentru tot site-ul. Desi in design apare acest component mai in toate paginile, nu ar trebui sa fie inclus in layout. E preferat sa fie inclus doar unde avem nevoie. Muta-l te rog in index.js, cu tot cu graphql queries",
@@ -5682,7 +5682,7 @@
  {
   "text": "Sterge comentariul de cod",
   "raw_message": "(3)",
-  "label": "neutral"
+  "label": "negative"
  },
  {
   "text": "a e ok, am uitat ca aveam support in baza de date pentru asta\r\n![image](https://github.com/user-attachments/assets/3575ab54-f24d-44e3-83b7-bb6ed5039fe0)",
@@ -5767,7 +5767,7 @@
  {
   "text": "Nu avem de ce sa includem 2 versiuni pentru aceasi librarie",
   "raw_message": "(3)",
-  "label": "neutral"
+  "label": "negative"
  },
  {
   "text": "Aici nu mai trebuia setata si o data? Sau stabilisem ca se poate si fara? Nu mai tin minte.",
@@ -5802,7 +5802,7 @@
  {
   "text": "pune paranteze la parametrul lui \"disp\" ca sa mearga pe toate versiunile de Octave/Matlab",
   "raw_message": "(3) - Răspunsul pare a fi critic, sugerând o problemă în cod.",
-  "label": "neutral"
+  "label": "negative"
  },
  {
   "text": "nu folosim styles de genul, doar styled-components",
@@ -6652,7 +6652,7 @@
  {
   "text": "Fără virgulă înainte de `etc.`.",
   "raw_message": "(3)",
-  "label": "neutral"
+  "label": "negative"
  },
  {
   "text": "Ma gandisem ca e mai bine sa fac merge la asta asa cum e si sa fac un commit separate in care sa scot butonul de close, ca sa nu tin toate modificarile astea in review pentru o modificare mica pe care nu stiu cand o sa am timp sa o fac zilele astea. Dar sigur, nu o sa se mai repete!",
@@ -8272,7 +8272,7 @@
  {
   "text": "sterge codul comentat",
   "raw_message": "(3)",
-  "label": "neutral"
+  "label": "negative"
  },
  {
   "text": "cred ca poti renunta la useTheme, pt ca in main.tsx oricum se foloseste ThemeProvider peste toate componentele din App si poti accesa direct culorile",
@@ -9267,7 +9267,7 @@
  {
   "text": "Mai trebuie sa elimini semnele de punctuatie",
   "raw_message": "(3)",
-  "label": "neutral"
+  "label": "negative"
  },
  {
   "text": "identeaza corect",
@@ -9417,7 +9417,7 @@
  {
   "text": "Văd că ai făcut indentare la 2 și la 4 spații. Pune te rog 4 spații peste tot.",
   "raw_message": "(3) - Răspunsul pare a fi critic, sugerând o eroare în cod.",
-  "label": "neutral"
+  "label": "negative"
  },
  {
   "text": "numeste variabila cu ceva mai evident",
@@ -9577,7 +9577,7 @@
  {
   "text": "nu e nevoie sa fie input",
   "raw_message": "(3)",
-  "label": "neutral"
+  "label": "negative"
  },
  {
   "text": "scoate si de aici comentariile",

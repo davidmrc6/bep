@@ -682,7 +682,7 @@
  {
   "text": ":confused: ",
   "raw_message": "The use of the emoji \":confused:\" typically conveys a sense of uncertainty or lack of understanding regarding something in the code review comments. This suggests that the reviewer is not entirely clear about what has been done or why, which can be interpreted as a neutral sentiment with a slight negative inclination due to the expression of confusion.\n\nLabel: (3) Negative\n\nIf you have more context around this comment, it might help refine the interpretation further!",
-  "label": "neutral"
+  "label": "negative"
  },
  {
   "text": "sorry -- this is my first formula and that was an extra line of copy/paste -- Deleted",
@@ -1457,12 +1457,12 @@
  {
   "text": "coding style: brace on next line",
   "raw_message": "The comment \"coding style: brace on next line\" is a factual statement regarding the placement of braces in code and does not express any sentiment, positive or negative. It simply points out an aspect of coding style without conveying approval or disapproval.\n\nLabel: (2) neutral",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "val NATFirewallAddresses = getStringList(\"\"akka.remote.nat-firewall-addresses\"\").asScala.toSet",
   "raw_message": "The sentence you provided appears to be a line of code rather than a comment. It seems to define a variable `NATFirewallAddresses` by retrieving and converting a list from some configuration source into a Scala set.\n\nSince this is not an actual comment but a piece of code, it doesn't inherently express any sentiment like positive, neutral, or negative. If you have a specific comment related to this line of code that expresses approval, disapproval, or neutrality, please provide that for analysis. Otherwise, the sentiment label would be (2) neutral, as there is no expressed opinion in the code itself.",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "Oh my... I remember I stopped and looked at the word, it looked weird but kept going... =_=",
@@ -1762,7 +1762,7 @@
  {
   "text": "\\ No newline at end of file",
   "raw_message": "The comment \"No newline at end of file\" is typically a reminder to adhere to coding style guidelines rather than an expression of sentiment about the code's quality or functionality. It suggests that there is a minor formatting issue, but it doesn't inherently convey positive, neutral, or negative feelings towards the work itself.\n\nTherefore, the sentiment expressed in this comment would be considered (2) neutral.",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "This breaks gossip options :(",
@@ -3482,7 +3482,7 @@
  {
   "text": "rbac_group_roles",
   "raw_message": "The sentence \"rbac_group_roles\" appears to be a label or identifier rather than an expressive comment with sentiment. It doesn't convey any positive, neutral, or negative sentiment on its own. Therefore, the appropriate label for this would be (2) neutral. If you have more context or additional comments related to it, feel free to share!",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "<button onclick=\"\"alert('speaking of security....')\"\">hhahaha WHOOPS",
@@ -3877,7 +3877,7 @@
  {
   "text": "Thanks for the commit finally :D  I would rather see the account and char ban commands actually work before the vehicles patch :P",
   "raw_message": "The sentiment expressed in this sentence is a mix of positive and negative. The phrase \"Thanks for the commit finally :D\" conveys a positive sentiment, as it expresses gratitude with an enthusiastic tone. However, the latter part, \"I would rather see the account and char ban commands actually work before the vehicles patch :P,\" suggests some impatience or concern about prioritization, which carries a slightly negative sentiment.\n\nOverall, considering both parts of the sentence, I would label this as (3) negative due to the expressed preference for functionality over new features.",
-  "label": "positive"
+  "label": "negative"
  },
  {
   "text": "It is needed for LATM AAC. It can be removed once we update ffmpeg, but I'm waiting for some Windows developer to test it. (https://github.com/xbmc/xbmc/pull/18)",
@@ -4262,7 +4262,7 @@
  {
   "text": "Also, assigning vars inside a transformation?",
   "raw_message": "The sentence \"Also, assigning vars inside a transformation?\" seems to express curiosity or concern about the practice of assigning variables within a transformation process. It doesn't explicitly convey positive or negative sentiment but rather suggests a neutral stance with an implicit question regarding best practices or potential issues.\n\nLabel: (2) Neutral",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "This line is missing in the latest version, causing `uploaded_file` always nil. Is this intended?",
@@ -5882,7 +5882,7 @@
  {
   "text": "`it is...`",
   "raw_message": "The sentence \"it is...\" on its own does not provide enough context to determine a sentiment. It could be part of a positive, neutral, or negative statement depending on what follows. Therefore, based solely on this fragment, the sentiment would be classified as (2) neutral until more information is provided.",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "My patch tested and working 3 month more). But we must fix it in blizzlike way) BTW animation is well. And it seems this item created by blizz for transmogrif",
@@ -6182,7 +6182,7 @@
  {
   "text": "what happens if negative or 0?",
   "raw_message": "The sentiment of the comment \"what happens if negative or 0?\" is likely **neutral**. This sentence appears to be a question seeking clarification or information about how certain conditions (negative or zero values) are handled in the code, rather than expressing approval, disapproval, or any emotional tone.",
-  "label": "negative"
+  "label": "neutral"
  },
  {
   "text": "Ahh, I don't know how I feel about this... Paul Irish would not agree. =P lol I joke of course. =)",
@@ -6712,7 +6712,7 @@
  {
   "text": "finally....",
   "raw_message": "The word \"finally\" on its own is somewhat ambiguous and doesn't provide enough context to determine a clear sentiment. It could imply relief or satisfaction if something has been completed after a long wait, which might suggest a positive sentiment. However, without additional context, it's difficult to definitively label the sentiment as positive, neutral, or negative.\n\nIn this case, I would lean towards labeling it as (2) neutral due to the lack of explicit emotional content or clear indication of sentiment.",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "@peterc, letting testing concerns seep into the core object like this gravely offends my sense of aesthetics. Big part of the reason why I dislike rspec syntax so much.",
@@ -8022,7 +8022,7 @@
  {
   "text": "And everything else that came in that expansion and before too.",
   "raw_message": "The sentence \"And everything else that came in that expansion and before too\" appears to be a statement rather than an expression of sentiment, as it lacks explicit positive or negative language. It seems neutral because it doesn't convey any particular emotion or opinion about the subject matter. Therefore, I would label this sentence as (2) neutral.",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "This should be fixed now:  https://github.com/xbmc/xbmc/commit/d446c0a01f3460c1726c61e43c649188b981350a",

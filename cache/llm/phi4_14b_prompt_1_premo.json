@@ -132,7 +132,7 @@
  {
   "text": "My bad. When using the dirties context approach a new  is created, which is what I meant with context. Would it make sense to create an  with a separate namespace (like the  which could be preconfigured to use a different default for the ? and maybe some other defaults to optimize an ElasticSearch instance for testing? maybe with reusing parts of the current ?",
   "raw_message": "To categorize the sentiment expressed in this sentence, let's break it down:\n\n1. **Apology**: The phrase \"My bad\" indicates a recognition of a mistake or oversight, which can be seen as neutral to slightly negative.\n   \n2. **Clarification and Suggestion**: The rest of the sentence provides clarification about what was meant (\"a new context is created\") and suggests an idea for improvement (\"Would it make sense to create an instance with a separate namespace...\"). This part of the sentence is constructive and forward-looking, which leans towards positive.\n\nOverall, while there's an acknowledgment of a mistake, the focus on suggesting improvements and seeking feedback indicates a constructive approach. Therefore, the sentiment can be categorized as **(1) positive** due to its constructive nature and openness to improvement.",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "The fix is done",
@@ -3407,7 +3407,7 @@
  {
   "text": "Squashed all my commits into one. and for commits messages I am already following convention stated in guideline of:",
   "raw_message": "To categorize the sentiment expressed in this sentence from a GitHub pull request code review comment, let's break it down:\n\n1. **\"Squashed all my commits into one.\"** - This part is neutral as it simply states an action taken without expressing any emotion or opinion.\n\n2. **\"and for commit messages I am already following convention stated in guideline of:\"** - This part suggests adherence to guidelines, which can be seen as positive because it implies compliance and attention to best practices.\n\nOverall, the sentiment expressed here leans towards being **positive**, as it indicates a proactive approach to maintaining code quality by squashing commits and adhering to commit message conventions. \n\nLabel: Positive",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "Thanks for your contribution. I'm trying to verify these changes locally by running , and have been running into issues launching the UI from local. Here's my error stack trace: Also, here's my gulp details after running : Let me know if I'm missing something.",
@@ -4202,7 +4202,7 @@
  {
   "text": "Ah... answered just here: ",
   "raw_message": "The sentence \"Ah... answered just here:\" seems to express a mild surprise or realization that something has been addressed in the current context. It doesn't convey strong emotions, either positive or negative. Therefore, it would be best categorized as (2) neutral. The sentiment is more about acknowledging information rather than expressing approval or disapproval.",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "and  are still using examples files from the  directory. This PR ensures that both scripts use modules. Since the ES6 module support in context of node is complicated, the scripts now require the usage of esm. Tested the change with ,  and . Sidenote: I also like to suggest to remove both scripts and refer to the editor instead. The project only provides for two 3D formats such converters which is somewhat inconsistent. Besides, even the current implementation of  does not cover all features compared to the browser version and requires some ugly monkey-patching so textures can be handled. Not a proper solution, IMO.",
@@ -4477,7 +4477,7 @@
  {
   "text": "Demo here: (top red box uses Verlet with soft & hard sets, bottom is existing)",
   "raw_message": "The sentence you provided seems to be a factual statement describing what can be seen in a demo, specifically mentioning the use of \"Verlet\" and differentiating between \"soft & hard sets\" and an \"existing\" setup. There are no explicit positive or negative words that convey sentiment; it is more descriptive.\n\nTherefore, I would categorize this sentence as (2) neutral. It simply provides information without expressing any particular emotion or opinion.",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "Shiny new commit with all the logic in the transport adapter. I added an  function to the  because I suspect most future transport adapters will heavily rely on this one. Adding specific headers is useful logic, and this allows the adapter to be easily subclassed and have new headers added: only one function override is needed.",
@@ -4677,7 +4677,7 @@
  {
   "text": "Updated <details to_replacevalueto_replacevalueto_replacevalueto_replacevalueto_replacevaluevaluevalueNonevaluevaluevalueregexvalueto_replaceto_replaceto_replacevalueto_replaceto_replaceNoneto_replacevalueNaNregexto_replaceto_replacevalueto_replaceregexto_replaceto_replacevalueto_replaceto_replacevalueto_replaceto_replaceto_replaceto_replaceto_replaceto_replacevalueto_replacereplace ﻿</details ",
   "raw_message": "To categorize the sentiment of this sentence, we need to consider its context and content. The sentence appears to be a technical comment related to updating or replacing values in code, possibly within a pull request on GitHub.\n\n1. **Positive Sentiment**: This would typically include praise, approval, or expressions of satisfaction with the changes made.\n2. **Neutral Sentiment**: This would involve factual statements without any emotional tone, such as descriptions of actions taken or technical updates.\n3. **Negative Sentiment**: This would include criticism, disapproval, or expressions of dissatisfaction.\n\nThe sentence you provided seems to be a technical description of code changes, specifically mentioning the replacement of values with placeholders like `None`, `NaN`, and regex patterns. There are no explicit positive or negative words indicating approval or disapproval.\n\nTherefore, the sentiment expressed in this sentence is most likely **neutral**. It appears to be a straightforward statement about what was done in the code update without any emotional tone.",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "I already have class like . My problem is that this is class that can be registered many times, not like the blueprint. So, the problem is the same, I need to be able to write: and then: By the way, to avoid collision, my blueprint is declared with an url_prefix: If you look at the code, there was an attribute meant to implement that: . The problem: it wasn't working and induces me in error. This is why I started this pull-request.",
@@ -4932,7 +4932,7 @@
  {
   "text": "What are \"Active headings\" ?",
   "raw_message": "The sentence \"What are 'Active headings'?\" appears to be a straightforward inquiry seeking clarification or information about the term \"Active headings.\" It does not express any sentiment, positive or negative. Therefore, it would be categorized as (2) neutral. The commenter is simply asking for more information without expressing approval, disapproval, or any emotional tone.",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "Hi  , We lock the plotly.js version constraint for  because the Python library is code generated off of the schema for that specific version.  This is admittedly a bit conservative since the plotly.js project does work hard to keep everything backwards compatible, but there are still cases where it could cause an issue. For example, if Plotly.js fixes a bug that plotly.py had worked around then the release of a new version of plotly.js could break  mid cycle (though I suppose that is just the nature of bounded dependency resolution) In any case, there are already so many moving parts in getting the JupyterLab installation working that I'd prefer to not add another free variable that can change between releases. I am a bit confused about why this warning is issued though.  states a dependency on plotly.js version  and  states a dependency of .  Do you have any idea why this doesn't resolve to 1.40.1? Also, the installation still succeeds and I'm able to use both  and  but I'm not sure how to check what version of plotly.js was actually installed.",
@@ -6137,7 +6137,7 @@
  {
   "text": "Please review ",
   "raw_message": "The sentence \"Please review\" is a straightforward request and does not inherently express any sentiment. It is simply asking someone to take action without conveying positive, neutral, or negative emotions. Therefore, the sentiment expressed in this sentence can be categorized as (2) neutral.",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "I'm with  that the tab-completion shouldn't do any magic hiding - I've learned the hard way (in some of my own personal code) that this can cause a lot of mysterious confusion. As for returning a value and not a quantity, I see 's point that this is a bit arbitrary.  But my concern with only turning it on some of the time is that then users will get even more confused because once they start using e.g. , they won't be used to it from more generic  objects.   Also I don't really see why this is any less useful for a generic  vs. something specific like .  In both cases I sometimes want to \"quickly\" get a value in a particular unit. ",
@@ -6212,7 +6212,7 @@
  {
   "text": "PiperOrigin-RevId: 387738023 Change-Id: I83d18d36a7b82ffd2a40b5124a4e5b4c72238f27",
   "raw_message": "The sentence you provided appears to be a reference or identifier for a specific change in a version control system, such as Git. It includes a \"PiperOrigin-RevId\" and a \"Change-Id,\" which are typically used to track changes or revisions.\n\nIn terms of sentiment analysis, this sentence does not express any opinion, emotion, or evaluative content that would indicate a positive, neutral, or negative sentiment. It is purely informational and factual, serving as an identifier for tracking purposes in the context of code review comments on GitHub.\n\nTherefore, the sentiment expressed in this sentence can be categorized as (2) neutral.",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "PR Checklist Please check if your PR fulfills the following requirements:  [x] The commit message follows our guidelines:  [ ] Tests for the changes have been added (for bug fixes / features) [x] Docs have been added / updated (for bug fixes / features)  PR Type What kind of change does this PR introduce? <!-- Please check the one that applies to this PR using \"x\". -- - [ ] Bugfix - [ ] Feature - [ ] Code style update (formatting, local variables) - [ ] Refactoring (no functional changes, no api changes) - [ ] Build related changes - [ ] CI related changes - [x] Documentation content changes - [ ] angular.io application / infrastructure changes - [ ] Other... Please describe: What is the current behavior? <!-- Please describe the current behavior that you are modifying, or link to a relevant issue. -- Issue Number: N/A What is the new behavior? Does this PR introduce a breaking change?  [ ] Yes [x] No  <!-- If this PR contains a breaking change, please describe the impact and migration path for existing applications below. -- Other information",
@@ -6582,7 +6582,7 @@
  {
   "text": "This is a comment that describes the purpose of a class.   [ ] Change in CHANGELOG.md described [ ] Tests created for changes [ ] Manually tested changed features in running JabRef [ ] Screenshots added in PR description (for bigger UI changes) [ ] Ensured that the git commit message is a good one [ ] Check documentation status (Issue created for outdated help page at help.jabref.org?) ",
   "raw_message": "The sentence you provided appears to be more of an instruction or checklist rather than expressing sentiment. It outlines various tasks or considerations related to code review and pull request processes, such as updating the changelog, creating tests, manually testing features, adding screenshots for UI changes, ensuring good commit messages, and checking documentation status.\n\nSince it doesn't express any positive, neutral, or negative feelings about a particular subject but rather lists actions or checks, I would categorize its sentiment as (2) neutral. It is informational and directive in nature without conveying any emotional tone.",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "I am always interested in learning new things. Currently I'm not up to date with this PR. Is this meant to update this PR or address issues in the Rework? But it eventually would be a slow process. What about the JavaFX Team from /stupro  ? :smile: ",
@@ -6727,7 +6727,7 @@
  {
   "text": ", PTAL.",
   "raw_message": "The phrase \"PTAL\" stands for \"Please Take A Look.\" It is typically used in code reviews to request someone's attention on a particular piece of work or change. This comment does not express any explicit sentiment, as it is more of an instruction or reminder rather than conveying positive, neutral, or negative feelings.\n\nLabel: (2) Neutral\n\nIf you have further context or additional comments that accompany this phrase, feel free to share them for a more nuanced analysis!",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "is confusingly named and never used.  This PR gets rid of it. The deprecated numpy API that causes zillions of warnings includes , so this replaces the old usage with the encouraged usage. A bunch of  isn't actually used in tslibs.util, so the relevant functions are moved up to . Docstrings for most of what's left in tslibs.util. Simplify util._checknull by removing an unnecessary try/except.",
@@ -6842,7 +6842,7 @@
  {
   "text": "Same question for URLs and passwords. I'm on latest stable Chrome on OSX.",
   "raw_message": "The sentence you provided seems to be a statement rather than an expression of sentiment. It appears to be asking about handling URLs and passwords, possibly in the context of testing or compatibility with the latest stable version of Chrome on macOS.\n\nGiven that it doesn't express any positive, neutral, or negative feelings or opinions, I would categorize this as (2) neutral. The sentence is more informational than evaluative.",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "The snapshot should be updated, and this is exactly what has been fixed in source-map 0.5.14. Let's take this snapshot for an example It is produced by In the code above, the error is thrown in the function , according to the stack trace format, it should print on the first line the name of the function called, which is , instead of . source-map v0.5.16 fixed this bug and one can see the snapshot difference on the CI log. You can also verify the correctness by running the following JavaScript program copy pasted from  It will print the following stack trace.",
@@ -7027,7 +7027,7 @@
  {
   "text": "Was the bridge package created? ",
   "raw_message": "The sentence \"Was the bridge package created?\" is a straightforward inquiry and does not express any sentiment. It's simply asking for information without conveying positive, neutral, or negative feelings. Therefore, it would be categorized as (2) neutral.",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "Just chiming in here that I'd love to see this kind of thing in mainline D3.  I would use the version of d3 shown in this PR, but unfortunately it's too old for me now.  ;)",
@@ -7682,7 +7682,7 @@
  {
   "text": "I thought RFC2616 was considered obsolete. () And if I recall - IE had some issues when the content-type was lowercase.  ()  - may be outdated info though as checks are passing :) ",
   "raw_message": "To categorize the sentiment expressed in this sentence, let's break it down:\n\n1. \"I thought RFC2616 was considered obsolete.\" – This part is neutral; it reflects a statement of belief or fact without expressing any positive or negative emotion.\n\n2. \"And if I recall - IE had some issues when the content-type was lowercase.\" – This is also neutral, as it's simply recalling information about past behavior without expressing approval or disapproval.\n\n3. \"- may be outdated info though as checks are passing :)\" – The phrase \"may be outdated info\" suggests a slight concern (potentially negative), but this is immediately followed by \"as checks are passing :)\", which introduces a positive sentiment due to the successful outcome and the use of a smiley face, indicating satisfaction or relief.\n\nOverall, considering the context and especially the concluding part with the smiley face, the sentiment leans towards **positive**. The concern about outdated information is mitigated by the reassurance that checks are passing successfully.",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "A rebased version of #73. Better git history.",
@@ -7782,7 +7782,7 @@
  {
   "text": "This PR was merged into the repository by commit da58801f95c66c201e332189af25702bdd722f3f.",
   "raw_message": "The sentence you provided is a factual statement that simply reports an action taken (the merging of a pull request) and identifies the specific commit associated with it. There are no words or phrases in this sentence that express any sentiment, whether positive, neutral, or negative. It's purely informational.\n\nLabel: Neutral\n\nIf there were additional context or comments accompanying this sentence, such as praise for the work done or criticism of the changes made, then a sentiment might be inferred from those parts. However, based solely on the sentence provided, it is best categorized as neutral.",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "Fixes #4703. <!-- describe the changes you have made here: what, why, ...       Link issues by using the following pattern: #333 or koppor#49.      The title of the PR must not reference an issue, because GitHub does not support autolinking there. --   [ ] Change in CHANGELOG.md described [ ] Tests created for changes [ ] Manually tested changed features in running JabRef [ ] Screenshots added in PR description (for bigger UI changes) [ ] Ensured that the git commit message is a good one [ ] Check documentation status (Issue created for outdated help page at help.jabref.org?) ",
@@ -8082,7 +8082,7 @@
  {
   "text": "About Laos: Laos is a landlocked country in South-east Asia on the Indochinese peninsula between Thailand and Vietnam and north of Cambodia.",
   "raw_message": "The sentence you provided appears to be purely informational, describing geographical facts about Laos. It does not express any emotions or opinions that would indicate a positive, neutral, or negative sentiment. Therefore, the sentiment expressed in this sentence can be categorized as (2) neutral.",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "Compilation with ngcc is now included in the CLI, so its no longer necessary to run in manually PR Checklist Please check if your PR fulfills the following requirements:  [ ] The commit message follows our guidelines:  [ ] Tests for the changes have been added (for bug fixes / features) [x] Docs have been added / updated (for bug fixes / features)  PR Type What kind of change does this PR introduce? <!-- Please check the one that applies to this PR using \"x\". -- - [ ] Bugfix - [ ] Feature - [ ] Code style update (formatting, local variables) - [ ] Refactoring (no functional changes, no api changes) - [ ] Build related changes - [ ] CI related changes - [x] Documentation content changes - [ ] angular.io application / infrastructure changes - [ ] Other... Please describe: What is the current behavior? <!-- Please describe the current behavior that you are modifying, or link to a relevant issue. -- Issue Number: N/A What is the new behavior? Does this PR introduce a breaking change?  [ ] Yes [x] No  <!-- If this PR contains a breaking change, please describe the impact and migration path for existing applications below. -- Other information",
@@ -8112,7 +8112,7 @@
  {
   "text": "¯\\_(ツ)_/¯",
   "raw_message": "The emoticon \"¯\\_(ツ)_/¯\" is commonly used to express indifference, uncertainty, or a lack of strong opinion about something. It suggests that the person doesn't have a clear positive or negative sentiment and might be conveying a sense of ambivalence or resignation.\n\nLabel: (2) Neutral\n\nThis label reflects the neutral nature of the emoticon, as it does not convey a distinctly positive or negative emotion but rather an indifferent or non-committal stance.",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "add win32 fonts directory check PR Summary PR Checklist <!-- Please mark any checkboxes that do not apply to this PR as [N/A]. --Tests and Styling - [x] Has pytest style unit tests (and  passes). - [x] Is Flake 8 compliant (install  and run ). Documentation - [ ] New features are documented, with examples if plot related. - [ ] New features have an entry in  (follow instructions in README.rst there). - [ ] API changes documented in  (follow instructions in README.rst there). - [ ] Documentation is sphinx and numpydoc compliant (the docs should build without error). <!-- Thank you so much for your PR!  To help us review your contribution, please consider the following points:   A development guide is available at .   Help with git and github is available at   .   Do not create the PR out of main, but out of a separate branch.   The PR title should summarize the changes, for example \"Raise ValueError on   non-numeric input to set_xlim\".  Avoid non-descriptive titles such as   \"Addresses issue #8576\".   The summary should provide at least 1-2 sentences describing the pull request   in detail (Why is this change required?  What problem does it solve?) and   link to any relevant issues.   If you are contributing fixes to docstrings, please pay attention to   .  In particular,   note the difference between using single backquotes, double backquotes, and   asterisks in the markup.   We understand that PRs can sometimes be overwhelming, especially as the reviews start coming in.  Please let us know if the reviews are unclear or the recommended next step seems overly demanding, if you would like help in addressing a reviewer's comments, or if you have been waiting too long to hear back on your PR. --",
@@ -8277,7 +8277,7 @@
  {
   "text": "/azp run",
   "raw_message": "The sentence \"/azp run\" appears to be a command rather than an expression of sentiment. It likely refers to running a task using Azure Pipelines, which is part of the Azure DevOps suite for continuous integration and deployment.\n\nSince this is a technical command without any emotional or evaluative language, it doesn't express positive, neutral, or negative sentiment in itself. Therefore, I would categorize it as (2) neutral. If there were additional context or comments around this command that expressed an opinion or evaluation, the sentiment could be assessed differently.",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "Hmm, did something go wrong with ",

@@ -87,7 +87,7 @@
  {
   "text": "Lupu este un baiat doarte destept si apreciez ca pot fi coleg cu el.Este foarte sociabil si stie ceea ce face.Aceasta problema este executata foarte corect dar totusi se poate si mai bine.",
   "raw_message": "The sentiment expressed in this sentence is a mix of positive and constructive feedback. The first part of the sentence highlights positive attributes about Lupu, such as being smart, appreciable as a colleague, sociable, and knowing what he does. This can be considered (1) positive.\n\nHowever, the latter part of the sentence provides constructive criticism regarding the execution of a problem, suggesting that it could be done even better. While this is not negative in tone, it implies room for improvement, which aligns more with neutral feedback aimed at enhancement rather than outright praise or criticism.\n\nOverall, considering both parts, the sentiment can be best categorized as (2) neutral, due to the balance between positive acknowledgment and constructive suggestion for further improvement.",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "Nice 🚀 \r\n\r\nAm lasat cateva sugestii.\r\n\r\nHaide sa adaugam un .gitignore sa scapam de fisierele din bin si obj si .vs",
@@ -1867,7 +1867,7 @@
  {
   "text": "Esti sigur ca asta ii cazul tau de utilizare?",
   "raw_message": "The sentence \"Esti sigur că asta îți este cazul de utilizare?\" translates to \"Are you sure this is your use case?\" in English. This question seems to express a need for clarification or confirmation regarding the appropriateness of the code change for the intended purpose. It doesn't convey strong positive or negative sentiment but rather seeks assurance about the relevance and correctness of the implementation.\n\nLabel: (2) neutral",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "Am vazut videoul si citit codul comentat, o sa aprob acest pull request dar o sa adaug un issue in legatura cu visual artifact-ul care apare atunci cand se misca caracterul(cel din poza, se vede si in videoul pus).\r\n![firefox_79UiBFCI5j](https://github.com/Epure-Tofanel-Carlo/Unity/assets/129178776/b7848ec2-afb0-457d-bb89-12179813857d)",
@@ -2097,7 +2097,7 @@
  {
   "text": "@criske poti adauga si unit testul din acest PR te rog? https://github.com/decorators-squad/eo-yaml/pull/416\r\n\r\nMi se pare ca e aceeasi problema si acolo, iar acel unit test ar trebui sa treaca :D \r\n\r\nSi daca poti te rog sa lasi un puzzle, pentru a rezolva problema cumva cu lines iterators? Solutia asta e ok momentan, e mai important sa rezolvam bug-ul, dar nu respecta ideea din spatele arhitecturii. Ideea ar fi sa nu se modifica input-ul deloc ci doar sa fie citite liniile si iterate, fwtute, intoarse etc, ca sa se gaseasca valorile. \r\n\r\nApropo, cum ti se pare libraria? Chiar mi-am facut de cap cu ea, din punct de vedere OOP :))",
   "raw_message": "The sentiment expressed in this sentence is a mix of neutral and positive with some constructive criticism:\n\n1. **Positive**: The comment acknowledges the addition of a unit test as a good step (\"Mi se pare ca e aceeasi problema si acolo, iar acel unit test ar trebui sa treaca :D\"). This shows appreciation for the effort made in addressing an issue.\n\n2. **Neutral/Constructive Criticism**: There is a suggestion to leave a \"puzzle\" or task for future improvement regarding line iterators (\"Si daca poti te rog sa lasi un puzzle, pentru a rezolva problema cumva cu lines iterators?\"). This indicates that while the current solution works temporarily, there's room for architectural alignment.\n\n3. **Neutral**: The comment also reflects on the library from an object-oriented programming perspective, indicating some challenges faced (\"Apropo, cum ti se pare libraria? Chiar mi-am facut de cap cu ea, din punct de vedere OOP :)\"). This is more of a neutral observation or reflection rather than outright criticism.\n\nOverall, while there are suggestions for improvement and reflections on the library's design, the tone remains constructive and appreciative. Therefore, I would classify this as primarily **neutral** with positive elements.",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "Preferabil automata, dar poti sa faci si manual daca asa iti convine, momentan",
@@ -5107,7 +5107,7 @@
  {
   "text": "stai deci rulam check-urile la fiecare secunda pt fiecare joc?",
   "raw_message": "The sentence \"stai deci rulam check-urile la fiecare secunda pt fiecare joc?\" translates to \"So, are we running the checks every second for each game?\" in English. This question seems to be seeking clarification or confirmation about a process.\n\nGiven that it is phrased as an inquiry without any explicit positive or negative connotations, the sentiment expressed here would likely be considered (2) neutral. It's simply asking for information or confirmation rather than expressing approval, disapproval, or emotion.",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "E mai curat codul. Nu neaparat un hook, dar cel putin scoase undeva separat",
@@ -5167,7 +5167,7 @@
  {
   "text": "poate alt titlu",
   "raw_message": "The comment \"poate alt titlu\" translates from Romanian to English as \"maybe another title.\" This suggests a suggestion for improvement without expressing any strong positive or negative sentiment. Therefore, the sentiment expressed in this sentence is (2) neutral. It indicates a constructive feedback aimed at enhancing clarity or appropriateness of the title.",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "Am gasit si inlocuit cu cel oficial",
@@ -5362,7 +5362,7 @@
  {
   "text": "nu va mai exista URL-ul vechi?",
   "raw_message": "The sentence \"nu va mai exista URL-ul vechi?\" translates to \"will the old URL no longer exist?\" in English. This question seems to be seeking clarification or confirmation about a change, without expressing any particular positive or negative sentiment. Therefore, the sentiment expressed is (2) neutral.",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "de ce ai adaugat update-user?",
@@ -5797,7 +5797,7 @@
  {
   "text": "Corect, nici nu l-am folosit.",
   "raw_message": "The sentiment expressed in this sentence is somewhat ambiguous due to the language used and context not being fully clear. However, breaking it down:\n\n- \"Corect\" translates to \"Correct,\" which generally has a positive connotation as it acknowledges correctness or approval.\n- \"nici nu l-am folosit\" translates to \"I haven't used it either,\" which is more neutral in sentiment.\n\nOverall, the sentence seems to acknowledge something positively (\"Correct\") but also indicates that the speaker hasn't utilized whatever is being discussed. Without additional context, this leans towards a **neutral** sentiment because there's no strong positive or negative emotion expressed beyond acknowledging correctness and lack of use. \n\nLabel: Neutral",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "pune paranteze la parametrul lui \"disp\" ca sa mearga pe toate versiunile de Octave/Matlab",
@@ -6617,7 +6617,7 @@
  {
   "text": "as tine acelasi layout ca blogurile de dedesupt de Most popular posts si sub 1500px in partea de sus",
   "raw_message": "To determine the sentiment of this sentence, let's break it down:\n\n- The sentence seems to be discussing a layout aspect related to blogs, specifically mentioning \"Most popular posts\" and positioning elements under 1500px at the top.\n- There is no explicit positive or negative language used. It appears to be more of an observation or statement about how something is laid out.\n\nGiven this analysis, the sentiment expressed in the sentence seems to be neutral. \n\nLabel: (2) Neutral",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "Ai pus un spatiu in plus la inceput pe linia asta, si pune te rog spatiu inainte de `{`",
@@ -7017,7 +7017,7 @@
  {
   "text": "context ii accesibil inafara metodei build?",
   "raw_message": "The sentence \"context ii accessible outside of the build method?\" seems to be asking a question about whether a certain context is accessible outside of a specific method. This type of inquiry typically indicates curiosity or concern regarding code structure and scope, rather than expressing an opinion with positive or negative sentiment.\n\nTherefore, the sentiment expressed in this sentence would be classified as (2) neutral.",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "acest text introdu l intr un span, apoi il stilizezi. dupa care pe clasa logo-name ii dai display: flex, gap de 8px, align items center si justijy content center",
@@ -8032,7 +8032,7 @@
  {
   "text": "scoate comentariul",
   "raw_message": "The sentence \"scoate comentariul\" translates to \"remove the comment\" in English. This instruction is typically a directive without any inherent positive or negative sentiment; it's simply asking for an action to be taken. Therefore, the sentiment expressed in this sentence would be (2) neutral.",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "mnda... si asta e corect",
@@ -8617,7 +8617,7 @@
  {
   "text": "Am modificat. Am adaugat margin pe toate butoanele si margin negativ pe parinte.",
   "raw_message": "The sentiment expressed in the sentence \"Am modificat. Am adaugat margin pe toate butoanele și margin negativ pe parinte.\" is neutral. The statement describes changes made (adding margins and negative margins) without expressing any particular positive or negative emotion or opinion about those changes. It's simply reporting what was done.",
-  "label": "neutral"
+  "label": "negative"
  },
  {
   "text": "inainte si dupa return o linie libera",
@@ -9092,7 +9092,7 @@
  {
   "text": "de ce a fost modificata?",
   "raw_message": "The sentence \"de ce a fost modificata?\" translates to \"why was it changed?\" in English. This question is seeking clarification and does not inherently express any positive or negative sentiment; rather, it's neutral as it simply requests information about the changes made.\n\nLabel: (2) Neutral",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "ar trebui sa fie enum.",
@@ -9132,7 +9132,7 @@
  {
   "text": "Asta ar semana mai mult cu get auction cu id-ul respectiv din lista de auction al unui obiect post",
   "raw_message": "To determine the sentiment of this sentence from a GitHub pull request code review comment, let's break it down:\n\n- \"Asta ar\" translates to \"This would.\"\n- \"semana mai mult cu get auction cu id-ul respectiv din lista de auction al unui obiect post\" roughly means \"take more time with getting the auction with the respective ID from the list of auctions of a posted object.\"\n\nThe comment seems to be pointing out that the proposed change or addition might increase processing time, which is generally not seen as positive in terms of performance. Therefore, this sentence expresses concern about potential inefficiency.\n\nLabel: (3) negative",
-  "label": "positive"
+  "label": "negative"
  },
  {
   "text": "Slight typo: schimba numele in accordion (2 de c) la toate componentele te rog.",
@@ -9362,7 +9362,7 @@
  {
   "text": "De ce au toate astea scope test?",
   "raw_message": "The sentence \"De ce au toate astea scope test?\" translates from Romanian to English as \"Why do all of these have test scope?\" This question seems to express curiosity or confusion about why certain items are included in the test scope. It doesn't convey a clear positive, negative, or neutral sentiment but rather seeks clarification.\n\nGiven this context, I would classify it as (2) neutral. The sentence is more informational and questioning rather than expressing an opinion or emotion.",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "Am vazut ca la unele personaje averile sunt categorisite:\nhttp://verificaintegritatea.romaniacurata.ro/?p=8041,",

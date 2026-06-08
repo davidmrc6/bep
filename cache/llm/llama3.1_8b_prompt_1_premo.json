@@ -647,7 +647,7 @@
  {
   "text": "Sorry, we've been heads down fixing problems with 1.2.0 so we've not really had a chance to look yet. Will take a look when we flip the master branch to 1.3.0 (it's still on 1.2.x at the moment).  It looks interesting and I'm keen to look at what we can do with Docker in 1.3.0.",
   "raw_message": "I would categorize the sentiment expressed in this sentence as (2) neutral.\n\nThe tone is polite and apologetic, indicating that the reviewer hasn't had a chance to review the code yet, but they're interested in doing so when they have time. The phrase \"It looks interesting\" suggests a positive inclination, but it's not strong enough to classify the sentiment as (1) positive overall.",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "Merged, thanks.",
@@ -3837,7 +3837,7 @@
  {
   "text": "Looks like it. I switched the ci build to use Java 8. Can you rebase and try again?",
   "raw_message": "I would categorize the sentiment expressed in this sentence as (2) neutral.\n\nThe tone is polite and helpful, but there's no explicit praise or enthusiasm, and the request to \"rebase and try again\" implies that the previous attempt was unsuccessful. However, the language used is not critical or negative, so it doesn't quite fit into a (3) negative category either.",
-  "label": "neutral"
+  "label": "negative"
  },
  {
   "text": "That seems fine.  Ultimately I used this just to add outlining to the text so you can read it no matter what picture is displayed behind.  I'll make the change later.  Thanks!",
@@ -4067,12 +4067,12 @@
  {
   "text": ", actually, I really like  because that's what actually is (but we have vue's event modifiers too), maybe you could just do a poll with the members of core team to find out which one is reasonable? ",
   "raw_message": "I would categorize the sentiment expressed in this sentence as (2) neutral.\n\nThe tone is polite and collaborative, with phrases like \"I really like\" and \"maybe you could\", indicating that the commenter is open to discussion and compromise. The suggestion of a poll also implies a willingness to involve others in the decision-making process. However, there is no strong endorsement or enthusiasm, which keeps the sentiment from being (1) positive. Additionally, the tone is not critical or dismissive, ruling out (3) negative.",
-  "label": "neutral"
+  "label": "negative"
  },
  {
   "text": ":+1: I don't know if this is the way I prefer, but makes sense. Also, it is easy to make  always return https, if this is what the user want.",
   "raw_message": "I would categorize the sentiment expressed in this sentence as (2) neutral.\n\nThe tone of the comment seems to be informative and objective, with a hint of approval (\"makes sense\"). The use of \"+1\" also suggests that the reviewer is generally agreeing with the change. However, the phrase \"but makes sense\" implies a slight reservation or uncertainty about the approach taken, which prevents me from labeling it as (1) positive.",
-  "label": "neutral"
+  "label": "positive"
  },
  {
   "text": "38448",
@@ -4637,7 +4637,7 @@
  {
   "text": "would you mind signing the CLA and update ?",
   "raw_message": "I would categorize the sentiment expressed in this sentence as (2) neutral.\n\nThe tone is polite and courteous (\"would you mind\"), but it's also a request for action, which implies that there might be some expectation or requirement to fulfill. However, the language used is not critical or negative, so I wouldn't label it as (3) negative.",
-  "label": "neutral"
+  "label": "negative"
  },
  {
   "text": "i'll just fix it up  - thanks though man",
@@ -4692,7 +4692,7 @@
  {
   "text": "review_need",
   "raw_message": "Based on the context of a GitHub pull request code review comment, I would categorize the sentiment expressed in this sentence as:\n\n(1) Positive\n\nThe reason is that \"review_needed\" (assuming it's a typo and you meant to say \"review_needed\") implies that someone needs to review the code, which suggests that the code is ready for feedback and improvement. This is a neutral or even positive indication, as it shows that the author is open to receiving constructive criticism and willing to make changes based on feedback.\n\nHowever, if I were to categorize it more precisely, I would say that it's actually (2) Neutral, since it simply states a fact about the code review process without expressing any opinion or emotion.",
-  "label": "positive"
+  "label": "neutral"
  },
  {
   "text": "I am so sorry I find a issue just now.     <div          <div v-for=\"(item, index) in list\" :key=\"index\"            <component :is='comp' v-once          </div        </div  in third test, I got , but  it is ok. I am not sure is it a bug, cause  is variational. Thanks",
@@ -4872,7 +4872,7 @@
  {
   "text": "969",
   "raw_message": "It seems like you didn't provide a sentence for me to categorize.\n\nPlease go ahead and share the sentence from GitHub pull request code review comments, and I'll be happy to help you determine its sentiment as (1) positive, (2) neutral, or (3) negative.",
-  "label": "positive"
+  "label": "negative"
  },
  {
   "text": "This, or something similar, would be a great addition for our use too. We have a few code bases at work that require some hoop jumping to work around system  using system certs[1] and virtualenvs in  runs attempting to use the certs in . I ended up adding something along the same lines to github2 to work around  using bundled certs on some hosts, and it would be nice if I didn't need to worry about it when using  ;) 1. Debian and Gentoo patch system certs support in to their packages, possibly others too.",
@@ -4917,7 +4917,7 @@
  {
   "text": "462",
   "raw_message": "It seems like you didn't provide a sentence for me to categorize.\n\nPlease go ahead and share the sentence from GitHub pull request code review comments, and I'll be happy to help you determine its sentiment as (1) positive, (2) neutral, or (3) negative.",
-  "label": "positive"
+  "label": "negative"
  },
  {
   "text": "-amd",
@@ -5192,7 +5192,7 @@
  {
   "text": "106.41",
   "raw_message": "It seems like there's no actual sentence provided for me to categorize the sentiment.\n\nHowever, if you'd like to provide a sentence from GitHub pull request code review comments, I'll be happy to help you categorize its sentiment as (1) positive, (2) neutral, or (3) negative.",
-  "label": "positive"
+  "label": "negative"
  },
  {
   "text": "Sorry, the previous set of commits were a WIP and I ran out of steam before getting d3.xml and d3.text working. Should have left a message about that. On the other hand your comments were very helpful for coming up with an approach. All unit tests are passing now and I think the method overloading should be working properly as well.",
@@ -5247,7 +5247,7 @@
  {
   "text": "In virtual-dom system of vue 2.0, when we are necessary in order to communicate the parent-child components, need to use the .",
   "raw_message": "I would categorize the sentiment expressed in this sentence as (1) positive.\n\nThe tone is informative and neutral, but the fact that it's providing a solution or recommendation (\"need to use\") implies a helpful intent, which leans towards being positive. There's no criticism or negative language present, so I wouldn't classify it as (3) negative.",
-  "label": "positive"
+  "label": "negative"
  },
  {
   "text": "what is your screen resolution/devicePixelRatio? I have a suspicion that this has to do with scale/zoom.",
@@ -5277,7 +5277,7 @@
  {
   "text": "237",
   "raw_message": "It seems like you didn't provide a sentence for me to categorize.\n\nPlease go ahead and share the sentence from GitHub pull request code review comments, and I'll be happy to help you determine its sentiment as (1) positive, (2) neutral, or (3) negative.",
-  "label": "positive"
+  "label": "negative"
  },
  {
   "text": "cleaning <!-- Please uncomment this block and take a look at this checklist if your PR is making substantial changes to documentation/impacts files in the  directory. Check all that apply to your PR, and leave the rest unchecked to discuss with your reviewer! Not all boxes must be checked for every PR :) If your PR modifies code of the  package, we have a different checklist below :-). Documentation PR  [ ] I've seen the  file [ ] This change runs in the current version of Plotly on PyPI and targets the  branch OR it targets the  branch [ ] If this PR modifies the first example in a page or adds a new one, it is a  example if at all possible [ ] Every new/modified example has a descriptive title and motivating sentence or paragraph [ ] Every new/modified example is independently runnable [ ] Every new/modified example is optimized for short line count  and focuses on the Plotly/visualization-related aspects of the example rather than the computation required to produce the data being visualized [ ] Meaningful/relatable datasets are used for all new examples instead of randomly-generated data where possible [ ] The random seed is set if using randomly-generated data in new/modified examples [ ] New/modified remote datasets are loaded from  and added to  [ ] Large computations are avoided in the new/modified examples in favour of loading remote datasets that represent the output of such computations [ ] Imports are  /  /  [ ] Data frames are always called  [ ] fig.add_fig.update_go.Figure(data=..., layout=...)fig.add_shapefig.update_xaxesfig.update_layoutfig.show()plotly.plot()plotly.iplot()plotly.graph_objectscodegen` files and not generated files. [ ] I have added tests (if submitting a new feature or correcting a bug) or   modified existing tests. [ ] For a new feature, I have added documentation examples in an existing or   new tutorial notebook (please see the doc checklist as well). [ ] I have added a CHANGELOG entry if fixing/changing/adding anything substantial. [ ] For a new feature or a change in behaviour, I have updated the relevant docstrings in the code to describe the feature or behaviour (please see the doc checklist as well).  --",
@@ -5507,7 +5507,7 @@
  {
   "text": "extra/datasets #1155",
   "raw_message": "It seems like you didn't provide a sentence for me to categorize.\n\nPlease go ahead and share the sentence from GitHub pull request code review comments, and I'll be happy to help you determine its sentiment as (1) positive, (2) neutral, or (3) negative.",
-  "label": "positive"
+  "label": "negative"
  },
  {
   "text": "In case user pass non-string as a tensor name, the code raises ValueError. One common mistake is to specify tensor object instad of its name. Unfortunately, in this case current implementation fails to produce an error message resulting in misleading errors like shown below. This PR introduce explicit type-checks of input parameters.",
@@ -5622,7 +5622,7 @@
  {
   "text": "10",
   "raw_message": "It seems like there's no actual sentence provided for me to categorize.\n\nCould you please provide the sentence from GitHub pull request code review comments that you'd like me to analyze? I'll be happy to help with categorizing its sentiment as (1) positive, (2) neutral, or (3) negative.",
-  "label": "positive"
+  "label": "negative"
  },
  {
   "text": ", I'm sorry that the merge could not be achieved this week as the PR enables hybrid model support by default in XNNPACK delegate which requires much more thorough testing internally with other Google products. So to move it forward, we may guard your change with some pre-defined macros. Thanks for your patience, and hope you could understand this. Many thanks again for your contribution!",
@@ -6557,7 +6557,7 @@
  {
   "text": "4102",
   "raw_message": "It seems like you didn't provide a sentence for me to categorize.\n\nPlease go ahead and share the sentence from GitHub pull request code review comments, and I'll be happy to help you determine its sentiment as (1) positive, (2) neutral, or (3) negative.",
-  "label": "positive"
+  "label": "negative"
  },
  {
   "text": "awesome, thank you very much.",
@@ -7607,7 +7607,7 @@
  {
   "text": "6938",
   "raw_message": "It seems like you didn't provide the actual sentence. Could you please share it with me? I'll be happy to categorize its sentiment for you.\n\nOnce you provide the sentence, I'll classify it as (1) positive, (2) neutral, or (3) negative based on the tone and language used in the code review comment.",
-  "label": "positive"
+  "label": "negative"
  },
  {
   "text": "Hi Johann, I fixed the issue in new commit. The use of jquery event namespace worked in release 4.3.1 but not in the master branch. I replaced it with a named function.",
@@ -8132,7 +8132,7 @@
  {
   "text": "http://test/OCL:229307881:BASE:229307905:1547528246221:6725d55a",
   "raw_message": "It seems like the sentence is a URL and not a text that conveys sentiment. However, I can help you categorize the label associated with it.\n\nCould you please provide the actual comment or text associated with this pull request code review? That way, I can accurately determine its sentiment as (1) positive, (2) neutral, or (3) negative.",
-  "label": "positive"
+  "label": "negative"
  },
  {
   "text": "Summary matcher could not handle symbol based properties in array's, causing jest to throw: Minimal example: Throws: The cause of this issue is this line which assumes that all property names of arrays are strings and hence  can be called on them.  This assumption does not held for symbol based properties. If the property name is a symbol, it is never an index, so it should always be added to the  collection.  Test plan I added a unit test demonstrating that deep equality on arrays behaves correctly now, even in the presence of symbolic properties.",
@@ -8522,7 +8522,7 @@
  {
   "text": "k",
   "raw_message": "It seems like you didn't provide a sentence for me to categorize.\n\nPlease go ahead and share the sentence from GitHub pull request code review comments, and I'll be happy to help you determine its sentiment as (1) positive, (2) neutral, or (3) negative.",
-  "label": "positive"
+  "label": "negative"
  },
  {
   "text": "Not forgotten at all. Just I've been working on pydantic-core in preparation for pydantic V2. I promise to review this once I get working on pydantic v1.10.",
@@ -8562,7 +8562,7 @@
  {
   "text": "777",
   "raw_message": "It seems like there's no actual sentence provided for me to categorize the sentiment.\n\nCould you please provide the sentence from GitHub pull request code review comments that you'd like me to analyze? I'll be happy to help with categorizing its sentiment as (1) positive, (2) neutral, or (3) negative.",
-  "label": "positive"
+  "label": "negative"
  },
  {
   "text": "Disclaimer:  The following is a cornercase, not a best practice.  I wouldn't encourage anyone to do this but the rest of the code seems to allow it so I suppose there's a case to be made for handling it here (for now... until/unless we make it an error elsewhere). The \"name\" parameter to add_hosts does not appear to be a true DNS name.  Instead it is a name that ansible uses to reference a host.  If the \"name\" does not also contain an ansible_ssh_hostname parameter than the name would have to be valid as an ip address or a DNS hostname.  This is the common case.  However, a cornercase exists when an inventory does specify an ansible_ssh_hostname.  In that case, the hostname does not have to be valid in DNS because ansible_ssh_hostname is used instead.  That means that the user could specify something like this: Stupid thing to do?  Yes.  Does someone out there want to do it?  Probably so.  We get some really weird bug reports sometimes.  How far should we go to support this silly cornercase?  I'm not sure I'd go too far but I do think it would be good for the code to do a little bit more checking to prevent someone doing that from masquerading as valid ipv6 addresses.  So for instance, if someone passes in \"[one:two]:90\" we shouldn't parse that into \"one:two\", 90.  We should either return \"[one:two]:90\", None  or \"[one:two]\", 90 (I lean slightly towards the former to give the user flexibility). So maybe enhance the regex to search for four sets of  in order to decide that the value is an ipv6 address. Does that make sense?",
@@ -8787,12 +8787,12 @@
  {
   "text": "651",
   "raw_message": "It seems like you provided a label rather than a sentence.\n\nHowever, if you'd like to provide the actual sentence from the GitHub pull request code review comments, I'll be happy to help categorize its sentiment as (1) positive, (2) neutral, or (3) negative.",
-  "label": "positive"
+  "label": "negative"
  },
  {
   "text": "Currently we have a common utility method for running commands in a child process. This method pipes all stdout and stderr, but sets the  to . This seemed to work as expected in terms of allowing interactive commands being executed, but it messes with the TTY in Windows (and potentially other platforms) so that colors and prompts no longer work properly. It's unclear how this causes the TTY to no longer support colors; but I guess it's the mix of inherit and pipe. See attached screenshot.  We fix this by not inheriting the stdin by default; but exposing a dedicated method for interactive commands. This results in more readable and obvious code too, so it's worth making this change regardless of the TTY issues.",
   "raw_message": "After analyzing the sentence, I would categorize the sentiment as (3) Negative.\n\nThe reason is that the comment mentions a problem with the current implementation (\"messes with the TTY\"), which has an unclear cause and affects the functionality of colors and prompts. The tone is also somewhat critical, suggesting that the current behavior is \"not expected\" and \"unintuitive\". However, the overall sentiment shifts to (2) Neutral when mentioning the proposed solution, as it's presented in a neutral and matter-of-fact way (\"We fix this by...\").",
-  "label": "negative"
+  "label": "neutral"
  },
  {
   "text": "I cleaned up the loader after your first PR. Do you mind updating first? Sorry about that...",
