@@ -1,5 +1,8 @@
 # Sentiment Analysis for Code Review
-This repository contains the replication package for the bachelor end project "Sentiment Analysis for Code Review."
+This repository contains the replication package for the bachelor end project "Can Open-Source LLMs Match SE-Specific Sentiment Tools? An English
+and Romanian Evaluation."
+
+Note that this repository is available on both [gitlab.tue.nl](gitlab.tue.nl)  and [github.com](github.com).
 
 ## Repository structure
 
@@ -11,4 +14,3 @@ This repository contains the replication package for the bachelor end project "S
 - `input/`: preformatted inputs for external tools (e.g. `deva/` `.txt` files).
 - `output/`: generated artifacts: DEVA outputs, combined prediction parquets, and the qualitative sample.
 - `requirements.txt`: Python dependencies.
-
